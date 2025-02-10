@@ -1,0 +1,7 @@
+---
+layout: home
+title: "Two Ticks"
+---
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}

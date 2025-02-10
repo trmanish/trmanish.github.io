@@ -1,5 +1,5 @@
 ---
-title: "Great Product Decisions are not always driven by data"
+title: "Great product decisions are not always driven by data"
 date: 2025-02-09
 layout: default
 tags: [product, user-trust, decision-making, data-driven]

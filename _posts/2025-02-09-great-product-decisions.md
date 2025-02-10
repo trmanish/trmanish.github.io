@@ -48,7 +48,11 @@ The **retention rate fell from 90% to 85%**, resulting in a **$60 million annual
 
 Contrary to conventional wisdom— “always build products based on data-driven testing” —Netflix’s product leader implemented the email notification system anyway**.
 
-Many would have thought he was crazy, ignoring clear data showing that retention was falling. But great product decisions are not always about short-term revenue. Great products are built for user trust.
+Obviously at that time many would have felt that this guy is smoking something, who is going against what the data clearly screams out - retention rate falling if you implement this feature and would cause losses in millions to company.
+
+But as a product owner, he took a call to implement the feature. I would have done the same and it was a similar thing what I suggested to that guy at Linkedin.
+
+> Great product features are not those which are always built on data driven insights. Great products features are built for User Trust.
 
 Your users will keep using your product if they trust you, believe in you, and know you act in their best interest.
 

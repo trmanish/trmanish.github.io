@@ -1,0 +1,8 @@
+title: "Two Ticks"
+description: "Life Two Ticks at a Time"
+baseurl: "" # Set this if deploying under a subdirectory
+url: "https://trmanish.github.io"
+theme: minima # You can change this to another theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

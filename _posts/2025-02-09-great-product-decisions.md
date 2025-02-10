@@ -5,7 +5,7 @@ layout: default
 tags: [product, user-trust, decision-making, data-driven]
 ---
 
-# Great Product Decisions are not always driven by Data
+# **Great Product Decisions are not always driven by Data**
 
 <img src="/assets/great_product_decisions/headline_image.jpeg" width="100%">
 

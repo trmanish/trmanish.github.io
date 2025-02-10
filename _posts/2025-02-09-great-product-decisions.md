@@ -5,6 +5,8 @@ layout: default
 tags: [product, user-trust, decision-making, data-driven]
 ---
 
+<img src="/assets/great_product_decisions/headline_image.jpeg" width="100%">
+
 I once interviewed at LinkedIn. I wasn’t very interested in the role; the recruiter approached me, and I had been out of the interview market for some time, so I decided to go for a refresh of my interviewing skills.
 
 Let’s just say the process didn’t go well. I ended up having a “disagreement” with one interviewer about A/B testing—specifically, what p-value exactly means. His answer was that the p-value is alpha (Type I error), which it clearly isn't.
@@ -25,7 +27,7 @@ I stood by my answer.
 
 Early in Netflix’s product life, Netflix introduced a **one-month free trial** for new users. The homepage was designed to calm potential subscribers, reassuring them that they could cancel anytime. However, to access the trial, users had to enter their credit card details, and they would be charged once the trial ended.
 
-![Netflix Homepage](assets/great_product_decisions/netflix.jpeg)
+<img src="/assets/great_product_decisions/netflix.jpeg" width="100%">
 
 At that time, Netflix’s retention rate after the first free month was **90%**—a huge success. However, there was no **email or text notification system** to remind users that their card would be charged when the trial ended. This led to many customer complaints and call center requests, costing Netflix around **$10 million** in handling these issues.
 
@@ -43,7 +45,7 @@ Many would have thought he was crazy, ignoring clear data showing that retention
 
 Your users will keep using your product if they **trust you**, believe in you, and know you act in their best interest.
 
-![Indian CEO](assets/great_product_decisions/indian_ceo.jpeg)
+<img src="/assets/great_product_decisions/indian_ceo.jpeg" width="100%">
 
 In India, **Flipkart** was the pioneer in e-commerce long before Amazon entered the market. However, within three years of Amazon’s arrival, Flipkart started losing market share.
 

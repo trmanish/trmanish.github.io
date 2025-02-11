@@ -22,10 +22,15 @@ body {
     margin-right: 20px;
     font-size: 18px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-bar a:hover {
     color: #94a3b8;
+}
+
+.nav-bar a.active {
+    color: #facc15;
 }
 
 /* Main Headings */
@@ -57,7 +62,7 @@ h2 {
     padding: 12px 24px;
     font-size: 18px;
     color: white;
-    background-color: #007bff;
+    background-color: black;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 20px;
@@ -66,7 +71,7 @@ h2 {
 }
 
 .read-ticks-btn:hover {
-    background-color: #0056b3;
+    background-color: #333;
 }
 
 /* Blog List */
@@ -146,4 +151,5 @@ footer {
     margin-top: 50px;
     font-size: 14px;
     color: #555;
+    text-align: center;
 }

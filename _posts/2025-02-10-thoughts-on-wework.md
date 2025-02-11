@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on WeWork"
 date: 2019-11-06
-layout: default
+layout: post
 tags: [WeWork]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Great product decisions are not always driven by data"
 date: 2018-10-08
-layout: default
+layout: post
 tags: [product, user-trust, decision-making, data-driven]
 ---
 

@@ -9,19 +9,19 @@ tags: [WeWork]
   <h1><strong>Thoughts on WeWork</strong></h1>
 </div>
 
-<br><br><br> <!-- Adds extra spacing -->
+<br><br> <!-- Adds extra spacing -->
 
 <img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
 
-<br><br> <!-- Additional spacing -->
+<br> <!-- Additional spacing -->
 
-*First Published in Nov, 2019 on LI* <br> <br> 
+*First Published in Nov, 2019 on LI* <br> 
 
 It's been a while and I know by now lot of ppl are already aware of the WeWork drama.
 
 For the un-initiated, WeWork, one of the darling unicorns in the US and just a couple of months ago privately valued at $47B saw its IPO ambition crashed when the public investors freaked out buying its shares for even under $10B valuation.
 
-<img src="/assets/thoughts_on_wework/WeWork_ipo.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/WeWork_ipo.jpeg" width="100%"> <br>
 
 
 Consequently, IPO was cancelled, CEO was forced out of the company and even the Board seat, and [around 4000 employees](https://www.reuters.com/article/us-wework-layoffs/wework-plans-to-lay-off-4000-staff-ft-idUSKBN1X22F0) to be laid off with their equity becoming worthless.
@@ -64,7 +64,7 @@ As usual anything that has some remote connections to Silicon Valley would alway
 
 I was told "what have you done", "You are not rich that we listen to you" or the usual "Amazon story" analogy.
 
-<img src="/assets/thoughts_on_wework/me_3.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/me_3.jpeg" width="100%"><br>
 
 I was used to all this and even worse as around that time, I also started writing about Tesla. A far bigger cult, where Musk's fanbase is even more vocal and angry if anything is said against the company or its CEO.
 
@@ -132,7 +132,7 @@ But it teaches very interesting philosophy in life:
 
 - However, unlike a typical Bayesian Stats where if the data becomes more, your prior belief doesn’t matter then, humans hold onto their prior beliefs more strongly than any good data you throw at them.
 
-- This brings to my most important lessons I learnt last one year- <br> <br>
+- This brings to my most important lessons I learnt last one year- <br> 
 
 > Good data does not make for better decision making models for humans.
 
@@ -162,11 +162,11 @@ And that's a bad thing.
 
 <u>Capitalism is also gone wrong, when someone claims to find issues in its current form and tries to "seemingly" talk about addressing them,</u>
 
-<img src="/assets/thoughts_on_wework/beinoff.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/beinoff.jpeg" width="100%"><br>
 
 <u> but ironically decides to not acknowledge or call out the bad actors in the current system.</u>
 
-<img src="/assets/thoughts_on_wework/beinoff_2.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/beinoff_2.jpeg" width="100%"> <br>
 
 *That's like saying, I know the current cancer is bad for the body, but the tumour which exists is great!*
 
@@ -177,7 +177,7 @@ If Masa Son slapped all hard working honest entrepreneurs by "rewarding" someone
 For Masa at least he is now realizing that the biggest signal he missed as a VC in this story is the "Perception Hack". At least thats the lesson he claims to have learnt now.
 
 
-<img src="/assets/thoughts_on_wework/masa.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/masa_1.jpeg" width="100%">
 
 However I am not sure, if he has still learnt not to conflate future investors with "hypothetical" scenarios like the slide from his current deck while pitching Vision Fund II to investors.
 

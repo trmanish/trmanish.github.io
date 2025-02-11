@@ -162,11 +162,11 @@ And that's a bad thing.
 
 <u>Capitalism is also gone wrong, when someone claims to find issues in its current form and tries to "seemingly" talk about addressing them,</u>
 
-<img src="/assets/thoughts_on_wework/beinoff.jpeg" width="100%"><br>
+<img src="/assets/thoughts_on_wework/beinoff.jpeg" style="max-width:100%; height:auto;"><br>
 
 <u> but ironically decides to not acknowledge or call out the bad actors in the current system.</u>
 
-<img src="/assets/thoughts_on_wework/beinoff_2.jpeg" width="100%"> <br>
+<img src="/assets/thoughts_on_wework/beinoff_2.jpeg" style="max-width:100%; height:auto;"> <br>
 
 *That's like saying, I know the current cancer is bad for the body, but the tumour which exists is great!*
 
@@ -177,7 +177,7 @@ If Masa Son slapped all hard working honest entrepreneurs by "rewarding" someone
 For Masa at least he is now realizing that the biggest signal he missed as a VC in this story is the "Perception Hack". At least thats the lesson he claims to have learnt now.
 
 
-<img src="/assets/thoughts_on_wework/masa_1.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/masa_1.jpeg" style="max-width:100%; height:auto;">
 
 However I am not sure, if he has still learnt not to conflate future investors with "hypothetical" scenarios like the slide from his current deck while pitching Vision Fund II to investors.
 

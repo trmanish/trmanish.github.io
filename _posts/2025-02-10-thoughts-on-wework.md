@@ -5,10 +5,15 @@ layout: default
 tags: [WeWork]
 ---
 
-# *Thoughts on WeWork <br> <br> 
+<div align="center">
+  <h1><strong>Thoughts on WeWork</strong></h1>
+</div>
+
+<br><br><br> <!-- Adds extra spacing -->
 
 <img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
 
+<br><br> <!-- Additional spacing -->
 
 *First Published in Nov, 2019 on LI* <br> <br> 
 

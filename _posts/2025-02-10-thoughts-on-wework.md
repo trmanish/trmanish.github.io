@@ -5,6 +5,8 @@ layout: default
 tags: [WeWork]
 ---
 
+*First Published in Nov, 2019 on LI* <br> <br> 
+
 It's been a while and I know by now lot of ppl are already aware of the WeWork drama.
 
 For the un-initiated, WeWork, one of the darling unicorns in the US and just a couple of months ago privately valued at $47B saw its IPO ambition crashed when the public investors freaked out buying its shares for even under $10B valuation.

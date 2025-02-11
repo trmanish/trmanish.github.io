@@ -9,7 +9,7 @@ tags: [WeWork]
   <h1><strong>Thoughts on WeWork</strong></h1>
 </div>
 
-<br><br> <!-- Adds extra spacing -->
+<br> <!-- Adds extra spacing -->
 
 <img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
 

@@ -25,11 +25,7 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-.nav-bar a:hover {
-    color: #94a3b8;
-}
-
-.nav-bar a.active {
+.nav-bar a:hover, .nav-bar a.active {
     color: #facc15;
 }
 
@@ -76,7 +72,7 @@ h2 {
 
 /* Blog List */
 .post-list {
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
     padding: 40px 0;
 }
@@ -90,7 +86,7 @@ h2 {
 
 .post-info {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 40px;
     text-align: left;
 }
 
@@ -112,8 +108,8 @@ h2 {
 }
 
 .post-image {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 }
 
 .post-image img {

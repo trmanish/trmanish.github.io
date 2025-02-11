@@ -8,9 +8,11 @@
 </head>
 <body>
 
-    <header>
-        <h1>Two Ticks</h1>
-    </header>    
+    <header style="display: flex; justify-content: space-between; padding: 20px;">
+        <a href="{{ "/" | relative_url }}" style="text-decoration: none; font-size: 24px; font-weight: bold;">Two Ticks</a>
+        <a href="{{ "/posts.html" | relative_url }}" style="text-decoration: none; font-size: 18px;">All Ticks</a>
+    </header>
+        
 
     <main>
         {{ content }}

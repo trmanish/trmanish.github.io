@@ -29,6 +29,10 @@ body {
     color: #facc15;
 }
 
+.nav-bar a[href$="/posts.html"].active {
+    color: #facc15;
+}
+
 /* Main Headings */
 h1 {
     font-size: 36px;

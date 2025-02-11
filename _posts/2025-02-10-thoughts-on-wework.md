@@ -5,6 +5,8 @@ layout: default
 tags: [WeWork]
 ---
 
+# *Thoughts on WeWork <br> <br> 
+
 <img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
 
 

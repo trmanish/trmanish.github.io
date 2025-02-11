@@ -7,22 +7,14 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-    {% if page.url == '/' %}
-        <!-- No header links on the Home Page -->
-    {% elsif page.url == '/posts.html' %}
-        <header class="nav-bar">
-            <nav>
-                <a href="{{ "/" | relative_url }}">About</a>
-            </nav>
-        </header>
-    {% else %}
-        <header class="nav-bar">
-            <nav>
-                <a href="{{ "/" | relative_url }}">About</a>
-                <a href="{{ "/posts.html" | relative_url }}">All Ticks</a>
-            </nav>
-        </header>
-    {% endif %}
+    <header class="nav-bar">
+        <nav>
+            <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
+            {% if page.url != '/posts.html' %}
+                <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' %}active{% endif %}">All Ticks</a>
+            {% endif %}
+        </nav>
+    </header>
     
     <main>
         {% if page.layout == 'post' %}
@@ -33,7 +25,12 @@
     </main>
 
     <footer>
-        <p>&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
+        {% if page.url == '/' %}
+            <div class="footer-center">
+                <a href="{{ "/posts.html" | relative_url }}" class="read-ticks-btn">Read Ticks</a>
+            </div>
+        {% endif %}
+        <p class="footer-center">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
 </body>
 </html>

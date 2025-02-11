@@ -1,9 +1,12 @@
 ---
 title: "Thoughts on WeWork"
-date: 2025-02-10
+date: 2019-11-06
 layout: default
 tags: [WeWork]
 ---
+
+<img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
+
 
 *First Published in Nov, 2019 on LI* <br> <br> 
 
@@ -11,7 +14,7 @@ It's been a while and I know by now lot of ppl are already aware of the WeWork d
 
 For the un-initiated, WeWork, one of the darling unicorns in the US and just a couple of months ago privately valued at $47B saw its IPO ambition crashed when the public investors freaked out buying its shares for even under $10B valuation.
 
-![WeWork](assets/thoughts_on_wework/WeWork_ipo.jpeg)
+<img src="/assets/thoughts_on_wework/WeWork_ipo.jpeg" width="100%">
 
 
 Consequently, IPO was cancelled, CEO was forced out of the company and even the Board seat, and [around 4000 employees](https://www.reuters.com/article/us-wework-layoffs/wework-plans-to-lay-off-4000-staff-ft-idUSKBN1X22F0) to be laid off with their equity becoming worthless.
@@ -42,19 +45,19 @@ After 2 hours, I sent an email to my friends- "WeWork is a scam".
 
 I however didn't talk about it publicly until I realized the water has gone overboard. A year ago, far earlier than the current drama and before most of the ppl had any issues or concern with the company or its CEO, I first wrote on Linkedin openly where I stand on WeWork.
 
-![post](assets/thoughts_on_wework/me_1.jpeg)
+<img src="/assets/thoughts_on_wework/me_1.jpeg" width="100%">
 
 Little did I know that "collapse" and CEO "would have still enrich himself" would turn out to be so prophetic one day. As we know, Neumann still ended up making close to $2B even after his ousted.
 
 Over time, I started becoming more vocal on this to highlight the actual reasons underlying all this- most *VCs running a ponzi investment thesis seeking a Greater Fool*.
 
-![post](assets/thoughts_on_wework/me_2.jpeg)
+<img src="/assets/thoughts_on_wework/me_2.jpeg" width="100%">
 
 As usual anything that has some remote connections to Silicon Valley would always have ppl taking issues with your point.
 
 I was told "what have you done", "You are not rich that we listen to you" or the usual "Amazon story" analogy.
 
-![post](assets/thoughts_on_wework/me_3.jpeg)
+<img src="/assets/thoughts_on_wework/me_3.jpeg" width="100%">
 
 I was used to all this and even worse as around that time, I also started writing about Tesla. A far bigger cult, where Musk's fanbase is even more vocal and angry if anything is said against the company or its CEO.
 
@@ -152,11 +155,11 @@ And that's a bad thing.
 
 <u>Capitalism is also gone wrong, when someone claims to find issues in its current form and tries to "seemingly" talk about addressing them,</u>
 
-![beinoff](assets/thoughts_on_wework/beinoff.jpeg)
+<img src="/assets/thoughts_on_wework/beinoff.jpeg" width="100%">
 
 <u> but ironically decides to not acknowledge or call out the bad actors in the current system.</u>
 
-![beinoff](assets/thoughts_on_wework/beinoff_2.jpeg)
+<img src="/assets/thoughts_on_wework/beinoff_2.jpeg" width="100%">
 
 *That's like saying, I know the current cancer is bad for the body, but the tumour which exists is great!*
 
@@ -167,11 +170,11 @@ If Masa Son slapped all hard working honest entrepreneurs by "rewarding" someone
 For Masa at least he is now realizing that the biggest signal he missed as a VC in this story is the "Perception Hack". At least thats the lesson he claims to have learnt now.
 
 
-![masa](assets/thoughts_on_wework/masa.jpeg)
+<img src="/assets/thoughts_on_wework/masa.jpeg" width="100%">
 
 However I am not sure, if he has still learnt not to conflate future investors with "hypothetical" scenarios like the slide from his current deck while pitching Vision Fund II to investors.
 
-![masa](assets/thoughts_on_wework/masa_2.jpeg)
+<img src="/assets/thoughts_on_wework/masa_2.jpeg" width="100%">
 
 
 I am sure many ppl in this story either part of or watching from outside would have learnt a few lessons.

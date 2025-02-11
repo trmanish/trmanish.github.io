@@ -2,7 +2,7 @@
 title: "Thoughts on WeWork"
 date: 2019-11-06
 layout: post
-tags: [WeWork]
+image: "/assets/thoughts_on_wework/headline_image.jpeg"
 ---
 
 <div align="center">
@@ -11,7 +11,7 @@ tags: [WeWork]
 
 <br> <!-- Adds extra spacing -->
 
-<img src="/assets/thoughts_on_wework/headposter.jpeg" width="100%">
+<img src="/assets/thoughts_on_wework/headline_image.jpeg" width="100%">
 
 <br> <!-- Additional spacing -->
 

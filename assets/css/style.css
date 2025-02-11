@@ -1,33 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&family=Merriweather:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
 
 /* Global Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background-color: white;
     color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #1F2937;
+    padding: 15px 10%;
+    text-align: left;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: #94a3b8;
 }
 
 /* Main Headings */
 h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 600;
     margin-top: 40px;
 }
 
 h2 {
-    font-family: 'Lora', serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
 }
 
 /* Italicized Text for Home Page */
 .italic-text {
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     max-width: 800px;
     margin-left: auto;
@@ -53,23 +69,53 @@ h2 {
     background-color: #0056b3;
 }
 
-/* Home and All Ticks Links in Post Header */
-.header-links {
+/* Blog List */
+.post-list {
+    max-width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.post-item {
     display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
 }
 
-.header-links a {
-    text-decoration: none;
-    font-size: 18px;
+.post-info {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.post-info h2 {
+    font-size: 24px;
     font-weight: bold;
-    color: #007bff;
-    transition: color 0.3s ease-in-out;
+    margin: 0 0 10px;
 }
 
-.header-links a:hover {
-    color: #0056b3;
+.post-info .post-summary {
+    font-size: 16px;
+    color: #555;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.post-image {
+    width: 150px;
+    height: 150px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Post Navigation (Previous & Next) */

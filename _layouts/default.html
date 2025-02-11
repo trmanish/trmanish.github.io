@@ -8,12 +8,13 @@
 </head>
 <body>
 
-    <header style="display: flex; justify-content: space-between; padding: 20px;">
-        <a href="{{ "/" | relative_url }}" style="text-decoration: none; font-size: 24px; font-weight: bold;">Two Ticks</a>
-        <a href="{{ "/posts.html" | relative_url }}" style="text-decoration: none; font-size: 18px;">All Ticks</a>
+    <header class="nav-bar">
+        <nav>
+            <a href="{{ "/" | relative_url }}">About</a>
+            <a href="{{ "/posts.html" | relative_url }}">All Ticks</a>
+        </nav>
     </header>
         
-
     <main>
         {{ content }}
     </main>

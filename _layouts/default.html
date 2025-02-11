@@ -26,11 +26,11 @@
 
     <footer>
         {% if page.url == '/' %}
-            <div class="footer-center">
+            <div class="footer-center" style="text-align: center;">
                 <a href="{{ "/posts.html" | relative_url }}" class="read-ticks-btn">Read Ticks</a>
             </div>
         {% endif %}
-        <p class="footer-center">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
+        <p class="footer-center" style="text-align: center;">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
 </body>
 </html>

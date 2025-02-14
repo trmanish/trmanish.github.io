@@ -2,7 +2,7 @@
 title: "A Year of Million Robotaxis and a 'V for Vendetta'​ Moment Decade!"
 date: 2020-03-08
 layout: post
-image: "/assets/v_for_vendetta/headline_image.jpeg"
+image: "/assets/v_for_vendetta/headline.jpeg"
 ---
 
 Welcome to a new year and a new decade! 

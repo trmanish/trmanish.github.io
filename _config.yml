@@ -1,21 +1,18 @@
 title: "Two Ticks"
 description: "Life Two Ticks at a Time"
-baseurl: "" # Keep this empty unless your site is in a subdirectory
+baseurl: "" # Leave empty unless in a subdirectory
 url: "https://trmanish.github.io"
-
-theme: minima # Ensure the theme supports blog layouts
-permalink: /:year/:month/:day/:title.html # Standard Jekyll blog post format
+theme: minima # Keep using Minima but customize it
+permalink: /:year/:month/:day/:title.html
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate # Add pagination support
-  - jekyll-sitemap # Helps search engines index your site
 
-paginate: 8 # Shows 5 posts per page (optional)
-paginate_path: "/page:num/"
+# Custom settings for fonts and styles
+sass:
+  style: compressed
 
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:year/:month/:day/:title.html
+include:
+  - _layouts
+  - _includes

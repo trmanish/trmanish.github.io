@@ -44,7 +44,8 @@ Lets start off with the most pressing topic of the moment- **Coronavirus**:<br>
 
 Since Jan'20 when the news first broke out of this virus impacting China, especially Wuhan area, I have been quietly watching and reading news and data points coming around this. Lot of ppl said many things- it's not worse than the common cold as 100s of thousands of deaths happen every year due to normal flu, self proclaimed "world renown" virologists claiming it's not deadly at all:
 
-<img src="/assets/v_for_vendetta/musk_covid.jpeg" width="100%"><br><br>
+
+<img src="/assets/v_for_vendetta/musk_covid.jpeg" width="300" height= "200" ><br><br>
 
 I read and watched all the news coming out on media from the govts. After 2 months I decided to break my silence as I felt it had become obligatory for me to write what I feel is the correct thing for normal public to know:
 

@@ -5,6 +5,14 @@ layout: post
 image: "/assets/v_for_vendetta/headline.jpeg"
 ---
 
+<br> <!-- Adds extra spacing -->
+
+<img src="/assets/v_for_vendetta/headline.jpeg" width="100%">
+
+<br> <!-- Additional spacing -->
+
+*First Published in March, 2020 on LI* <br> 
+
 Welcome to a new year and a new decade! 
 
 I know it's a bit late. We are already half way through the third month of the new decade and year. I was busy with few things. There are few other things that need my focus more and I have been cutting down on my time on Linkedin due to that.

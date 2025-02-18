@@ -29,7 +29,7 @@ jobs:
         run: git add assets/js/supabase-config.js
 
       - name: Debug Deployment Contents
-        run: ls -R assets/js
+        run: ls -R ./
 
       - name: Commit Supabase Config
         run: |
@@ -37,10 +37,11 @@ jobs:
           git config --global user.name "github-actions"
           git add assets/js/supabase-config.js
           git commit -m "Add supabase-config.js" || echo "No changes to commit"
-
+          git push origin main || echo "No changes to push"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          publish_branch: gh-pages  # Ensure GitHub Pages uses this branch

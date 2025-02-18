@@ -43,9 +43,6 @@
         <p class="footer-center" style="text-align: center;">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
     
-    <!-- Ensure Supabase config is loaded first -->
-    <script type="module" src="{{ '/assets/js/supabase-config.js' | relative_url }}"></script>
-    
     <!-- Fix import issue by treating `subscribe.js` as an ES module -->
     <script type="module" src="{{ '/assets/js/subscribe.js' | relative_url }}"></script>
 

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value;
 
         try {
-            const response = await fetch("https://your-project.functions.supabase.co/subscribe", {
+            const response = await fetch("https://vmxgdukmghrrzmadoqsm.functions.supabase.co/subscribe", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -15,19 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ email })
             });
 
-            if (response.ok) {
-                message.innerText = "Thank you for subscribing!";
-                message.style.color = "green";
-                message.style.display = "block";
-                form.reset();
-            } else {
-                message.innerText = "Subscription failed. Try again.";
-                message.style.color = "red";
-                message.style.display = "block";
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
+
+            const result = await response.json();
+            message.innerText = result.message;
+            message.style.color = "green";
+            message.style.display = "block";
+            form.reset();
         } catch (error) {
-            console.error("Network Error:", error);
-            message.innerText = "Network error. Please try again.";
+            console.error("Error:", error);
+            message.innerText = "Network Error. Please try again.";
             message.style.color = "red";
             message.style.display = "block";
         }

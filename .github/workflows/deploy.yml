@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages with Supabase Secrets
+name: Deploy GitHub Pages and Supabase Edge Functions
 
 on:
   push:
@@ -16,28 +16,8 @@ jobs:
       - name: Create assets/js directory if not exists
         run: mkdir -p assets/js
 
-      - name: Inject Supabase Secrets into JavaScript
-        run: |
-          echo "const SUPABASE_URL = '${{ secrets.SUPABASE_URL }}';" > assets/js/supabase-config.js
-          echo "const SUPABASE_KEY = '${{ secrets.SUPABASE_KEY }}';" >> assets/js/supabase-config.js
-          echo "export { SUPABASE_URL, SUPABASE_KEY };" >> assets/js/supabase-config.js
-
-      - name: Verify File Creation (Debugging Step)
-        run: cat assets/js/supabase-config.js
-
-      - name: Ensure Supabase Config is Tracked
-        run: git add assets/js/supabase-config.js
-
       - name: Debug Deployment Contents
         run: ls -R ./
-
-      - name: Commit Supabase Config
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-          git add assets/js/supabase-config.js
-          git commit -m "Add supabase-config.js" || echo "No changes to commit"
-          git push origin main || echo "No changes to push"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -45,3 +25,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages  # Ensure GitHub Pages uses this branch
+
+  deploy-supabase-functions:
+    runs-on: ubuntu-latest
+    needs: build  # Ensure GitHub Pages deploys first
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Supabase CLI
+        run: npm install -g supabase
+
+      - name: Login to Supabase
+        run: supabase login --access-token ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+      - name: Deploy Supabase Edge Function
+        run: supabase functions deploy subscribe --project-ref ${{ secrets.SUPABASE_PROJECT_ID }}

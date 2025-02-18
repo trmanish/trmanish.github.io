@@ -1,33 +1,19 @@
-import { SUPABASE_URL, SUPABASE_KEY } from './supabase-config.js';
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("subscribe-form");
     const message = document.getElementById("subscribe-message");
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
-        const email = document.getElementById("email").value.trim(); // Trim whitespace
-
-        if (!email) {
-            message.innerText = "Please enter a valid email.";
-            message.style.color = "red";
-            message.style.display = "block";
-            return;
-        }
+        const email = document.getElementById("email").value;
 
         try {
-            const response = await fetch(`${SUPABASE_URL}/rest/v1/members`, {
+            const response = await fetch("https://your-project.functions.supabase.co/subscribe", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "apikey": SUPABASE_KEY,
-                    "Authorization": `Bearer ${SUPABASE_KEY}`,
-                    "Prefer": "return=representation"  // Ensures response is returned
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({ email })
             });
-
-            const result = await response.json();
 
             if (response.ok) {
                 message.innerText = "Thank you for subscribing!";
@@ -35,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 message.style.display = "block";
                 form.reset();
             } else {
-                console.error("Supabase Error:", result);
-                message.innerText = `Subscription failed: ${result.message || "Try again."}`;
+                message.innerText = "Subscription failed. Try again.";
                 message.style.color = "red";
                 message.style.display = "block";
             }

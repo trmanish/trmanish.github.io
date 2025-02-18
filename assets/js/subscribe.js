@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const email = document.getElementById("email").value;
 
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/emails`, {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/members`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

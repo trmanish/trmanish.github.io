@@ -25,6 +25,12 @@ jobs:
       - name: Verify File Creation (Debugging Step)
         run: cat assets/js/supabase-config.js
 
+      - name: Ensure Supabase Config is Tracked
+        run: git add assets/js/supabase-config.js
+
+      - name: Debug Deployment Contents
+        run: ls -R assets/js
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

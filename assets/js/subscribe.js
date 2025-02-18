@@ -1,3 +1,5 @@
+import { SUPABASE_URL, SUPABASE_KEY } from './supabase-config.js';
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("subscribe-form");
     const message = document.getElementById("subscribe-message");
@@ -5,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
         const email = document.getElementById("email").value;
-
-        const SUPABASE_URL = "https://your-supabase-url.supabase.co";
-        const SUPABASE_KEY = "your-anon-key"; // Keep this secure in env variables
 
         const response = await fetch(`${SUPABASE_URL}/rest/v1/emails`, {
             method: "POST",

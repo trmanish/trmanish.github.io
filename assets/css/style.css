@@ -156,38 +156,38 @@ footer {
 /* Subscription Section Adjustments */
 .subscribe-container {
     text-align: center;
-    margin-top: 50px;  /* Increased spacing from Read Ticks button */
+    margin-top: 40px;
 }
 
-.subscribe-container p {
-    font-size: 14px; /* Slightly smaller font */
-    font-weight: normal; /* Remove bold effect */
-    margin-bottom: 10px; /* Add some spacing below */
-    color: #444; /* Slightly lighter shade for subtle look */
+.subscribe-container h3 {
+    font-size: 18px;  /* Made slightly smaller */
+    font-weight: normal; /* Removed bold */
+    margin-bottom: 10px;
 }
 
 #subscribe-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Reduced spacing between input box and button */
+    gap: 0; /* Remove space between input and button */
 }
 
 #subscribe-form input {
-    width: 200px; /* Decreased width of email input box */
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333; /* Bolder border */
+    border-right: none; /* Removes border between input & button */
+    border-radius: 5px 0 0 5px; /* Rounded on left only */
+    width: 200px; /* Reduced width */
 }
 
 #subscribe-form button {
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 16px;
     color: white;
     background-color: black;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid black; /* Match input border */
+    border-radius: 0 5px 5px 0; /* Rounded on right only */
     cursor: pointer;
 }
 

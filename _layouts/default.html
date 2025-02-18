@@ -30,7 +30,22 @@
                 <a href="{{ "/posts.html" | relative_url }}" class="read-ticks-btn black-btn">Read Ticks</a>
             </div>
         {% endif %}
+    
+        <div class="subscribe-container">
+            <h3>Stay in the Loop — For New Ticks</h3>
+            <form id="subscribe-form">
+                <input type="email" id="email" placeholder="name@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribe-message" style="display:none;"></p>
+        </div>
+    
         <p class="footer-center" style="text-align: center;">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
+    
+    <script src="{{ '/assets/js/subscribe.js' | relative_url }}"></script>
 </body>
 </html>
+
+
+

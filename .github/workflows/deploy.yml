@@ -42,8 +42,8 @@ jobs:
       - name: Verify Supabase CLI Installation
         run: supabase --version
 
-      - name: Login to Supabase
-        run: supabase login --access-token ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      - name: Login to Supabase (Fix)
+        run: supabase login --token ${{ secrets.SUPABASE_ACCESS_TOKEN }}
 
       - name: Deploy Supabase Edge Function
         run: supabase functions deploy subscribe --project-ref ${{ secrets.SUPABASE_PROJECT_ID }}

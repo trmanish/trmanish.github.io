@@ -153,35 +153,37 @@ footer {
     color: #555;
     text-align: center;
 }
-
+/* Subscription Section Adjustments */
 .subscribe-container {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;  /* Increased spacing from Read Ticks button */
 }
 
-.subscribe-container h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.subscribe-container p {
+    font-size: 14px; /* Slightly smaller font */
+    font-weight: normal; /* Remove bold effect */
+    margin-bottom: 10px; /* Add some spacing below */
+    color: #444; /* Slightly lighter shade for subtle look */
 }
 
 #subscribe-form {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 5px; /* Reduced spacing between input box and button */
 }
 
 #subscribe-form input {
-    padding: 10px;
-    font-size: 16px;
+    width: 200px; /* Decreased width of email input box */
+    padding: 8px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 250px;
 }
 
 #subscribe-form button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 12px;
+    font-size: 14px;
     color: white;
     background-color: black;
     border: none;

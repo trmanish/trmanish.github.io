@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "supabase/functions/**"  # Only trigger if functions are modified
+      - ".github/workflows/deploy.yml"  # Allow workflow updates to trigger
 
 jobs:
   build:

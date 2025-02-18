@@ -31,6 +31,14 @@ jobs:
       - name: Debug Deployment Contents
         run: ls -R assets/js
 
+      - name: Commit Supabase Config
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git add assets/js/supabase-config.js
+          git commit -m "Add supabase-config.js" || echo "No changes to commit"
+
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

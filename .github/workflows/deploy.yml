@@ -1,0 +1,30 @@
+name: Deploy GitHub Pages with Supabase Secrets
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create assets/js directory if not exists
+        run: mkdir -p assets/js
+
+      - name: Inject Supabase Secrets into JavaScript
+        run: |
+          echo "const SUPABASE_URL = '${{ secrets.SUPABASE_URL }}';" > assets/js/supabase-config.js
+          echo "const SUPABASE_KEY = '${{ secrets.SUPABASE_KEY }}';" >> assets/js/supabase-config.js
+          echo "export { SUPABASE_URL, SUPABASE_KEY };" >> assets/js/supabase-config.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

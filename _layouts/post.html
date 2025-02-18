@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+
+    <header class="nav-bar">
+        <nav>
+            <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
+            {% if page.url != '/posts.html' %}
+                <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' %}active{% endif %}">All Ticks</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: left;">
+        <p><strong>{{ page.date | date: "%B %d, %Y" }}</strong></p>
+        <div>
+            {{ content }}
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            {% if page.previous %}
+                <a href="{{ page.previous.url }}" style="margin-right: 20px;">← {{ page.previous.title }}</a>
+            {% endif %}
+            {% if page.next %}
+                <a href="{{ page.next.url }}"> {{ page.next.title }} →</a>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer style="text-align: center; margin-top: 40px;">
+        <p>&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
+    </footer>
+
+</body>
+</html>

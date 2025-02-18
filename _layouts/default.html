@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+    <header class="nav-bar">
+        <nav>
+            <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
+            {% if page.url != '/posts.html' %}
+                <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' %}active{% endif %}">All Ticks</a>
+            {% endif %}
+        </nav>
+    </header>
+    
+    <main>
+        {% if page.layout == 'post' %}
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+        {{ content }}
+    </main>
+
+    <footer>
+        {% if page.url == '/' %}
+            <div class="footer-center" style="text-align: center; margin-top: -30px;">
+                <a href="{{ "/posts.html" | relative_url }}" class="read-ticks-btn black-btn">Read Ticks</a>
+            </div>
+        {% endif %}
+    
+        <div class="subscribe-container">
+            <h3>Stay in the Loop — For New Ticks</h3>
+            <form id="subscribe-form">
+                <input type="email" id="email" placeholder="name@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribe-message" style="display:none;"></p>
+        </div>
+    
+        <p class="footer-center" style="text-align: center;">&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
+    </footer>
+    
+    <script src="{{ '/assets/js/subscribe.js' | relative_url }}"></script>
+</body>
+</html>
+
+
+

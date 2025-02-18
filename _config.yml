@@ -1,0 +1,18 @@
+title: "Two Ticks"
+description: "Life Two Ticks at a Time"
+baseurl: "" # Leave empty unless in a subdirectory
+url: "https://trmanish.github.io"
+theme: minima # Keep using Minima but customize it
+permalink: /:year/:month/:day/:title.html
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom settings for fonts and styles
+sass:
+  style: compressed
+
+include:
+  - _layouts
+  - _includes

@@ -46,4 +46,4 @@ jobs:
         run: supabase login --token ${{ secrets.SUPABASE_ACCESS_TOKEN }}
 
       - name: Deploy Supabase Edge Function
-        run: supabase functions deploy subscribe --project-ref ${{ secrets.SUPABASE_PROJECT_ID }}
+        run: supabase functions deploy subscribe --project-ref ${{ secrets.SUPABASE_PROJECT_ID }} --no-verify-jwt

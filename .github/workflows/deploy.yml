@@ -35,7 +35,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Supabase CLI (Fixed)
-        run: curl -fsSL https://supabase.io/install | sh
+        run: |
+          curl -fsSL https://supabase.io/install | sh
+          echo "$HOME/.supabase/bin" >> $GITHUB_PATH  # Ensure CLI is in PATH
 
       - name: Verify Supabase CLI Installation
         run: supabase --version

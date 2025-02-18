@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write  # Grant write permission to GitHub Actions bot
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +21,9 @@ jobs:
           echo "const SUPABASE_URL = '${{ secrets.SUPABASE_URL }}';" > assets/js/supabase-config.js
           echo "const SUPABASE_KEY = '${{ secrets.SUPABASE_KEY }}';" >> assets/js/supabase-config.js
           echo "export { SUPABASE_URL, SUPABASE_KEY };" >> assets/js/supabase-config.js
+
+      - name: Verify File Creation (Debugging Step)
+        run: cat assets/js/supabase-config.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

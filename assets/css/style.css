@@ -23,6 +23,7 @@ body {
     z-index: 1000;
 }
 
+/* Navbar Links */
 .nav-bar a {
     color: white;
     text-decoration: none;
@@ -37,12 +38,18 @@ body {
     color: #facc15;
 }
 
+/* Keep 'All Ticks' & 'Podcasts' Active */
 .nav-bar a[href$="/posts.html"].active, 
 .nav-bar a[href$="/podcasts.html"].active {
     color: #facc15;
 }
 
-/* Center Main Content on Home Page */
+/* Move all pages slightly down to prevent hiding under navbar */
+main {
+    padding-top: 80px; /* Moves everything slightly down */
+}
+
+/* Home Page Background */
 .home-page {
     background: url("../images/bg_1.jpeg") no-repeat center center fixed;
     background-size: cover;
@@ -52,10 +59,10 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 120px; /* Moves content down */
 }
 
-/* "Two Ticks" Title - Centered on Home Page */
+/* "Two Ticks" Title - Centered and Moved Down */
 .home-page h1 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -191,10 +198,11 @@ footer {
     width: 100%;
 }
 
+/* Move "Stay in the Loop" Slightly Above the Subscribe Box */
 .subscribe-container h3 {
     font-size: 16px;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced space */
 }
 
 /* Subscription Input & Button */

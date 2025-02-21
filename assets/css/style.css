@@ -16,6 +16,11 @@ body {
     background-color: #1F2937;
     padding: 15px 10%;
     text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top */
 }
 
 .nav-bar a {
@@ -41,17 +46,10 @@ body {
 /* Main Headings */
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 34px; /* Reduced from 42px */
+    font-size: 34px;
     font-weight: 700;
     color: #222;
     line-height: 1.3;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px; /* Reduced from 32px */
-    font-weight: 700;
-    color: #222;
 }
 
 /* Paragraph Styling */
@@ -65,7 +63,7 @@ p {
 /* Italicized Text */
 .italic-text {
     font-style: italic;
-    font-size: 16px; /* Reduced */
+    font-size: 16px;
     color: #555;
     line-height: 1.8;
 }
@@ -74,7 +72,7 @@ p {
 .read-ticks-btn {
     display: inline-block;
     padding: 10px 22px;
-    font-size: 16px; /* Adjusted */
+    font-size: 16px;
     color: white;
     background-color: black;
     border-radius: 5px;
@@ -86,6 +84,32 @@ p {
 
 .read-ticks-btn:hover {
     background-color: #333;
+}
+
+/* Center Main Content */
+.home-page {
+    background: url("../images/bg_1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Adjust for fixed navbar */
+}
+
+/* Ensure text remains readable */
+.home-page h1 {
+    color: #222;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.home-page p {
+    font-size: 18px;
+    color: #444;
+    max-width: 700px;
+    line-height: 1.6;
 }
 
 /* Blog List */
@@ -110,13 +134,13 @@ p {
 
 .post-info h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 22px; /* Reduced */
+    font-size: 22px;
     font-weight: 700;
     color: #222;
 }
 
 .post-info .post-summary {
-    font-size: 16px; /* Reduced */
+    font-size: 16px;
     font-family: 'Merriweather', serif;
     color: #444;
     line-height: 1.8;
@@ -173,21 +197,18 @@ footer {
 
 /* Subscription Section Adjustments */
 .subscribe-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    margin-top: 30px;
 }
 
-.subscribe-container h3 {
-    font-size: 16px;  /* Slightly reduced */
-    font-weight: normal;
-    margin-bottom: 10px;
-}
-
+/* Subscription Input & Button */
 #subscribe-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0;
 }
 
 #subscribe-form input {
@@ -218,24 +239,8 @@ footer {
     font-size: 14px;
 }
 
-/* Background Image for Home Page */
-.home-page {
-    background: url("../images/bg_1.jpeg") no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Ensure text remains readable */
-.home-page h1 {
-    color: #222;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-}
-
-.home-page p {
-    color: #555;
+/* Adjust Readability */
+.post-info h2, .post-info p, .italic-text {
+    color: #222; /* Ensures visibility */
+    text-shadow: none;
 }

@@ -16,3 +16,9 @@ sass:
 include:
   - _layouts
   - _includes
+
+collections:
+  podcasts:
+    output: true
+    permalink: /podcasts/:path/
+

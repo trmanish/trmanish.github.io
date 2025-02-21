@@ -25,13 +25,16 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-.nav-bar a:hover, .nav-bar a.active {
+.nav-bar a:hover, 
+.nav-bar a.active {
     color: #facc15;
 }
 
-.nav-bar a[href$="/posts.html"].active {
+.nav-bar a[href$="/posts.html"].active, 
+.nav-bar a[href$="/podcasts.html"].active {
     color: #facc15;
 }
+
 
 /* Main Headings */
 h1 {

@@ -1,5 +1,5 @@
 ---
-title: "Great product decisions are not always driven by data"
+title: "I once interviewed at LinkedIn. I wasn’t very interested in the role; the recruiter approached me, and I had been out of the interview market for some time, so I decided to go for a refresh of my interviewing skills."
 date: 2018-10-08
 layout: post
 image: "/assets/great_product_decisions/headline_image.jpeg"

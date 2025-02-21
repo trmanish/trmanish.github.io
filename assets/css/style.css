@@ -44,10 +44,7 @@ body {
     color: #facc15;
 }
 
-/* Move all pages slightly down to prevent hiding under navbar */
-main {
-    padding-top: 80px; /* Moves everything slightly down */
-}
+
 
 /* Home Page Background */
 .home-page {
@@ -85,7 +82,11 @@ main {
     font-style: italic;
     font-size: 16px;
     color: #555;
-    line-height: 1.8;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* Button Style for "Read Ticks" */

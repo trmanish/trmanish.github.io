@@ -202,3 +202,22 @@ footer {
     margin-top: 10px;
     font-size: 14px;
 }
+
+/* Background Image for Home Page */
+.home-page {
+    background: url("../images/bg_1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Make it full screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ensure text remains readable */
+.home-page h1,
+.home-page p {
+    color: white; /* Adjust if necessary */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds readability */
+}

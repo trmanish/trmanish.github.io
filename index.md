@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Two Ticks"
+class: "home-page"
 ---
 
 <div align="center">

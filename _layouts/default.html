@@ -10,10 +10,11 @@
     <header class="nav-bar">
         <nav>
             <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
-            <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' %}active{% endif %}">All Ticks</a>
+            <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' or page.layout == 'post' %}active{% endif %}">All Ticks</a>
             <a href="{{ "/podcasts.html" | relative_url }}" class="{% if page.url == '/podcasts.html' %}active{% endif %}">Podcasts</a>
         </nav>
     </header>
+    
     
     
     <main>
@@ -32,7 +33,7 @@
         {% endif %}
     
         <div class="subscribe-container">
-            <p class="subscribe-heading">Stay in the Loop — For New Ticks</p>
+            <p class="subscribe-heading">Stay in the Loop For New Ticks</p>
             <form id="subscribe-form" class="subscribe-form">
                 <input type="email" id="email" placeholder="name@email.com" required>
                 <button type="submit">Subscribe</button>

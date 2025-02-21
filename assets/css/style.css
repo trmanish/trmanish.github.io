@@ -16,14 +16,8 @@ body {
     background-color: #1F2937;
     padding: 15px 10%;
     text-align: left;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
-/* Navbar Links */
 .nav-bar a {
     color: white;
     text-decoration: none;
@@ -38,7 +32,6 @@ body {
     color: #facc15;
 }
 
-/* Keep 'All Ticks' & 'Podcasts' Active */
 .nav-bar a[href$="/posts.html"].active, 
 .nav-bar a[href$="/podcasts.html"].active {
     color: #facc15;
@@ -46,14 +39,10 @@ body {
 
 
 /* Main Headings */
-/* "Two Ticks" Title - Centered and Moved Down */
-.home-page h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 700;
-    color: #222;
-    text-align: center;
-    margin-bottom: 20px;
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 40px;
 }
 
 h2 {
@@ -111,16 +100,13 @@ h2 {
 }
 
 .post-info h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 10px;
-
 }
 
 .post-info .post-summary {
     font-size: 16px;
-    font-family: 'Merriweather', serif;
     color: #555;
 }
 

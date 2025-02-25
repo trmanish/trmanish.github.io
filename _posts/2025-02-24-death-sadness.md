@@ -13,13 +13,13 @@ image: "/assets/death_sadness/header.jpg"
 
 <img src="/assets/death_sadness/header.jpg" width="100%">
 
-
-*First published in Aug 2022 on LI*<br>
+*First published in Aug 2022 on LI*<br><br>
 
 ***Credit: Each Scene Re-Construction and art shown is created using AI***<br>
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    <strong>Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude".</strong>
+    <strong>"Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude".
+    Anne Frank</strong>
 </div>
 
 <br> 

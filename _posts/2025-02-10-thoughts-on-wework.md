@@ -15,7 +15,7 @@ image: "/assets/thoughts_on_wework/headline_image.jpeg"
 
 <br> <!-- Additional spacing -->
 
-*First Published in Nov, 2019 on LI* <br> 
+*First Published in Nov, 2019 on LI* <br><br>
 
 It's been a while and I know by now lot of ppl are already aware of the WeWork drama.
 

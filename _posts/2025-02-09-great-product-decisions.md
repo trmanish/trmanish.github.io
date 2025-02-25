@@ -5,7 +5,11 @@ layout: post
 image: "/assets/great_product_decisions/headline_image.jpeg"
 ---
 
-# **Great Product Decisions are not always driven by Data**
+<div align="center">
+  <h1><strong>Great product decisions are not always driven by data</strong></h1>
+</div>
+
+<br> <!-- Adds extra spacing -->
 
 <img src="/assets/great_product_decisions/headline_image.jpeg" width="100%">
 

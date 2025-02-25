@@ -18,8 +18,11 @@ image: "/assets/death_sadness/header.jpg"
 
 ***Credit: Each Scene Re-Construction and art shown is created using AI***<br>
 
-> **"Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude"** - 
->    Anne Frank <br>
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude".</strong>
+</div>
+
+<br> 
 
 We celebrate Life, Happiness, Joy, the Good times, but somehow we have never celebrated Emotions that "hurt" us. We shy away from them as if they are to be shunned. They are bad. They evoke pain, they lure in the sadness. In fact, the very words "Sadness", "Pain" start causing grimace on our face. 
 
@@ -43,7 +46,7 @@ The day I came back home, she was lying on the bed in her room at home. Very low
 
 My Grandma was waiting for me. She had her son, her family, everyone around her, but she was waiting for me to come back from college even when she was very much motionless. <br> 
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #f8f9fa; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     <strong>Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.</strong>
 </div>
 
@@ -128,7 +131,10 @@ But somehow, it felt more real. Somehow it managed to break the numbness.
 
 That she is gone. That a Life you once grew up seeing around you, a Life that loved you, cared for you, is no more around you. That Life is gone!<br>
 
-> **When you see someone you love, die next to you, it trivializes every single problem in your life.** <br> 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>When you see someone you love, die next to you, it trivializes every single problem in your life.</strong>
+</div>
+
 
 Sometimes, I end up coming across posts in my feed of people who died due to a tragic incident and some friend/relatives of theirs tagging their profile. 
 
@@ -148,7 +154,10 @@ I never thought much why I always end up doing it. But I always do it.
 
 Maybe It's like saying an unsaid Eulogy for a Life that left us. That left all of us. <br>
 
-> **Life is Evanescent. Death has Permanence.** <br>
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Life is Evanescent. Death has Permanence.</strong>
+</div>
+
 
 **Death Humbles You.**
 
@@ -209,7 +218,10 @@ She gave him some money. But more than the money, it was a bright smile she offe
 
 Sometimes, it's not the money, not the tangibles, that bring joy to us. Often it's the small things. The little things. An innocuous smile at someone, that makes your day. That unspoken admission of ***"You brought me joy and that's why I am smiling"*** is more empowering than any money you can give to somebody.<br>
 
-> **Being the reason behind someone's smile is utter bliss** <br>
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Being the reason behind someone's smile is utter bliss.</strong>
+</div>
+
 
 He had to talk to her. Everything he has been quietly observing standing across her, only made him want to talk to her more. Amazing demeanor, that kind nature, even amazing smile. 
 
@@ -277,7 +289,9 @@ The next few conversation didn't help him either. In-fact it made him even more 
 
 She was a real engineer who builds bridges and buildings. He was a phony engineer in front of her. While she solves real engineering problems, he does artificial engineering writing code on a laptop. <br>
 
-> **Smartness has more beauty to it than actual beauty.** <br> 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Smartness has more beauty to it than actual beauty.</strong>
+</div>
 
 
 His stop came. He had to get down. Somewhere his heart said to continue further. Maybe get back into conversation fully engaged and not worry about what she said earlier. 
@@ -337,7 +351,10 @@ You get to laugh at small jokes, minor banters with friends. Even a slight tickl
 
 But it takes a mountain to make you cry. It's not small sadness, small pain that hurts you. <br> 
 
-> **Joy is bounteous and ephemeral. Sadness scarce, yet enduring.** <br> 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Joy is bounteous and ephemeral. Sadness scarce, yet enduring.</strong>
+</div>
+
 
 When you cry, it shows that thing really mattered to you. That moment in past really mattered to you. 
 

@@ -266,17 +266,17 @@ The stock is headed to zero and the Jesus of 21st century ending up with multipl
 
 There will come a day, when the govt. agencies won't be able to cover up on this. <br>
 
-- **The EV Fad**
+**The EV Fad**
 
 Over the last one year or so, I have stuck to couple of other very contrarian thoughts.
 
 - The whole Battery Electric Vehicle (BEV) industry is a bubble and will collapse with every automaker having huge inventory glut of BEV cars.
 
-<img src="/assets/v_for_vendetta/ev.jpg" width="100%"> <br> 
+<img src="/assets/v_for_vendetta/ev.jpg" width="100%"> <br> <br>
 
 
 
-- The EV scooter startups would all perish as none would make a dime and the story ends the moment cash pumps dry out.
+- The EV scooter startups would all perish as none would make a dime and the story ends the moment cash pumps dry out.<br>
 
 <img src="/assets/v_for_vendetta/scooter.jpg" width="100%"> <br> 
 

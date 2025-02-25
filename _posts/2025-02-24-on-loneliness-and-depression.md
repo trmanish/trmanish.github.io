@@ -4,9 +4,13 @@ date: 2024-11-08
 layout: post
 ---
 
-# **On Loneliness and Depression**<br><br>
+<div align="center">
+  <h1><strong>On Loneliness and Depression"</strong></h1>
+</div>
 
-*First Published in March, 2020 on LI* <br><br>
+<br> <!-- Adds extra spacing -->
+
+*First published in Sep 2024 on LI*<br><br>
 
 
 As you observe more, you realize: 

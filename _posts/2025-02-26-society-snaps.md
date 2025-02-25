@@ -1,5 +1,5 @@
 ---
-title: "As Silicon Valley leads the orchestra on blowing the trumpet of Technology Acceleration, Society will reach a point where it will just Snap"
+title: "When the Society Snaps"
 date: 2024-05-14
 layout: post
 ---
@@ -15,7 +15,10 @@ layout: post
 
 As Silicon Valley leads the orchestra on blowing the trumpet of Technology Acceleration, Society will reach a point where it will just Snap. For the eventuality. 
 
-Technology and harmony in society are inversely related. More the drumbeat on technological push, more detached society becomes of humanity. 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Technology and harmony in society are inversely related. More the drumbeat on technological push, more detached society becomes of humanity.</strong>
+</div>
+
 
 Technology cocoons the generation of people within their own confines. And if that technology push spans multi- generation, you have literally pushed almost the entire population into being a walking zombie where the very basic essence of what it means to be human gets obliterated and lost.
 

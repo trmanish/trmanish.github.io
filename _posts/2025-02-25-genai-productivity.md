@@ -1,5 +1,5 @@
 ---
-title: "The GenAI field right now gives a very similar vibes to last decades’ hype on Self Driving and “Uber for X” startups"
+title: "The Curious Case of GenAI and Productivity"
 date: 2024-07-08
 layout: post
 ---

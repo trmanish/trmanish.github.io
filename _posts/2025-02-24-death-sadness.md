@@ -43,8 +43,8 @@ The day I came back home, she was lying on the bed in her room at home. Very low
 
 My Grandma was waiting for me. She had her son, her family, everyone around her, but she was waiting for me to come back from college even when she was very much motionless. <br> 
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #f8f9fa; border: 1px solid rgba(0, 0, 0, 0.05); width: 80%; margin: 20px auto;">
-    <strong>Even if your situation in life is pretty bad, don't forget to be kind. There would always be someone who is in a worse situation than you. Respect that.</strong>
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #f8f9fa; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.</strong>
 </div>
 
 
@@ -182,7 +182,7 @@ Rush hour traffic in San Francisco trains before Covid used to be a sight to beh
 
 After few stops, he saw a woman enter his coach, who stood right opposite him. Light brown golden hair, with a carry-on luggage so probably heading to SFO to catch a flight.
 
-<img src="/assets/death_sadness/both.jpg" width="100%">
+<img src="/assets/death_sadness/girl.jpg" width="100%">
 
 
 If you commuted early morning in SF subways, getting "greeted" with homeless ppl in every coach was a normal sight. Some of them wanted to "earn" when they ask you for money, by playing and singing a song, a respectable act nevertheless. 

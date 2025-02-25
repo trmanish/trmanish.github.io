@@ -36,7 +36,7 @@ We finished a decade. While there are lot of experiences I have had last decade 
 
 - *Look for Integrity, Intelligence and Ingenuity in someone. However, if there is no Integrity, don’t bother about the other two. That’s the Signal you should focus on.*
 
-These are the same principles which have helped me in seeing [things on WeWork](https://www.linkedin.com/pulse/why-weworked-manish-tripathi?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_content%3BA9j%2BfFGhRuSoq3hqmg6DlA%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_content-article_description&) or Uber and similar such tech news of last one year.
+These are the same principles which have helped me in seeing [things on WeWork](https://trmanish.github.io/2019/11/06/thoughts-on-wework.html) or Uber and similar such tech news of last one year.
 
 Using the above principles, I felt compelled to write on things the way I am seeing it now. I know most of the people won't agree to most of it as has been the case in the past. Thats ok. Most of what I write is contrarian and it's difficult to agree to something where the majority consensus is not there. But I still wish and urge you to read till the end. As usual I am very confident on my conviction and feel most of the things below will come true. If that happens, I want you to be prepared.
 

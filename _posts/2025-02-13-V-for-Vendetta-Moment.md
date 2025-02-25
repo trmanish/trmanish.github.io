@@ -14,7 +14,7 @@ image: "/assets/v_for_vendetta/headline.jpeg"
 
 <br> <!-- Additional spacing -->
 
-*First Published in March, 2020 on LI* <br> 
+*First Published in March, 2020 on LI* <br><br>
 
 Welcome to a new year and a new decade! 
 

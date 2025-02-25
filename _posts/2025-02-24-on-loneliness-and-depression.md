@@ -5,7 +5,7 @@ layout: post
 ---
 
 <div align="center">
-  <h1><strong>On Loneliness and Depression"</strong></h1>
+  <h1><strong>On Loneliness and Depression</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->

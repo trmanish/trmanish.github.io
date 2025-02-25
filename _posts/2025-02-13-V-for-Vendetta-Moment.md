@@ -234,13 +234,15 @@ As I have always said, this story is not about building any cars, or "saving any
 **The actual narrative:**
 
 - Tesla's revenue fell 34% YoY in their biggest market-US last year.
+
 - Tesla had more than $800MM of yearly loss in 2019 and in the last 17 years, this company has never made a single year of profit.
+
 - Tesla does all kinds of Accounting Shenanigans including Warranty Reserves Fraud.
 
 The narrative which is being given around Europe, China, have patience and watch.
 
 
-> When you are kicking the can down the road every time, there comes a time when the road ends and there is no kicking left anymore.
+> **When you are kicking the can down the road every time, there comes a time when the road ends and there is no kicking left anymore.**
 
 This is not that these countries are not buying EVs. This is that they are not buying Tesla anymore. As I said, the narrative which is being given to public is totally different from the actual reality. Thousands of defective cars have been dumped on gullible public. Completely negligent service and abusing the customers is hidden from the narrative.
 
@@ -250,11 +252,40 @@ You can "Let the Fires Burn" as Reid Hoffman recommends in his podcast to ppl, b
 
 But stock price went up like a bubble?
 
-> Every bubble has its poster child.
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    <strong>Every bubble has its poster child</strong>
+</div>
+
+
+<img src="/assets/v_for_vendetta/charlie.jpg" width="100%">
+
+
+My conviction on this is same, though even more firm.
+
+The stock is headed to zero and the Jesus of 21st century ending up with multiple fraud charges.
+
+There will come a day, when the govt. agencies won't be able to cover up on this. <br>
+
+- **The EV Fad**
+
+Over the last one year or so, I have stuck to couple of other very contrarian thoughts.
+
+- The whole Battery Electric Vehicle (BEV) industry is a bubble and will collapse with every automaker having huge inventory glut of BEV cars.
+
+<img src="/assets/v_for_vendetta/ev.jpg" width="100%"> <br> 
 
 
 
+- The EV scooter startups would all perish as none would make a dime and the story ends the moment cash pumps dry out.
 
+<img src="/assets/v_for_vendetta/scooter.jpg" width="100%"> <br> 
+
+
+This year is already turning out to be very eventful, but it's this decade which would shape the world for years to come.
+
+If kindness has never been a virtue for you, now is a good time to start practising it.
+
+Be Kind and Safe!
 
 
 

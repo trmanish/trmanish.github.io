@@ -1,5 +1,5 @@
 ---
-title: "As you observe more, you realize: "
+title: "On Loneliness and Depression"
 date: 2024-11-08
 layout: post
 ---

@@ -13,14 +13,13 @@ image: "/assets/death_sadness/header.jpg"
 
 <img src="/assets/death_sadness/header.jpg" width="100%">
 
-<br> <!-- Additional spacing -->
 
 *First published in Aug 2022 on LI*<br>
 
 ***Credit: Each Scene Re-Construction and art shown is created using AI***<br>
 
-> "Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude" - 
->  Anne Frank
+> **"Dead People receive more flowers than the living ones, because Regret is stronger than Gratitude"** - 
+>    Anne Frank <br>
 
 We celebrate Life, Happiness, Joy, the Good times, but somehow we have never celebrated Emotions that "hurt" us. We shy away from them as if they are to be shunned. They are bad. They evoke pain, they lure in the sadness. In fact, the very words "Sadness", "Pain" start causing grimace on our face. 
 
@@ -42,10 +41,10 @@ The day I came back home, she was lying on the bed in her room at home. Very low
 
 *"She was asking when you would come, you would take care of her", my Mom quipped when I arrived.*
 
-My Grandma was waiting for me. She had her son, her family, everyone around her, but she was waiting for me to come back from college even when she was very much motionless. 
+My Grandma was waiting for me. She had her son, her family, everyone around her, but she was waiting for me to come back from college even when she was very much motionless. <br> 
 
 > **Being deeply loved by someone gives you strength, while loving someone deeply gives you courage**
->  Lao Tzu
+>  Lao Tzu <br> 
 
 I couldn't see her lying in bed without much medical help. I requested my Dad to let's get her admitted to hospital. 
 
@@ -181,7 +180,7 @@ Rush hour traffic in San Francisco trains before Covid used to be a sight to beh
 
 After few stops, he saw a woman enter his coach, who stood right opposite him. Light brown golden hair, with a carry-on luggage so probably heading to SFO to catch a flight.
 
-<img src="/assets/death_sadness/me.jpg" width="100%">
+<img src="/assets/death_sadness/both.jpg" width="100%">
 
 
 If you commuted early morning in SF subways, getting "greeted" with homeless ppl in every coach was a normal sight. Some of them wanted to "earn" when they ask you for money, by playing and singing a song, a respectable act nevertheless. 

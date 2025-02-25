@@ -8,7 +8,6 @@ layout: post
   <h1><strong>The Curious Case of GenAI and Productivity</strong></h1>
 </div>
 
-<br> <!-- Adds extra spacing -->
 
 *First published in Jul 2024 on LI*<br><br>
 

@@ -43,8 +43,10 @@ The day I came back home, she was lying on the bed in her room at home. Very low
 
 My Grandma was waiting for me. She had her son, her family, everyone around her, but she was waiting for me to come back from college even when she was very much motionless. <br> 
 
-> **Being deeply loved by someone gives you strength, while loving someone deeply gives you courage**
->  Lao Tzu <br> 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #f8f9fa; border: 1px solid #ddd; width: 80%; margin: 20px auto;">
+    <strong>Being deeply loved by someone gives you strength, while loving someone deeply gives you courage</strong>
+</div>
+
 
 I couldn't see her lying in bed without much medical help. I requested my Dad to let's get her admitted to hospital. 
 

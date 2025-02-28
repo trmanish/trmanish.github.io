@@ -37,7 +37,6 @@ As you mature, you realize there were few things you wish you were taught in hig
      People!.
 </div><br> 
 
-
 - **Optimize Maximizing your Free Time as soon as possible!**
 
  Life's purpose, whatever you realized it might be for you, isn't truly possible if

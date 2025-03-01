@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWGCRLMXHK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JWGCRLMXHK');
+    </script>
 </head>
 <body>
 
@@ -23,39 +30,6 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-    <a href="{{ page.previous.url }}" style="margin-right: 20px;">← {{ page.previous.title }}</a>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-</head>
-<body>
-
-    <header class="nav-bar">
-        <nav>
-            <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
-            <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url == '/posts.html' or page.layout == 'post' %}active{% endif %}">All Ticks</a>
-            <a href="{{ "/podcasts.html" | relative_url }}" class="{% if page.url == '/podcasts.html' %}active{% endif %}">Podcasts</a>
-        </nav>
-    </header>
-
-    <main style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: left;">
-        <p><strong>{{ page.date | date: "%B %d, %Y" }}</strong></p>
-        <div>
-            {{ content }}
-        </div>
-
-            {% if page.previous %}
-        <a href="{{ page.previous.url }}" style="margin-right: 20px;" 
-           onclick="gtag('event', 'click', {'event_category': 'Post', 'event_label': '{{ page.previous.title }}'});">← {{ page.previous.title }}</a>
-    {% endif %}
-    {% if page.next %}
-        <a href="{{ page.next.url }}" 
-           onclick="gtag('event', 'click', {'event_category': 'Post', 'event_label': '{{ page.next.title }}'});">{{ page.next.title }} →</a>
-    {% endif %}
             {% if page.previous %}
                 <a href="{{ page.previous.url }}" style="margin-right: 20px;">← {{ page.previous.title }}</a>
             {% endif %}

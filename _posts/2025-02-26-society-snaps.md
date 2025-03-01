@@ -15,7 +15,7 @@ layout: post
 As Silicon Valley leads the orchestra on blowing the trumpet of Technology Acceleration, Society will reach a point where it will just Snap. For the eventuality. 
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    <strong>Technology and harmony in society are inversely related. More the drumbeat on technological push, more detached society becomes of humanity.</strong>
+    Technology and harmony in society are inversely related. More the drumbeat on technological push, more detached society becomes of humanity.
 </div>
 
 

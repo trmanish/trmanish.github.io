@@ -440,7 +440,6 @@ I forgot, that Truth is like a foster child.
   It doesn’t get accepted the same as Deceit, his popular & attractive step-sister who is dating Narrative, a charming, handsome guy she likes<br>
 </div>
 
-
 There is a notion we all like to believe in. That Democracy is a good thing. 
 
 That it allows ppl to speak for themselves. While I myself is a big champion of Democracy, having born and raised in such an environment, it doesn't mean every undemocratic leader is bad for their country. 

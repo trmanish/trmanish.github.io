@@ -215,9 +215,7 @@ As per more details leaked, this new neo-Nazi, faction that was protesting again
 
 There was also a phone call leaked between Nuland and Svoboda leader, discussing whom to get into the govt. 
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-src="https://youtu.be/2QxZ8t3V_bk">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2QxZ8t3V_bk?si=EmAw-MsTb3B4FQFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 So, in, summary, it appears, the West media and narrative that Putin was toppling the Viktor Yanukoych's govt, in Ukraine, [allegedly appears to be an insurgency created by US, by arming neo-nazi Svoboda party](https://stormcloudsgathering.com/posts/the-ukraine-crisis-what-youre-not-being-told/). 
 
@@ -232,9 +230,12 @@ Only few independent journalists, have talked about this issue, which as per her
 
 [Let's take this](https://twitter.com/LFCNewsMedia/status/1499767549998903308) as another piece of information. 
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-src="https://twitter.com/LFCNewsMedia/status/1499767549998903308">
-</iframe>
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/LFCNewsMedia/status/1499767549998903308"></a>
+</blockquote> 
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 Azov Battalion, that is part of current Ukraine National Guards,were, all [documented by the UN as having committing war-crimes and atrocities.]( https://www.ohchr.org/Documents/Countries/UA/Ukraine_14th_HRMMU_Report.pdf)
 

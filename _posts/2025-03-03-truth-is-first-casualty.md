@@ -394,15 +394,15 @@ Just before taking the poison, he had these last words for an American journalis
 
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.<br>
+<p>“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.</p><br>
 
-Voice or no voice, the people can always be brought to the bidding of the leaders.<br>
+<p>Voice or no voice, the people can always be brought to the bidding of the leaders.</p>
 
-That is easy.<br>
+<p>That is easy.</p><br>
 
-All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.<br>
+<p>All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.</p><br>
 
-It works the same in every country."
+<p>It works the same in every country."</p>
 </div>
 
 Everything you read, everything you see on media, social media is done with a purpose. It is to manipulate.
@@ -434,12 +434,11 @@ I was wrong.
 I forgot, that Truth is like a foster child.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-  In a Time of Universal Deceit — Telling the Truth Is a Revolutionary Act”
-  However, Truth is a foster child.*<br> 
+<p>In a Time of Universal Deceit — Telling the Truth Is a Revolutionary Act”
+  However, Truth is a foster child.</p>
 
-  It doesn’t get accepted the same as Deceit, his popular & attractive step-sister who is dating Narrative, a charming, handsome guy she likes<br>
+  <p>It doesn’t get accepted the same as Deceit, his popular & attractive step-sister who is dating Narrative, a charming, handsome guy she likes</p>
 </div>
-
 
 There is a notion we all like to believe in. That Democracy is a good thing. 
 

@@ -394,13 +394,13 @@ Just before taking the poison, he had these last words for an American journalis
 
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-<p>“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.</p><br>
+<p>“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.</p>
 
 <p>Voice or no voice, the people can always be brought to the bidding of the leaders.</p>
 
-<p>That is easy.</p><br>
+<p>That is easy.</p>
 
-<p>All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.</p><br>
+<p>All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.</p>
 
 <p>It works the same in every country."</p>
 </div>

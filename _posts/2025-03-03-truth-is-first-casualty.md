@@ -215,7 +215,7 @@ As per more details leaked, this new neo-Nazi, faction that was protesting again
 
 There was also a phone call leaked between Nuland and Svoboda leader, discussing whom to get into the govt. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2QxZ8t3V_bk?si=YJlyJGHXQ_ZI1vSC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/2QxZ8t3V_bk?si=YJlyJGHXQ_ZI1vSC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 So, in, summary, it appears, the West media and narrative that Putin was toppling the Viktor Yanukoych's govt, in Ukraine, [allegedly appears to be an insurgency created by US, by arming neo-nazi Svoboda party](https://stormcloudsgathering.com/posts/the-ukraine-crisis-what-youre-not-being-told/). 
 

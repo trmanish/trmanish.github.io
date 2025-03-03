@@ -67,7 +67,7 @@ In some cases, I use all Principles and all are needed. In some, few.
 
 I don't want you to agree with all or even few of them. But if some makes sense, then in order for us to decipher few details in this article together, then Principle 1 and 5 would help us specifically on this topic. Please try to focus on these specifically for this topic, if you can. 
 
-<img src="/assets/truth_casualty/principles.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/principles.jpg" width="80%" ><br>
 
 With that said, let's begin: 
 
@@ -79,7 +79,7 @@ It's not that the US, Soviet Cold War in the 50s isn't important as that sowed t
 
 Before, we begin, let's agree on one thing unequivocally: ***Any war is to be severely condemned***. We can agree or disagree, on justifications of war by someone, but the act of War itself, is highly condemnable. No one wins in a war! 
 
-<u>**Lets start with US, Russia and Putin**</u>
+<strong><u>Lets start with US, Russia and Putin**</u></strong>
 
 - [Gorbachev](https://en.wikipedia.org/wiki/Mikhail_Gorbachev), who was leading the Soviet Union, came to power in 1985, but couldn't last long. By 1991-92, Soviet Union was disbanded. Three ppl, Boris Yeltsin especially, the then President of Russia, which was then part of Soviet Union, whose head was Gorbachev then, wanted to do away with Soviet Union. 
 
@@ -93,13 +93,15 @@ Before, we begin, let's agree on one thing unequivocally: ***Any war is to be se
 
  He ended his speech, by extending an hand of friendship. 
 
-> ***Today, free and democratic Russia is extending its hand of friendship to the people of America. Acting on the will of the people of Russia, I am inviting you, and through you the people of the United States, to join us in partnership, in the quest for freedom and justice in the 21st century.***
+> *"Today, free and democratic Russia is extending its hand of friendship to the people of America. Acting on the will of the people of Russia, I am inviting you, and through you the people of the United States, to join us in partnership, in the quest for freedom and justice in the 21st century."*
 
 - United States, had **two choices-**
 
-- i) they could have taken the offer of friendship and embraced, a Russia, that is going against it's 1000s of years of culture and opening up for democracy, (Russia, as a culture never had Democracy as know of today) OR 
+- i) They could have taken the offer of friendship and embraced, a Russia, that is going against it's 1000s of years of culture and opening up for democracy, (Russia, as a culture never had Democracy as know of today) 
 
-- ii) Take a **strong anti-stand** that you had a Cold War with us, threatened us with nuclear capability and we won't be friends with you. 
+OR 
+
+- ii)Take a **strong anti-stand** that you had a Cold War with us, threatened us with nuclear capability and we won't be friends with you. 
 
 It helps to understand, what was actually going on in US policymaker's mind back then. One event that is quite important to see this, is when a document, around the same time in 1992, got produced- [Wolfowitz Doctrine](https://en.wikipedia.org/wiki/Wolfowitz_Doctrine)
 
@@ -109,7 +111,7 @@ The document was accidentally leaked to NYTimes, and was panned unequivocally as
 
 > **The United States, will never allow any other country to challenge it again. The United States MUST remain THE superior country, and we must watch out for Russia...**
 
-<img src="/assets/truth_casualty/wolf.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/wolf.jpg" width="90%" ><br><br>
 
 - When this doctrine got leaked, many ppl in America were outraged by the "imperialistic" language of the doctrine. 
 
@@ -117,7 +119,7 @@ The document was accidentally leaked to NYTimes, and was panned unequivocally as
 
 - This bring us to another, important key event in this history- the [discussion between US Secretary of State](https://nsarchive.gwu.edu/document/16117-document-06-record-conversation-between), during 1990s and Soviet Union President, Mikhail Gorbachev, where Baker's assurance as a US secretary of state, that ***NATO will "not move an inch eastwards"*** . NATO as we know, was a military org created during Cold war, against Soviet.
 
-<img src="/assets/truth_casualty/gorbachev.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/gorbachev.jpg" width="90%" ><br><br>
 
 Those who have read the history or the narration from the Western perspective, have claimed that no such assurance was granted and nothing was signed. However to quote James Baker, 
 
@@ -147,9 +149,9 @@ While, the West narrative is that Clinton, had no objection to that request, the
 
 Not many also know, that post 9/11 attack on US, [Putin called the then President George Bush, and offered any unconditional help](https://edition.cnn.com/2002/WORLD/europe/09/10/ar911.russia.putin/index.html) to fight terrorists behind the attack. He offered his forces to fight the terrorists hiding even offering his Soviet bases.
 
-> **In a stunning decision, the Russian president coordinated with central Asian nations to allow U.S. forces, for the first time, to use military bases of the former Soviet Union.**
+> *In a stunning decision, the Russian president coordinated with central Asian nations to allow U.S. forces, for the first time, to use military bases of the former Soviet Union.*
 
-- [During his speech at Russian Embassy in Washington](http://www.en.kremlin.ru/events/president/transcripts/21398), November, 2001, Putin said, “I am sure that today, when our **‘destiny again meets history’ we will be not only partners, but we may well be friends.”**
+- [During his speech at Russian Embassy in Washington](http://www.en.kremlin.ru/events/president/transcripts/21398), November, 2001, Putin said, “I am sure that today, when our **"‘destiny again meets history’ we will be not only partners, but we may well be friends.”**
 
 - The response from the Bush administration, was lukewarm. They did take Russia's help in fighting terrorists in Afghanistan, but never considered "equal partnership". 
 
@@ -173,7 +175,7 @@ As one of his first acts as President, Yanukovych signs an agreement with Russia
 
 [This part wasn't liked by the Western Media](https://euobserver.com/opinion/30016). In fact, Luke Harding, for Guardian even wrote: 
 
-> **the most concrete sign yet that Ukraine is now back under Russia’s influence following Yanukovych’s victory in February’s presidential elections**
+> *the most concrete sign yet that Ukraine is now back under Russia’s influence following Yanukovych’s victory in February’s presidential elections*
 
 Remember, just until Feb 2008, US Secretary of State was signing charters with Ukraine's foreign minister to join NATO. This new President seemed to not go with that. 
 
@@ -203,13 +205,13 @@ Because immediately post this event, <u>Putin, went and "annexed" Crimea.</u>
 
 On February 20th of 2014 the world was shocked by video footage of snipers firing on protesters in Kiev Ukraine. 
 
-Twenty one people were murdered, and it was widely assumed that President Victor Yanukovich and his supporters were behind the attacks. However a phone conversation between EU foreign policy chief Cathy Ashton and Estonia’s foreign minister Urmas Paet leaked to the public on March 5th reveals that the snipers in were actually from the new coalition government, and that **Western diplomats knew this and covered it up.** 
+Twenty one people were murdered, and it was widely assumed that President Victor Yanukovich and his supporters were behind the attacks. However a phone conversation between EU foreign policy chief Cathy Ashton and Estonia’s foreign minister Urmas Paet leaked to the public on March 5th reveals that the snipers in were actually from the new coalition government, and that [**Western diplomats knew this and covered it up.**](https://soundcloud.com/stormcloudsgathering/estonian-foreign-minister-1?utm_source=soundcloud&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fstormcloudsgathering%252Festonian-foreign-minister-1) 
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
 src="https://soundcloud.com/stormcloudsgathering/estonian-foreign-minister-1?utm_source=soundcloud&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fstormcloudsgathering%252Festonian-foreign-minister-1">
 </iframe>
 
-Not only, this, the demonstrating factions, were led by few groups, the most prominent of these groups, is an organization called <u>**Svoboda**</u>. The Svoboda party which traces its roots to the Ukrainian partisan army of World War II, was loosely allied with Nazi Germany. Until 2004, Svoboda had been called the Social-Nationalist Party, a deliberate reference to the National Socialism of the Nazis.
+Not only, this, the demonstrating factions, were led by few groups, the most prominent of these groups, is an organization called <strong<u>Svoboda</u></strong>. The Svoboda party which traces its roots to the Ukrainian partisan army of World War II, was loosely allied with Nazi Germany. Until 2004, Svoboda had been called the Social-Nationalist Party, a deliberate reference to the National Socialism of the Nazis.
 
 As per more details leaked, this new neo-Nazi, faction that was protesting against Ukraine's President, was allegedly supported by **US. Victoria Nuland from the U.S. State Department meeting with Oleh Tyahnybok**, leader of the Svoboda Party. 
 
@@ -230,7 +232,7 @@ One important thing to note is, that after this arming of neo-nazi group, the Do
 
 Only few independent journalists, have talked about this issue, which as per her, more than 13,000 Ukrainians living in Donbas regions have been killed since 2014, mainly by the attacks of Azov Battalion, part of Ukraine's National Guards. 
 
-Let's take this as another piece of information. 
+[Let's take this](https://twitter.com/LFCNewsMedia/status/1499767549998903308) as another piece of information. 
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
 src="https://twitter.com/LFCNewsMedia/status/1499767549998903308">
@@ -238,7 +240,7 @@ src="https://twitter.com/LFCNewsMedia/status/1499767549998903308">
 
 Azov Battalion, that is part of current Ukraine National Guards,were, all [documented by the UN as having committing war-crimes and atrocities.]( https://www.ohchr.org/Documents/Countries/UA/Ukraine_14th_HRMMU_Report.pdf)
 
-<img src="/assets/truth_casualty/nazi2.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/nazi2.jpg" width="85%" ><br><br>
 
 <h2 id="Annexation of Crimea">Annexation of Crimea</h2>
 
@@ -246,7 +248,7 @@ After seeing, that the "democratically" elected govt. of Viktor Yanuvoch, got ta
 
 Now, the West narrative and even the popular consensus is that Putin took Crimea away from Ukraine. And that is true. However, what details that are missing is, that Crimea was the peninsula, which Russia was already leasing from Ukraine for years (remember Yanukoych extending the lease until 2042?. 
 
-Why? **Because Russia has its Naval base in Crimea. Its a very strategic location right in Black Sea.**
+Why? **Because Russia has its Naval base in Crimea. Its a very strategic location right in Black Sea.**<br>
 
 <img src="/assets/truth_casualty/navalbase.jpg" width="80%" ><br><br>
 
@@ -294,7 +296,7 @@ However, this is not even the image taken now. This was taken last year, when Ze
 
 However, I started seeing a sudden barrage of such pics, stories, videos, images, all over media and social media. 
 
-<img src="/assets/truth_casualty/troops.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/troops.jpg" width="85%" ><br><br>
 
 Even on Linkedin, talking and sharing political things around this story, became fashionable and the main part. If you aren't doing it, then you are not supporting ppl.
 
@@ -392,20 +394,20 @@ Just before taking the poison, he had these last words for an American journalis
 
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.
+“Naturally, the common people don't want war ... but after all it is the leaders of a country who determine the policy, and it is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship.<br>
 
-Voice or no voice, the people can always be brought to the bidding of the leaders.
+Voice or no voice, the people can always be brought to the bidding of the leaders.<br>
 
-That is easy.
+That is easy.<br>
 
-All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.
+All you have to do is to tell them they are being attacked, and denounce the pacifists for lack of patriotism and exposing the country to danger.<br>
 
 It works the same in every country."
 </div>
 
 Everything you read, everything you see on media, social media is done with a purpose. It is to manipulate.
 
-> *Everything is propaganda. Everything is manufactured for you to feel or think a certain way. What someone is doing, the images they are showing, it is very heroic or horrific, but it is designed to target your heart strings in a certain way. The others will do the same thing.
+> *Everything is propaganda. Everything is manufactured for you to feel or think a certain way. What someone is doing, the images they are showing, it is very heroic or horrific, but it is designed to target your heart strings in a certain way. The others will do the same thing.*
 
 The war is real. The deaths are real. The sufferings is real.
 
@@ -429,14 +431,17 @@ I started writing a lot on such things.
 
 I was wrong. 
 
-I forgot, that Truth is like a foster child. 
+I forgot, that Truth is like a foster child.
 
-> **In a Time of Universal Deceit — Telling the Truth Is a Revolutionary Act”
-  However, Truth is a foster child. 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+  In a Time of Universal Deceit — Telling the Truth Is a Revolutionary Act”
+  However, Truth is a foster child.*<br> 
 
-  It doesn’t get accepted the same as Deceit, his popular & attractive step-sister who is dating Narrative, a charming, handsome guy she likes**
+  It doesn’t get accepted the same as Deceit, his popular & attractive step-sister who is dating Narrative, a charming, handsome guy she likes<br>
+</div>
 
-  There is a notion we all like to believe in. That Democracy is a good thing. 
+
+There is a notion we all like to believe in. That Democracy is a good thing. 
 
 That it allows ppl to speak for themselves. While I myself is a big champion of Democracy, having born and raised in such an environment, it doesn't mean every undemocratic leader is bad for their country. 
 
@@ -450,7 +455,7 @@ Libya, had one of the best per capita GDP in the world under Gaddafi.
 
 Almost everybody had an apartment to live, built by their leader. 
 
-<img src="/assets/truth_casualty/gaddafi.jpg" width="80%" ><br><br>
+<img src="/assets/truth_casualty/gaddafi.jpg" width="90%" ><br><br>
 
 He was a dictator, which I am sure, a lot of oppressive systems and rules, mostly for other foreign countries. But if that culture in the country, prefer the Tribal System, a system run by a head of tribe, leading and taking decisions for entire tribe, who are we to interfere and seek change? Just because someone wanted to sell their oil in a different system? 
 

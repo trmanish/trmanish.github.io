@@ -12,7 +12,7 @@ layout: post
 
 *First published in Oct 2024 on LI*<br><br>
 
-7 months ago, when the our tech and VC brothers and sisters in SV overnight became AGI bros and sis, I wrote quietly [here](https://trmanish.github.io/2024/03/25/the-agi-myth.html) that LLMs do not have Intelligence as they cannot Reason and Plan- two key tenets of Intelligence. 
+7 months ago, when our tech and VC brothers and sisters in SV overnight became AGI bros and sis, I wrote quietly [here](https://trmanish.github.io/2024/03/25/the-agi-myth.html) that LLMs do not have Intelligence as they cannot Reason and Plan- two key tenets of Intelligence. 
 
 As usual, unpopular things get discarded by crowd. Our Sequoia crowd in [Sonya Huang](https://www.linkedin.com/in/sonyaruihuang/) et al, even ended up writing thought articles on AI's next act- Reasoning. Credit where credit is due however, her writing is articulate and well composed, underlying premise I naturally disagree. 
 

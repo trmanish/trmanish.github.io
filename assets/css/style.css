@@ -32,11 +32,6 @@ body {
     color: #facc15;
 }
 
-.nav-bar a[href$="/posts.html"].active, 
-.nav-bar a[href$="/podcasts.html"].active {
-    color: #facc15;
-}
-
 
 /* Main Headings */
 h1 {

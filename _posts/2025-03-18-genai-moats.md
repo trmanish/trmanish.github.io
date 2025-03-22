@@ -1,6 +1,6 @@
 ---
 title: "Moats in GenAI Startups"
-date: 2025-03-23
+date: 2024-10-14
 layout: post
 ---
 

@@ -30,13 +30,13 @@ Zuck is one of the smartest businessman of our era. He will outsmart everyone tr
 
 Your effort is not to compete in that with him. 
 
-The mass value of GenAI is in Application Layer. 
+The **mass value of GenAI is in Application Layer**. 
 
 There is a plethora of existing business and consumer problems that can really be disrupted how things get done using LLMs if you refrain yourself from falling for the hype on Reasoning and focus on UX/UI layer unlike what the current call is in Silicon Valley.
 
-However, the real moat in application layer is not the myriads of Agentic workflow you can create. Any Tom, Dick and Harry can do that if they have spent some time in figuring out MoA/Multi Agent Systems. There is no moat there. If you have written code in that area off late, you will know there is ZERO moat in your Agentic architecture. Sooner or later, someone tinkerer will have it for themselves.
+However, the real moat in application layer is **not the myriads of Agentic workflow you can create**. Any Tom, Dick and Harry can do that if they have spent some time in figuring out MoA/Multi Agent Systems. There is no moat there. If you have written code in that area off late, you will know there is ZERO moat in your Agentic architecture. Sooner or later, someone tinkerer will have it for themselves.
 
-The true moat of GenAI application is in using Agents in solving a problem where you are able to add in the entire network. Your value is not in solving a specific user problem using Agents. Your value will be bringing the entire network on your product away from everything else out there. 
+The true moat of GenAI application is in using Agents in solving a problem where you are <u>able to add in the entire network</u>. Your value is not in solving a specific user problem using Agents. Your value will be bringing the entire network on your product away from everything else out there. 
 
 Now I will be the first one to say openly that breaking the network is one of the most challenging task in life. Network don't easily break if others in network don't move. 
 

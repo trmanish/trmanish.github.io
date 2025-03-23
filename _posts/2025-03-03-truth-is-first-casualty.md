@@ -2,6 +2,7 @@
 title: "Truth is Always the First Casualty of War"
 date: 2022-03-08
 layout: post
+featured: true
 image: "/assets/truth_casualty/headline.jpg"
 ---
 
@@ -486,48 +487,3 @@ The deluge of images of Ukraine heroes and fighters, the relentless stories abou
 To use us as a pawn. To make you think, you are helping those who are suffering. While, benefitting those who really want ***these sufferings!***
 
 **Because, Truth is always the first casualty Of a War!**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

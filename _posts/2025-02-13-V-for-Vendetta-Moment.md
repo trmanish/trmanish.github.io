@@ -2,6 +2,7 @@
 title: "A Year of Million Robotaxis and a 'V for Vendetta'​ Moment Decade!"
 date: 2020-03-08
 layout: post
+featured: true
 image: "/assets/v_for_vendetta/headline.jpeg"
 ---
 
@@ -285,14 +286,3 @@ This year is already turning out to be very eventful, but it's this decade which
 If kindness has never been a virtue for you, now is a good time to start practising it.
 
 Be Kind and Safe!
-
-
-
-
-
-
-
-
-
-
-

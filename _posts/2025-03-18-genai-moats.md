@@ -2,6 +2,8 @@
 title: "Moats in GenAI Startups"
 date: 2024-10-14
 layout: post
+featured: true
+image: "/assets/genai_moats/pdf1.jpg"
 ---
 
 <div align="center">

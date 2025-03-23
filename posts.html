@@ -5,7 +5,10 @@ title: "All Ticks"
 
 <div class="featured-posts">
     <h3>Featured Posts</h3>
-    <div class="featured-posts-grid">
+    <div class="featured-posts-container">
+        <button class="scroll-arrow scroll-left" onclick="scrollFeatured('left')">&lt;</button>
+        <button class="scroll-arrow scroll-right" onclick="scrollFeatured('right')">&gt;</button>
+        <div class="featured-posts-grid">
         {% for post in site.posts %}
             {% if post.featured %}
                 <div class="featured-post-item">
@@ -22,8 +25,11 @@ title: "All Ticks"
                 </div>
             {% endif %}
         {% endfor %}
+        </div>
     </div>
 </div>
+
+<div class="featured-posts-separator"></div>
 
 <div class="post-list">
     {% for post in site.posts %}
@@ -43,3 +49,21 @@ title: "All Ticks"
         </div>
     {% endfor %}
 </div>
+
+<script>
+function scrollFeatured(direction) {
+    const container = document.querySelector('.featured-posts-grid');
+    const scrollAmount = 300;
+    if (direction === 'left') {
+        container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    } else {
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
+</script>

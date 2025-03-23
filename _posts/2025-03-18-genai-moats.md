@@ -3,7 +3,7 @@ title: "Moats in GenAI Startups"
 date: 2024-10-14
 layout: post
 featured: true
-featured_order: 1
+featured_order: 2
 image: "/assets/genai_moats/pdf1.jpg"
 ---
 

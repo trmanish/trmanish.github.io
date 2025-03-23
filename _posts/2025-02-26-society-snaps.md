@@ -2,7 +2,6 @@
 title: "When the Society Snaps"
 date: 2024-05-14
 layout: post
-featured: true
 ---
 
 <div align="center">

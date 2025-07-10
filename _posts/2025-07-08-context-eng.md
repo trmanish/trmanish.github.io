@@ -18,7 +18,7 @@ The term Context Engineering, ideally was started by Dex Horthy at Humanlayer vi
 
 If you are someone who is working or interested in Agentic AI, would recommend going through "12 Factors Agents" as my take on how to build Agentic AI products is very similar after having spent some time writing code last couple of years in this area. Plus Dex appears a no fluff guy, a trait I rarely find in most ppl around me last few years in an era when "influencing" has become most's core value. 
 
-- ### Context Engineering
+### Context Engineering
 
 Every Useful Agentic App is basically a function of two things: Context Engineering and Reliability Engineering. That's all. 
 
@@ -46,7 +46,7 @@ There are already quite a [few blogs](https://www.philschmid.de/context-engineer
 
 This brings to the topic of Memory
 
-- ### Memory
+### Memory
 
 Memory has become quite discussed topic last few months, primarily in my opinion driven by Sam Altman's tweet on ChatGPT Memory. This has led to as usual a flurry of developer and VC folks in the Valley jumping the gun on Memory as the MOAT for GenAI Apps. Silicon Valley is (in)famous for herd style thinking on various topics in tech/society so I wasn't surprised how fervent the discussion on Memory became that many VCs started investing in Memory as Infra play. 
 
@@ -76,7 +76,7 @@ So that means Memory plays a role, but in a small niche area of LLM apps (Vertic
 
 This brings to last segue:
 
-- ### Agentic Browsers 
+### Agentic Browsers 
 
 Agentic Browsers or AI Browsers is becoming the next GenAI product war. Two players, Perplexity (with Comet) and OpenAI are mainly releasing their Agentic Browser to so called compete with Google Chromes of the world. 
 

@@ -28,7 +28,6 @@ Every Useful Agentic App is basically a function of two things: Context Engineer
     Agentic AI Product = Context Engineering + Reliability Engineering.
 </div>
 
-
 Good Context leads to better Reliability. Bad Context leads to unreliable LLM app. However, you can also have a perfect context and yet less reliable LLM App. That is why both exist together for a production LLM App and working only on one won't lead to adoptable AI LLM Products.
 
 I will write about Reliability Engineering in a separate post, however one of the best ways to aim for reliability out of your LLM apps is by building with **Schema First Design Principle**. That leads to more Structured Input and Output which leads to easier validation and trigger point for Human in the Loop UX. All design patterns that help in more deterministic reliability from your LLM product.  
@@ -49,7 +48,6 @@ There are already quite a [few blogs](https://www.philschmid.de/context-engineer
 This brings to the topic of Memory
 
 <br> <!-- Adds extra spacing -->
-
 
 ### Memory
 
@@ -82,7 +80,6 @@ So that means Memory plays a role, but in a small niche area of LLM apps (Vertic
 This brings to last segue:
 
 <br> <!-- Adds extra spacing -->
-
 
 ### Agentic Browsers 
 

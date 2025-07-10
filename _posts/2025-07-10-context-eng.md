@@ -118,6 +118,8 @@ And this is why all Agentic Browser products will IMO, fail to get adoption by c
 
 None of them will cause even a minor dent in Google Chrome. 
 
+In fact, the **only place** where anything agentic will actually work for a browser is going to be <u>Chrome itself</u>. Because ppl have already given up their privacy to Chrome for years. Even there, quite a few would think twice in allowing AI in their browsing activity, yet, it's the only best place where some agentic workflow in browser that could be added. 
+
 So while next few weeks and months you will start hearing a barrage of narratives by folks in Valley who have unfortuantely grabbed a bugle for an audience, - on how amazing and magical this Agentic Browser from so and so company is (mainly OpenAI, Perplexity) and the upcoming doom of Chrome as a browser, - ***just take a deep seat and relax***. 
 
 <img src="/assets/context-eng/dharmesh.jpg" width="100%">

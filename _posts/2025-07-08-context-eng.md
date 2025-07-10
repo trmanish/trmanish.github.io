@@ -14,7 +14,7 @@ The AI field is known for coming up with new fancy terms to make it sound all so
 
 One of the recent trend that has caught up off late is Context Engineering, Memory and Agentic Browsers. 
 
-The term Context Engineering ideally was started by Dex Horthy at Humanlayer via his ["12 Factors Agents"](https://github.com/humanlayer/12-factor-agents) and not Tobi from Shopify or Karpathy as many seems to misleadingly attribute to in their blogs and talks. 
+The term Context Engineering, ideally was started by Dex Horthy at Humanlayer via his ["12 Factors Agents"](https://github.com/humanlayer/12-factor-agents) and not Tobi from Shopify or Karpathy as many seems to misleadingly attribute to in their blogs and talks. 
 
 If you are someone who is working or interested in Agentic AI, would recommend going through "12 Factors Agents" as my take on how to build Agentic AI products is very similar after having spent some time writing code last couple of years in this area. Plus Dex appears a no fluff guy, a trait I rarely find in most ppl around me last few years in an era when "influencing" has become most's core value. 
 

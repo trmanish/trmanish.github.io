@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
 
 /* Global Styles */
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Geist', sans-serif;
     background-color: white;
     color: #444;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
 }
 

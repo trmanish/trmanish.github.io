@@ -1,6 +1,6 @@
 ---
 title: "Context Engineering, Memory and Agentic Browsers"
-date: 2025-07-08
+date: 2025-07-10
 layout: post
 ---
 

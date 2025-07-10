@@ -16,7 +16,8 @@ One of the recent trend that has caught up off late is Context Engineering, Memo
 
 The term Context Engineering, ideally was started by Dex Horthy at Humanlayer via his ["12 Factors Agents"](https://github.com/humanlayer/12-factor-agents) and not Tobi from Shopify or Karpathy as many seems to misleadingly attribute to in their blogs and talks. 
 
-If you are someone who is working or interested in Agentic AI, would recommend going through "12 Factors Agents" as my take on how to build Agentic AI products is very similar after having spent some time writing code last couple of years in this area. Plus Dex appears a no fluff guy, a trait I rarely find in most ppl around me last few years in an era when "influencing" has become most's core value. 
+If you are someone who is working or interested in Agentic AI, would recommend going through "12 Factors Agents" as my take on how to build Agentic AI products is very similar after having spent some time writing code last couple of years in this area. Plus Dex appears a no fluff guy, a trait I rarely find in most ppl around me last few years in an era when "influencing" has become most's core value.
+
 
 ### Context Engineering
 
@@ -45,6 +46,7 @@ There are already quite a [few blogs](https://www.philschmid.de/context-engineer
 
 
 This brings to the topic of Memory
+
 
 ### Memory
 
@@ -75,6 +77,7 @@ Or imagine you have a Personal AI Medical Doctor, that has access to all your me
 So that means Memory plays a role, but in a small niche area of LLM apps (Vertical plays) than the overarching belief that it is a universal moat. 
 
 This brings to last segue:
+
 
 ### Agentic Browsers 
 

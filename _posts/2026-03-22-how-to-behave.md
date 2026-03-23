@@ -75,7 +75,7 @@ So, if someone does unjust illegal act towards you, if someone is hurting you ph
 
 But if someone is unjust and unfair in their behavior towards you— you can definitely hurt them back. But you control your Karma by controlling your actions.
 
-I have often found, it's more peaceful to move on, end things on a high note with someone, and walk away, than to continue the bitterness of a relationship. Your gracious ending might make them construe it as your weakness, but it takes more strength to control your anger and then to vent it all out.
+I have often found, it's more peaceful to move on, end things on a high note with someone, and walk away, than to continue the bitterness of a relationship. Your gracious ending might make them construe it as your weakness, but it takes more strength to control your anger than to vent it all out.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     One day that person would leave this world— you don't want to end up with a regret that will haunt you for the rest of your life. Walk away gracefully, not for them, not for anyone, but for yourself.

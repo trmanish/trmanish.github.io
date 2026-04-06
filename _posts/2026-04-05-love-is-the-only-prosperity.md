@@ -40,7 +40,7 @@ I finally said goodbye. But I didn't really want to say it. I feared she'll love
 
 But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have loved them more than you. Seeing them loved is its own way of seeing them prosper.
 
-You realize eventually that the only thing that really matters, the only thing you really need, is Love. Love for the other person. An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
+You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.** An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
 
 Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
 

@@ -34,7 +34,9 @@ Life, unfortunately, had its own plans. She walked away. I wanted to stop her, b
 
 I never got to say these things to her. The situation was complicated. I didn't know what she wanted, and I didn't want to force the weight of my expectations onto her. But every day that went by, I just wanted to see her do well, irrespective of whether I was there or not. That is the only thing that remained from the beginning.
 
-I finally said goodbye. But I didn't really want to say it. I fear she'll love somebody else. But there's no way to control the way the heart feels.
+I finally said goodbye. But I didn't really want to say it. I feared she'll love somebody else. But there's no way to control the way the heart feels.
+
+But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have loved them more than you. Seeing them loved is its own way of seeing them prosper.
 
 You realize eventually that the only thing that really matters, the only thing you really need, is Love. Love for the other person. An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
 

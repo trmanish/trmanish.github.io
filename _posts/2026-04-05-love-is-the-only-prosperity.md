@@ -2,6 +2,8 @@
 title: "Love is the Only Prosperity"
 date: 2026-04-05
 layout: post
+featured: true
+featured_order: 1
 ---
 
 <div align="center">

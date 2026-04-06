@@ -40,7 +40,7 @@ But there is a quiet, unconditional geometry to the heart—it wants the person 
 
 You realize eventually that the only thing that really matters, the only thing you really need, is Love. Love for the other person. An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
 
-Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It feels heavy to say goodbye to someone I didn't want to let go.
+Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
 
 But this is the heart's way of saying that love is all that matters in the end. It is all you should strive for. It's beautiful, it's painful, it's joyful, and it's quiet—yet it is profound. Most importantly, it forces the best out of you for everyone around you.
 

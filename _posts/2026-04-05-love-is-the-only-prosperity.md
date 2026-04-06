@@ -8,6 +8,8 @@ layout: post
   <h1><strong>Love is the Only Prosperity</strong></h1>
 </div>
 
+<br> <!-- Adds extra spacing -->
+
 A few days ago, I came across a post from OpenAI's CMO about leaving her role to fight a late-stage battle with cancer.
 
 As I grow older, I realize that what truly gives joy—at least to me—is seeing joy in everyone around you. Even if you don't know them. Even if you've barely met.

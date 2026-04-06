@@ -40,9 +40,11 @@ I finally said goodbye. But I didn't really want to say it. I feared she'll love
 
 But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have loved them more than you. Seeing them loved is its own way of seeing them prosper.
 
-You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.** An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
+You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.**
 
-Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
+An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. The love to see a child anywhere in the world fall asleep without fearing whether they'll wake up to the sound of bombs. The love to know that a kid somewhere is worrying about what game to play tomorrow—not whether they'll have a single meal to survive the day. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
+
+Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It's heavy knowing that right now, somewhere in the world, a child is going to sleep not knowing if they'll see the morning. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
 
 But this is the heart's way of saying that love is all that matters in the end. It is all you should strive for. It's beautiful, it's painful, it's joyful, and it's quiet—yet it is profound. Most importantly, it forces the best out of you for everyone around you.
 

@@ -12,7 +12,7 @@ A few days ago, I came across a post from OpenAI's CMO about leaving her role to
 
 As I grow older, I realize that what truly gives joy—at least to me—is seeing joy in everyone around you. Even if you don't know them. Even if you've barely met.
 
-I interacted with someone online a few months ago. We started sparring over some topic, and he apparently liked a few things I'd written. He sent me a message on Signal. We barely interacted there and never met in person. Then one day, out of the blue, he messaged me the news of his upcoming wedding. That was the best news I heard all day. I felt a surge of happiness seeing him start a new chapter of life. Even though we were strangers, I couldn't stop myself from feeling that warmth.
+I interacted with someone online a few months ago. We started exchanging thoughts on some topic, and he apparently liked a few things I'd written. He sent me a message on Signal. We seldom interacted there and never met in person. Then one day, he messaged me with the news of his upcoming wedding—just like that, no preamble. That was the best news I heard all day. I felt a surge of happiness seeing him start a new chapter of life. Even though we were strangers, I couldn't stop myself from feeling that warmth.
 
 Whenever I see a post in my feed about someone passing away, it makes me go quiet for a while. Even if I didn't know them. Because that's one life that is no longer among us on this planet. One voice you can no longer read, hear, or talk to. One person I will never get the chance to meet. One life, simply gone.
 
@@ -34,7 +34,7 @@ Life, unfortunately, had its own plans. She walked away. I wanted to stop her, b
 
 I never got to say these things to her. The situation was complicated. I didn't know what she wanted, and I didn't want to force the weight of my expectations onto her. But every day that went by, I just wanted to see her do well, irrespective of whether I was there or not. That is the only thing that remained from the beginning.
 
-I finally said goodbye. But I didn't really want to say it. I feared she'll love somebody else. But there's no way to control the way the heart feels.
+I finally said goodbye. But I didn't really want to say it. I feared she'll love somebody else. There's no way to control the way the heart feels.
 
 But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have loved them more than you. Seeing them loved is its own way of seeing them prosper.
 

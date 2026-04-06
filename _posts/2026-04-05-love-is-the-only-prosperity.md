@@ -16,7 +16,11 @@ I interacted with someone online a few months ago. We started sparring over some
 
 Whenever I see a post in my feed about someone passing away, it makes me go quiet for a while. Even if I didn't know them. Because that's one life that is no longer among us on this planet. One voice you can no longer read, hear, or talk to. One person I will never get the chance to meet. One life, simply gone.
 
-> *"I think the true definition of prosperity is seeing everyone prosper around you. It's not a good feeling to be a man who is thriving while the person next to him is struggling just to stay alive."*
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    I think the true definition of prosperity is seeing everyone prosper around you. It's not a good feeling to be a man who is thriving while the person next to him is struggling just to stay alive.
+</div>
+
+<br>
 
 A few years ago, I met someone in San Francisco—a random traveler from New York. My introverted nature usually keeps me to myself, but we were both waiting outside at the same time. One conversation led to another, and soon I found myself showing her the city.
 
@@ -38,4 +42,6 @@ Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep
 
 But this is the heart's way of saying that love is all that matters in the end. It is all you should strive for. It's beautiful, it's painful, it's joyful, and it's quiet—yet it is profound. Most importantly, it forces the best out of you for everyone around you.
 
-> *"Your fear of getting hurt should never be greater than your courage to love. Because whenever the heart grows heavy, love will always find its way."*
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    Your fear of getting hurt should never be greater than your courage to love. Because whenever the heart grows heavy, love will always find its way.
+</div>

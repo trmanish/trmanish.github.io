@@ -3,7 +3,7 @@ title: "Truth is Always the First Casualty of War"
 date: 2022-03-08
 layout: post
 featured: true
-featured_order: 3
+featured_order: 4
 image: "/assets/truth_casualty/headline.jpg"
 ---
 

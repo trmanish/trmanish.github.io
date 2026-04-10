@@ -13,7 +13,7 @@ image: "/assets/love_prosperity/sf_pier.png"
 
 <br> <!-- Adds extra spacing -->
 
-<img src="/assets/love_prosperity/sf_pier.png" width="100%">
+<img src="/assets/love_prosperity/sf_pier.png" width="60%">
 
 <br>
 

@@ -13,7 +13,7 @@ image: "/assets/love_prosperity/sf_pier.png"
 
 <br> <!-- Adds extra spacing -->
 
-<img src="/assets/love_prosperity/sf_pier.png" width="60%">
+<img src="/assets/love_prosperity/sf_pier.png" style="width: 100%; height: 450px; object-fit: cover; object-position: top;">
 
 <br>
 

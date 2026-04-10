@@ -14,7 +14,7 @@ image: "/assets/love_prosperity/sf_pier.png"
 <br> <!-- Adds extra spacing -->
 
 <div style="text-align: center;">
-<img src="/assets/love_prosperity/sf_pier.png" style="width: 55%; display: inline-block;">
+<img src="/assets/love_prosperity/sf_pier.png" style="width: 65%; display: inline-block;">
 </div>
 
 <br>
@@ -51,7 +51,7 @@ But there is a quiet, unconditional geometry to the heart—it wants the person 
 
 You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.**
 
-An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. The love to see a child anywhere in the world fall asleep without fearing whether they'll wake up to the sound of bombs. The love to know that a kid somewhere is worrying about what game to play tomorrow—not whether they'll have a single meal to survive the day. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
+*An unconditional love for the life around you, with no expectations. The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. The love to see a child anywhere in the world fall asleep without fearing whether they'll wake up to the sound of bombs. The love to know that a kid somewhere is worrying about what game to play tomorrow—not whether they'll have a single meal to survive the day. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.*
 
 Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It's heavy knowing that right now, somewhere in the world, a child is going to sleep not knowing if they'll see the morning. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
 

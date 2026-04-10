@@ -14,7 +14,7 @@ image: "/assets/love_prosperity/sf_pier.png"
 <br> <!-- Adds extra spacing -->
 
 <div style="text-align: center;">
-<img src="/assets/love_prosperity/sf_pier.png" style="width: 65%; display: inline-block;">
+<img src="/assets/love_prosperity/sf_pier.png" style="width: 55%; display: inline-block;">
 </div>
 
 <br>

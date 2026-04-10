@@ -56,5 +56,7 @@ Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep
 But this is the heart's way of saying that love is all that matters in the end. It is all you should strive for. It's beautiful, it's painful, it's joyful, and it's quiet—yet it is profound. Most importantly, it forces the best out of you for everyone around you.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    Your fear of getting hurt should never be greater than your courage to love. Because whenever the heart grows heavy, love will always find its way.
+    Your fear of getting hurt should never be greater than your courage to love.
 </div>
+
+Because whenever the heart grows heavy, love will always find its way.

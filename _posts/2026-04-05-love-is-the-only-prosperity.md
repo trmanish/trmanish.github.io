@@ -47,7 +47,7 @@ I never got to say these things to her. The situation was complicated. I didn't 
 
 I finally said goodbye. But I didn't really want to say it. I feared she'll love somebody else. There's no way to control the way the heart feels.
 
-But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have loved them more than you. Seeing them loved is its own way of seeing them prosper.
+But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have cared for them more than you. Seeing them loved is its own way of seeing them prosper.
 
 You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.**
 

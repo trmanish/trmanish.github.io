@@ -13,8 +13,8 @@ image: "/assets/love_prosperity/sf_pier.png"
 
 <br> <!-- Adds extra spacing -->
 
-<div style="width: 100%; max-height: 500px; overflow: hidden;">
-<img src="/assets/love_prosperity/sf_pier.png" style="width: 100%; display: block;">
+<div style="text-align: center;">
+<img src="/assets/love_prosperity/sf_pier.png" style="width: 55%; display: inline-block;">
 </div>
 
 <br>

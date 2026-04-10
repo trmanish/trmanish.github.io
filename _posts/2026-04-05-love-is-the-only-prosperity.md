@@ -4,6 +4,7 @@ date: 2026-04-05
 layout: post
 featured: true
 featured_order: 1
+image: "/assets/love_prosperity/sf_pier.png"
 ---
 
 <div align="center">
@@ -11,6 +12,10 @@ featured_order: 1
 </div>
 
 <br> <!-- Adds extra spacing -->
+
+<img src="/assets/love_prosperity/sf_pier.png" width="100%">
+
+<br>
 
 A few days ago, I came across a post from OpenAI's CMO about leaving her role to fight a late-stage battle with cancer.
 

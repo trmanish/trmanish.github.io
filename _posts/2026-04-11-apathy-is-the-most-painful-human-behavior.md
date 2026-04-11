@@ -38,7 +38,9 @@ After years of painful experiences, the one thing I have learnt is this: *observ
 
 And the moment you notice it, that flat, unbothered indifference to something that should have moved them, **walking away**, no matter how difficult, is not just your best option. **It is your only option.**
 
-> Detach, because detaching isn't losing something valuable. It is removing the illusion that made them seem valuable.
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    Detach, because detaching isn't losing something valuable. It is removing the illusion that made them seem valuable.
+</div>
 
 Because staying near apathy doesn't change the other person. It changes you. Slowly, quietly, it strips away your sense of dignity, your trust in your own judgment, your belief that your feelings are worth something. You begin to wonder if perhaps you really don't matter. And that is the deepest damage apathy does — it doesn't just ignore you. It teaches you to ignore yourself.
 

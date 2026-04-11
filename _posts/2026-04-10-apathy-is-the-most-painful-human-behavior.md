@@ -14,11 +14,13 @@ There are many difficult things a person can endure from another human being. An
 
 But apathy — the complete indifference to your existence, your feelings, your words — is something the human heart was never built to withstand.
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    Apathy is not the absence of love. **It is the absence of everything.**
-</div>
+Apathy is not the absence of love. **It is the absence of everything.**
 
-It says: you don't matter enough for me to feel anything at all. Not anger, not guilt, not even discomfort. You are simply — nothing. And when someone you tried to be good to, someone you showed kindness to, someone you believed was decent — treats you with that level of indifference, it doesn't just hurt. It quietly dismantles something inside you. Because the mind can reason with cruelty. It cannot reason with nothingness.
+It says: you don't matter enough for me to feel anything at all. Not anger, not guilt, not even discomfort. You are simply — nothing. And when someone you tried to be good to, someone you showed kindness to, someone you believed was decent — treats you with that level of indifference, it doesn't just hurt. It quietly dismantles something inside you.
+
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    The mind can reason with cruelty. It cannot reason with nothingness.
+</div>
 
 You see it often — someone finds a new person, a new attraction, and overnight the person who was kind to them, who cared about them, simply ceases to exist. Not even a conversation to close the chapter. Not even the basic dignity of an ending. Just silence — as if the kindness they received was never worth acknowledging, as if the person who offered it was never there at all.
 

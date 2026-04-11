@@ -2,6 +2,8 @@
 title: "Apathy is the Most Painful Human Behavior"
 date: 2026-04-10
 layout: post
+featured: true
+featured_order: 2
 ---
 
 <div align="center">

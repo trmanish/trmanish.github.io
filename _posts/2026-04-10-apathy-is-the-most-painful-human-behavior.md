@@ -24,7 +24,7 @@ It says: you don't matter enough for me to feel anything at all. Not anger, not 
     The mind can reason with cruelty. It cannot reason with nothingness.
 </div>
 
-You see it often. Someone finds a new person, a new attraction, and overnight the person who was kind to them, who cared about them, simply ceases to exist. Not even a conversation to close the chapter. Not even the basic dignity of an ending. Just silence, as if the kindness they received was never worth acknowledging, as if the person who offered it was never there at all.
+You see it in everyday life. A friend who was there through difficult times, quietly forgotten when things got better. A colleague who helped someone rise, never heard from again once they did. Someone who was once close, simply fading from view the moment a new chapter began. People have a way of outgrowing the ones who were once part of their life. Not through any falling out, but through sheer indifference. No ending. No conversation. Just a slow, silent fade — as if the connection was never real to begin with.
 
 A person can recover from being told they are wrong. They can recover from being shouted at, misunderstood, even betrayed. But the slow, silent realization that someone feels absolutely nothing about what they did to you, that they can look through you as if you were glass. That is the wound that refuses to heal. Not because it was deep, but because it was never acknowledged.
 

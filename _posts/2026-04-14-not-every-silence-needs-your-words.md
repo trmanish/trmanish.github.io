@@ -22,7 +22,9 @@ What I have come to understand is that silence, when deliberate, is not a gap in
 
 There is a fine line between being someone who communicates with intention and someone who is chasing clarity that was never owed to them. The moment you cross that line, the conversation stops being about understanding and starts being about convincing. And no answer, no matter how satisfying, is worth becoming someone who needs to convince another person to care.
 
-So I am learning, slowly, to let silence be. To stop treating every unanswered question as a problem to solve. <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+So I am learning, slowly, to let silence be. To stop treating every unanswered question as a problem to solve.
+
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     Some silences are not waiting to be broken. They are complete sentences on their own.
 </div>
 

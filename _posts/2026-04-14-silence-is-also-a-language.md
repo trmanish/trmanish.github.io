@@ -1,11 +1,11 @@
 ---
-title: "Not Every Silence Needs Your Words"
+title: "Silence is Also a Language"
 date: 2026-04-14
 layout: post
 ---
 
 <div align="center">
-  <h1><strong>Not Every Silence Needs Your Words</strong></h1>
+  <h1><strong>Silence is Also a Language</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->

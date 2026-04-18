@@ -28,7 +28,7 @@
         <nav>
             <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
             <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url contains 'posts' or page.layout == 'post' %}active{% endif %}">All Ticks</a>
-            <a href="{{ "/podcasts.html" | relative_url }}" class="{% if page.url == '/podcasts.html' %}active{% endif %}">Podcasts</a>
+            <a href="{{ "/podcasts.html" | relative_url }}" class="{% if page.url contains 'podcast' %}active{% endif %}">Podcasts</a>
         </nav>
     </header>
     

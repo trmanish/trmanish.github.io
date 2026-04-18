@@ -1,0 +1,50 @@
+name: Send Newsletter on New Post
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_posts/**"
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new post
+        id: detect
+        run: |
+          NEW_POST=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- '_posts/*.md' | head -1)
+          if [ -z "$NEW_POST" ]; then
+            echo "No new post detected"
+            echo "found=false" >> $GITHUB_OUTPUT
+          else
+            echo "New post: $NEW_POST"
+            echo "found=true" >> $GITHUB_OUTPUT
+            echo "file=$NEW_POST" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        if: steps.detect.outputs.found == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        if: steps.detect.outputs.found == 'true'
+        run: npm install @neondatabase/serverless resend gray-matter marked
+
+      - name: Send newsletter
+        if: steps.detect.outputs.found == 'true'
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SITE_URL: "https://trmanish.github.io"
+          POST_FILE: ${{ steps.detect.outputs.file }}
+        run: node .github/scripts/send-newsletter.mjs

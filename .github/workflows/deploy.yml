@@ -1,13 +1,17 @@
-name: Deploy GitHub Pages and Supabase Edge Functions
+name: Deploy GitHub Pages
 
 on:
   push:
     branches:
       - main
     paths:
-      - "_posts/**"  # Only trigger GitHub Pages deploy when a post is modified
-      - "supabase/functions/**"  # Only trigger Supabase deployment when functions change
-      - ".github/workflows/deploy.yml"  # Trigger if workflow file is updated
+      - "_posts/**"
+      - "_layouts/**"
+      - "assets/**"
+      - "*.html"
+      - "*.md"
+      - "_config.yml"
+      - ".github/workflows/deploy.yml"
 
 jobs:
   build:
@@ -15,40 +19,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create assets/js directory if not exists
         run: mkdir -p assets/js
-
-      - name: Debug Deployment Contents
-        run: ls -R ./
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
-          publish_branch: gh-pages  # Ensure GitHub Pages uses this branch
-
-  deploy-supabase-functions:
-    runs-on: ubuntu-latest
-    needs: build  # Ensure GitHub Pages deploys first
-    if: github.event_name == 'push' && (contains(github.event.head_commit.modified, 'supabase/functions/') || contains(github.event.head_commit.modified, '.github/workflows/deploy.yml'))
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Supabase CLI (v2.12.1)
-        run: |
-          curl -L https://github.com/supabase/cli/releases/download/v2.12.1/supabase_2.12.1_linux_amd64.deb -o supabase.deb
-          sudo dpkg -i supabase.deb
-
-      - name: Verify Supabase CLI Installation
-        run: supabase --version
-
-      - name: Login to Supabase (Fix)
-        run: supabase login --token ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-
-      - name: Deploy Supabase Edge Function
-        run: supabase functions deploy subscribe --project-ref ${{ secrets.SUPABASE_PROJECT_ID }} --no-verify-jwt
+          publish_branch: gh-pages

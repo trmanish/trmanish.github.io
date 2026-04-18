@@ -46,7 +46,7 @@ export default {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: 'Two Ticks <onboarding@resend.dev>',
+          from: 'Two Ticks <newsletter@twoticks.blog>',
           to: env.NOTIFY_EMAIL,
           subject: `New Subscriber: ${email}`,
           html: `

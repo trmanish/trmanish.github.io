@@ -6,7 +6,7 @@ import { readFileSync } from 'fs';
 
 const sql = neon(process.env.DATABASE_URL);
 const resend = new Resend(process.env.RESEND_API_KEY);
-const siteUrl = process.env.SITE_URL;
+const siteUrl = process.env.SITE_URL || 'https://twoticks.blog';
 const postFile = process.env.POST_FILE;
 
 // Read and parse the post
@@ -68,7 +68,7 @@ for (let i = 0; i < subscribers.length; i += batchSize) {
 
   try {
     await resend.emails.send({
-      from: 'Two Ticks <newsletter@twoticks.co>',
+      from: 'Two Ticks <newsletter@twoticks.blog>',
       to: emails,
       subject: `New Tick: ${title}`,
       html: emailHtml,

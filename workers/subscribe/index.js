@@ -46,7 +46,7 @@ export default {
           'Authorization': `Bearer ${env.RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: 'Two Ticks <newsletter@twoticks.co>',
+          from: 'Two Ticks <onboarding@resend.dev>',
           to: env.NOTIFY_EMAIL,
           subject: `New Subscriber: ${email}`,
           html: `
@@ -63,6 +63,7 @@ export default {
         { headers }
       );
     } catch (error) {
+      console.error("Subscribe error:", error.message);
       return new Response(
         JSON.stringify({ error: "Something went wrong. Please try again." }),
         { status: 500, headers }

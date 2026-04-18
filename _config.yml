@@ -1,7 +1,7 @@
 title: "Two Ticks"
 description: "Life Two Ticks at a Time"
 baseurl: "" # Leave empty unless in a subdirectory
-url: "https://trmanish.github.io"
+url: "https://twoticks.blog"
 theme: minima # Keep using Minima but customize it
 permalink: /:year/:month/:day/:title.html
 

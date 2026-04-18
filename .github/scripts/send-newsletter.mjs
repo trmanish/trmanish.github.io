@@ -51,7 +51,7 @@ const emailHtml = `
 `;
 
 // Fetch all subscribers
-const subscribers = await sql`SELECT email FROM subscribers`;
+const subscribers = await sql`SELECT email FROM subscribers WHERE confirmed = true`;
 
 if (subscribers.length === 0) {
   console.log('No subscribers found. Skipping.');

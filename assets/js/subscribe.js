@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const email = document.getElementById(emailId).value;
 
             try {
-                const response = await fetch("https://twoticks-subscribe.two-ticks.workers.dev", {
+                const response = await fetch("https://api.twoticks.blog", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

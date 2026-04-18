@@ -1,0 +1,9 @@
+name = "twoticks-subscribe"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://trmanish.github.io"
+
+# Set these via: wrangler secret put DATABASE_URL
+# DATABASE_URL = your Neon connection string

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value;
 
         try {
-            const response = await fetch("https://vmxgdukmghrrzmadoqsm.functions.supabase.co/subscribe", {
+            const response = await fetch("https://twoticks-subscribe.two-ticks.workers.dev", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

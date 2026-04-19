@@ -10,7 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-There is a kind of anger that doesn't look for someone to blame. It doesn't shout at the world. It doesn't point fingers. It turns inward, quietly, violently, and it sits in your chest like a fire with no exit. Because you know. You know it was you.
+There is a kind of anger that doesn't look for someone to blame. It doesn't shout at the world. It doesn't point fingers. It turns inward, quietly, violently, and it sits in your chest like a fire with no exit. Because you know. **You know it was you.**
 
 She called. You didn't go. She waited. You hesitated. She opened the door more than once, and every single time, you found a reason to stand outside it a little longer. A surgery. A bad month. A career falling apart. An excuse dressed as a circumstance. And you believed it. You believed that life was doing this to you, that the timing was wrong, that things would settle and then you'd show up. As if love waits for your calendar to clear.
 
@@ -24,7 +24,7 @@ But patience is not the same thing as presence. And respecting someone's space i
 
 That is where the anger lives. Not at the career that broke you. Not at the circumstances that made it harder. But at yourself, for letting those things lead when you should have led. For being the man who endured everything life threw at him but couldn't get on a flight for the one person who made all of it bearable.
 
-You think about every moment you could have been there and weren't. The birthday you forgot. The trip you delayed. The New Year's Eve you should have been standing next to her. She was telling you what she wanted. Not in grand declarations, but in the quiet way people tell you things when they actually mean them. And you, the man who prides himself on reading between the lines, couldn't read the simplest sentence she ever wrote: come.
+You think about every moment you could have been there and weren't. The birthday you forgot. The trip you delayed. The New Year's Eve you should have been standing next to her. She was telling you what she wanted. Not in grand declarations, but in the quiet way people tell you things when they actually mean them. And you, the man who prides himself on reading between the lines, couldn't read the simplest sentence she ever wrote: **come.**
 
 And now you are chasing. Desperately. Foolishly. Sending messages that land on a silence you created. Writing letters that carry the weight of words you should have said months ago, face to face, holding her hand, not through a screen. You are pouring your heart out now, and the cruelest part is this: the words that would have changed everything six months ago now sound like a man drowning, reaching for a shore he swam away from himself.
 

@@ -1,0 +1,13 @@
+-- Run this entire block together in Neon SQL editor
+-- Replace the passwords before running
+
+CREATE ROLE app_subscriber WITH LOGIN PASSWORD 'CHANGE_THIS_TO_A_STRONG_PASSWORD';
+
+GRANT INSERT ON subscribers TO app_subscriber;
+GRANT USAGE, SELECT ON SEQUENCE subscribers_id_seq TO app_subscriber;
+
+REVOKE ALL ON subscribers FROM PUBLIC;
+
+CREATE ROLE app_newsletter WITH LOGIN PASSWORD 'CHANGE_THIS_TO_ANOTHER_PASSWORD';
+
+GRANT SELECT ON subscribers TO app_newsletter;

@@ -36,6 +36,8 @@ You can feel the earth shifting beneath your feet. Not because the world is unfa
     She gave you every chance not to become a regret. And you still did.
 </div>
 
+And now, when the mountains are finally behind you, when the battles that consumed your entire year are slowly turning into victories, when the world would look at you and say you made it, you feel nothing. Because the person you were fighting all of it for, the reason you wanted to conquer everything in the first place, is no longer standing at the other side waiting for you. You climbed every peak life threw at you. But the one view you wanted at the top was her. And she's gone.
+
 There is nothing poetic about this kind of loss. There is no silver lining. No lesson that makes it lighter. You don't get to wrap this in wisdom and walk away feeling whole. You broke something that didn't need to be broken, and the shards are yours to carry. Not hers. She was never the problem. She was the answer you were too slow to reach for.
 
 Own it. Not as a lesson for the next time. There is no next time for this. Own it as the heaviest thing you will ever hold. The woman who made your heart feel alive deserved a man who crossed a city for her. And the tragedy is, you were busy moving every other mountain life threw at you that year, fighting not to collapse, just so you could one day stand in front of her whole. But she didn't need you whole. She just needed you there.

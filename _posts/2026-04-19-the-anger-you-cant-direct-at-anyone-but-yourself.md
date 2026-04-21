@@ -16,7 +16,7 @@ She called. You didn't go. She waited. You hesitated. She opened the door more t
 
 And now she's gone. Not because she stopped caring. But because you gave her every reason to.
 
-You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that.
+You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. You sit alone at a restaurant, fork in hand, food untouched, staring at the empty chair across from you. You walk through the busy streets of downtown, people rushing past in every direction, and feel a tear quietly trickle down your face that you don't even bother to wipe. Because the only person who would have noticed isn't here anymore. That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You are watching a part of your heart walk away in real time, and your feet are cemented to the ground by your own choices.
@@ -26,7 +26,7 @@ And the thing is, you weren't pretending. Life was genuinely falling apart. The 
 
 But patience is not the same thing as presence. And respecting someone's space is not the same as disappearing from their life. You confused the two. You let the uncertainty of her silence become an excuse to wait instead of act. She called you to come. More than once. And you, the man drowning in his own chaos, kept telling himself next month. When things settle. When I'm in a better place. As if she was asking for perfection. She wasn't. She was asking for you.
 
-That is where the anger lives. Not at the career that broke you. Not at the circumstances that made it harder. But at yourself, *for letting those circumstances lead when you should have led.* For being the man who endured everything life threw at him but couldn't get on a flight for the one person who made all of it bearable.
+That is where the anger lives. Not at the career that broke you. Not at the circumstances that made it harder. But at yourself, **for letting those circumstances lead when you should have led.** For being the man who endured everything life threw at him but couldn't get on a flight for the one person who made all of it bearable.
 
 You think about every moment you could have been there and weren't. The birthday you forgot. The trip you delayed. The New Year's Eve you should have been standing next to her. She was telling you what she wanted. Not in grand declarations, but in the quiet way people tell you things when they actually mean them. And you, the man who prides himself on reading between the lines, couldn't read the simplest sentence she ever wrote: **come.**
 
@@ -50,4 +50,4 @@ That is the anger. Not at life. Not at her. At the man in the mirror who had eve
 
 And now, the only honest thing left to do is to stop. Stop chasing. Stop explaining. Stop sending letters that serve your guilt more than her peace. If you truly loved her, the last act of that love isn't a desperate plea. It's the hardest thing you'll ever do: letting her go, quietly, with the full weight of knowing that this one was on you.
 
-**Because losing her isn't like losing someone. It is like watching a part of your heart detach from your body, walk out the door, and knowing you are the one who left it open.** It is sitting alone at a restaurant, fork in hand, food untouched, staring at the empty chair across from you. It is walking through the busy streets of downtown, people rushing past in every direction, and feeling a tear quietly trickle down your face that you don't even bother to wipe. Because what's the point. The only person who would have noticed isn't here anymore.
+*Because losing her isn't like losing someone. It is like watching a part of your heart detach from your body, walk out the door, and knowing you are the one who left it open.*

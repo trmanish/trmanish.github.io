@@ -16,7 +16,11 @@ She called. You didn't go. She waited. You hesitated. She opened the door more t
 
 And now she's gone. Not because she stopped caring. But because you gave her every reason to.
 
-You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. You sit alone at a restaurant, fork in hand, food untouched, staring at the empty chair across from you. You walk through the busy streets of downtown, people rushing past in every direction, and feel a tear quietly trickle down your face that you don't even bother to wipe. Because the only person who would have noticed isn't here anymore. That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that.
+You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. You sit alone at a restaurant, fork in hand, food untouched, staring at the empty chair across from you. You walk through the busy streets of downtown, people rushing past in every direction, and feel a tear quietly trickle down your face that you don't even bother to wipe. Because the only person who would have noticed isn't here anymore.
+
+You are breathing, but it feels like just existing. Lungs moving, heart beating, but the air doesn't reach the same places it used to. You walk but your mind is somewhere else. Always somewhere else. You are working on everything you set out to build, chasing every ambition you ever had, and yet every single day there is an emptiness that no achievement will ever fill. The world moves around you and you move through it, but the part of you that felt alive, the part that lit up reading her messages at midnight, the part that wanted to wake up early just to talk to her. That part left when she did.
+
+That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You are watching a part of your heart walk away in real time, and your feet are cemented to the ground by your own choices.

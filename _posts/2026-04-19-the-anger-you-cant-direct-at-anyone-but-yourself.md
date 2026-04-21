@@ -26,7 +26,7 @@ And the thing is, you weren't pretending. Life was genuinely falling apart. The 
 
 But patience is not the same thing as presence. And respecting someone's space is not the same as disappearing from their life. You confused the two. You let the uncertainty of her silence become an excuse to wait instead of act. She called you to come. More than once. And you, the man drowning in his own chaos, kept telling himself next month. When things settle. When I'm in a better place. As if she was asking for perfection. She wasn't. She was asking for you.
 
-That is where the anger lives. Not at the career that broke you. Not at the circumstances that made it harder. But at yourself, for letting those things lead when you should have led. For being the man who endured everything life threw at him but couldn't get on a flight for the one person who made all of it bearable.
+That is where the anger lives. Not at the career that broke you. Not at the circumstances that made it harder. But at yourself, **for letting those circumstances lead when you should have led.** For being the man who endured everything life threw at him but couldn't get on a flight for the one person who made all of it bearable.
 
 You think about every moment you could have been there and weren't. The birthday you forgot. The trip you delayed. The New Year's Eve you should have been standing next to her. She was telling you what she wanted. Not in grand declarations, but in the quiet way people tell you things when they actually mean them. And you, the man who prides himself on reading between the lines, couldn't read the simplest sentence she ever wrote: **come.**
 

@@ -16,7 +16,9 @@ She called. You didn't go. She waited. You hesitated. She opened the door more t
 
 And now she's gone. Not because she stopped caring. But because you gave her every reason to.
 
-You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that. <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+You sit in your car and the rage hits you like a wall. Not at her. Never at her. At yourself. You scream at the steering wheel because your chest cannot hold what your mind is finally accepting. That the person you wanted more than anything in this world was right there, asking for nothing extraordinary, just your presence, and you couldn't even give her that.
+
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You are watching a part of your heart walk away in real time, and your feet are cemented to the ground by your own choices.
 </div>
 

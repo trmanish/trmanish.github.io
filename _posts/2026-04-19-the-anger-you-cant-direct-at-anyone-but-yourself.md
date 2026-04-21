@@ -52,4 +52,4 @@ And now, the only honest thing left to do is to stop. Stop chasing. Stop explain
 
 *Because losing her isn't like losing someone. It is like watching a part of your heart detach from your body, walk out the door, and knowing you are the one who left it open.*
 
-*And that is the weight you will carry. Not for a season. Not until it fades. For the rest of your life.*
+And that is the weight you will carry. Not for a season. Not until it fades. But for the rest of your life.

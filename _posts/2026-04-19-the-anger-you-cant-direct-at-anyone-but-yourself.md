@@ -2,6 +2,7 @@
 title: "The Anger You Can't Direct at Anyone But Yourself"
 date: 2026-04-19
 layout: post
+published: false
 ---
 
 <div align="center">

@@ -45,3 +45,5 @@ Own it. Not as a lesson for the next time. There is no next time for this. Own i
 That is the anger. Not at life. Not at her. At the man in the mirror who had everything he needed and still managed to let it slip through his fingers.
 
 And now, the only honest thing left to do is to stop. Stop chasing. Stop explaining. Stop sending letters that serve your guilt more than her peace. If you truly loved her, the last act of that love isn't a desperate plea. It's the hardest thing you'll ever do: letting her go, quietly, with the full weight of knowing that this one was on you.
+
+**Because losing her isn't like losing someone. It is like watching a part of your heart detach from your body, walk out the door, and knowing you are the one who left it open.**

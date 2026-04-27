@@ -13,7 +13,9 @@ published: true
 
 I learnt this very late in life. Far later than I should have.
 
-For most of my years, I operated on a quiet, almost naive belief: if I was good, the world would be good back. If I moved through life with honesty, with care, with intention, then the world, in some unspoken cosmic exchange, would return the favor. I genuinely thought goodness was contagious. That if enough of us chose to be decent, the rest would slowly come around. That kindness, given freely, would multiply. I believed being good was the fastest way to make the world good.
+From the time you are a child, you are told the same thing, in different words, by different people. Be good. Do good. Be kind. Be honest. Don't lie. Don't cheat. Help others. Stand up for what is right. Your parents say it. Your teachers say it. Every story you read as a kid says it. And somewhere along the way, without even realizing it, you start striving for it. You want to make your parents proud. You want to be the model good person they can point to. You want to be the one who is known for being decent, the one who can be trusted, the one who does the right thing even when no one is looking. You build your entire identity around being that person.
+
+For most of my years, I operated on a quiet, almost naive belief that flowed straight out of all that childhood teaching: if I was good, the world would be good back. If I moved through life with honesty, with care, with intention, then the world, in some unspoken cosmic exchange, would return the favor. I genuinely thought goodness was contagious. That if enough of us chose to be decent, the rest would slowly come around. That kindness, given freely, would multiply. I believed being good was the fastest way to make the world good.
 
 It is not. And realizing this is one of the hardest awakenings of adult life.
 

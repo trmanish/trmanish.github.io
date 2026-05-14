@@ -11,7 +11,9 @@ published: true
 
 <br> <!-- Adds extra spacing -->
 
-There is something strange about being human. Of all the species walking this planet, only one wakes up in the morning and asks itself why it is here at all. Only one builds telescopes to look at stars it will never touch, sends ships into oceans it cannot live in, points cameras at galaxies it cannot reach, and still feels a quiet ache when it finally puts the instruments down at night. A dog does not do this. A bird does not do this. They wake up, they live, they sleep. They are not haunted by the question.
+***There is something strange about being human.***
+
+Of all the species walking this planet, only one wakes up in the morning and asks itself why it is here at all. Only one builds telescopes to look at stars it will never touch, sends ships into oceans it cannot live in, points cameras at galaxies it cannot reach, and still feels a quiet ache when it finally puts the instruments down at night. A dog does not do this. A bird does not do this. They wake up, they live, they sleep. They are not haunted by the question.
 
 We are. And we are haunted by it because we were given an intellect, and the very nature of intellect is to dissect, to question, to keep peeling at the layers of things until it finds the thing underneath. That is the gift, and the curse, of being the only species with this much self awareness. The mind cannot rest until it knows why it is doing what it is doing. So somewhere, in everyone's life, the question arrives uninvited. *What is the point of all this?* For some, it shows up at twenty, sitting on the floor of a college dorm. For some, it shows up at forty, in a hotel room after a long flight. For some, it shows up only at the very end, when there is no time left to do anything about it. But it shows up. It always does.
 
@@ -19,13 +21,15 @@ And here is the saddest part. Most people never actually answer it. They never f
 
 But this is a borrowed answer. And borrowed answers do not survive the moment they are tested. We are about to see what happens when work itself is taken away from a lot of people. A certain part of society is openly saying it now. That in the next decade or two, technology will do most of the jobs, while a smaller group of them sips pina coladas on a beach somewhere. Whether the full version of that prediction lands or not is a different conversation. The fact that the prospect of it scares so many people so deeply is itself the proof. If your work disappearing is enough to collapse the meaning of your life, then your work was never the purpose. It was the scaffolding you mistook for the building. And the day the scaffolding comes down, you find out, in the worst possible way, that there was nothing underneath.
 
-This happens because for a long time we have been taught to attach the word purpose to a list of things that were never actually it. Some people say the purpose of life is money. Some say happiness. Some say success. Some say faith. Some say family. Some, the loudest ones, say it is your work. That what stays behind when you are gone is the legacy of what you built, and so building must be the point.
+This happens because for a long time we have been taught to attach the word purpose to a list of things that were never actually it. Some people say the purpose of life is **money**. Some say **happiness**. Some say **success**. Some say **faith**. Some say **family**. Some, the loudest ones, say it is your **work**. That what stays behind when you are gone is the legacy of what you built, and so building must be the point.
 
 None of these are the purpose.
 
 I have thought about this question for as long as I can remember, and the way I have come to my answer has been the long way around, through time and money first, before arriving at the actual thing.
 
-Money is important because it buys time. It frees up time for you. Time which you can then choose to spend chasing whatever you think your purpose is, however big or small that may be.
+**Money is important because it buys time.**
+
+It frees up time for you. Time which you can then choose to spend chasing whatever you think your purpose is, however big or small that may be.
 
 Time is the original currency of life. Rest everything is a derivative. However, Money is just the currency of time. The greatest inequality in life is not money, it is time. 
 
@@ -47,7 +51,7 @@ Take any joy you have ever felt in your life and trace it back honestly. The fir
 
 Now imagine the opposite. Take a suitcase of cash. Fly to Vegas. Win the biggest jackpot the casino has ever paid out. Stand alone in that hotel room with all of it spread out on the bed. No one to call. No one to share the news with. No one waiting on the other side. The high will last about ten minutes. After that, the room will get very quiet. You can only buy so much food for yourself, so many cars for yourself, so many watches for yourself, before all of it begins to look meaningless sitting in a drawer. But the joy of buying a small gift for someone you love, of seeing their face light up at something small you remembered, of sitting across from them at a table you paid for, of taking your parents on a trip they could never have taken alone, that joy does not run out. It does not get used up. It compounds.
 
-That is the test. If joy compounds when shared, and decays when alone, then the math of life is not complicated.
+That is the test. If joy compounds when shared, and decays when alone, **then the math of life is not complicated.**
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     Money is the currency of time, time is the canvas of life, and People are the only thing worth painting on it.

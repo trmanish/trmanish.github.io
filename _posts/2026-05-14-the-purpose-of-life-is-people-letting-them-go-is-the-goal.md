@@ -133,7 +133,7 @@ Once you understand this, a quiet weight comes off your chest. You stop expectin
 
 There is another reason letting go is the goal, and this one is harder to face. Because nature has been quietly telling us this from the beginning of time, and most of us have not been listening.
 
-If you do not learn to let go of people on your own, life will eventually do it for you.
+**If you do not learn to let go of people on your own, life will eventually do it for you.**
 
 The friend who slowly drifts. The parent who grows old. The partner who walks out. The child who builds their own life and no longer needs you the way they once did. And finally, the most undeniable teacher of them all, death itself.
 

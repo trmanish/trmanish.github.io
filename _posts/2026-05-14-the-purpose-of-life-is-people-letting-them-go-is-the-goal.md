@@ -31,7 +31,9 @@ But this is a borrowed answer. And borrowed answers do not survive the moment th
 
 **But most people do not know what their passion is.** Most people will never know what their purpose is. Most people do not have the agency to think new ideas, to create new innovation, no matter how easy the tools that promise to help them do that. For most people, the purpose has quietly, by default, become the work itself. Wake up. Get to the office. 9 to 5. Come back. Feed the family. Sleep. Do it again on Monday. And that becomes a routine. That routine slowly starts to mirage as a Purpose. A meaning. And when that work is no longer there, what happens to a society that no longer finds the meaning to continue going?
 
-I am aware of the counter arguments. That AI will end up creating more jobs than it takes, the way every wave of technology before it has. That Jevons paradox will play out again. This argument, more often than not, is made loudest by those in tech circles who stand to benefit the most, pecuniarily, from this technology being adopted at scale. They will compare AI to the steam engine. To electricity. To the printing press. I do not fully buy that comparison. I have written about it in detail in an earlier piece, [The Curious Case of GenAI and Productivity](/2024/07/08/genai-productivity.html). But that is a longer argument for another essay, and not really the point of this one.
+I am aware of the counter arguments. That AI will end up creating more jobs than it takes, the way every wave of technology before it has. That Jevons paradox will play out again. This argument, more often than not, is made loudest by those in tech circles who stand to benefit the most, pecuniarily, from this technology being adopted at scale. They will compare AI to the steam engine. To electricity. To the printing press.
+
+I do not fully buy that comparison. I have written about it in detail in an earlier piece, [The Curious Case of GenAI and Productivity](/2024/07/08/genai-productivity.html). But that is a longer argument for another essay, and not really the point of this one.
 
 <div align="center">
   <a href="/2024/07/08/genai-productivity.html">

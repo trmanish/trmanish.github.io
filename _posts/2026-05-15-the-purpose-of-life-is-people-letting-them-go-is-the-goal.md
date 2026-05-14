@@ -1,12 +1,12 @@
 ---
-title: "People Are the Purpose, Letting Them Go is the Goal"
-date: 2026-05-13
+title: "The Purpose of Life is People, Letting Them Go is the Goal"
+date: 2026-05-15
 layout: post
 published: true
 ---
 
 <div align="center">
-  <h1><strong>People Are the Purpose, Letting Them Go is the Goal</strong></h1>
+  <h1><strong>The Purpose of Life is People, Letting Them Go is the Goal</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->

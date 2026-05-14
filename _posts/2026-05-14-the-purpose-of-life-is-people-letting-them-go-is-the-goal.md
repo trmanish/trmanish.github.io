@@ -109,7 +109,7 @@ And the leaving is not always dramatic. Or painful. Or personal. Sometimes their
 
 For a long time, I fought this. I would hold on to people far past the point where whatever was between us had already given me everything it came to give. I would manufacture meaning that was no longer really there. I would tell myself walking away was a kind of betrayal of how much I had cared.
 
-So I would stay. I would explain. I would write the message and delete the message and write it again. I would book the flight. I would knock on the door. I would do whatever I could think of to keep the chapter open. And the strange thing was, the more I chased, the more I kept losing the very thing I was trying to hold on to. The version of them that had lived in my head.
+So I would stay. I would explain. I would write the message and delete the message and write it again. I would book the flight. And when I did not, I would carry that regret for a long time, quietly wishing I had booked the flight. I would knock on the door. I would do whatever I could think of to keep the chapter open. And the strange thing was, the more I chased, the more I kept losing the very thing I was trying to hold on to. The version of them that had lived in my head.
 
 And here is the part nobody really wants to say out loud.
 

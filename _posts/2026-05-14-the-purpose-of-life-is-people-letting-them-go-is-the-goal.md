@@ -113,7 +113,7 @@ So I would stay. I would explain. I would write the message and delete the messa
 
 And here is the part nobody really wants to say out loud.
 
-You do not actually get to own anyone in life.
+**You don't own anyone in life.**
 
 Not their time. Not their attention. Not their love. Not even their staying.
 

@@ -35,7 +35,7 @@ And borrowed answers do not survive the moment they are tested. We are about to 
 
 I am aware of the counter arguments. That AI will end up creating more jobs than it takes, the way every wave of technology before it has. That Jevons paradox will play out again. This argument, more often than not, is made loudest by those in tech circles who stand to benefit the most, pecuniarily, from this technology being adopted at scale. They will compare AI to the steam engine. To electricity. To the printing press.
 
-I do not fully buy that comparison. I have written about it in detail in an earlier piece, [The Curious Case of GenAI and Productivity](/2024/07/08/genai-productivity.html). But that is a longer argument for another essay, and not really the point of this one.
+I do not fully buy that comparison. But that is a longer argument for another essay, and not really the point of this one.
 
 <div align="center">
   <a href="/2024/07/08/genai-productivity.html">

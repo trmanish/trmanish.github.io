@@ -1,12 +1,12 @@
 ---
-title: "The Purpose of Life is People, Letting Them Go is the Goal"
+title: "When AI Takes Your Job, What's the Purpose Then?"
 date: 2026-05-14
 layout: post
 published: true
 ---
 
 <div align="center">
-  <h1><strong>The Purpose of Life is People, Letting Them Go is the Goal</strong></h1>
+  <h1><strong>When AI Takes Your Job, What's the Purpose Then?</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->
@@ -133,7 +133,7 @@ This is where a very different kind of letting go starts to form inside you. Not
 
 You stop writing endings in your head. You stop bracing yourself for the day they walk. You learn to actually be there with people while they are still here, instead of spending the whole time guarding yourself against the eventual goodbye. You learn to meet them where they actually are. Not where you wished they were. Not where some calendar in your head said they should have been by now.
 
-You laugh with them. You grow with them. You learn from them. And you trust that even if their road eventually turns away from yours, none of it will have been wasted. The chapter just ends. There is no guilt in that. No shame in that either.
+You laugh with them. You grow with them. You learn from them. And you trust that even if their road eventually turns away from yours, none of it will have been wasted. The walk simply ended where it was always going to end. That is not a failure. And there is nothing in it that anyone needs to apologize for.
 
 And strangely, this is the only way you ever really love anyone in life. Whether it is a friend. A partner. A colleague. A parent. A sibling. Or a person you barely got to know.
 

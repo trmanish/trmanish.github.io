@@ -15,7 +15,13 @@ published: true
 
 Of all the species walking this planet, only one wakes up in the morning and asks itself why it is here at all. Only one builds telescopes to look at stars it will never touch, sends ships into oceans it cannot live in, points cameras at galaxies it cannot reach, and still feels a quiet ache when it finally puts the instruments down at night. A dog does not do this. A bird does not do this. They wake up, they live, they sleep. They are not haunted by the question.
 
-We are. And we are haunted by it because we were given an intellect, and the very nature of intellect is to dissect, to question, to keep peeling at the layers of things until it finds the thing underneath. That is the gift, and the curse, of being the only species with this much self awareness. The mind cannot rest until it knows why it is doing what it is doing. So somewhere, in everyone's life, the question arrives uninvited. *What is the point of all this?* For some, it shows up at twenty, sitting on the floor of a college dorm. For some, it shows up at forty, in a hotel room after a long flight. For some, it shows up only at the very end, when there is no time left to do anything about it. But it shows up. It always does.
+We are.
+
+And we are haunted by it because we were given an intellect, and the very nature of intellect is to dissect, to question, to keep peeling at the layers of things until it finds the thing underneath. That is the gift, and the curse, of being the only species with this much self awareness. The mind cannot rest until it knows why it is doing what it is doing. So somewhere, in everyone's life, the question arrives uninvited.
+
+**What is the point of all this?**
+
+For some, it shows up at twenty, sitting on the floor of a college dorm. For some, it shows up at forty, in a hotel room after a long flight. For some, it shows up only at the very end, when there is no time left to do anything about it. But it shows up. It always does.
 
 And here is the saddest part. Most people never actually answer it. They never find their purpose. They circle it for years, sometimes for an entire life, and then quietly settle for whatever the world handed them as a substitute. Somewhere in their twenties or thirties, the wondering just stops. Not because they found anything. Because the rent is due. The kids need school. The parents are getting old. The bills do not pause while you sit on a couch trying to figure out the meaning of your life. So the purpose, by default, becomes the work. Wake up, get to the office, come back, feed the family, sleep, do it again on Monday. And slowly you start to tell yourself that this is what life is. That this is what every grown up does. That the questioning was meant for college kids and philosophers, not for someone with responsibilities.
 

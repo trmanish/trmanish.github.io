@@ -1,6 +1,6 @@
 ---
 title: "The Purpose of Life is People, Letting Them Go is the Goal"
-date: 2026-05-15
+date: 2026-05-14
 layout: post
 published: true
 ---

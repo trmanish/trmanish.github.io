@@ -205,4 +205,6 @@ If I had to compress everything I have come to believe into a single sentence I 
 
 You will love people. You will lose people. Sometimes you will be the one walking away. Sometimes you will be the one watching them walk. Both are part of the same life. Both are part of being human. The only thing you really get to choose is how you carry the loving and the losing inside you when the day is done.
 
-Walk through your life with open hands. Hold people gently. Love them honestly. Let them go when they have given everything they came to give, and let yourself go when you have given everything you came to give. *Because in the end, **the Purpose of Life is People. And Letting Them Go is the Goal**.*
+Walk through your life with open hands. Hold people gently. Love them honestly. Let them go when they have given everything they came to give, and let yourself go when you have given everything you came to give. *Because in the end, **the Purpose of Life is People.***
+
+***And Letting Them Go is the Goal.***

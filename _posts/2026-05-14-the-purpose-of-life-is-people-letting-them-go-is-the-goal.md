@@ -155,7 +155,7 @@ Once you understand this, a quiet weight comes off your chest. You stop expectin
 
 And yet, when someone you love deeply does walk away, your heart will still hurt. Not for an afternoon. For days. For weeks. Sometimes for months. That is okay. That is the process you have to walk through. The peace only comes at the end of it. In the quiet understanding that this was always how Nature meant it to be. That letting go of people was always the goal.
 
-There is another reason letting go is the goal, and this one is harder to face. Because nature has been quietly telling us this from the beginning of time, and most of us have not been listening.
+There is another reason letting go is the goal, and this one is harder to face. Because Nature has been quietly telling us this from the beginning of time, and most of us have not been listening.
 
 **If you do not learn to let go of people on your own, life will eventually do it for you.**
 

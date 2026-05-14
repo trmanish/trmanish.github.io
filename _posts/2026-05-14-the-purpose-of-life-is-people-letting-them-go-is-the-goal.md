@@ -127,8 +127,6 @@ You laugh with them. You grow with them. You learn from them. And you trust that
 
 And strangely, this is the only way you ever really love anyone in life. Whether it is a friend. A partner. A colleague. A parent. A sibling. Or a person you barely got to know.
 
-Love with a clenched fist is not love. It is fear wearing love's clothes. Love that demands permanence is not generosity. It is a need with prettier vocabulary. The love that actually survives, even after the person is no longer in the room, is the love that was given freely the entire time. The love that did not come with terms and conditions. The love that did not require the other person to stay in order for it to make sense.
-
 Once you understand this, a quiet weight comes off your chest. You stop expecting people to complete you. You stop handing them the responsibility for your wholeness, which was never theirs to carry to begin with. You let them just be who they are. And in return, you finally let yourself be whole. Whether they stay. Or whether they walk.
 
 There is another reason letting go is the goal, and this one is harder to face. Because nature has been quietly telling us this from the beginning of time, and most of us have not been listening.
@@ -157,7 +155,7 @@ The whole game, then, is to love people fully while they are here, and to releas
 
 <br>
 
-If I had to compress everything I have come to believe into a single sentence I could leave behind, it would be this. *The purpose of life is to spend your time, your free time, the time that is truly yours, on people. And the goal of life is to learn how to let those very people go, when life asks you to, without bitterness, without grasping, and without losing the love you had for them in the first place.*
+If I had to compress everything I have come to believe into a single sentence I could leave behind, it would be this. *The **purpose of life** is to spend your time, your free time, the time that is truly yours, on people. And the **goal of life** is to learn how to let those very people go, when life asks you to, without bitterness, without grasping, and without losing the love you had for them in the first place.*
 
 You will love people. You will lose people. Sometimes you will be the one walking away. Sometimes you will be the one watching them walk. Both are part of the same life. Both are part of being human. The only thing you really get to choose is how you carry the loving and the losing inside you when the day is done.
 

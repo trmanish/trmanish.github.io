@@ -107,6 +107,8 @@ Somewhere along the way, I had quietly confused love with permanence. I had deci
 
 But the older I get, the more I am starting to see this differently.
 
+That people, in their deepest form, are experiences. And experiences were never built to stay. They were built to arrive, to give what they came to give, and then to keep moving.
+
 There are people who are with you for a long, long stretch of life.
 
 A parent who has watched you grow from a child into whoever you are now. A sibling who knew you before the world started shaping you. The friend from school or college who has seen every version of you, the good ones, the embarrassing ones, the lost ones, the steady ones. A co-founder or a colleague you built something real with, who knows your work brain almost as well as you do. A partner who walked through years of decisions, joys and quiet defeats with you.

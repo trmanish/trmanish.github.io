@@ -113,9 +113,9 @@ Not their time. Not their attention. Not their love. Not even their staying.
 
 Once you really let that idea settle inside you, something quietly loosens. The grip softens. The bargaining stops. You stop treating every connection like it has to become a forever in order for it to have meant something.
 
-Some people are seasons in your life. Not all of them were ever meant to be the climate. And a season ending is not the same thing as a season failing. Nobody calls autumn a tragedy for becoming winter. Nobody calls a morning a failure for turning into afternoon. We just call it the shape of how things move.
+Some people are travelers walking alongside you on your road for a while. Not landmarks meant to stand there forever. They were always going to keep moving. And a fork in the road is not the same thing as a road failing. Nobody calls a path branching off a tragedy. Nobody calls two travelers heading in different directions a betrayal. We just call it the shape of how journeys move.
 
-People are no different. The mistake is not that the season ends. The mistake is when you try to force a season to behave like the climate, holding on to a short, beautiful chapter as if it was supposed to be the whole book.
+People are no different. The mistake is not that their road turns away from yours. The mistake is when you try to plant a traveler in the ground like a landmark, holding on to a brief, beautiful walk as if it was supposed to be the entire map.
 
 This is where a very different kind of letting go starts to form inside you. Not the cold kind. Not the version that pretends not to care anymore. The opposite, actually. The grown up kind. The one that lets you love someone without trying to script the next ten years of their life for them.
 

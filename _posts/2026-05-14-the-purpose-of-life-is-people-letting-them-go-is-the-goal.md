@@ -151,8 +151,6 @@ You stop writing endings in your head. You stop bracing yourself for the day the
 
 You laugh with them. You grow with them. You learn from them. And you trust that even if their road eventually turns away from yours, none of it will have been wasted. The walk simply ended where it was always going to end. That is not a failure. And there is nothing in it that anyone needs to apologize for.
 
-And strangely, this is the only way you ever really love anyone in life. Whether it is a friend. A partner. A colleague. A parent. A sibling. Or a person you barely got to know.
-
 Once you understand this, a quiet weight comes off your chest. You stop expecting people to complete you. You stop handing them the responsibility for your wholeness, which was never theirs to carry to begin with. You let them just be who they are. And in return, you finally let yourself be whole. Whether they stay. Or whether they walk.
 
 And yet, when someone you love deeply does walk away, your heart will still hurt. Not for an afternoon. For days. For weeks. Sometimes for months. That is okay. That is the process you have to walk through. The peace only comes at the end of it. In the quiet understanding that this was always how Nature meant it to be. That letting go of people was always the goal.

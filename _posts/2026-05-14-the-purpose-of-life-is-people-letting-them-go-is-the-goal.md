@@ -133,7 +133,9 @@ For a long time, I fought this.
 
 So I would stay. I would explain. I would write the message and delete the message and write it again. I would book the flight. And when I did not, I would carry that regret for a long time, quietly wishing I had booked the flight. I would knock on the door. I would do whatever I could think of to keep the chapter open.
 
-And here is the part nobody really wants to say out loud.
+Because the math in my head was simple. If People were the Purpose, then holding on to them had to be the Goal.
+
+But here is the part nobody really wants to say out loud.
 
 **You don't own anyone in life.**
 

@@ -139,7 +139,13 @@ And here is the part nobody really wants to say out loud.
 
 **You don't own anyone in life.**
 
-Not their time. Not their attention. Not their love. Not even their staying.
+Not their time.
+
+Not their attention.
+
+Not their love.
+
+Not even their staying.
 
 Once you really let that idea settle inside you, something quietly loosens. The grip softens. The bargaining stops. You stop treating every connection like it has to become a forever in order for it to have meant something.
 
@@ -149,7 +155,9 @@ People are no different. The mistake is not that their road turns away from your
 
 This is where a very different kind of letting go starts to form inside you. Not the cold kind. Not the version that pretends not to care anymore. The opposite, actually. The grown up kind. The one that lets you love someone without trying to script the next ten years of their life for them.
 
-You stop writing endings in your head. You stop bracing yourself for the day they walk. You learn to actually be there with people while they are still here, instead of spending the whole time guarding yourself against the eventual goodbye. You learn to meet them where they actually are. Not where you wished they were. Not where some calendar in your head said they should have been by now.
+You stop writing endings in your head. You stop bracing yourself for the day they walk. You learn to actually be there with people while they are still here, instead of spending the whole time guarding yourself against the eventual goodbye. You learn to meet them where they actually are. Not where you wished they were.
+
+Not where some calendar in your head said they should have been by now.
 
 You laugh with them. You grow with them. You learn from them. And you trust that even if their road eventually turns away from yours, none of it will have been wasted. The walk simply ended where it was always going to end. That is not a failure. And there is nothing in it that anyone needs to apologize for.
 

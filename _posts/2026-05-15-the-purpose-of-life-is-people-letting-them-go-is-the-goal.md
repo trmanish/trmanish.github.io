@@ -11,7 +11,7 @@ published: true
 
 <br> <!-- Adds extra spacing -->
 
-***There is something strange about being human.***
+*There is something strange about being human.*
 
 Of all the species walking this planet, only one wakes up in the morning and asks itself why it is here at all. Only one builds telescopes to look at stars it will never touch, sends ships into oceans it cannot live in, points cameras at galaxies it cannot reach, and still feels a quiet ache when it finally puts the instruments down at night. A dog does not do this. A bird does not do this. They wake up, they live, they sleep. They are not haunted by the question.
 

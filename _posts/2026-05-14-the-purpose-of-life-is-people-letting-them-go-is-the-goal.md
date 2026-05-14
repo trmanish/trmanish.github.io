@@ -57,7 +57,9 @@ So money is important. But only because it gives you back time. And time is only
 
 <br>
 
-And for a long time, after lots of experiences, good and bad, happy and painful, I have realized that the Purpose of Life is People. Every experience I have had in my life, every experience you have had in yours, the joy, the cries, the love you felt for someone, the heart ache you carried when someone walked away from you, the smile your kid brings to your face the moment they wake up, the joy of seeing your parents in good health, the slow melancholy of watching them grow old and starting to need your support, the same way you once needed theirs when you were growing up. All of it. Every single bit of it. It is because of People.
+And for a long time, after lots of experiences, good and bad, happy and painful, I have realized that the Purpose of Life is People.
+
+Every experience I have had in my life, every experience you have had in yours, the joy, the cries, the love you felt for someone, the heart ache you carried when someone walked away from you, the smile your kid brings to your face the moment they wake up, the joy of seeing your parents in good health, the slow melancholy of watching them grow old and starting to need your support, the same way you once needed theirs when you were growing up. All of it. Every single bit of it. It is because of People.
 
 Take any joy you have ever felt in your life and trace it back honestly. The first laugh of a child you love. The smell of your mother's kitchen on a Sunday. A friend who showed up at three in the morning when you did not even ask. The hand of someone you love resting on yours in a quiet room. The drive to the airport that you did not want to end. A goodbye that took everything in you to say. Every single one of these has a person in it. Not a thing. Not an object. Not an achievement on a wall. A person.
 

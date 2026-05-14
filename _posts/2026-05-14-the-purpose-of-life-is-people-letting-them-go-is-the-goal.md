@@ -31,6 +31,14 @@ But this is a borrowed answer. And borrowed answers do not survive the moment th
 
 **But most people do not know what their passion is.** Most people will never know what their purpose is. Most people do not have the agency to think new ideas, to create new innovation, no matter how easy the tools that promise to help them do that. For most people, the purpose has quietly, by default, become the work itself. Wake up. Get to the office. 9 to 5. Come back. Feed the family. Sleep. Do it again on Monday. And that becomes a routine. That routine slowly starts to mirage as a Purpose. A meaning. And when that work is no longer there, what happens to a society that no longer finds the meaning to continue going?
 
+I am aware of the counter arguments. That AI will end up creating more jobs than it takes, the way every wave of technology before it has. That Jevons paradox will play out again. This argument, more often than not, is made loudest by those in tech circles who stand to benefit the most, pecuniarily, from this technology being adopted at scale. They will compare AI to the steam engine. To electricity. To the printing press. I do not fully buy that comparison. I have written about it in detail in an earlier piece, [The Curious Case of GenAI and Productivity](/2024/07/08/genai-productivity.html). Earlier waves of technology unlocked energy and poured it back into society as economic surplus. AI seems to consume energy out of society, not add to it. But that is a longer argument for another essay, and not really the point of this one.
+
+<div align="center">
+  <a href="/2024/07/08/genai-productivity.html">
+    <img src="/assets/images/default-short-form-image.jpg" alt="The Curious Case of GenAI and Productivity" style="width: 30%; border: 1px solid #eee; border-radius: 6px;">
+  </a>
+</div>
+
 Whether the full version of that AI prediction lands or not is a different conversation. The fact that the prospect of it scares so many people so deeply is itself the proof. If your work disappearing is enough to collapse the meaning of your life, then your work was never the purpose. It was the scaffolding you mistook for the building. And the day the scaffolding comes down, you find out, in the worst possible way, that there was nothing underneath.
 
 This happens because for a long time we have been taught to attach the word purpose to a list of things that were never actually it. Some people say the purpose of life is **money**. Some say **happiness**. Some say **success**. Some say **faith**. Some say **family**. Some, the loudest ones, say it is your **work**. That what stays behind when you are gone is the legacy of what you built, and so building must be the point.

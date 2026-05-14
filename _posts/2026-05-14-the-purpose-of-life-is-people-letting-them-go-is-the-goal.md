@@ -35,7 +35,7 @@ I am aware of the counter arguments. That AI will end up creating more jobs than
 
 <div align="center">
   <a href="/2024/07/08/genai-productivity.html">
-    <img src="/assets/images/default-short-form-image.jpg" alt="The Curious Case of GenAI and Productivity" style="width: 30%; border: 1px solid #eee; border-radius: 6px;">
+    <img src="/assets/purpose_letting_go/genai-productivity-card.png" alt="The Curious Case of GenAI and Productivity" style="width: 60%; border: 1px solid #eee; border-radius: 6px;">
   </a>
 </div>
 

@@ -125,7 +125,9 @@ They came in to deliver something specific. A lesson. A softening. A question. A
 
 And once that delivery was complete, they left. Sometimes loudly. Sometimes so quietly that you only noticed they were gone months later, when you reached for them in your head and realized they were no longer there.
 
-And the leaving is not always dramatic. Or painful. Or personal. Sometimes their role in your life was simply complete. Sometimes the two of you outgrew each other without anyone doing anything wrong. Sometimes you were on different timelines of growth. Sometimes the lesson the two of you came to teach each other had already been learned. Sometimes that is just how life moves.
+And the leaving is not always dramatic. Or painful. Or personal. Sometimes their role in your life was simply complete. Sometimes the two of you outgrew each other without anyone doing anything wrong. Sometimes you were on different timelines of growth. Sometimes the lesson the two of you came to teach each other had already been learned.
+
+Sometimes that is just how life moves.
 
 For a long time, I fought this.
 

@@ -101,6 +101,8 @@ They were never meant to be permanent. They came in to deliver something specifi
 
 And once that delivery was complete, they left. Sometimes loudly. Sometimes so quietly that you only noticed they were gone months later, when you reached for them in your head and realized they were no longer there.
 
+And the leaving is not always dramatic. Or painful. Or personal. Sometimes their role in your life was simply complete. Sometimes the two of you outgrew each other without anyone doing anything wrong. Sometimes you were on different timelines of growth. Sometimes the lesson the two of you came to teach each other had already been learned. Sometimes it is just life being life.
+
 For a long time, I fought this. I would hold on to people far past the point where whatever was between us had already given me everything it came to give. I would manufacture meaning that was no longer really there. I would tell myself walking away was a kind of betrayal of how much I had cared.
 
 So I would stay. I would explain. I would write the message and delete the message and write it again. I would book the flight. I would knock on the door. I would do whatever I could think of to keep the chapter open. And the strange thing was, the more I chased, the more I kept losing the very thing I was trying to hold on to. The version of them that had lived in my head.
@@ -120,6 +122,8 @@ People are no different. The mistake is not that their road turns away from your
 This is where a very different kind of letting go starts to form inside you. Not the cold kind. Not the version that pretends not to care anymore. The opposite, actually. The grown up kind. The one that lets you love someone without trying to script the next ten years of their life for them.
 
 You stop writing endings in your head. You stop bracing yourself for the day they walk. You learn to actually be there with people while they are still here, instead of spending the whole time guarding yourself against the eventual goodbye. You learn to meet them where they actually are. Not where you wished they were. Not where some calendar in your head said they should have been by now.
+
+You laugh with them. You grow with them. You learn from them. And you trust that even if their road eventually turns away from yours, none of it will have been wasted. The chapter just ends. There is no guilt in that. No shame in that either.
 
 And strangely, this is the only way you ever really love anyone in life. Whether it is a friend. A partner. A colleague. A parent. A sibling. Or a person you barely got to know.
 

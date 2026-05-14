@@ -119,7 +119,7 @@ And then there are people who arrive for a much shorter while.
 
 A colleague you worked closely with for a few intense years, before one of you moved cities or moved on. A friend who showed up at a very specific phase of your life, walked through it with you, and then quietly drifted as both your lives kept turning. A business partner who taught you everything you needed to know before the partnership ran its course. A mentor who shaped a few years of your thinking and then stepped back. A stranger in another country. Someone you almost loved. A person who shared a single afternoon with you in a city that was not supposed to mean anything at all.
 
-They were never meant to be permanent. They came in to deliver something specific. A lesson. A softening. A question. A part of you that you had not yet met. A small piece of clarity about what you actually wanted, or about what you had been quietly settling for.
+**They were never meant to be permanent.** They came in to deliver something specific. A lesson. A softening. A question. A part of you that you had not yet met. A small piece of clarity about what you actually wanted, or about what you had been quietly settling for.
 
 And once that delivery was complete, they left. Sometimes loudly. Sometimes so quietly that you only noticed they were gone months later, when you reached for them in your head and realized they were no longer there.
 

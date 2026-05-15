@@ -25,7 +25,11 @@ And we are haunted by it because we were given an intellect, and the very nature
 
 For some, it shows up at twenty, sitting on the floor of a college dorm. For some, it shows up at forty, in a hotel room after a long flight. For some, it shows up only at the very end, when there is no time left to do anything about it. But it shows up. It always does.
 
-And here is the saddest part. Most people never actually answer it. They never find their purpose. They circle it for years, sometimes for an entire life, and then quietly settle for whatever the world handed them as a substitute. Somewhere in their twenties or thirties, the wondering just stops. Not because they found anything. Because the rent is due. The kids need school. The parents are getting old. The bills do not pause while you sit on a couch trying to figure out the meaning of your life. And so we slowly tell ourselves that this is what life is. That this is what every grown up does. That the questioning was meant for college kids and philosophers, not for someone with responsibilities.
+And here is the saddest part.
+
+Most people never actually answer it. They never find their purpose. They circle it for years, sometimes for an entire life, and then quietly settle for whatever the world handed them as a substitute. Somewhere in their twenties or thirties, the wondering just stops. Not because they found anything. Because the rent is due. The kids need school. The parents are getting old. The bills do not pause while you sit on a couch trying to figure out the meaning of your life.
+
+And so we slowly tell ourselves that this is what life is. That this is what every grown up does. That the questioning was meant for college kids and philosophers, not for someone with responsibilities.
 
 But this is a borrowed answer.
 

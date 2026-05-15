@@ -87,7 +87,9 @@ That is the test. If joy compounds when shared, and decays when alone, **then th
 
 Every form of human emotion I have ever experienced, the deepest ones, the ones that mattered, never came from things. They came from people. The anger. The hurt. The smile that takes over your face for no reason when their name appears on your phone. The way you replay a single conversation in your head a hundred times. The pain when they leave. The melancholy when they are no longer around. The strange weight of seeing an empty chair where someone used to sit. None of this lives inside an object. It lives inside the people we walked some part of this life with.
 
-So the answer should be simple. **If People are the purpose, then chase them. Hold them.** Show up for them. Break a few rules to keep them. Take the flight. Make the call. Send the message your ego is begging you not to send. Say the thing while you still can. Do not wait until the eulogy to say what could have been said over a cup of coffee. That is what I believed for the longest time. And honestly, I still do.
+So the answer should be simple. **If People are the purpose, then chase them. Hold them.** Show up for them. Break a few rules to keep them. Take the flight. Make the call. Send the message your ego is begging you not to send. Say the thing while you still can. Do not wait until the eulogy to say what could have been said over a cup of coffee.
+
+That is what I believed for the longest time. And honestly, I still do.
 
 But sitting with this idea long enough, I have arrived at a second realization that I did not see coming. One that takes the first idea and turns it on its head.
 

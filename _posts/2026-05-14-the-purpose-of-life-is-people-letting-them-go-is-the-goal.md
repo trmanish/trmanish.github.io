@@ -165,6 +165,12 @@ You laugh with them. You grow with them. You learn from them. And you trust that
 
 Once you understand this, a quiet weight comes off your chest. You stop expecting people to complete you. You stop handing them the responsibility for your wholeness, which was never theirs to carry to begin with. You let them just be who they are. And in return, you finally let yourself be whole. Whether they stay. Or whether they walk.
 
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    "I suppose in the end, the whole of life becomes an act of letting go, but what always hurts the most is not taking a moment to say goodbye."
+    <br><br>
+    <span style="font-size: 0.7em;">— Yann Martel, <em>Life of Pi</em></span>
+</div>
+
 And yet, when someone you love deeply leaves your life, whether by walking away from you, or by passing away from this world, your heart will still hurt.
 
 Not for an afternoon.

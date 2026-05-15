@@ -1,12 +1,12 @@
 ---
-title: "When AI Takes the Jobs, What's the Purpose Then?"
+title: "The Point of It All"
 date: 2026-05-14
 layout: post
 published: true
 ---
 
 <div align="center">
-  <h1><strong>When AI Takes the Jobs, What's the Purpose Then?</strong></h1>
+  <h1><strong>The Point of It All</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->

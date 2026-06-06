@@ -87,7 +87,11 @@ So I began to sit with a harder question. **What happens after?**
 
 After technology has taken over, after most of our jobs are gone, after everything can be built so easily that building itself means nothing. When anyone can make anything, yet so few carry the Taste and Imagination to build what is meaningful, or the agency to see it through. In that world, what is even meaningful anymore?
 
-And the more I have thought about it, the more life has moved me forward, the more I keep arriving at the same simple answer. In the end, only two things will really matter. Two things that will become the scarcest things of all as technology completes its slow zombification of society. More so now, when we have willingly handed it our lives.
+And the more I have thought about it, the more life has moved me forward, the more I keep arriving at the same simple answer.
+
+In the end, only two things will really matter.
+
+Two things that will become the scarcest things of all as technology completes its slow zombification of society. More so now, when we have willingly handed it our lives.
 
 <br>
 
@@ -121,7 +125,9 @@ Because when machines have taken over everything flashy, everything fast, everyt
 
 This will give you more joy and purpose than any job, any title, any amount of money ever will.
 
-And yet, **this has become one of the scarcest things in life.** Technology has led everyone to chase hedonism over real, meaningful relationships.
+And yet, **this has become one of the scarcest things in life.**
+
+Technology has led everyone to chase hedonism over real, meaningful relationships.
 
 Our values are now measured by the size of someone's bank balance, rather than by whether they are the one who will sit beside us when everything else falls away. Money is important, it buys us Time. But beyond a certain amount, no money will ever give you more joy than a warm, caring embrace from someone who only cares for your well-being—truly and genuinely.
 
@@ -155,7 +161,9 @@ So this is where I have landed, after all these years of building the very thing
 
 And when that happens, the only things left standing—the only things that were ever really ours—will be the person whose hand you hold, and the person you actually are when no one is watching.
 
-And when I picture that world, I do not picture its towers or its glittering skylines. I picture two people grown old together on a quiet hillside outside the city—a small lantern between them, her head resting on his shoulder—watching the lights of a civilization that no longer needs them.
+And when I picture that world, I do not picture its towers or its glittering skylines.
+
+I picture two people grown old together on a quiet hillside outside the city—a small lantern between them, her head resting on his shoulder—watching the lights of a civilization that no longer needs them.
 
 And needing nothing but each other.
 

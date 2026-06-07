@@ -23,7 +23,7 @@ css: |-
 
   p {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   h1 {

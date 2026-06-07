@@ -2,9 +2,9 @@
 pdf_options:
   format: Letter
   margin:
-    top: 25mm
+    top: 22mm
     right: 20mm
-    bottom: 25mm
+    bottom: 22mm
     left: 20mm
   printBackground: true
 css: |-
@@ -15,7 +15,7 @@ css: |-
     background: white;
     color: #444;
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.65;
     max-width: 800px;
     margin: 0 auto;
     padding: 0;
@@ -23,7 +23,7 @@ css: |-
 
   p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   h1 {

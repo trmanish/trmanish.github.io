@@ -26,7 +26,7 @@ Two hypotheses have sat quietly underneath that thesis for years:
 
 **Technology and the lack of humanity are directly related.** The more technology pervades a society, the more it strips people of human connection, the quiet fabric that has held us together for centuries. And that fabric does not tear loudly. It frays. Thread by thread. Almost invisibly. Until one day a society looks around and cannot remember how to hold itself.
 
-This has been the core reason why, while I have spent my life working in this very industry, I have always felt a bit disconnected from some of the conversations coming out of the ecosystem. I have always felt excited, even energized, by talk of innovation, of new things to build. But the transactory conversations of Silicon Valley never felt enticing.
+This has been the core reason why, while I have spent my life working in this very industry, I have always felt a bit disconnected from some of the conversations coming out of the ecosystem. I have always felt excited, even energized, by talk of innovation, of new things to build. But the transactory conversations in Technology never felt enticing.
 
 It is why I have barely maintained an online presence. I deleted Facebook a decade ago, and never saw the appeal of Instagram or TikTok.
 

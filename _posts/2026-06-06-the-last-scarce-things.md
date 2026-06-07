@@ -30,7 +30,7 @@ This has been the core reason why, while I have spent my life working in this ve
 
 It is why I have barely maintained an online presence. I deleted Facebook a decade ago, and never saw the appeal of Instagram or TikTok.
 
-And to be clear, having technology automate the mundane and hand us back our time is a beautiful thing. Let it take over the orchestration of logistics in our lives. *Spend time with the people you love — not orchestrating the logistics that let you spend time with the people you love.* What I never bought into is the "OpenClaw-ism" of the Valley—adding every new agent to every corner of your life, until nothing in it is actually lived by you.
+And to be clear, having technology automate the mundane and hand us back our time is a beautiful thing. Let it take over the orchestration of logistics in our lives. *Spend time with the people you love — not orchestrating the logistics that let you spend time with the people you love.* What I never quite embraced is the "OpenClaw-ism" of the Valley—adding every new agent to every corner of your life, until nothing in it is actually lived by you.
 
 Somehow, I have kept myself deeply involved, technically, in every AI advancement, building with these tools every single day, and yet somehow managed to keep them from ever touching the part of my life that actually breathes.
 
@@ -40,7 +40,7 @@ There is a quiet ache in watching a stranger cry, and feeling the urge to walk o
 
 These small, unprofitable moments—some joyful, some sad, all deeply human—have always felt more heart-warming to me than any AI-driven euphoria someone managed to attain for themselves or their business.
 
-And I also came to see that barely anyone in the Valley seems to care about a world that exists and breathes outside San Francisco. And pushing our tech-driven dystopian vision onto that world is going to have debilitating effects across society.
+And I believe pushing a tech-driven dystopian vision onto a world that exists and breathes far beyond San Francisco is going to have debilitating effects across society.
 
 So I began to sit with a harder question. **What happens after?**
 

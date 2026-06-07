@@ -22,7 +22,7 @@ For a long time, I have held a strong thesis that too much technology is eventua
 
 Two hypotheses have sat quietly underneath that thesis for years:
 
-**Technology and critical thinking in a society are inversely related.** The more the technology, the dumber the society. Every tool that thinks for us is one less reason for us to think at all.
+**Technology and Critical Thinking in a society are inversely related.** The more the technology, the dumber the society. Every tool that thinks for us is one less reason for us to think at all.
 
 **Technology and the lack of humanity are directly related.** The more technology pervades a society, the more it strips people of human connection, the quiet fabric that has held us together for centuries. And that fabric does not tear loudly. It frays. Thread by thread. Almost invisibly. Until one day a society looks around and cannot remember how to hold itself.
 

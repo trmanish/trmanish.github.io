@@ -58,7 +58,7 @@ Waking up every morning caring for a life around you is the most meaningful thin
 
 Falling in love completely. Totally. With all your heart. Not wanting anything from them besides their well-being, their presence, and their warm embrace. Yearning for the smallest things: to see their face, to hear their voice, to know their scent.
 
-And then living that love in the most ordinary ways.
+**And then living that love in the most ordinary ways.**
 
 Learning exactly how they take their tea, and making it for them anyway, every morning, without being asked. Tilting the umbrella toward them in the rain and pretending you aren't getting wet.
 

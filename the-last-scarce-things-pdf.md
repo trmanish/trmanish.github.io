@@ -2,9 +2,9 @@
 pdf_options:
   format: Letter
   margin:
-    top: 22mm
+    top: 20mm
     right: 20mm
-    bottom: 22mm
+    bottom: 20mm
     left: 20mm
   printBackground: true
 css: |-
@@ -23,7 +23,7 @@ css: |-
 
   p {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   h1 {
@@ -137,7 +137,7 @@ Technology has led everyone to chase hedonism over real, meaningful relationship
 
 Our values are now measured by the size of someone's bank balance, rather than by whether they are the one who will sit beside us when everything else falls away. Money is important, it buys us Time. But beyond a certain amount, no money will ever give you more joy than a warm, caring embrace from someone who only cares for your well-being—truly and genuinely.
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+<div style="text-align: center; font-size: 1.25em; padding: 10px 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     In a world where machines can do everything, the only thing left worth doing is to love someone—completely, simply, every ordinary day.
 </div>
 
@@ -155,7 +155,7 @@ The beauty will shift from Perfection to Imperfection.
 
 To the cracks. To the unpolished. To the trembling voice that means every word it says. To the real.
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+<div style="text-align: center; font-size: 1.25em; padding: 10px 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     When machines make perfection abundant, imperfection becomes the new beauty. Character becomes the new wealth. And purity of heart—already a rarity—becomes the rarest thing in the world.
 </div>
 
@@ -169,7 +169,7 @@ And when that happens, the only things left standing—the only things that were
 
 And when I picture that world, I do not picture its towers or its glittering skylines.
 
-I picture two people grown old together on a quiet hillside outside the city—a small lantern between them, her head resting on his shoulder—watching the lights of a civilization that no longer needs them.
+I picture two people grown old together on a quiet hillside outside the city, a small lantern between them, watching the lights of a civilization that no longer needs them.
 
 And needing nothing but each other.
 

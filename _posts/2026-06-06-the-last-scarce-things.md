@@ -124,7 +124,7 @@ And when that happens, the only things left standing—the only things that were
 
 And when I picture that world, I do not picture its towers or its glittering skylines.
 
-I picture two people grown old together on a quiet hillside outside the city—a small lantern between them, her head resting on his shoulder—watching the lights of a civilization that no longer needs them.
+I picture two people grown old together on a quiet hillside outside the city, a small lantern between them, watching the lights of a civilization that no longer needs them.
 
 And needing nothing but each other.
 

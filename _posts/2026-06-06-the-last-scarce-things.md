@@ -28,7 +28,7 @@ Two hypotheses have sat quietly underneath that thesis for years:
 
 This has been the core reason why, while I have spent my life working in this very industry, I have always felt disconnected from the ecosystem and the values it propagates. I have always felt excited, even energized, by conversations about innovation, about new things to build. But the transactory conversations of Silicon Valley never felt enticing.
 
-It is why I have barely maintained an online presence. I deleted Facebook a decade ago, never saw the appeal of Instagram or TikTok, and even as the Valley raced to hand its life over to AI assistants, I never once bothered to "automate" mine. Somehow, I have kept myself deeply involved, technically, in every AI advancement, building with these tools every single day, and yet somehow managed to keep them from ever touching the part of my life that actually breathes.
+It is why I have barely maintained an online presence. I deleted Facebook a decade ago, and never saw the appeal of Instagram or TikTok. And to be clear, having technology automate the mundane and hand us back our time, so we can spend it on the people we love, is a beautiful thing. What I never bought into is the "OpenClaw-ism" of the Valley—adding every new agent to every corner of your life, until nothing in it is actually lived by you. Somehow, I have kept myself deeply involved, technically, in every AI advancement, building with these tools every single day, and yet somehow managed to keep them from ever touching the part of my life that actually breathes.
 
 Perhaps because, somewhere along the way, I discovered where my heart actually lives.
 

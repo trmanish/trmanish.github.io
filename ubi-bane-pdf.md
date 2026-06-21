@@ -87,7 +87,15 @@ And yet, I believe it is a seemingly noble idea wrapped around a bane for societ
 
 It is the single strongest force in the shaping of human Character.
 
-This is because most people do not know what their passion is. Most people will never know what their purpose is. More often than not, it is circumstance. It is hardship. It is the sheer weight of Suffering that forces a person to strive, to fight, to change their situation.
+I believe Suffering does two things to a person.
+
+For some, it curdles into bitterness. They look around and ask why they were the ones chosen to suffer, while someone else seems handed an easy fate, a life untouched by the pain they were made to carry. That resentment slowly hardens into anger. And they begin to hurt the world around them, almost as a revenge for their own suffering. If they had to bleed, so should everyone else.
+
+But there are a few who walk the opposite road. They come to believe that the entire purpose of Suffering is to become so good at it, so practiced at carrying pain, that they can become an Umbrella for others. So that the people they love, and even the strangers they will never meet, never have to be drenched in the same storm they once stood in alone.
+
+One takes their pain and hands it back to the world. The other takes the very same pain and makes sure no one else ever has to feel it.
+
+Most people do not know what their passion is. Most people will never know what their purpose is. More often than not, it is circumstance. It is hardship. It is the sheer weight of Suffering that forces a person to strive, to fight, to change their situation.
 
 And because Money is the functioning rail of modern society, the rail on which nearly all of everyday life runs, the desire to make Money becomes, for most people, the engine of their Ambition. For some, it goes further. Because Money is Power, the hunger to accumulate extreme amounts of it, to wield that Power, becomes the very thing that drives them out of bed each morning.
 

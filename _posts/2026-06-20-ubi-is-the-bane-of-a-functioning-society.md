@@ -33,7 +33,7 @@ After all, in a just society, one should want everyone to thrive, to live decent
 And yet, I believe it is a seemingly noble idea wrapped around a bane for society. Because it violates the most fundamental truth of how human behavior actually works.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    Nothing of meaning, purpose, or value in our history has ever been built by men who had life on easy mode.
+    Nothing of meaning, purpose, or value in our history has ever been built by people who had life on easy mode.
 </div>
 
 <br>
@@ -42,7 +42,15 @@ And yet, I believe it is a seemingly noble idea wrapped around a bane for societ
 
 It is the single strongest force in the shaping of human Character.
 
-This is because most people do not know what their passion is. Most people will never know what their purpose is. More often than not, it is circumstance. It is hardship. It is the sheer weight of Suffering that forces a person to strive, to fight, to change their situation.
+I believe Suffering does two things to a person.
+
+For some, it curdles into bitterness. They look around and ask why they were the ones chosen to suffer, while someone else seems handed an easy fate, a life untouched by the pain they were made to carry. That resentment slowly hardens into anger. And they begin to hurt the world around them, almost as a revenge for their own suffering. If they had to bleed, so should everyone else.
+
+But there are a few who walk the opposite road. They come to believe that the entire purpose of Suffering is to become so good at it, so practiced at carrying pain, that they can become an Umbrella for others. So that the people they love, and even the strangers they will never meet, never have to be drenched in the same storm they once stood in alone.
+
+One takes their pain and hands it back to the world. The other takes the very same pain and makes sure no one else ever has to feel it.
+
+Most people do not know what their passion is. Most people will never know what their purpose is. More often than not, it is circumstance. It is hardship. It is the sheer weight of Suffering that forces a person to strive, to fight, to change their situation.
 
 And because Money is the functioning rail of modern society, the rail on which nearly all of everyday life runs, the desire to make Money becomes, for most people, the engine of their Ambition. For some, it goes further. Because Money is Power, the hunger to accumulate extreme amounts of it, to wield that Power, becomes the very thing that drives them out of bed each morning.
 
@@ -64,7 +72,9 @@ Andrew Carnegie arrived in America as a penniless immigrant and went to work in 
 
 Look at entire nations and the pattern only sharpens. The generation that crawled out of the rubble of post-war Germany and Japan, with nothing but ash and humiliation behind them, rebuilt their countries into economic powerhouses within a few decades. The very hardship that should have broken them became the forge that made them. Their children, raised in the comfort their parents bled for, would never have to summon that same ferocity, and largely never did.
 
-**Suffering, it turns out, is not the enemy of greatness. It is most often its origin.**
+**Suffering, it turns out, is most often the very origin of greatness.**
+
+Take it away, and you take away the one thing that has made most people rise at all.
 
 This is precisely where UBI works against its own stated intention. The noble voice behind it says: free people from worrying about their basic needs, and they will be liberated to build great things for society.
 

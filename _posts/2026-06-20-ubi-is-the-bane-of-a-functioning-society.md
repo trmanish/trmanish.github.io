@@ -46,7 +46,9 @@ It is the single strongest force in the shaping of human Character.
 
 I believe Suffering does two things to a person.
 
-For some, it curdles into bitterness. They look around and ask why they were the ones chosen to suffer, while someone else seems handed an easy fate, a life untouched by the pain they were made to carry. That resentment slowly hardens into anger. And they begin to hurt the world around them, almost as a revenge for their own suffering. If they had to bleed, so should everyone else.
+For some, it curdles into bitterness.
+
+They look around and ask why they were the ones chosen to suffer, while someone else seems handed an easy fate, a life untouched by the pain they were made to carry. That resentment slowly hardens into anger. And they begin to hurt the world around them, almost as a revenge for their own suffering. If they had to bleed, so should everyone else.
 
 But there are a few who walk the opposite road. They come to believe that the entire purpose of Suffering is to become so good at it, so practiced at carrying pain, that they can become an Umbrella for others. So that the people they love, and even the strangers they will never meet, never have to be drenched in the same storm they once stood in alone.
 
@@ -104,13 +106,19 @@ During the pandemic, governments rightly rushed emergency stimulus and enhanced 
 
 It is worth pausing here, because the most serious thinkers on freedom never argued that society should let its weakest simply fall.
 
-Even Friedrich Hayek, the great defender of free markets and the author of *The Road to Serfdom*, accepted that a society as wealthy as ours can and should guarantee a floor. He wrote that "some minimum of food, shelter, and clothing, sufficient to preserve health and the capacity to work, can be assured to everybody," and that this kind of security could be provided to all without endangering general freedom.
+Even Friedrich Hayek, the great defender of free markets and the author of *The Road to Serfdom*, accepted that a society as wealthy as ours can and should guarantee a floor. He wrote that *"some minimum of food, shelter, and clothing, sufficient to preserve health and the capacity to work, can be assured to everybody,"* and that this kind of security could be provided to all without endangering general freedom.
 
 But notice the line he drew, because the entire argument lives inside it.
 
-Hayek separated two very different kinds of security. The first was security against destitution: a minimum floor beneath which no one, especially those genuinely unable to provide for themselves, need fall. This he embraced. The second was the security of a given standard of living, a guarantee of one's relative comfort and position compared to others. This he warned against in the sharpest possible terms, because to deliver it the state must seize ever more control over how people live, work, and are rewarded. That, he argued, is the road to serfdom.
+Hayek separated two very different kinds of security.
 
-UBI, in its universal and unconditional form, quietly steps across that very line. It hands a full standard of living to everyone alike, the fallen and the comfortable, the striving and the idle, with no condition attached to any of it. And the moment sustenance is severed from any need to contribute, when even the capacity to work, the very thing Hayek wanted his floor to protect, is no longer asked of anyone, you have not built a safety net.
+The first was security against destitution: a minimum floor beneath which no one, especially those genuinely unable to provide for themselves, need fall. This he embraced.
+
+The second was the security of a given standard of living, a guarantee of one's relative comfort and position compared to others. This he warned against in the sharpest possible terms, because to deliver it the state must seize ever more control over how people live, work, and are rewarded. **That, he argued, is the road to serfdom.**
+
+UBI, in its universal and unconditional form, quietly steps across that very line.
+
+It hands a full standard of living to everyone alike, the fallen and the comfortable, the striving and the idle, with no condition attached to any of it. And the moment sustenance is severed from any need to contribute, when even the capacity to work, the very thing Hayek wanted his floor to protect, is no longer asked of anyone, you have not built a safety net.
 
 There is also a deeper, quieter danger in all of this.
 
@@ -122,7 +130,9 @@ And a people who can no longer build for themselves become a people who must dep
 
 That dependence is never free.
 
-A society where most people rely on the state and the rich for their basic sustenance is a society that has quietly handed over its leverage. Power concentrates further into the hands of the few who fund the doles, while the many, comfortable but captive, slowly surrender their voice, their agency, and their right to truly say no. You do not bite the hand that feeds you. And a society that will not bite is a society that can be led anywhere.
+A society where most people rely on the state and the rich for their basic sustenance is a society that has quietly handed over its leverage. Power concentrates further into the hands of the few who fund the doles, while the many, comfortable but captive, slowly surrender their voice, their agency, and their right to truly say no.
+
+You do not bite the hand that feeds you. And a society that will not bite is a society that can be led anywhere.
 
 This is the cruel inversion at the heart of UBI. Sold as the great equalizer, it may well become the great pacifier. A gilded cushion that, in softening the fall, also robs people of the very reason to ever stand up and climb.
 

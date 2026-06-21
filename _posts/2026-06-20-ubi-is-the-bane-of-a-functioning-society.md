@@ -38,7 +38,9 @@ And yet, I believe it is a seemingly noble idea wrapped around a bane for societ
 
 <br>
 
-Suffering is the core of human existence. It is the single strongest force in the shaping of human Character.
+**Suffering is the core of human existence.**
+
+It is the single strongest force in the shaping of human Character.
 
 This is because most people do not know what their passion is. Most people will never know what their purpose is. More often than not, it is circumstance. It is hardship. It is the sheer weight of Suffering that forces a person to strive, to fight, to change their situation.
 
@@ -58,23 +60,27 @@ There is a saying that captures this cycle better than I ever could:
 
 History is, in many ways, just this sentence playing out on a loop.
 
-Andrew Carnegie arrived in America as a penniless immigrant and went to work in a cotton mill as a boy, earning barely over a dollar a week. The man who would go on to build the steel that built modern America did not begin in comfort. He began in want. John D. Rockefeller, the world's first billionaire, grew up the son of a con man, in a household where survival was never guaranteed.
+Andrew Carnegie arrived in America as a penniless immigrant and went to work in a cotton mill as a boy, earning barely over a dollar a week. The man who would go on to build the steel that built modern America did not begin in comfort. He began in want.
 
 Look at entire nations and the pattern only sharpens. The generation that crawled out of the rubble of post-war Germany and Japan, with nothing but ash and humiliation behind them, rebuilt their countries into economic powerhouses within a few decades. The very hardship that should have broken them became the forge that made them. Their children, raised in the comfort their parents bled for, would never have to summon that same ferocity, and largely never did.
 
-Suffering, it turns out, is not the enemy of greatness. It is most often its origin.
+**Suffering, it turns out, is not the enemy of greatness. It is most often its origin.**
 
 This is precisely where UBI works against its own stated intention. The noble voice behind it says: free people from worrying about their basic needs, and they will be liberated to build great things for society.
 
 But the exact opposite is what happens when you hand people free money.
 
-The desire to be ambitious quietly dies. The motivation to strive evaporates. The Suffering that once lit the fire is no longer there. The bottom rungs of Maslow's hierarchy are covered. And once they are covered, the very drive to climb higher dissolves.
+**The desire to be ambitious quietly dies.** The motivation to strive evaporates. The Suffering that once lit the fire is no longer there. The bottom rungs of Maslow's hierarchy are covered. And once they are covered, the very drive to climb higher dissolves.
 
 And this is not theory. We have run this experiment before, more than once.
 
-In 1795, the English parish of Speenhamland introduced a system that, in spirit, was an early form of basic income. Wages were topped up from public funds to guarantee every family a minimum livelihood, indexed to the price of bread. It was profoundly well-intentioned. And it was, by most later accounts, a catastrophe. Employers slashed wages knowing the parish would make up the difference. Workers lost the incentive to work harder than the bare minimum, since effort no longer changed their income. An entire class of laborers was slowly pauperized, made dependent, stripped of the dignity and drive that work had once given them. The cure deepened the disease.
+In 1795, the English parish of Speenhamland introduced a system that, in spirit, was an early form of basic income. Wages were topped up from public funds to guarantee every family a minimum livelihood, indexed to the price of bread. It was profoundly well-intentioned.
 
-We saw a faster, sharper version of the same thing in our own lifetime. During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for a large share of lower-wage workers, those benefits paid more than their actual jobs did. And so a perfectly rational thing happened. Why work ten hours a day for a full paycheck when you could stay home and collect seventy-five percent of it, or more, for nothing? Businesses desperately wanted workers back. Workers, doing nothing more than responding sensibly to the incentives placed in front of them, often chose not to return. It was not laziness. It was human nature, behaving exactly as human nature does.
+And it was, by most later accounts, a catastrophe. Employers slashed wages knowing the parish would make up the difference. Workers lost the incentive to work harder than the bare minimum, since effort no longer changed their income. An entire class of laborers was slowly pauperized, made dependent, stripped of the dignity and drive that work had once given them. The cure deepened the disease.
+
+We saw a faster, sharper version of the same thing in our own lifetime.
+
+During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for a large share of lower-wage workers, those benefits paid more than their actual jobs did. And so a perfectly rational thing happened. Why work ten hours a day for a full paycheck when you could stay home and collect seventy-five percent of it, or more, for nothing? Businesses desperately wanted workers back. Workers, doing nothing more than responding sensibly to the incentives placed in front of them, often chose not to return. It was not laziness. It was human nature, behaving exactly as human nature does.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You cannot pay a society to stay hungry. The moment its hunger is satisfied for free, its ambition goes to sleep.
@@ -90,15 +96,13 @@ Hayek separated two very different kinds of security. The first was security aga
 
 UBI, in its universal and unconditional form, quietly steps across that very line. It is not a floor for those who have fallen. It is a standard of living handed to everyone alike, whether they have fallen or not, whether they strive or not. And the moment sustenance is severed from any need to contribute, when even the capacity to work, the very thing Hayek wanted his floor to protect, is no longer asked of anyone, you have not built a safety net.
 
-<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    A safety net is meant to catch a person who falls. A universal income, given to all whether they fall or not, is not a net. It is a hammock.
-</div>
-
-<br>
-
 There is also a deeper, quieter danger in all of this.
 
-When the majority of a society comes to rest on the doles handed down by the wealthy and the political class, it does not merely lose its work ethic. It loses something far more precious. It loses the muscle to suffer. To struggle. To build. And a people who can no longer build for themselves become a people who must depend on others to build for them.
+When the majority of a society comes to rest on the doles handed down by the wealthy and the political class, it does not merely lose its work ethic. It loses something far more precious.
+
+**It loses the muscle to suffer. To struggle. To build.**
+
+And a people who can no longer build for themselves become a people who must depend on others to build for them.
 
 That dependence is never free.
 
@@ -108,4 +112,6 @@ This is the cruel inversion at the heart of UBI. Sold as the great equalizer, it
 
 I want a world where no one suffers needlessly. I want that more than almost anything.
 
-But the answer to suffering was never to anesthetize it with free money. It was to give people the tools, the opportunity, and the dignity to fight their way out of it themselves. Because in that fight, and only in that fight, is where human beings have always become who they were meant to be.
+But the answer to suffering was never to anesthetize it with free money. It was to give people the tools, the opportunity, and the dignity to fight their way out of it themselves.
+
+Because in that fight, and only in that fight, is where human beings have always become who they were meant to be.

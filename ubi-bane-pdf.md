@@ -74,7 +74,7 @@ After all, in a just society, one should want everyone to thrive, to live decent
 And yet, I believe it is a seemingly noble idea wrapped around a bane for society. Because it violates the most fundamental truth of how human behavior actually works.
 
 <div style="text-align: center; font-size: 1.25em; padding: 10px 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    Nothing of meaning, purpose, or value in our history has ever been built by men who had life on easy mode.
+    Nothing of meaning, purpose, or value in our history has ever been built by people who had life on easy mode.
 </div>
 
 <br>
@@ -119,7 +119,9 @@ Andrew Carnegie arrived in America as a penniless immigrant and went to work in 
 
 Look at entire nations and the pattern only sharpens. The generation that crawled out of the rubble of post-war Germany and Japan, with nothing but ash and humiliation behind them, rebuilt their countries into economic powerhouses within a few decades. The very hardship that should have broken them became the forge that made them. Their children, raised in the comfort their parents bled for, would never have to summon that same ferocity, and largely never did.
 
-**Suffering, it turns out, is not the enemy of greatness. It is most often its origin.**
+**Suffering, it turns out, is most often the very origin of greatness.**
+
+Take it away, and you take away the one thing that has made most people rise at all.
 
 This is precisely where UBI works against its own stated intention. The noble voice behind it says: free people from worrying about their basic needs, and they will be liberated to build great things for society.
 

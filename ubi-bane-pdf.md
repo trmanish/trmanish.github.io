@@ -105,7 +105,7 @@ There is a saying that captures this cycle better than I ever could:
 
 History is, in many ways, just this sentence playing out on a loop.
 
-Andrew Carnegie arrived in America as a penniless immigrant and went to work in a cotton mill as a boy, earning barely over a dollar a week. The man who would go on to build the steel that built modern America did not begin in comfort. He began in want.
+Andrew Carnegie arrived in America as a penniless immigrant and went to work in a cotton mill as a boy, earning barely over a dollar a week. The man who would build the steel that built modern America was forged in want, long before he ever forged anything else.
 
 Look at entire nations and the pattern only sharpens. The generation that crawled out of the rubble of post-war Germany and Japan, with nothing but ash and humiliation behind them, rebuilt their countries into economic powerhouses within a few decades. The very hardship that should have broken them became the forge that made them. Their children, raised in the comfort their parents bled for, would never have to summon that same ferocity, and largely never did.
 
@@ -117,7 +117,7 @@ But the exact opposite is what happens when you hand people free money.
 
 **The desire to be ambitious quietly dies.** The motivation to strive evaporates. The Suffering that once lit the fire is no longer there. The bottom rungs of Maslow's hierarchy are covered. And once they are covered, the very drive to climb higher dissolves.
 
-And this is not theory. We have run this experiment before, more than once.
+And none of this is hypothetical. We have run the experiment before, more than once.
 
 In 1795, the English parish of Speenhamland introduced a system that, in spirit, was an early form of basic income. Wages were topped up from public funds to guarantee every family a minimum livelihood, indexed to the price of bread. It was profoundly well-intentioned.
 
@@ -125,7 +125,7 @@ And it was, by most later accounts, a catastrophe. Employers slashed wages knowi
 
 We saw a faster, sharper version of the same thing in our own lifetime.
 
-During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for a large share of lower-wage workers, those benefits paid more than their actual jobs did. And so a perfectly rational thing happened. Why work ten hours a day for a full paycheck when you could stay home and collect seventy-five percent of it, or more, for nothing? Businesses desperately wanted workers back. Workers, doing nothing more than responding sensibly to the incentives placed in front of them, often chose not to return. It was not laziness. It was human nature, behaving exactly as human nature does.
+During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for a large share of lower-wage workers, those benefits paid more than their actual jobs did. And so a perfectly rational thing happened. Why work ten hours a day for a full paycheck when you could stay home and collect seventy-five percent of it, or more, for nothing? Businesses desperately wanted workers back. Workers, doing nothing more than responding sensibly to the incentives placed in front of them, often chose not to return. There was nothing lazy in it. Just human nature, responding to the incentives placed in front of it, exactly as it always has.
 
 <div style="text-align: center; font-size: 1.25em; padding: 10px 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You cannot pay a society to stay hungry. The moment its hunger is satisfied for free, its ambition goes to sleep.
@@ -139,7 +139,7 @@ But notice the line he drew, because the entire argument lives inside it.
 
 Hayek separated two very different kinds of security. The first was security against destitution: a minimum floor beneath which no one, especially those genuinely unable to provide for themselves, need fall. This he embraced. The second was the security of a given standard of living, a guarantee of one's relative comfort and position compared to others. This he warned against in the sharpest possible terms, because to deliver it the state must seize ever more control over how people live, work, and are rewarded. That, he argued, is the road to serfdom.
 
-UBI, in its universal and unconditional form, quietly steps across that very line. It is not a floor for those who have fallen. It is a standard of living handed to everyone alike, whether they have fallen or not, whether they strive or not. And the moment sustenance is severed from any need to contribute, when even the capacity to work, the very thing Hayek wanted his floor to protect, is no longer asked of anyone, you have not built a safety net.
+UBI, in its universal and unconditional form, quietly steps across that very line. It hands a full standard of living to everyone alike, the fallen and the comfortable, the striving and the idle, with no condition attached to any of it. And the moment sustenance is severed from any need to contribute, when even the capacity to work, the very thing Hayek wanted his floor to protect, is no longer asked of anyone, you have not built a safety net.
 
 There is also a deeper, quieter danger in all of this.
 

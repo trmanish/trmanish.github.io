@@ -15,7 +15,7 @@ css: |-
     background: white;
     color: #444;
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.62;
     max-width: 800px;
     margin: 0 auto;
     padding: 0;
@@ -23,7 +23,7 @@ css: |-
 
   p {
     margin-top: 0;
-    margin-bottom: 13px;
+    margin-bottom: 11px;
   }
 
   h1 {

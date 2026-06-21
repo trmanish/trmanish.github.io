@@ -101,7 +101,9 @@ Most people do not know what their passion is. Most people will never know what 
 
 And because Money is the functioning rail of modern society, the rail on which nearly all of everyday life runs, the desire to make Money becomes, for most people, the engine of their Ambition. For some, it goes further. Because Money is Power, the hunger to accumulate extreme amounts of it, to wield that Power, becomes the very thing that drives them out of bed each morning.
 
-Strip that away, and you are left with a quieter, more uncomfortable truth. Without an innate drive to do things, most people simply do not push themselves. Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
+Strip that away, and you are left with a quieter, more uncomfortable truth.
+
+Without an innate drive to do things, most people simply do not push themselves. Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
 
 There is a saying that captures this cycle better than I ever could:
 
@@ -143,7 +145,9 @@ During the pandemic, governments rightly rushed emergency stimulus and enhanced 
 
 <br>
 
-It is worth pausing here, because the most serious thinkers on freedom never argued that society should let its weakest simply fall. Even Friedrich Hayek, the great defender of free markets and the author of *The Road to Serfdom*, accepted that a society as wealthy as ours can and should guarantee a floor. He wrote that "some minimum of food, shelter, and clothing, sufficient to preserve health and the capacity to work, can be assured to everybody," and that this kind of security could be provided to all without endangering general freedom.
+It is worth pausing here, because the most serious thinkers on freedom never argued that society should let its weakest simply fall.
+
+Even Friedrich Hayek, the great defender of free markets and the author of *The Road to Serfdom*, accepted that a society as wealthy as ours can and should guarantee a floor. He wrote that "some minimum of food, shelter, and clothing, sufficient to preserve health and the capacity to work, can be assured to everybody," and that this kind of security could be provided to all without endangering general freedom.
 
 But notice the line he drew, because the entire argument lives inside it.
 

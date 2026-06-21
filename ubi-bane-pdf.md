@@ -63,7 +63,9 @@ css: |-
 
 <br>
 
-Let me say upfront that I know this is a controversial opinion. It runs against the grain of what most kind, well-meaning people believe, and against what an increasingly loud chorus in technology and academia has been advocating. But I have sat with it long enough to believe it is true, and I would rather be honestly unpopular than comfortably wrong.
+Let me say upfront that I know this is a controversial opinion.
+
+It runs against the grain of what most kind, well-meaning people believe, and against what an increasingly loud chorus in technology and academia has been advocating. But I have sat with it long enough to believe it is true, and I would rather be honestly unpopular than comfortably wrong.
 
 One of the core ideas floated over the last few years, usually sprung up by the rich class, is Universal Basic Income (UBI).
 
@@ -133,7 +135,7 @@ And it was, by most later accounts, a catastrophe. Employers slashed wages knowi
 
 We saw a faster, sharper version of the same thing in our own lifetime.
 
-During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for a large share of lower-wage workers, those benefits paid more than their actual jobs did. And so a perfectly rational thing happened. Why work ten hours a day for a full paycheck when you could stay home and collect seventy-five percent of it, or more, for nothing? Businesses desperately wanted workers back. Workers, doing nothing more than responding sensibly to the incentives placed in front of them, often chose not to return. There was nothing lazy in it. Just human nature, responding to the incentives placed in front of it, exactly as it always has.
+During the pandemic, governments rightly rushed emergency stimulus and enhanced unemployment benefits to people. But for many lower-wage workers, those benefits paid more than their actual jobs did. Why work ten hours a day for a full paycheck when you could stay home and collect most of it for nothing? Businesses desperately wanted workers back. Many simply chose not to return. There was nothing lazy in it. Just human nature, responding to the incentives placed in front of it, exactly as it always has.
 
 <div style="text-align: center; font-size: 1.25em; padding: 10px 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
     You cannot pay a society to stay hungry. The moment its hunger is satisfied for free, its ambition goes to sleep.

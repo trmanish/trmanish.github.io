@@ -57,12 +57,6 @@ css: |-
 
 <br>
 
-<div style="text-align: center;">
-<img src="assets/ubi_bane/ubi-cover.png" style="width: 100%; display: inline-block; border-radius: 6px;">
-</div>
-
-<br>
-
 Let me say upfront that I know this is a controversial opinion.
 
 It runs against the grain of what most kind, well-meaning people believe, and against what an increasingly loud chorus in technology and academia has been advocating. But I have sat with it long enough to believe it is true, and I would rather be honestly unpopular than comfortably wrong.
@@ -105,7 +99,9 @@ And because Money is the functioning rail of modern society, the rail on which n
 
 Strip that away, and you are left with a quieter, more uncomfortable truth.
 
-Without an innate drive to do things, most people simply do not push themselves. Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
+**Without an innate drive to do things, most people simply do not push themselves.**
+
+Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
 
 There is a saying that captures this cycle better than I ever could:
 

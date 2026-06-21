@@ -3,7 +3,6 @@ title: "UBI is the Bane of a Functioning Society"
 date: 2026-06-20
 layout: post
 published: true
-image: "/assets/ubi_bane/ubi-cover.png"
 ---
 
 <div align="center">
@@ -11,12 +10,6 @@ image: "/assets/ubi_bane/ubi-cover.png"
 </div>
 
 <br> <!-- Adds extra spacing -->
-
-<div style="text-align: center;">
-<img src="/assets/ubi_bane/ubi-cover.png" style="width: 90%; display: inline-block; border-radius: 6px;">
-</div>
-
-<br>
 
 Let me say upfront that I know this is a controversial opinion.
 
@@ -60,7 +53,9 @@ And because Money is the functioning rail of modern society, the rail on which n
 
 Strip that away, and you are left with a quieter, more uncomfortable truth.
 
-Without an innate drive to do things, most people simply do not push themselves. Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
+**Without an innate drive to do things, most people simply do not push themselves.**
+
+Not for the lure of Money. Not for the pursuit of Power. Not even to escape their own Suffering.
 
 There is a saying that captures this cycle better than I ever could:
 

@@ -1,14 +1,39 @@
 ---
-title: "Things that Enrich Life"
-date: 2026-07-10
-layout: post
+pdf_options:
+  format: Letter
+  margin: 20mm 20mm
+  printBackground: true
+css: |-
+  /* Mirror the blog stylesheet (assets/css/style.css) exactly */
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+
+  body {
+    font-family: 'Geist', sans-serif;
+    background-color: white;
+    color: #444;
+    /* Mirror post.html <main style="max-width:800px;margin:40px auto;padding:20px"> */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
 ---
+
+**July 10, 2026**
 
 <div align="center">
   <h1><strong>Things that Enrich Life</strong></h1>
 </div>
 
-<br> <!-- Adds extra spacing -->
+<br>
 
 *First published in Sep 2022 on LI*<br><br>
 

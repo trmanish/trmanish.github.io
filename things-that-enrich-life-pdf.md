@@ -119,6 +119,9 @@ Things that will truly enrich your life:
 - Character over Reputation. Character is what you truly are. Reputation is what you want others to know who you are. 
 
 
+- Build your Character before you seek Attention. 
+
+
 - Learn to sit back and observe. Not everything needs a reaction. 
 
 

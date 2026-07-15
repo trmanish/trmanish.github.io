@@ -77,6 +77,9 @@ Things that will truly enrich your life:
 - See a random stranger crying. 
 
 
+- Purity of Heart is a rarity. 
+
+
 - Walk with yourself in complete solitude. 
 
 
@@ -110,6 +113,9 @@ Things that will truly enrich your life:
 - Cry alone. Cry in front of everyone. 
 
 
+- Silence is also a Language. The sooner you learn it, the better. 
+
+
 - Never look upto anybody. Never look down upon anybody. 
 
 
@@ -134,6 +140,9 @@ Things that will truly enrich your life:
 - Ask Why, Answer Why Not! 
 
 
+- Develop a Taste for Music, Writing or Reading. Peace often lives there. 
+
+
 - Spend some time in a different country than yours. 
 
 
@@ -150,6 +159,9 @@ Things that will truly enrich your life:
 
 
 - Never expect to get what you give. 
+
+
+- The only Defeat in Life is Death. Until then, Keep Going! 
 
 
 - "Leap, and the Net will appear"

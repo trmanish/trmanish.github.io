@@ -65,9 +65,6 @@ Things that will truly enrich your life:
 - Fall out of Love. 
 
 
-- Love people like they are forever. Hold them like they are seasons. 
-
-
 - Wake up with a responsibility of caring for some life. 
 
 
@@ -84,6 +81,9 @@ Things that will truly enrich your life:
 
 
 - Travel a lot. More nondescript places, less exotic ones. 
+
+
+- Build your Character before you seek Attention. 
 
 
 - Experience grief and trauma. 
@@ -116,10 +116,10 @@ Things that will truly enrich your life:
 - Learn to cook. 
 
 
+- Love people like they are forever. Hold them like they are seasons. 
+
+
 - Character over Reputation. Character is what you truly are. Reputation is what you want others to know who you are. 
-
-
-- Build your Character before you seek Attention. 
 
 
 - Learn to sit back and observe. Not everything needs a reaction. 

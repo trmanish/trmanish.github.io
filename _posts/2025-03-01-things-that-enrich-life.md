@@ -157,6 +157,9 @@ Things that will truly enrich your life:
 - Read old Poetry sometimes. 
 
 
+- Live a Little. When things go south, they usually go wrong in a bunch. Don't get so consumed fighting every problem that you forget to be with the people who matter. Never let worry over things steal your moments with people. 
+
+
 - Call Mom more often. 
 
 

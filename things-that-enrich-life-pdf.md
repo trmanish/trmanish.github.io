@@ -1,7 +1,7 @@
 ---
 pdf_options:
   format: Letter
-  margin: 20mm 20mm
+  margin: 12mm 20mm
   printBackground: true
 css: |-
   /* Mirror the blog stylesheet (assets/css/style.css) exactly */
@@ -13,7 +13,7 @@ css: |-
     color: #444;
     /* Mirror post.html <main style="max-width:800px;margin:40px auto;padding:20px"> */
     max-width: 800px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 20px;
     font-size: 15px;
     line-height: 1.7;
@@ -27,7 +27,7 @@ css: |-
   }
 ---
 
-**July 10, 2026**
+**July 25, 2026**
 
 <div align="center">
   <h1><strong>Things that Enrich Life</strong></h1>
@@ -35,7 +35,7 @@ css: |-
 
 <br>
 
-*First published in Sep 2022 on LI*<br><br>
+*First published in Sep 2022 on LI. Updated July 2026.*<br><br>
 
 
 Things that will truly enrich your life: 
@@ -89,10 +89,16 @@ Things that will truly enrich your life:
 - Experience bankruptcy. Witness Poverty. 
 
 
+- Choose people who care about how their actions make you feel. Everyone will hurt you at some point; those who are right for you won't make that hurt hurtful. 
+
+
 - Interact with a toddler. Hold hand of an old person. 
 
 
 - Get cheated on. Face rejections. 
+
+
+- Self Respect over Empathy towards others. People won't change to value you and stand by you, just because you did right with them. Integrity is a rarity. Most don't have it. 
 
 
 - Have Regrets. 
@@ -110,6 +116,9 @@ Things that will truly enrich your life:
 - Never look upto anybody. Never look down upon anybody. 
 
 
+- Look for three things in anyone: Integrity, Intelligence and Ingenuity. However if the first is missing, don't bother about the remaining two. 
+
+
 - Learn to cook. 
 
 
@@ -117,6 +126,9 @@ Things that will truly enrich your life:
 
 
 - Learn to sit back and observe. Not everything needs a reaction. 
+
+
+- Allow people to do what they want to do. If they care, they will try. If they don't, they will walk away. Actions always speak louder than words. Let them act. 
 
 
 - Listen when someone wants you to, Talk when You need you to. Speak up, when others need you to. 
@@ -135,6 +147,9 @@ Things that will truly enrich your life:
 
 
 - Check on someone you care. 
+
+
+- Don't try to save someone who doesn't want to be saved. Except when they are about to take away their life. 
 
 
 - Read more, Watch less 
@@ -161,10 +176,7 @@ Things that will truly enrich your life:
 - Love and care for someone deeply and unconditionally. 
 
 
-- Get drenched in rain. 
-
-
-- Be good to yourself before being good to others. 
+- Be smarter about who has access to you. Being a good person doesn't mean life will be good to you back. 
 
 
 - Read old Poetry sometimes. 
@@ -179,7 +191,7 @@ Things that will truly enrich your life:
 - Have fun with people. Don't make fun of them. 
 
 
-- Mail that Letter to someone who mattered. Mail, not Email. 
+- Write that Letter to someone who mattered. Post it. Don't Email. 
 
 
 - Send flowers. When they are alive, rather than when they are gone. 
@@ -203,6 +215,9 @@ Things that will truly enrich your life:
 - Don't reason your way through human emotions. Feelings aren't puzzles to be solved. 
 
 
+- Get hurt without being hurtful. 
+
+
 - Stop asking why did they do this to me. Start asking what can I do now. 
 
 
@@ -224,10 +239,13 @@ Things that will truly enrich your life:
 - Develop a Taste for Music, Writing or Reading. Peace often lives there. 
 
 
-- End things with someone on a high, no matter how bitter the end. 
+- End things on a high with someone, no matter how bitter the end. One day they will be gone, and the regret that comes after someone's Death lingers for a very long time. 
 
 
 - Love people like they are forever. Hold them like they are seasons. 
 
 
 - Don't save your Love for another day. Say the words you keep inside. Hold on to a little longer than your pride. 
+
+
+- Get drenched in rain. 

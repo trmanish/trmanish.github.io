@@ -126,7 +126,13 @@ css: |-
   styling to `body` instead (as the template does).
 - **Do not** add an `@page { margin: 0 }` rule — it cancels the `pdf_options`
   page margins and shoves content to the top edge. Let `pdf_options.margin`
-  (20mm) provide the breathing room.
+  provide the breathing room.
+- **Trailing empty page?** A long post can overflow the last page by a sliver,
+  producing a blank final page. Fix by trimming OUTER whitespace only (never the
+  inter-bullet spacing that matches the blog): reduce `pdf_options.margin` top/
+  bottom (e.g. `20mm 20mm` → `12mm 20mm`) and set the body `margin` to
+  `0 auto` instead of `40px auto`. Regenerate and confirm with
+  `pdfinfo <file>.pdf | grep Pages` until the blank page is gone.
 - Keep the Google Fonts `@import` weights identical to the blog (`300;400;700`).
   The blog's `h1` requests weight 600, which with only 400/700 available renders
   at 700 — matching that fallback keeps the title weight identical. Don't add a

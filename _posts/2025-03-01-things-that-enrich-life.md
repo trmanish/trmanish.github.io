@@ -10,7 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Sep 2022 on LI. Updated July 2026.*<br><br>
+<span style="font-size: 12px;"><em>First published in Sep 2022 on LI. Updated July 2026.</em></span><br><br>
 
 
 Things that will truly enrich your life: 
@@ -20,6 +20,9 @@ Things that will truly enrich your life:
 
 
 - Exercise. Strength training; walk or run, if nothing. 
+
+
+- Learn a sport. 
 
 
 - Take Cold showers. 1-2 min at least. Even during Winters 
@@ -55,7 +58,13 @@ Things that will truly enrich your life:
 - Walk with yourself in complete solitude. 
 
 
+- Sit by a creek in a forest. Watch the water flow. Stillness lives in moving water. 
+
+
 - Travel a lot. More nondescript places, less exotic ones. 
+
+
+- Climb a Mountain. 
 
 
 - Experience grief and trauma. 
@@ -82,6 +91,9 @@ Things that will truly enrich your life:
 - Question every narrative. 
 
 
+- Never ask a liar why they lied. To explain it, they would have to lie again. 
+
+
 - Hug someone tightly. 
 
 
@@ -89,9 +101,6 @@ Things that will truly enrich your life:
 
 
 - Never look upto anybody. Never look down upon anybody. 
-
-
-- Look for three things in anyone: Integrity, Intelligence and Ingenuity. However if the first is missing, don't bother about the remaining two. 
 
 
 - Learn to cook. 
@@ -103,7 +112,7 @@ Things that will truly enrich your life:
 - Learn to sit back and observe. Not everything needs a reaction. 
 
 
-- Allow people to do what they want to do. If they care, they will try. If they don't, they will walk away. Actions always speak louder than words. Let them act. 
+- Allow people to do what they want to do. Actions always speak louder than words. Let them act. 
 
 
 - Listen when someone wants you to, Talk when You need you to. Speak up, when others need you to. 
@@ -157,7 +166,7 @@ Things that will truly enrich your life:
 - Read old Poetry sometimes. 
 
 
-- Live a Little. When things go south, they usually go wrong in a bunch. Don't get so consumed fighting every problem that you forget to be with the people who matter. Never let worry over things steal your moments with people. 
+- Live a Little. When things go south, they usually go wrong in a bunch. Never let worry over things steal your moments with people. 
 
 
 - Call Mom more often. 
@@ -175,7 +184,7 @@ Things that will truly enrich your life:
 - Send flowers. When they are alive, rather than when they are gone. 
 
 
-- Pick up that phone and call them. Allow someone to be able to call you. Don't let the moment pass. Life slips by and then...it's over. 
+- Pick up that phone and call them. Allow someone to be able to call you. Life slips by and then...it's over. 
 
 
 - Watch an animal play with their baby. 
@@ -202,6 +211,9 @@ Things that will truly enrich your life:
 - Realize People are like Experiences. And just like every experience, they will come and go! 
 
 
+- Love People, Use Things. The world is in chaos because Things are being loved and People are being used. 
+
+
 - Don't derive your value from entities. When the entity is gone, you will lose your identity. 
 
 
@@ -217,7 +229,7 @@ Things that will truly enrich your life:
 - Develop a Taste for Music, Writing or Reading. Peace often lives there. 
 
 
-- End things on a high with someone, no matter how bitter the end. One day they will be gone, and the regret that comes after someone's Death lingers for a very long time. 
+- End things on a high with someone, no matter how bitter the end. The regret that comes after someone's Death lingers for a very long time. 
 
 
 - Love people like they are forever. Hold them like they are seasons. 

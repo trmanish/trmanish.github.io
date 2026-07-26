@@ -35,9 +35,6 @@ css: |-
 
 <br>
 
-<span style="font-size: 12px;"><em>First published in Sep 2022 on LI. Updated July 2026.</em></span><br><br>
-
-
 Things that will truly enrich your life: 
 
 

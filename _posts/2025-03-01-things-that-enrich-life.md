@@ -1,6 +1,6 @@
 ---
 title: "Things that Enrich Life"
-date: 2026-07-25
+date: 2026-08-07
 layout: post
 ---
 
@@ -10,7 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-<span style="font-size: 12px;"><em>First published in Sep 2022 on LI. Updated July 2026.</em></span><br><br>
+<span style="font-size: 12px;"><em>First published in Sep 2022 on LI. Updated Aug 2026.</em></span><br><br>
 
 
 Things that will truly enrich your life: 
@@ -50,6 +50,9 @@ Things that will truly enrich your life:
 
 
 - Buy food for someone who doesn't have means to buy. 
+
+
+- Eat with someone poor. Once where you celebrate, once where they do. 
 
 
 - See a random stranger crying. 
@@ -166,9 +169,6 @@ Things that will truly enrich your life:
 - Read old Poetry sometimes. 
 
 
-- Live a Little. When things go south, they usually go wrong in a bunch. Never let worry over things steal your moments with people. 
-
-
 - Call Mom more often. 
 
 
@@ -187,7 +187,13 @@ Things that will truly enrich your life:
 - Pick up that phone and call them. Allow someone to be able to call you. Life slips by and then...it's over. 
 
 
+- Ask someone to text or call you when they reach home. Then stay awake for it. 
+
+
 - Watch an animal play with their baby. 
+
+
+- Watch an animal refuse to leave its dead. 
 
 
 - Allow an old person to hold your arm. Experience them hold it tighter with every moment. 
@@ -235,7 +241,7 @@ Things that will truly enrich your life:
 - Love people like they are forever. Hold them like they are seasons. 
 
 
-- Don't save your Love for another day. Say the words you keep inside. Hold on to a little longer than your pride. 
+- Get out everyday, even for 10 mins. Sunlight and moving are natural anti-depressants. 
 
 
 - Get drenched in rain. 

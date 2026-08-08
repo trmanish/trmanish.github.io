@@ -18,116 +18,102 @@ image: "/assets/last_scarce_things/ai-pilled.jpeg"
 
 <br>
 
-For a long time, I have held a strong thesis that too much technology is eventually bad for society. A boon for capitalism. A bane for the soul of a society.
+For a long time, I have believed that too much technology is eventually bad for a society. It helps capitalism grow, and it slowly harms the people who live under it.
 
-Two hypotheses have sat quietly underneath that thesis for years:
+That belief comes from two ideas I have held for years.
 
-**Technology and Critical Thinking in a society are inversely related.** The more the technology, the dumber the society. Every tool that thinks for us is one less reason for us to think at all.
+**Technology and critical thinking in a society are inversely related.** The more technology a society uses, the less its people think for themselves, because every tool that thinks for us removes one more reason for us to think at all.
 
-**Technology and the lack of humanity are directly related.** The more technology pervades a society, the more it strips people of human connection, the quiet fabric that has held us together for centuries. And that fabric does not tear loudly. It frays. Thread by thread. Almost invisibly. Until one day a society looks around and cannot remember how to hold itself.
+**Technology and the lack of humanity are directly related.** The more technology spreads through a society, the more it strips people of the human connection that has held us together for centuries. The loss happens slowly and almost invisibly, until one day the society finds that its people no longer know how to care for each other.
 
-This has been the core reason why, while I have spent my life working in this very industry, I have always felt a bit disconnected from some of the conversations coming out of the ecosystem. I have always felt excited, even energized, by talk of innovation, of new things to build. But the transactory conversations in Technology never felt enticing.
+The two ideas explain why, even though I have spent my whole career in this industry, I have always felt a little disconnected from some of the conversations that come out of it. Talk of innovation, and of new things to build, has always excited me. But the conversations about deals and money never felt enticing.
 
-It is why I have barely maintained an online presence. I deleted Facebook a decade ago, and never saw the appeal of Instagram or TikTok.
+For the same reason, I have barely maintained an online presence. I deleted Facebook a decade ago, and I never saw the appeal of Instagram or TikTok.
 
-And to be clear, having technology automate the mundane and hand us back our time is a beautiful thing. Let it take over the orchestration of logistics in our lives. *Spend time with the people you love — not orchestrating the logistics that let you spend time with the people you love.*
+To be clear, I am glad when technology automates the routine parts of life and gives us back our time. Let it handle the logistics of our lives. *Spend your time with the people you love, not on the logistics that let you spend time with the people you love.*
 
-What I never quite embraced is the "OpenClaw-ism" of the Valley—adding every new agent to every corner of your life, until nothing in it is actually lived by you.
+What I never embraced is the habit, now common in Silicon Valley, of adding every new AI agent to every corner of your life, until nothing in your life is actually lived by you.
 
-Somehow, I have kept myself deeply involved, technically, in every AI advancement, building with these tools every single day, and yet somehow managed to keep them from ever touching the part of my life that actually breathes.
+I have stayed deeply involved in every AI advancement, and I build with these tools every single day. Yet I have kept them away from the personal part of my life. I think that is because, somewhere along the way, I learned what actually moves me.
 
-Perhaps because, somewhere along the way, I discovered where my heart actually lives.
+I feel a quiet ache when I watch a stranger cry and want to walk over and simply say hello. I feel warmth when someone I have never met shares the news of their wedding, and my heart lifts for them. Holding the hand of an old woman while she crosses the street has moved me more than any product launch.
 
-There is a quiet ache in watching a stranger cry, and feeling the urge to walk over and simply say *hello*. A tenderness in holding the hand of an old woman trying to cross the street. A warmth in seeing someone completely unknown to me share the news of their wedding, and feeling my own heart lift, as if it were the news of an old friend.
+These small moments earn nothing, but they have always warmed me more than any success that AI brought a person or a business.
 
-These small, unprofitable moments—some joyful, some sad, all deeply human—have always felt more heart-warming to me than any AI-driven euphoria someone managed to attain for themselves or their business.
-
-And I believe pushing a tech-driven dystopian vision onto a world that exists and breathes far beyond San Francisco is going to have debilitating effects across society.
+I also believe that pushing a fully automated vision of life onto a world that lives far beyond San Francisco will damage society.
 
 So I began to sit with a harder question. **What happens after?**
 
-After technology has taken over, after most of our jobs are gone, after everything can be built so easily that building itself means nothing. When anyone can make anything, yet so few carry the Taste and Imagination to build what is meaningful, or the agency to see it through. In that world, what is even meaningful anymore?
+What happens after technology has taken over, after most of our jobs are gone, and after everything can be built so easily that building itself means nothing? When anyone can make anything, few people will still carry the taste and the imagination to build what is meaningful, or the agency to see it through. I kept asking what would remain meaningful in that world.
 
-And the more I have thought about it, the more life has moved me forward, the more I keep arriving at the same simple answer.
-
-In the end, only two things will really matter.
-
-Two things that will become the scarcest things of all as technology completes its slow zombification of society. More so now, when we have willingly handed it our lives.
+The more I have thought about it, the more I keep arriving at the same simple answer. In the end, only two things will matter, and they will become the scarcest things of all as technology takes over more of our lives.
 
 <br>
 
 ### I. Find someone to love deeply and care for in life.
 
-There is nothing more scarce in life than to find someone you truly love and care for, and to be loved and cared for by them in return.
+Nothing in life is more scarce than finding someone you truly love and care for, who loves and cares for you in return.
 
-Waking up every morning caring for a life around you is the most meaningful thing that will keep you going. Even in a post-apocalyptic world.
+Waking up every morning to care for a life beside you is the most meaningful thing there is, and it will keep you going in any world.
 
-Falling in love completely. Totally. With all your heart. Not wanting anything from them besides their well-being, their presence, and their warm embrace. Yearning for the smallest things: to see their face, to hear their voice, to know their scent.
+I mean falling in love completely, with all your heart, wanting nothing from the person besides their well-being, their presence, and their warm embrace. I mean yearning for the smallest things: to see their face, to hear their voice, to know their scent.
 
-**And then living that love in the most ordinary ways.**
+**And then you live that love in the most ordinary ways.**
 
-Learning exactly how they take their tea, and making it for them anyway, every morning, without being asked. Tilting the umbrella toward them in the rain and pretending you aren't getting wet.
+You learn exactly how they take their tea, and you make it for them every morning without being asked. You tilt the umbrella toward them in the rain and pretend you are not getting wet.
 
-Tucking a loose strand of hair behind their ear while they are mid-sentence about their day. Sitting in the same room reading different books, saying nothing, and somehow saying everything. Dancing badly with them in the kitchen to a song older than both of you.
+You tuck a loose strand of hair behind their ear while they are in the middle of a sentence about their day. You sit in the same room reading different books, saying nothing, and somehow saying everything. You dance badly with them in the kitchen to a song older than both of you.
 
-Listening to their problems. Comforting them. Feeding them. Reminding them of their appointments. Taking walks together with no destination at all, because the walk was never about getting anywhere. It was about their hand in yours.
+You listen to their problems and comfort them. You feed them, and you remind them of their appointments. You take walks together with no destination at all, because the walk was never about getting anywhere. It was about their hand in yours.
 
-Waking up every morning beside them, seeing their messy hair—and still finding them the most beautiful sight in the world. Teasing them.
+You wake up every morning beside them, see their messy hair, and still find them the most beautiful sight in the world. You tease them.
 
-Fighting with them over nothing and making up over even less. And then growing old with them through all of it. Watching their hair slowly turn silver and loving it more than the color it replaced. Holding their wrinkled hand in a hospital waiting room without either of you needing to say a word.
+You fight with them over nothing and make up over even less. You grow old with them through all of it. You watch their hair slowly turn silver and love it more than the color it replaced. You hold their wrinkled hand in a hospital waiting room without either of you needing to say a word.
 
-Bringing another life into this world together, making a promise together to care for that new life, protecting it as it grows in front of both your eyes, and one day watching that life walk out into the world, while you two remain, side by side, where it all began.
+You bring another life into this world together, and you promise together to care for that new life and protect it as it grows in front of both of you. One day you watch that life walk out into the world, while you two remain, side by side, where it all began.
 
-**The actual big acts in life are when you propose to someone you love.**
+**The biggest act in your life is when you propose to someone you love.**
 
-Forget all the other stuff. If you made the right decision, and you get the right answer from him or her, you are ninety percent of the way home in life.
+Forget all the other stuff. If you made the right decision, and you get the right answer from him or her, most of your life is already settled.
 
-Because when machines have taken over everything flashy, everything fast, everything impressive, the rarest, most meaningful thing left will be this: someone you deeply love, and the ordinary, everyday things you get to do with them.
+When machines have taken over everything fast and impressive, the rarest and most meaningful thing left will be someone you deeply love, and the ordinary everyday things you get to do with them.
 
-This will give you more joy and purpose than any job, any title, any amount of money ever will.
+That love will give you more joy and purpose than any job, any title, or any amount of money.
 
-And yet, **this has become one of the scarcest things in life.**
+And yet, **such love has become one of the scarcest things in life.**
 
-Technology has led everyone to chase hedonism over real, meaningful relationships.
+Technology has led people to chase pleasure instead of meaningful relationships.
 
-Our values are now measured by the size of someone's bank balance, rather than by whether they are the one who will sit beside us when everything else falls away. Money is important, it buys us Time. But beyond a certain amount, no money will ever give you more joy than a warm, caring embrace from someone who only cares for your well-being—truly and genuinely.
+We now measure a person by the size of their bank balance, rather than by whether they will sit beside us when everything else falls away. Money is important because it buys time. But beyond a certain amount, no money will give you more joy than a warm embrace from someone who truly cares for your well-being.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    In a world where machines can do everything, the only thing left worth doing is to love someone—completely, simply, every ordinary day.
+    In a world where machines can do everything, the only thing left worth doing is to love someone completely, simply, on every ordinary day.
 </div>
 
 <br>
 
 ### II. Carry your authenticity.
 
-In a world dominated by AI, perfection is no longer scarce. It is abundant. It is a commodity. Anyone can project themselves as the perfect embodiment of whatever they want the world to believe about them. It has never been easier to build a great Reputation.
+In a world dominated by AI, perfection is no longer scarce. It is abundant, and it is a commodity. Anyone can present themselves as the perfect embodiment of whatever they want the world to believe about them, so it has never been easier to build a great reputation.
 
-**But Character is what you truly are. Reputation is merely what you want others to know who you are.**
+**But character is what you truly are, and reputation is only what you want others to believe about you.**
 
-The authenticity that would get socially scoffed at until now, because you refused to agree with the masses, will become the only way to survive. When everyone can generate the perfect image, the perfect words, the perfect life, perfection loses all its meaning.
+Until now, people scoffed at you for staying authentic when it meant refusing to agree with everyone else. In the coming world, authenticity will be the only way to stand apart, because when everyone can generate the perfect image, the perfect words, and the perfect life, perfection loses all its meaning.
 
-The beauty will shift from Perfection to Imperfection.
-
-To the cracks. To the unpolished. To the trembling voice that means every word it says. To the real.
+Beauty will shift from the perfect to the imperfect. People will value the cracks, the unpolished work, and the trembling voice that means every word it says.
 
 <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-    When machines make perfection abundant, imperfection becomes the new beauty. Character becomes the new wealth. And purity of heart—already a rarity—becomes the rarest thing in the world.
+    When machines make perfection abundant, imperfection becomes the new beauty. Character becomes the new wealth, and purity of heart becomes the rarest thing in the world.
 </div>
 
 <br>
 
-Those who carry purity in their heart, a rarity already, will be the ones the world quietly gravitates toward, when everything else around them is generated, optimized, and artificial.
+People who carry purity in their heart, already a rarity, will be the ones the world gravitates toward when everything else around them is generated, optimized, and artificial.
 
-So this is where I have landed, after all these years of building the very thing I have been wary of. The machines will take the jobs. They will write the words, paint the images, run the businesses. They will hand us perfection at zero cost.
+So, after all these years of building the very thing I have been wary of, I have landed here. Machines will take the jobs. They will write the words and paint the images, and they will run the businesses. They will hand us perfection at zero cost.
 
-And when that happens, the only things left standing—the only things that were ever really ours—will be the person whose hand you hold, and the person you actually are when no one is watching.
+When that happens, only two things will remain truly ours. The first is the person whose hand you hold, and the second is the person you actually are when no one is watching.
 
-And when I picture that world, I do not picture its towers or its glittering skylines.
+When I picture that world, I do not picture its towers or its glittering skylines. I picture two people who have grown old together, sitting on a quiet hillside outside the city with a small lantern between them. They watch the lights of a civilization that no longer needs them, and they need nothing but each other.
 
-I picture two people grown old together on a quiet hillside outside the city, a small lantern between them, watching the lights of a civilization that no longer needs them.
-
-And needing nothing but each other.
-
-Everything else, technology will replicate.
-
-These two things, it never will.
+Technology will replicate everything else. It will never replicate the love you share with someone, or the person you truly are.

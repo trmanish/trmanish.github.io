@@ -239,6 +239,9 @@ Things that will truly enrich your life:
 - Realize People are like Experiences. And just like every experience, they will come and go! 
 
 
+- See someone you love deeply, leave you. Love is truly experienced when you miss someone, when you grieve for someone. 
+
+
 - Love People, Use Things. The world is in chaos because Things are being loved and People are being used. 
 
 

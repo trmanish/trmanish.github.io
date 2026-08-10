@@ -251,6 +251,7 @@
 
   function finishTurn(state, committed) {
     if (committed) current = state.target;
+    if (committed) haptic(7);
     state.leaf.remove();
     book.classList.remove('is-turning-next', 'is-turning-prev');
     root.style.setProperty('--turn-shade', '0');
@@ -287,6 +288,34 @@
     }
     requestAnimationFrame(frame);
   }
+
+  /* Haptics, so a page has weight in the hand: a soft tick when a page is
+     picked up, a detent as it tips past the point of no return, and one as
+     it settles. Android exposes navigator.vibrate; iOS Safari 17.4+ gives a
+     haptic when a switch-style checkbox is clicked inside a user gesture;
+     desktop quietly does nothing. */
+  const haptic = (() => {
+    let toggle = null;
+    function ensureToggle() {
+      if (toggle) return toggle;
+      const holder = document.createElement('label');
+      holder.setAttribute('aria-hidden', 'true');
+      holder.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.setAttribute('switch', '');
+      input.tabIndex = -1;
+      holder.appendChild(input);
+      document.body.appendChild(holder);
+      toggle = input;
+      return toggle;
+    }
+    return function tick(strength) {
+      if (introActive) return;
+      if (navigator.vibrate) { navigator.vibrate(strength); return; }
+      try { ensureToggle().click(); } catch (error) { /* not supported */ }
+    };
+  })();
 
   function canTurn(direction) {
     return direction === 'next' ? current < spreads.length - 1 : current > 0;
@@ -328,6 +357,7 @@
       setTurn(pointer.state, 0);
       resetLean();
       turning = true;
+      haptic(4);
     }
     try { zone.setPointerCapture(event.pointerId); } catch (error) { /* synthetic pointers */ }
     event.preventDefault();
@@ -345,6 +375,9 @@
     pointer.previousAmount = amount;
     pointer.previousTime = now;
     pointer.amount = amount;
+    /* the detent: the page tips past its point of no return */
+    if (!pointer.detented && amount > .46) { pointer.detented = true; haptic(9); }
+    else if (pointer.detented && amount < .36) { pointer.detented = false; haptic(5); }
     setTurn(pointer.state, pointer.amount);
   }
 

@@ -157,12 +157,9 @@
       const pull = inner.querySelector('.memory-page__quote--pull');
       const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight) || 18;
       const innerBottom = inner.getBoundingClientRect().bottom - parseFloat(getComputedStyle(inner).paddingBottom);
-      let reserved = read ? read.getBoundingClientRect().height + 16 : 0;
-      if (pull) {
-        reserved += pull.getBoundingClientRect().height
-          + parseFloat(getComputedStyle(pull).marginTop || 0) + 10;
-      }
-      const available = innerBottom - reserved - excerpt.getBoundingClientRect().top - 4;
+      let reserved = read ? read.getBoundingClientRect().height + 12 : 0;
+      if (pull) reserved += pull.getBoundingClientRect().height + 18;
+      const available = innerBottom - reserved - excerpt.getBoundingClientRect().top;
       const lines = Math.max(2, Math.floor(available / lineHeight));
       const scope = excerpt.closest('.memory-page--feature') ? '--clamp-feature' : '--clamp-body';
       root.style.setProperty(scope, lines);
@@ -481,8 +478,10 @@
     requestAnimationFrame(frame);
   }
 
-  /* The riffle settles with the last page still slightly lifted, the feather
-     drifts in from the left of the screen, touches that bent page, and the
+  /* The diary opens at its first page and flips forward through real page
+     turns, fast ones, until it stops a few pages past the feature spread.
+     The stop page settles slightly lifted rather than flat, the feather
+     drifts in from the left and slides under that lifted edge, and its
      touch pushes the page over to open the feature spread. */
   function runOpeningStory() {
     if (reducedMotion || spreads.length < 2 || introIndex <= loveIndex) {
@@ -496,33 +495,53 @@
     current = 0;
     render(current);
     restFeather(false);
+
+    /* If anything interrupts the opening, the diary must never stay locked:
+       after a hard limit it lands on the feature spread and hands over. */
+    const watchdog = setTimeout(() => {
+      if (!introActive) return;
+      introActive = false;
+      turning = false;
+      book.querySelectorAll('.diary-leaf').forEach((leaf) => leaf.remove());
+      book.classList.remove('is-turning-next', 'is-turning-prev', 'is-bent');
+      feather.classList.remove('diary-feather--under');
+      current = loveIndex;
+      render(current);
+      restFeather(true);
+    }, 13000);
+
     makeRiffle();
-    let bentLeaf = null;
 
     /* The riffle is still blurring past when the diary lands on the stop
        page, so the change of spread hides inside the motion. */
     setTimeout(() => {
       current = introIndex;
       render(current);
-      turning = true;
-      bentLeaf = buildLeaf('prev', loveIndex);
-      setTurn(bentLeaf, .11);
     }, 1500);
 
     setTimeout(() => {
+      book.classList.add('is-bent');
+      setTimeout(startFeather, 380);
+    }, 2050);
+
+    function startFeather() {
       feather.classList.add('diary-feather--under');
       flyFeather(ANCHOR.start, ANCHOR.hit, 2300, {
         sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
         rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
       }, turnOnContact);
-    }, 2050);
+    }
 
     function turnOnContact() {
-      if (!bentLeaf) return;
+      turning = true;
+      const state = buildLeaf('prev', loveIndex);
+      setTurn(state, .035);
+      book.classList.remove('is-bent');
       /* The feather slid in under the lifted page, so it stays beneath the
          book until the turning page has risen clear of it. */
       setTimeout(() => feather.classList.remove('diary-feather--under'), 520);
-      tweenIntroTurn(bentLeaf, 1650, () => {
+      tweenIntroTurn(state, 1650, () => {
+        clearTimeout(watchdog);
         introActive = false;
         restFeather(true);
         caption.textContent = 'Love is the Only Prosperity';

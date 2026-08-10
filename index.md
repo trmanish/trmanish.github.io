@@ -29,6 +29,7 @@ class: "home-page"
         <button class="diary-turn-zone diary-turn-zone--left" type="button" aria-label="Drag or tap to turn to the previous pages" data-diary-drag="prev"></button>
         <button class="diary-turn-zone diary-turn-zone--right" type="button" aria-label="Drag or tap to turn to the next pages" data-diary-drag="next"></button>
         <div class="diary-gutter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="diary-riffle" data-diary-riffle aria-hidden="true"></div>
       </div>
       <!-- The feather lives beside the book, not inside its 3D space, so a
            turning page can never slice through it. -->

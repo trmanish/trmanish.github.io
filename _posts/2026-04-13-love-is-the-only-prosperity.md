@@ -41,7 +41,7 @@ A few weeks later, I messaged her. Usually, I forget names and numbers remain in
 
 As the days progressed, I realized all I really wanted was to tease her, talk to her, laugh with her, and just see the best version of her.
 
-Life, unfortunately, had its own plans. She walked away. I wanted to stop her, but I also knew that some things are beyond our control. I wanted to hear her voice every day—every time I woke up, and every time I went to sleep. When I close my eyes, I see her. When I open them, I wanted her to be there.
+Life, unfortunately, had its own plans. She walked away. I wanted to stop her, but I also knew that some things are beyond our control. I wanted to hear her voice every day—every time I woke up, and every time I went to sleep. When I close my eyes, I see her. When I open them, I wanted to see her.
 
 I never got to say these things to her. The situation was complicated. I didn't know what she wanted, and I didn't want to force the weight of my expectations onto her. But every day that went by, I just wanted to see her do well, irrespective of whether I was there or not. That is the only thing that remained from the beginning.
 

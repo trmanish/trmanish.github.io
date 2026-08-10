@@ -274,10 +274,11 @@
     render(current);
   }
 
-  function settleTurn(state, committed, initialVelocity = 0) {
+  function settleTurn(state, committed, initialVelocity = 0, onDone = null) {
     if (reducedMotion) {
       setTurn(state, committed ? 1 : 0);
       finishTurn(state, committed);
+      if (onDone) onDone();
       return;
     }
     const target = committed ? 1 : 0;
@@ -297,6 +298,7 @@
       if (Math.abs(value - target) < .002 && Math.abs(velocity) < .02) {
         setTurn(state, target);
         finishTurn(state, committed);
+        if (onDone) onDone();
       } else {
         requestAnimationFrame(frame);
       }
@@ -492,12 +494,14 @@
       .filter((stop) => stop > 0 && stop < spreads.length)
       .sort((a, b) => a - b);
 
+    /* Each opening flip is the same spring-driven turn a drag produces,
+       thrown with a little starting speed the way a flicked page moves. */
     function flipTo(list, i, done) {
       if (i >= list.length) { done(); return; }
       turning = true;
       const state = buildLeaf('next', list[i]);
       setTurn(state, 0);
-      tweenIntroTurn(state, 460, () => setTimeout(() => flipTo(list, i + 1, done), 120));
+      settleTurn(state, true, 2.4, () => setTimeout(() => flipTo(list, i + 1, done), 90));
     }
 
     setTimeout(() => {

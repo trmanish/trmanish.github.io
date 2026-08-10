@@ -681,11 +681,11 @@ body.site-page--post.is-closing { opacity: 0; }
        warm pool of light. Shares its markup with the diary home. ---- */
 .lamp-toggle {
     position: fixed;
-    top: 6px;
+    top: 0;
     right: clamp(10px, 2.2vw, 26px);
     z-index: 130;
     width: 44px;
-    height: 70px;
+    height: 92px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -705,7 +705,7 @@ body.site-page--post.is-closing { opacity: 0; }
 .lamp-glow {
     position: absolute;
     left: 50%;
-    top: 56%;
+    top: 52%;
     width: 120px;
     height: 120px;
     transform: translate(-50%, -50%);

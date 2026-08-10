@@ -8,6 +8,8 @@
   --diary-accent: #8b4b36;
   --diary-serif: "Cormorant Garamond", Georgia, serif;
   --diary-sans: "Geist", system-ui, sans-serif;
+  --diary-hand: "Caveat", "Segoe Script", cursive;
+  --diary-pen: #3d332a;
 }
 
 * { box-sizing: border-box; }
@@ -115,9 +117,9 @@ a { text-decoration: none; }
 }
 .diary-stage {
   min-width: 0;
+  position: relative;
   perspective: 1800px;
   perspective-origin: 50% 42%;
-  filter: drop-shadow(0 30px 30px rgba(69, 47, 25, .21));
   touch-action: pan-y;
 }
 .diary-book {
@@ -129,6 +131,40 @@ a { text-decoration: none; }
   transition: transform .16s ease-out;
   will-change: transform;
   --page-pad: clamp(18px, 3.1vw, 48px);
+  --span: .481;
+  --strips: 18;
+  --leaf-w: calc(var(--book-w, 1000px) * var(--span));
+  --strip-w: calc(var(--leaf-w) / var(--strips));
+}
+
+/* The book sits on a surface, so the shadow is a pool underneath it rather
+   than a filter on the artwork. Each pool fades to nothing well inside its
+   own bounds, and all three ease off while a leaf is in the air. */
+.diary-cast {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.diary-cast--ambient {
+  left: 3%; right: 3%; top: 26%; bottom: -6%;
+  background: radial-gradient(50% 50% at 50% 58%,
+    rgba(58, 44, 26, .34) 0%, rgba(58, 44, 26, .18) 40%, rgba(58, 44, 26, 0) 74%);
+  filter: blur(26px);
+  opacity: calc(1 - var(--turn-shade, 0) * .42);
+}
+.diary-cast--contact {
+  left: 7%; right: 7%; top: 60%; bottom: -3%;
+  background: radial-gradient(50% 44% at 50% 42%,
+    rgba(44, 32, 14, .42) 0%, rgba(44, 32, 14, .17) 48%, rgba(44, 32, 14, 0) 78%);
+  filter: blur(11px);
+  opacity: calc(1 - var(--turn-shade, 0) * .5);
+}
+.diary-cast--hair {
+  left: 10%; right: 10%; top: 72%; bottom: 2%;
+  background: radial-gradient(50% 52% at 50% 40%,
+    rgba(40, 28, 10, .36) 0%, rgba(40, 28, 10, 0) 76%);
+  filter: blur(4px);
+  opacity: calc(1 - var(--turn-shade, 0) * .62);
 }
 .diary-book::after {
   content: "";
@@ -154,10 +190,10 @@ a { text-decoration: none; }
 }
 .diary-page-stack {
   position: absolute;
-  top: 4.1%; bottom: 2.5%;
-  width: 48.7%;
+  top: 4.1%; bottom: 2.2%;
+  width: 48.9%;
   background: repeating-linear-gradient(180deg, #ddcfb2 0 2px, #b7a586 2px 3px, #eadfc8 3px 5px);
-  box-shadow: 0 8px 9px rgba(58,36,19,.22);
+  box-shadow: 0 10px 12px rgba(58,36,19,.26), inset 0 -3px 5px rgba(70,45,22,.22);
   transform: translateZ(-3px);
 }
 .diary-page-stack--left { left: 1.8%; border-radius: 12px 2px 4px 12px; }
@@ -170,12 +206,15 @@ a { text-decoration: none; }
   grid-template-columns: 1fr 1fr;
   transform-style: preserve-3d;
 }
+/* Each zone covers a whole half of the spread, so a page can be picked up
+   anywhere on it and dragged. A press that never moves is a click: near the
+   outer edge it turns the page, and anywhere else it opens the essay. */
 .diary-turn-zone {
   position: absolute;
   z-index: 48;
   top: 3.3%;
   bottom: 3%;
-  width: 17%;
+  width: 48.1%;
   padding: 0;
   border: 0;
   background: transparent;
@@ -184,30 +223,31 @@ a { text-decoration: none; }
   -webkit-tap-highlight-color: transparent;
 }
 .diary-turn-zone:active { cursor: grabbing; }
-.diary-turn-zone:disabled { pointer-events: none; }
+.diary-turn-zone:disabled { cursor: pointer; }
 .diary-turn-zone--left { left: 1.9%; }
 .diary-turn-zone--right { right: 1.9%; }
 .diary-turn-zone::after {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 34px;
-  height: 34px;
+  width: 62px;
+  height: 62px;
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity .25s ease;
 }
 .diary-turn-zone--left::after {
   left: 0;
-  background: linear-gradient(45deg, rgba(117,91,61,.12), transparent 52%);
+  background: linear-gradient(45deg, rgba(96,74,48,.22), rgba(117,91,61,.06) 46%, transparent 62%);
   border-radius: 0 100% 0 0;
 }
 .diary-turn-zone--right::after {
   right: 0;
-  background: linear-gradient(-45deg, rgba(117,91,61,.12), transparent 52%);
+  background: linear-gradient(-45deg, rgba(96,74,48,.22), rgba(117,91,61,.06) 46%, transparent 62%);
   border-radius: 100% 0 0;
 }
 .diary-turn-zone:hover::after,
 .diary-turn-zone:focus-visible::after { opacity: 1; }
+.diary-turn-zone:disabled::after { opacity: 0; }
 .memory-page {
   position: relative;
   min-width: 0;
@@ -262,10 +302,9 @@ a { text-decoration: none; }
   gap: 10px;
   margin: 0 0 clamp(9px, 1.6vw, 20px);
   color: var(--diary-soft);
-  font-family: var(--diary-sans);
-  font-size: clamp(7px, .82vw, 10px);
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-family: var(--diary-hand);
+  font-size: clamp(11px, 1.15vw, 16px);
+  letter-spacing: .04em;
 }
 .memory-page__number { font-variant-numeric: tabular-nums; }
 .memory-page__image {
@@ -293,10 +332,12 @@ a { text-decoration: none; }
 }
 .memory-page__title {
   margin: 0;
-  font-size: clamp(18px, 2.15vw, 34px);
-  font-weight: 500;
-  line-height: .98;
-  letter-spacing: -.018em;
+  color: var(--diary-pen);
+  font-family: var(--diary-hand);
+  font-size: clamp(21px, 2.5vw, 40px);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: .005em;
   text-wrap: balance;
 }
 .memory-page__rule {
@@ -308,10 +349,11 @@ a { text-decoration: none; }
 }
 .memory-page__excerpt {
   margin: 0;
-  color: rgba(48,39,31,.76);
-  font-size: clamp(10px, 1.14vw, 16px);
+  color: rgba(61, 51, 42, .82);
+  font-family: var(--diary-hand);
+  font-size: clamp(12px, 1.38vw, 20px);
   font-weight: 400;
-  line-height: 1.48;
+  line-height: 1.34;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -321,10 +363,10 @@ a { text-decoration: none; }
   margin: auto 0 0;
   padding-top: 12px;
   color: var(--diary-accent);
-  font-family: var(--diary-sans);
-  font-size: clamp(7px, .78vw, 10px);
-  letter-spacing: .17em;
-  text-transform: uppercase;
+  font-family: var(--diary-hand);
+  font-size: clamp(11px, 1.1vw, 16px);
+  font-weight: 600;
+  letter-spacing: .05em;
 }
 
 .memory-page--feature .memory-page__title { font-size: clamp(24px, 3.1vw, 47px); }
@@ -334,10 +376,13 @@ a { text-decoration: none; }
   position: relative;
   margin: 0;
   padding: 0 2%;
-  font-size: clamp(18px, 2.25vw, 34px);
-  font-style: italic;
-  line-height: 1.18;
+  color: var(--diary-pen);
+  font-family: var(--diary-hand);
+  font-size: clamp(20px, 2.5vw, 38px);
+  font-weight: 600;
+  line-height: 1.12;
   text-align: center;
+  transform: rotate(-1.1deg);
 }
 .memory-page__quote::before {
   content: "“";
@@ -349,10 +394,11 @@ a { text-decoration: none; }
 }
 .memory-page__continuation {
   margin: clamp(14px, 2.2vw, 28px) auto 0;
-  max-width: 31ch;
-  color: var(--diary-soft);
-  font-size: clamp(10px, 1.12vw, 15px);
-  line-height: 1.5;
+  max-width: 34ch;
+  color: rgba(61, 51, 42, .76);
+  font-family: var(--diary-hand);
+  font-size: clamp(12px, 1.32vw, 19px);
+  line-height: 1.36;
   text-align: center;
 }
 
@@ -393,12 +439,17 @@ a { text-decoration: none; }
 .diary-arrow:hover, .diary-arrow:focus-visible { color: var(--diary-ink); background: rgba(247,239,219,.78); transform: scale(1.05); }
 .diary-arrow:disabled { opacity: .2; cursor: default; transform: none; }
 
+/* The turning leaf is a chain of nested strips whose tangent sweeps through
+   an arc, so the paper bends instead of pivoting like a flat door. Every
+   width here is an absolute length derived from --book-w. A percentage would
+   resolve against the parent strip, and because the strips are nested each
+   one would end up a fraction of the strip above it. */
 .diary-leaf {
   position: absolute;
   z-index: 55;
   top: 3.3%;
   height: 93.7%;
-  width: 48.1%;
+  width: var(--leaf-w);
   transform-style: preserve-3d;
   pointer-events: none;
   --turn: 0deg;
@@ -410,16 +461,16 @@ a { text-decoration: none; }
   position: absolute;
   top: 0;
   height: 100%;
-  width: calc(100% / var(--strips));
+  width: var(--strip-w);
   transform-style: preserve-3d;
 }
 .diary-leaf--next > .diary-strip { left: 0; transform-origin: left center; }
-.diary-leaf--prev > .diary-strip { right: 0; transform-origin: right center; }
+.diary-leaf--prev > .diary-strip { right: 0; left: auto; transform-origin: right center; }
 .diary-leaf--next .diary-strip > .diary-strip { left: 100%; transform-origin: left center; transform: rotateY(var(--step)); }
-.diary-leaf--prev .diary-strip > .diary-strip { right: 100%; transform-origin: right center; transform: rotateY(calc(-1 * var(--step))); }
+.diary-leaf--prev .diary-strip > .diary-strip { right: 100%; left: auto; transform-origin: right center; transform: rotateY(calc(-1 * var(--step))); }
 .diary-face {
   position: absolute;
-  inset: 0 -1px 0 0;
+  inset: 0 -1.1px 0 0;
   overflow: hidden;
   background: var(--diary-paper);
   backface-visibility: hidden;
@@ -430,11 +481,22 @@ a { text-decoration: none; }
   position: absolute;
   top: 0;
   height: 100%;
-  width: calc(100% * var(--strips));
+  width: var(--leaf-w);
   pointer-events: none;
 }
-.diary-leaf--next .diary-face__page { left: calc(-100% * var(--strip-index)); }
-.diary-leaf--prev .diary-face__page { right: calc(-100% * var(--strip-index)); }
+/* A back face is pre-rotated 180°, so when the leaf lands the strips read in
+   the opposite order. Its offsets count from the far edge, or the landed page
+   comes out with its slices reversed. */
+.diary-leaf--next .diary-face--front .diary-face__page { left: calc(-1 * var(--strip-w) * var(--strip-index)); }
+.diary-leaf--next .diary-face--back .diary-face__page { left: calc(-1 * var(--strip-w) * (var(--strips) - 1 - var(--strip-index))); }
+.diary-leaf--prev .diary-face--front .diary-face__page { right: calc(-1 * var(--strip-w) * var(--strip-index)); left: auto; }
+.diary-leaf--prev .diary-face--back .diary-face__page { right: calc(-1 * var(--strip-w) * (var(--strips) - 1 - var(--strip-index))); left: auto; }
+/* A face is drawn 36 times per turn, so the costly paper effects come off
+   inside it. They are barely visible on a page that is edge on anyway. */
+.diary-face .memory-page { box-shadow: none; }
+.diary-face .memory-page::before,
+.diary-face .memory-page::after { display: none; }
+.diary-face .memory-page__image { filter: none; box-shadow: none; }
 .diary-face::before,
 .diary-face::after {
   content: "";
@@ -483,49 +545,36 @@ a { text-decoration: none; }
   100% { transform: rotateY(-180deg) skewY(-1deg); filter: blur(0); }
 }
 
+/* The feather is driven frame by frame from diary.js, so the only things
+   set here are its size and the shadow it drops on the paper. --h is how
+   far it is above the page, from 1 in the air to 0 lying on it. */
 .diary-feather {
   position: absolute;
+  left: 0; top: 0;
   z-index: 74;
-  width: 31%;
-  height: auto;
+  width: 27%;
+  opacity: 0;
   pointer-events: none;
   user-select: none;
-  filter: sepia(.16) saturate(.86) contrast(1.28) brightness(.72)
-    drop-shadow(0 8px 7px rgba(63,43,27,.28));
-  transform-origin: 72% 58%;
-  will-change: left, top, transform, opacity;
+  transform-origin: 76% 60%;
+  will-change: transform, opacity;
 }
-.diary-feather.is-hidden { left: 50%; top: -28%; opacity: 0; }
-.diary-feather.is-falling {
-  animation: feather-fall 1.6s cubic-bezier(.2,.62,.28,1) forwards;
+.diary-feather__quill {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: sepia(.2) saturate(.92) contrast(1.32) brightness(.6);
+  -webkit-user-drag: none;
 }
-.diary-feather.is-landed-left {
-  left: 15%;
-  top: 30%;
-  opacity: .88;
-  transform: translateZ(38px) rotate(-18deg) rotateX(5deg);
-}
-.diary-feather.is-crossing {
-  animation: feather-cross-page 1.75s cubic-bezier(.45,.02,.28,1) forwards;
-}
-.diary-feather.is-resting {
-  left: 63%;
-  top: 31%;
-  opacity: .86;
-  transform: translateZ(38px) rotate(16deg) rotateX(4deg);
-}
-@keyframes feather-fall {
-  0% { left: 53%; top: -30%; opacity: 0; transform: translateZ(90px) rotate(-46deg) rotateY(24deg) scale(.9); }
-  18% { opacity: .82; }
-  48% { left: 34%; top: 2%; transform: translateZ(72px) rotate(12deg) rotateY(-14deg) scale(.96); }
-  76% { left: 20%; top: 21%; transform: translateZ(50px) rotate(-28deg) rotateY(8deg) scale(1); }
-  100% { left: 15%; top: 30%; opacity: .88; transform: translateZ(38px) rotate(-18deg) rotateX(5deg); }
-}
-@keyframes feather-cross-page {
-  0% { left: 15%; top: 30%; opacity: .88; transform: translateZ(38px) rotate(-18deg) rotateX(5deg); }
-  38% { left: 36%; top: 12%; opacity: .94; transform: translateZ(72px) rotate(2deg) rotateY(68deg); }
-  67% { left: 53%; top: 18%; transform: translateZ(58px) rotate(25deg) rotateY(118deg); }
-  100% { left: 63%; top: 31%; opacity: .86; transform: translateZ(38px) rotate(16deg) rotateX(4deg); }
+.diary-feather__shadow {
+  position: absolute;
+  z-index: -1;
+  left: 7%; right: 7%; top: 17%; bottom: 17%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(50,34,16,.55), rgba(50,34,16,0) 76%);
+  filter: blur(calc(3px + 15px * var(--h, 0)));
+  opacity: calc(.52 - var(--h, 0) * .32);
+  transform: translate(calc(var(--h, 0) * 24%), calc(var(--h, 0) * 32%)) scale(calc(1 + var(--h, 0) * .45));
 }
 
 .diary-meta {

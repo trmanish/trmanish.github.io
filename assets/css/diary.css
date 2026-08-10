@@ -219,6 +219,17 @@ a { text-decoration: none; }
   grid-template-columns: 1fr 1fr;
   transform-style: preserve-3d;
 }
+/* An open book is never flat. Each page plane tips a few degrees so the
+   paper rises toward the spine, and the shading below paints the bow of
+   the paper: darker in the crease, a soft light just before it. */
+.diary-spread .memory-page--left {
+  transform-origin: left center;
+  transform: rotateY(-5.5deg);
+}
+.diary-spread .memory-page--right {
+  transform-origin: right center;
+  transform: rotateY(5.5deg);
+}
 /* Each zone covers a whole half of the spread, so a page can be picked up
    anywhere on it and dragged. A press that never moves is a click: near the
    outer edge it turns the page, and anywhere else it opens the essay. */
@@ -298,6 +309,16 @@ a { text-decoration: none; }
 }
 .memory-page--left { border-radius: 9px 1px 2px 9px; box-shadow: inset -18px 0 22px -20px rgba(38,22,12,.9); }
 .memory-page--right { border-radius: 1px 9px 9px 2px; box-shadow: inset 18px 0 22px -20px rgba(38,22,12,.9); }
+.memory-page--left::before {
+  background: linear-gradient(90deg,
+    rgba(66,43,22,.07), transparent 15%, transparent 66%,
+    rgba(255,253,246,.5) 84%, rgba(58,37,19,.17) 99%);
+}
+.memory-page--right::before {
+  background: linear-gradient(270deg,
+    rgba(66,43,22,.07), transparent 15%, transparent 66%,
+    rgba(255,253,246,.5) 84%, rgba(58,37,19,.17) 99%);
+}
 .memory-page--left .memory-page__inner { padding-right: calc(var(--page-pad) * 1.15); }
 .memory-page--right .memory-page__inner { padding-left: calc(var(--page-pad) * 1.15); }
 .memory-page__inner {
@@ -403,8 +424,9 @@ a { text-decoration: none; }
   letter-spacing: .05em;
 }
 
-.memory-page--feature .memory-page__title { font-size: clamp(19px, 2.4vw, 36px); }
+.memory-page--feature .memory-page__title { font-size: clamp(16px, 1.95vw, 29px); }
 .memory-page--feature .memory-page__image { height: clamp(105px, 17vw, 225px); }
+.memory-page--feature .memory-page__photo { margin-bottom: clamp(16px, 2.4vw, 30px); }
 .memory-page--feature-continuation .memory-page__inner { justify-content: center; }
 
 /* A post owns its whole spread, so the right page is all writing. */
@@ -413,11 +435,44 @@ a { text-decoration: none; }
   font-size: clamp(11px, 1.3vw, 19px);
   -webkit-line-clamp: var(--clamp-body, 10);
 }
-.memory-page:not(.memory-page--feature):not(.memory-page--body):not(.memory-page--feature-continuation) .memory-page__inner {
-  justify-content: center;
-}
 .memory-page:not(.memory-page--feature):not(.memory-page--body):not(.memory-page--feature-continuation) .memory-page__title {
   font-size: clamp(18px, 2.3vw, 33px);
+}
+/* The few lines that follow the headline on a post's left page. */
+.memory-page__excerpt--lead {
+  margin-top: 2px;
+  -webkit-line-clamp: 3;
+}
+.memory-page__excerpt--lead:empty { display: none; }
+
+/* A line worth keeping, copied out across the lower part of the page. */
+.memory-page__quote--pull {
+  margin: clamp(12px, 1.9vw, 24px) 4% 0;
+  font-size: clamp(13px, 1.5vw, 22px);
+  transform: rotate(-.8deg);
+}
+
+/* A post written as bullets keeps its bullets in the diary. */
+.memory-page__list {
+  margin: clamp(6px, 1vw, 12px) 0 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(61, 51, 42, .82);
+  font-family: var(--diary-hand);
+  font-size: clamp(11px, 1.3vw, 19px);
+  line-height: 1.34;
+  overflow: hidden;
+}
+.memory-page__list li {
+  position: relative;
+  margin: 0 0 .38em;
+  padding-left: 1.05em;
+}
+.memory-page__list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: rgba(61, 51, 42, .55);
 }
 .memory-page__quote {
   position: relative;
@@ -580,6 +635,18 @@ a { text-decoration: none; }
   animation: opening-riffle 1.15s cubic-bezier(.45,.04,.2,1) forwards;
   animation-delay: var(--delay);
 }
+/* Each riffle leaf carries a written page on its face, hidden once the leaf
+   turns past edge-on so the flipped side reads as plain paper. */
+.diary-riffle__page {
+  position: absolute;
+  inset: 0;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.diary-riffle__page .memory-page { height: 100%; }
+.diary-riffle__page .memory-page::before,
+.diary-riffle__page .memory-page::after { display: none; }
 .diary-riffle__leaf::after {
   content: "";
   position: absolute; inset: 0;
@@ -606,6 +673,9 @@ a { text-decoration: none; }
   transform-origin: 76% 60%;
   will-change: transform, opacity;
 }
+/* While the feather slips in under the lifted page, it renders beneath the
+   book so its tip disappears under the paper's edge. */
+.diary-feather--under { z-index: -1; }
 .diary-feather__quill {
   display: block;
   width: 100%;

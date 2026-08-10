@@ -87,17 +87,48 @@
           <span class="memory-page__read">Continue reading &rarr;</span>`)
       };
     }
+    const bullets = (post.bullets || []).filter(Boolean);
+    const asList = bullets.length >= 3;
+    const parts = asList
+      ? { lead: post.intro || '', rest: '' }
+      : splitExcerpt(post.excerpt);
+    const quote = asList ? '' : pickQuote(parts.rest);
+    const body = asList
+      ? `<ul class="memory-page__list">${bullets.slice(0, 10).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      : `<p class="memory-page__excerpt">${escapeHtml(parts.rest)}</p>
+        ${quote ? `<blockquote class="memory-page__quote memory-page__quote--pull">${escapeHtml(quote)}</blockquote>` : ''}`;
     return {
       left: pageShell(post, 'left', '', `
         ${eyebrowMarkup(post, index * 2)}
         ${photoMarkup(post)}
         <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
-        <span class="memory-page__rule" aria-hidden="true"></span>`),
+        <span class="memory-page__rule" aria-hidden="true"></span>
+        <p class="memory-page__excerpt memory-page__excerpt--lead">${escapeHtml(parts.lead)}</p>`),
       right: pageShell(post, 'right', ' memory-page--body', `
         ${eyebrowMarkup(post, index * 2 + 1)}
-        <p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>
+        ${body}
         <span class="memory-page__read">Read this tick &rarr;</span>`)
     };
+  }
+
+  /* The first few lines of a post sit under its headline on the left page,
+     and the right page carries the writing on from that exact word. */
+  function splitExcerpt(excerpt = '') {
+    if (excerpt.length < 220) return { lead: excerpt, rest: '' };
+    const cut = excerpt.lastIndexOf(' ', 165);
+    if (cut < 60) return { lead: '', rest: excerpt };
+    return { lead: excerpt.slice(0, cut) + '…', rest: '…' + excerpt.slice(cut) };
+  }
+
+  /* A sentence from deeper in the post, written across the lower part of the
+     right page the way a line worth keeping gets copied out in a diary. */
+  function pickQuote(text = '') {
+    const sentences = (text.match(/[^.!?…]+[.!?]/g) || [])
+      .map((sentence) => sentence.trim())
+      .filter((sentence) => sentence.length > 45 && sentence.length < 180);
+    if (!sentences.length) return '';
+    const tail = sentences.slice(Math.floor(sentences.length / 2));
+    return tail.reduce((best, sentence) => (sentence.length > best.length ? sentence : best), tail[0]);
   }
 
   function render(index) {
@@ -120,16 +151,33 @@
      look of a written page. The measured counts go on the shell as CSS
      variables, so the faces built for a turn inherit the same limits. */
   function tuneClamp() {
-    spreadNode.querySelectorAll('.memory-page__excerpt').forEach((excerpt) => {
+    spreadNode.querySelectorAll('.memory-page__excerpt:not(.memory-page__excerpt--lead)').forEach((excerpt) => {
       const inner = excerpt.closest('.memory-page__inner');
       const read = inner.querySelector('.memory-page__read');
+      const pull = inner.querySelector('.memory-page__quote--pull');
       const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight) || 18;
       const innerBottom = inner.getBoundingClientRect().bottom - parseFloat(getComputedStyle(inner).paddingBottom);
-      const reserved = read ? read.getBoundingClientRect().height + 12 : 0;
+      let reserved = read ? read.getBoundingClientRect().height + 12 : 0;
+      if (pull) reserved += pull.getBoundingClientRect().height + 18;
       const available = innerBottom - reserved - excerpt.getBoundingClientRect().top;
       const lines = Math.max(2, Math.floor(available / lineHeight));
       const scope = excerpt.closest('.memory-page--feature') ? '--clamp-feature' : '--clamp-body';
       root.style.setProperty(scope, lines);
+    });
+
+    /* Bulleted pages drop whole bullets that would not fit, never half of one. */
+    spreadNode.querySelectorAll('.memory-page__list').forEach((list) => {
+      const inner = list.closest('.memory-page__inner');
+      const read = inner.querySelector('.memory-page__read');
+      const limit = inner.getBoundingClientRect().bottom
+        - parseFloat(getComputedStyle(inner).paddingBottom)
+        - (read ? read.getBoundingClientRect().height + 12 : 0);
+      let overflowed = false;
+      [...list.children].forEach((item) => { item.style.display = ''; });
+      [...list.children].forEach((item) => {
+        if (!overflowed && item.getBoundingClientRect().bottom > limit) overflowed = true;
+        if (overflowed) item.style.display = 'none';
+      });
     });
   }
 
@@ -336,12 +384,20 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
+  /* The riffle leaves carry real pages, sampled from the spreads between the
+     diary's start and where it stops, so the fast flips show writing going
+     past instead of blank paper. */
   function makeRiffle() {
     if (reducedMotion) return;
     for (let i = 0; i < 5; i += 1) {
       const leaf = document.createElement('i');
       leaf.className = 'diary-riffle__leaf';
       leaf.style.setProperty('--delay', `${180 + i * 105}ms`);
+      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
+      const page = document.createElement('span');
+      page.className = 'diary-riffle__page';
+      page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
+      leaf.appendChild(page);
       leaf.addEventListener('animationend', () => leaf.remove());
       riffle.appendChild(leaf);
     }
@@ -432,36 +488,46 @@
       return;
     }
     introActive = true;
-    current = introIndex;
+    current = 0;
     render(current);
     restFeather(false);
     makeRiffle();
     let bentLeaf = null;
 
+    /* The riffle is still blurring past when the diary lands on the stop
+       page, so the change of spread hides inside the motion. */
     setTimeout(() => {
+      current = introIndex;
+      render(current);
       turning = true;
       bentLeaf = buildLeaf('prev', loveIndex);
-      setTurn(bentLeaf, .062);
-    }, 1650);
+      setTurn(bentLeaf, .11);
+    }, 1500);
 
     setTimeout(() => {
+      feather.classList.add('diary-feather--under');
       flyFeather(ANCHOR.start, ANCHOR.hit, 2300, {
         sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
         rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
       }, turnOnContact);
-    }, 2000);
+    }, 2050);
 
     function turnOnContact() {
       if (!bentLeaf) return;
+      /* The feather slid in under the lifted page, so it stays beneath the
+         book until the turning page has risen clear of it. */
+      setTimeout(() => feather.classList.remove('diary-feather--under'), 520);
       tweenIntroTurn(bentLeaf, 1650, () => {
         introActive = false;
         restFeather(true);
         caption.textContent = 'Love is the Only Prosperity';
       });
-      flyFeather(ANCHOR.hit, ANCHOR.rest, 1650, {
-        sway: .025, swayAxis: 'y', cycles: .8, phase: 0, rock: 8, tilt: 40, arc: .09,
-        rotateFrom: -24, rotateTo: 16, liftFrom: .04, liftTo: 0, hop: .55
-      });
+      setTimeout(() => {
+        flyFeather(ANCHOR.hit, ANCHOR.rest, 1350, {
+          sway: .025, swayAxis: 'y', cycles: .8, phase: 0, rock: 8, tilt: 40, arc: .09,
+          rotateFrom: -24, rotateTo: 16, liftFrom: .04, liftTo: 0, hop: .55
+        });
+      }, 330);
     }
   }
 

@@ -62,11 +62,14 @@ class: "home-page"
 <script id="diary-posts" type="application/json">
 [
 {% for post in site.posts reversed %}
+  {% assign li_parts = post.content | split: '<li>' %}
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date: "%B %d, %Y" | jsonify }},
-    "excerpt": {{ post.content | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 460 | jsonify }},
+    "excerpt": {{ post.content | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 900 | jsonify }},
+    "intro": {{ li_parts | first | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 300 | jsonify }},
+    "bullets": [{% for part in li_parts offset: 1 limit: 12 %}{{ part | split: '</li>' | first | strip_html | strip_newlines | normalize_whitespace | truncate: 140 | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
     "image": {% if post.image %}{{ post.image | relative_url | jsonify }}{% else %}""{% endif %}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}

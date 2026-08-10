@@ -396,8 +396,6 @@
         const k = Math.min(1, t);
         const eased = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
         item.leaf.style.transform = `rotateY(${(-180 * eased).toFixed(2)}deg) skewY(${(-eased).toFixed(2)}deg)`;
-        /* past edge-on the sheet shows its plain back, not mirrored writing */
-        item.page.style.opacity = eased > .51 ? '0' : '1';
         if (k >= 1) { item.done = true; item.leaf.remove(); }
         else alive = true;
       });

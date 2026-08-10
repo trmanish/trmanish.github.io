@@ -219,6 +219,31 @@ a { text-decoration: none; }
   grid-template-columns: 1fr 1fr;
   transform-style: preserve-3d;
 }
+/* An open book is never flat. Each page plane tips a few degrees so the
+   paper rises toward the spine, and the shading below paints the bow of
+   the paper: darker in the crease, a soft light just before it.
+   The tilted pages sit above the flat turn zones in 3D, so they must not
+   swallow pointer events: every press belongs to the zones. */
+.diary-spread .memory-page { pointer-events: none; }
+.diary-spread .memory-page--left {
+  transform-origin: left center;
+  transform: rotateY(-5.5deg);
+  transition: transform .55s ease, box-shadow .55s ease;
+}
+.diary-spread .memory-page--right {
+  transform-origin: right center;
+  transform: rotateY(5.5deg);
+}
+/* The opening pauses with the left page settled not quite flat: hinged at
+   the spine, its outer edge lifted a little off the paper, throwing a soft
+   shadow, waiting for the feather to slip underneath and push it over. */
+.diary-book.is-bent .diary-spread .memory-page--left {
+  transform-origin: right center;
+  transform: rotateY(9deg);
+  box-shadow:
+    inset -18px 0 22px -20px rgba(38,22,12,.9),
+    -16px 12px 24px -12px rgba(50,32,16,.4);
+}
 /* Each zone covers a whole half of the spread, so a page can be picked up
    anywhere on it and dragged. A press that never moves is a click: near the
    outer edge it turns the page, and anywhere else it opens the essay. */
@@ -298,6 +323,16 @@ a { text-decoration: none; }
 }
 .memory-page--left { border-radius: 9px 1px 2px 9px; box-shadow: inset -18px 0 22px -20px rgba(38,22,12,.9); }
 .memory-page--right { border-radius: 1px 9px 9px 2px; box-shadow: inset 18px 0 22px -20px rgba(38,22,12,.9); }
+.memory-page--left::before {
+  background: linear-gradient(90deg,
+    rgba(66,43,22,.07), transparent 15%, transparent 66%,
+    rgba(255,253,246,.5) 84%, rgba(58,37,19,.17) 99%);
+}
+.memory-page--right::before {
+  background: linear-gradient(270deg,
+    rgba(66,43,22,.07), transparent 15%, transparent 66%,
+    rgba(255,253,246,.5) 84%, rgba(58,37,19,.17) 99%);
+}
 .memory-page--left .memory-page__inner { padding-right: calc(var(--page-pad) * 1.15); }
 .memory-page--right .memory-page__inner { padding-left: calc(var(--page-pad) * 1.15); }
 .memory-page__inner {
@@ -600,6 +635,10 @@ a { text-decoration: none; }
   background: linear-gradient(90deg, rgba(51,35,20,var(--a2,0)), rgba(51,35,20,var(--a1,0)));
 }
 
+
+/* The feather is driven frame by frame from diary.js, so the only things
+   set here are its size and the shadow it drops on the paper. --h is how
+   far it is above the page, from 1 in the air to 0 lying on it. */
 .diary-riffle { position: absolute; inset: 3.3% 1.9% 3%; z-index: 65; pointer-events: none; perspective: 1600px; }
 .diary-riffle__leaf {
   position: absolute;
@@ -638,9 +677,6 @@ a { text-decoration: none; }
   100% { transform: rotateY(-180deg) skewY(-1deg); filter: blur(0); }
 }
 
-/* The feather is driven frame by frame from diary.js, so the only things
-   set here are its size and the shadow it drops on the paper. --h is how
-   far it is above the page, from 1 in the air to 0 lying on it. */
 .diary-feather {
   position: absolute;
   left: 0; top: 0;

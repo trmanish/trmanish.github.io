@@ -25,6 +25,7 @@
   const caption = document.querySelector('[data-diary-caption]');
   const progress = document.querySelector('[data-diary-progress]');
   const hint = document.querySelector('[data-diary-hint]');
+  const riffle = root.querySelector('[data-diary-riffle]');
   const feather = root.querySelector('[data-diary-feather]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const STRIPS = 18;
@@ -385,6 +386,25 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
+  /* The riffle leaves carry real pages, sampled from the spreads between the
+     diary's start and where it stops, so the fast flips show writing going
+     past instead of blank paper. */
+  function makeRiffle() {
+    if (reducedMotion) return;
+    for (let i = 0; i < 5; i += 1) {
+      const leaf = document.createElement('i');
+      leaf.className = 'diary-riffle__leaf';
+      leaf.style.setProperty('--delay', `${180 + i * 105}ms`);
+      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
+      const page = document.createElement('span');
+      page.className = 'diary-riffle__page';
+      page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
+      leaf.appendChild(page);
+      leaf.addEventListener('animationend', () => leaf.remove());
+      riffle.appendChild(leaf);
+    }
+  }
+
   /* ---------------------------------------------------------- the feather */
   /* Anchors are the point of the quill that touches the paper, in fractions
      of the book. The feather is placed so that point lands on them. */
@@ -490,26 +510,19 @@
       restFeather(true);
     }, 13000);
 
-    const stops = [...new Set([1, 2, 3].map((step) => Math.max(1, Math.round(introIndex * step / 4))).concat(introIndex))]
-      .filter((stop) => stop > 0 && stop < spreads.length)
-      .sort((a, b) => a - b);
+    makeRiffle();
 
-    /* Each opening flip is the same spring-driven turn a drag produces,
-       thrown with a little starting speed the way a flicked page moves. */
-    function flipTo(list, i, done) {
-      if (i >= list.length) { done(); return; }
-      turning = true;
-      const state = buildLeaf('next', list[i]);
-      setTurn(state, 0);
-      settleTurn(state, true, 2.4, () => setTimeout(() => flipTo(list, i + 1, done), 90));
-    }
+    /* The riffle is still blurring past when the diary lands on the stop
+       page, so the change of spread hides inside the motion. */
+    setTimeout(() => {
+      current = introIndex;
+      render(current);
+    }, 1500);
 
     setTimeout(() => {
-      flipTo(stops, 0, () => {
-        book.classList.add('is-bent');
-        setTimeout(startFeather, 460);
-      });
-    }, 550);
+      book.classList.add('is-bent');
+      setTimeout(startFeather, 380);
+    }, 2050);
 
     function startFeather() {
       feather.classList.add('diary-feather--under');

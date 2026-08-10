@@ -367,17 +367,43 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
-  /* The opening flips are real page turns run fast, using the same leaf
-     machinery as a drag, so every flying page carries real writing and the
-     motion is identical on every browser. Each hop lands a few spreads
-     further on, the way a thumb lets a chunk of pages go at once. */
-  function quickTurns(targets, done) {
-    if (!targets.length) { done(); return; }
-    const target = targets.shift();
-    turning = true;
-    const state = buildLeaf('next', target);
-    setTurn(state, 0);
-    tweenIntroTurn(state, 310 + targets.length * 25, () => quickTurns(targets, done));
+  /* The riffle: a fast overlapping cascade of pages sweeping right to left,
+     each carrying real writing. The leaves are driven frame by frame with
+     plain transforms. A CSS keyframe animation with a filter in it made
+     Safari's compositor rasterize the page content at the wrong scale, so
+     no filter, no CSS animation and no backface layers are used here. */
+  function makeRiffle() {
+    if (reducedMotion) return;
+    const leaves = [];
+    for (let i = 0; i < 5; i += 1) {
+      const leaf = document.createElement('div');
+      leaf.className = 'diary-riffle__leaf';
+      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
+      const page = document.createElement('div');
+      page.className = 'diary-riffle__page';
+      page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
+      leaf.appendChild(page);
+      riffle.appendChild(leaf);
+      leaves.push({ leaf, page, start: 180 + i * 105, duration: 1100, done: false });
+    }
+    const began = performance.now();
+    function frame(now) {
+      let alive = false;
+      leaves.forEach((item) => {
+        if (item.done) return;
+        const t = (now - began - item.start) / item.duration;
+        if (t < 0) { alive = true; return; }
+        const k = Math.min(1, t);
+        const eased = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+        item.leaf.style.transform = `rotateY(${(-180 * eased).toFixed(2)}deg) skewY(${(-eased).toFixed(2)}deg)`;
+        /* past edge-on the sheet shows its plain back, not mirrored writing */
+        item.page.style.opacity = eased > .51 ? '0' : '1';
+        if (k >= 1) { item.done = true; item.leaf.remove(); }
+        else alive = true;
+      });
+      if (alive) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
   }
 
   /* ---------------------------------------------------------- the feather */
@@ -468,29 +494,26 @@
     current = 0;
     render(current);
     restFeather(false);
+    makeRiffle();
     let bentLeaf = null;
 
-    /* Flip forward through the diary in a few fast hops, then leave the
-       stop page settled slightly bent, waiting for the feather. */
-    const hops = [];
-    for (let k = 1; k <= 3; k += 1) {
-      const idx = Math.round(introIndex * k / 4);
-      if (idx > (hops[hops.length - 1] || 0) && idx < introIndex) hops.push(idx);
-    }
-    hops.push(introIndex);
+    /* The riffle is still sweeping past when the diary lands on the stop
+       page, so the change of spread hides inside the motion. */
+    setTimeout(() => {
+      current = introIndex;
+      render(current);
+      turning = true;
+      bentLeaf = buildLeaf('prev', loveIndex);
+      setTurn(bentLeaf, .11);
+    }, 1500);
 
     setTimeout(() => {
-      quickTurns(hops, () => {
-        turning = true;
-        bentLeaf = buildLeaf('prev', loveIndex);
-        setTurn(bentLeaf, .11);
-        feather.classList.add('diary-feather--under');
-        flyFeather(ANCHOR.start, ANCHOR.hit, 2150, {
-          sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
-          rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
-        }, turnOnContact);
-      });
-    }, 420);
+      feather.classList.add('diary-feather--under');
+      flyFeather(ANCHOR.start, ANCHOR.hit, 2150, {
+        sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
+        rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
+      }, turnOnContact);
+    }, 2050);
 
     function turnOnContact() {
       if (!bentLeaf) return;

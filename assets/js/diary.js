@@ -251,7 +251,6 @@
 
   function finishTurn(state, committed) {
     if (committed) current = state.target;
-    if (committed) haptic(7);
     state.leaf.remove();
     book.classList.remove('is-turning-next', 'is-turning-prev');
     root.style.setProperty('--turn-shade', '0');
@@ -295,25 +294,22 @@
      haptic when a switch-style checkbox is clicked inside a user gesture;
      desktop quietly does nothing. */
   const haptic = (() => {
-    let toggle = null;
-    function ensureToggle() {
-      if (toggle) return toggle;
-      const holder = document.createElement('label');
-      holder.setAttribute('aria-hidden', 'true');
-      holder.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;';
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.setAttribute('switch', '');
-      input.tabIndex = -1;
-      holder.appendChild(input);
-      document.body.appendChild(holder);
-      toggle = input;
-      return toggle;
-    }
+    const holder = document.createElement('label');
+    holder.setAttribute('aria-hidden', 'true');
+    holder.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none;';
+    const toggle = document.createElement('input');
+    toggle.type = 'checkbox';
+    toggle.setAttribute('switch', '');
+    toggle.tabIndex = -1;
+    holder.appendChild(toggle);
+    document.body.appendChild(holder);
     return function tick(strength) {
       if (introActive) return;
       if (navigator.vibrate) { navigator.vibrate(strength); return; }
-      try { ensureToggle().click(); } catch (error) { /* not supported */ }
+      /* iOS Safari: a switch-style checkbox clicked during a touch gesture
+         fires the system haptic. It only works while the gesture handler is
+         still on the stack, so every caller runs inside a pointer event. */
+      try { toggle.click(); } catch (error) { /* not supported */ }
     };
   })();
 
@@ -325,6 +321,7 @@
     if (introActive || turning || !canTurn(direction)) return;
     turning = true;
     dismissHint();
+    haptic(12);
     const state = buildLeaf(direction);
     setTurn(state, 0);
     settleTurn(state, true);
@@ -357,7 +354,7 @@
       setTurn(pointer.state, 0);
       resetLean();
       turning = true;
-      haptic(4);
+      haptic(10);
     }
     try { zone.setPointerCapture(event.pointerId); } catch (error) { /* synthetic pointers */ }
     event.preventDefault();
@@ -376,8 +373,8 @@
     pointer.previousTime = now;
     pointer.amount = amount;
     /* the detent: the page tips past its point of no return */
-    if (!pointer.detented && amount > .46) { pointer.detented = true; haptic(9); }
-    else if (pointer.detented && amount < .36) { pointer.detented = false; haptic(5); }
+    if (!pointer.detented && amount > .46) { pointer.detented = true; haptic(18); }
+    else if (pointer.detented && amount < .36) { pointer.detented = false; haptic(8); }
     setTurn(pointer.state, pointer.amount);
   }
 
@@ -397,6 +394,7 @@
     }
     if (!drag.state) return;
     const commit = tapped || drag.amount > .42 || drag.velocity > 1.1;
+    haptic(commit ? 14 : 6);
     settleTurn(drag.state, commit, drag.velocity);
   }
 

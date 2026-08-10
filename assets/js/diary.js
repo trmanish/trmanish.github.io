@@ -5,12 +5,16 @@
 
   /* Posts arrive oldest first, and each spread holds a single post, so the
      diary reads date after date the way a real one fills up. The feature
-     spread sits in front of them as the diary's opening page. */
+     spread keeps its own place in that order, and the opening animation
+     stops the riffle a few pages past it so the feather can flip back. */
   const posts = JSON.parse(dataNode.textContent);
-  const featureIndex = posts.findIndex((post) => post.title.toLowerCase() === 'love is the only prosperity');
-  const feature = featureIndex >= 0 ? posts.splice(featureIndex, 1)[0] : posts.shift();
-  const spreads = [{ type: 'feature', post: feature }];
-  posts.forEach((post) => spreads.push({ type: 'post', post }));
+  const spreads = posts.map((post) => ({
+    type: post.title.toLowerCase() === 'love is the only prosperity' ? 'feature' : 'post',
+    post
+  }));
+  const loveIndex = Math.max(0, spreads.findIndex((spread) => spread.type === 'feature'));
+  const foundIntro = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'the last scarce things');
+  const introIndex = foundIntro > loveIndex ? foundIntro : Math.min(loveIndex + 1, spreads.length - 1);
 
   const stage = root.querySelector('[data-diary-stage]');
   const book = root.querySelector('[data-diary-book]');
@@ -43,8 +47,9 @@
   function measure() {
     book.style.setProperty('--book-w', `${book.clientWidth}px`);
   }
-  window.addEventListener('resize', () => { measure(); placeFeather(featherPose); });
+  window.addEventListener('resize', () => { measure(); tuneClamp(); placeFeather(featherPose); });
   measure();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => tuneClamp());
 
   function photoMarkup(post) {
     if (!post.image) {
@@ -69,7 +74,7 @@
     if (spread.type === 'feature') {
       return {
         left: pageShell(post, 'left', ' memory-page--feature', `
-          ${eyebrowMarkup(post, 1)}
+          ${eyebrowMarkup(post, index * 2)}
           ${photoMarkup(post)}
           <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
           <span class="memory-page__rule" aria-hidden="true"></span>
@@ -105,8 +110,27 @@
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
     nextButton.disabled = index === spreads.length - 1;
-    if (!introActive) restFeather(index === 0);
+    if (!introActive) restFeather(index === loveIndex);
+    tuneClamp();
     attachPageNavigation();
+  }
+
+  /* The pages are a fixed size, so the excerpt gets exactly as many whole
+     lines as fit above the read link. Cutting a line in half would break the
+     look of a written page. The measured counts go on the shell as CSS
+     variables, so the faces built for a turn inherit the same limits. */
+  function tuneClamp() {
+    spreadNode.querySelectorAll('.memory-page__excerpt').forEach((excerpt) => {
+      const inner = excerpt.closest('.memory-page__inner');
+      const read = inner.querySelector('.memory-page__read');
+      const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight) || 18;
+      const innerBottom = inner.getBoundingClientRect().bottom - parseFloat(getComputedStyle(inner).paddingBottom);
+      const reserved = read ? read.getBoundingClientRect().height + 12 : 0;
+      const available = innerBottom - reserved - excerpt.getBoundingClientRect().top;
+      const lines = Math.max(2, Math.floor(available / lineHeight));
+      const scope = excerpt.closest('.memory-page--feature') ? '--clamp-feature' : '--clamp-body';
+      root.style.setProperty(scope, lines);
+    });
   }
 
   function attachPageNavigation() {
@@ -139,8 +163,10 @@
     return face;
   }
 
-  function buildLeaf(direction) {
-    const target = direction === 'next' ? current + 1 : current - 1;
+  function buildLeaf(direction, targetOverride) {
+    const target = targetOverride != null
+      ? targetOverride
+      : (direction === 'next' ? current + 1 : current - 1);
     const from = spreadPages(current);
     const to = spreadPages(target);
     const frontTemplate = template(direction === 'next' ? from.right : from.left);
@@ -339,8 +365,9 @@
     const x = pose.x * book.clientWidth - width * .76;
     const y = pose.y * book.clientHeight - height * .60;
     feather.style.transform =
-      `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, ${(14 + pose.height * 90).toFixed(1)}px)` +
-      ` rotate(${pose.rotate.toFixed(1)}deg) rotateY(${pose.tilt.toFixed(1)}deg)`;
+      `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)` +
+      ` rotate(${pose.rotate.toFixed(1)}deg) rotateY(${pose.tilt.toFixed(1)}deg)` +
+      ` scale(${(1 + pose.height * .16).toFixed(3)})`;
     feather.style.opacity = pose.opacity.toFixed(3);
     feather.style.setProperty('--h', pose.height.toFixed(3));
   }
@@ -397,15 +424,15 @@
      drifts in from the left of the screen, touches that bent page, and the
      touch pushes the page over to open the feature spread. */
   function runOpeningStory() {
-    if (reducedMotion || spreads.length < 2) {
-      current = 0;
+    if (reducedMotion || spreads.length < 2 || introIndex <= loveIndex) {
+      current = loveIndex;
       introActive = false;
       render(current);
       restFeather(true);
       return;
     }
     introActive = true;
-    current = 1;
+    current = introIndex;
     render(current);
     restFeather(false);
     makeRiffle();
@@ -413,7 +440,7 @@
 
     setTimeout(() => {
       turning = true;
-      bentLeaf = buildLeaf('prev');
+      bentLeaf = buildLeaf('prev', loveIndex);
       setTurn(bentLeaf, .062);
     }, 1650);
 

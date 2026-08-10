@@ -30,10 +30,12 @@ class: "home-page"
         <button class="diary-turn-zone diary-turn-zone--right" type="button" aria-label="Drag or tap to turn to the next pages" data-diary-drag="next"></button>
         <div class="diary-gutter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="diary-riffle" data-diary-riffle aria-hidden="true"></div>
-        <div class="diary-feather" data-diary-feather aria-hidden="true">
-          <span class="diary-feather__shadow"></span>
-          <img class="diary-feather__quill" src="{{ '/assets/images/diary/memory-feather.webp' | relative_url }}" alt="" draggable="false">
-        </div>
+      </div>
+      <!-- The feather lives beside the book, not inside its 3D space, so a
+           turning page can never slice through it. -->
+      <div class="diary-feather" data-diary-feather aria-hidden="true">
+        <span class="diary-feather__shadow"></span>
+        <img class="diary-feather__quill" src="{{ '/assets/images/diary/memory-feather.webp' | relative_url }}" alt="" draggable="false">
       </div>
     </div>
 

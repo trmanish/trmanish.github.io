@@ -505,14 +505,31 @@ body.site-page {
         url('../images/diary/memory-wash.webp') center / cover no-repeat;
 }
 
+/* The mast stays pinned while the page scrolls, and content sliding under
+   it blurs into a soft cloud below the bar instead of meeting a hard edge. */
 .site-page .nav-bar {
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 50;
     padding: 18px clamp(18px, 7vw, 90px);
-    background: rgba(242, 234, 216, .84);
-    border-bottom: 1px solid rgba(72, 50, 33, .12);
-    box-shadow: 0 5px 22px rgba(69, 45, 24, .06);
+    background: rgba(242, 234, 216, .78);
+    border-bottom: 1px solid rgba(72, 50, 33, .1);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.site-page .nav-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 38px;
+    background: linear-gradient(180deg, rgba(242, 234, 216, .68), transparent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent);
+    mask-image: linear-gradient(180deg, #000, transparent);
+    pointer-events: none;
 }
 
 .site-page .nav-bar nav {

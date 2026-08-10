@@ -54,6 +54,17 @@
         <p>&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
 
+    <button class="lamp-toggle" data-lamp type="button" aria-pressed="false" aria-label="Light the lamp">
+      <span class="lamp-glow" aria-hidden="true"></span>
+      <svg viewBox="0 0 44 70" aria-hidden="true">
+        <line class="lamp-cord" x1="22" y1="0" x2="22" y2="16"/>
+        <path class="lamp-shade" d="M10 32 L34 32 L28 16 L16 16 Z"/>
+        <circle class="lamp-bulb" cx="22" cy="40" r="7.5"/>
+        <path class="lamp-flame" d="M22 34.5 C24.6 37.5 24.6 41.5 22 43.8 C19.4 41.5 19.4 37.5 22 34.5 Z"/>
+      </svg>
+    </button>
+    <script src="{{ '/assets/js/lamp.js' | relative_url }}" defer></script>
+
     <script>
       // A click on the desk around the sheet closes it and returns to the diary.
       (function () {

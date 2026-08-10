@@ -18,6 +18,9 @@ class: "home-page"
     </button>
 
     <div class="diary-stage" data-diary-stage>
+      <div class="diary-cast diary-cast--ambient" aria-hidden="true"></div>
+      <div class="diary-cast diary-cast--contact" aria-hidden="true"></div>
+      <div class="diary-cast diary-cast--hair" aria-hidden="true"></div>
       <div class="diary-book" data-diary-book aria-live="polite">
         <div class="diary-cover" aria-hidden="true"></div>
         <div class="diary-page-stack diary-page-stack--left" aria-hidden="true"></div>
@@ -27,7 +30,10 @@ class: "home-page"
         <button class="diary-turn-zone diary-turn-zone--right" type="button" aria-label="Drag or tap to turn to the next pages" data-diary-drag="next"></button>
         <div class="diary-gutter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="diary-riffle" data-diary-riffle aria-hidden="true"></div>
-        <img class="diary-feather is-hidden" src="{{ '/assets/images/diary/memory-feather.webp' | relative_url }}" alt="" data-diary-feather aria-hidden="true">
+        <div class="diary-feather" data-diary-feather aria-hidden="true">
+          <span class="diary-feather__shadow"></span>
+          <img class="diary-feather__quill" src="{{ '/assets/images/diary/memory-feather.webp' | relative_url }}" alt="" draggable="false">
+        </div>
       </div>
     </div>
 

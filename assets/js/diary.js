@@ -25,6 +25,7 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const STRIPS = 18;
   const PEAK_CURL = 0.60;
+  const EDGE_BAND = .24;
   let current = 0;
   let turning = false;
   let pointer = null;
@@ -34,6 +35,15 @@
   const escapeHtml = (value = '') => value.replace(/[&<>'"]/g, (character) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
   })[character]);
+
+  /* Every width inside the turning leaf is an absolute length, because the
+     strips are nested and a percentage would resolve against the strip above
+     it. The book reports its own width here and the CSS divides it up. */
+  function measure() {
+    book.style.setProperty('--book-w', `${book.clientWidth}px`);
+  }
+  window.addEventListener('resize', () => { measure(); placeFeather(featherPose); });
+  measure();
 
   function pageMarkup(post, side, options = {}) {
     if (!post) {
@@ -46,7 +56,7 @@
         <div class="memory-page__inner">
           <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
           <blockquote class="memory-page__quote">Your fear of getting hurt should never be greater than your courage to love.</blockquote>
-          <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet—yet it forces the best out of us for everyone around us.</p>
+          <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet, yet it forces the best out of us for everyone around us.</p>
           <span class="memory-page__read">Continue reading &rarr;</span>
         </div>
       </article>`;
@@ -90,19 +100,12 @@
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
     nextButton.disabled = index === spreads.length - 1;
-    turnZones.forEach((zone) => {
-      zone.disabled = (zone.dataset.diaryDrag === 'prev' && index === 0) ||
-        (zone.dataset.diaryDrag === 'next' && index === spreads.length - 1);
-    });
-    if (!introActive && feather) {
-      feather.className = `diary-feather ${index === 0 ? 'is-resting' : 'is-hidden'}`;
-    }
+    if (!introActive) restFeather(index === 0);
     attachPageNavigation();
   }
 
   function attachPageNavigation() {
     spreadNode.querySelectorAll('[data-url]').forEach((page) => {
-      page.addEventListener('click', () => { window.location.href = page.dataset.url; });
       page.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
@@ -112,13 +115,21 @@
     });
   }
 
-  function buildFace(pageHtml, className, stripIndex) {
+  /* One parse per side, then clones. A turn builds 36 faces, and parsing the
+     same markup 36 times is what made the motion stutter. */
+  function template(html) {
+    const holder = document.createElement('template');
+    holder.innerHTML = html;
+    return holder.content;
+  }
+
+  function buildFace(fragment, className, stripIndex) {
     const face = document.createElement('div');
     face.className = `diary-face ${className}`;
     face.style.setProperty('--strip-index', stripIndex);
     const page = document.createElement('div');
     page.className = 'diary-face__page';
-    page.innerHTML = pageHtml;
+    page.appendChild(fragment.cloneNode(true));
     face.appendChild(page);
     return face;
   }
@@ -127,28 +138,26 @@
     const target = direction === 'next' ? current + 1 : current - 1;
     const from = spreadPages(current);
     const to = spreadPages(target);
+    const frontTemplate = template(direction === 'next' ? from.right : from.left);
+    const backTemplate = template(direction === 'next' ? to.left : to.right);
     const leaf = document.createElement('div');
     leaf.className = `diary-leaf diary-leaf--${direction}`;
-    leaf.style.setProperty('--strips', STRIPS);
     const stripList = [];
     let parent = leaf;
 
     for (let i = 0; i < STRIPS; i += 1) {
       const strip = document.createElement('div');
       strip.className = 'diary-strip';
-      const frontHtml = direction === 'next' ? from.right : from.left;
-      const backHtml = direction === 'next' ? to.left : to.right;
-      strip.appendChild(buildFace(frontHtml, 'diary-face--front', i));
-      strip.appendChild(buildFace(backHtml, 'diary-face--back', i));
+      strip.appendChild(buildFace(frontTemplate, 'diary-face--front', i));
+      strip.appendChild(buildFace(backTemplate, 'diary-face--back', i));
       parent.appendChild(strip);
       parent = strip;
       stripList.push(strip);
     }
 
-    const targetPages = spreadPages(target);
     spreadNode.innerHTML = direction === 'next'
-      ? from.left + targetPages.right
-      : targetPages.left + from.right;
+      ? from.left + to.right
+      : to.left + from.right;
     book.classList.remove('is-turning-next', 'is-turning-prev');
     book.classList.add(`is-turning-${direction}`);
     book.appendChild(leaf);
@@ -160,18 +169,18 @@
     const theta = Math.PI * t;
     const beta = PEAK_CURL * Math.sin(Math.PI * t);
     const degrees = 180 / Math.PI;
-    const rootAngle = (theta + beta) * degrees;
-    const stripAngle = (2 * beta / STRIPS) * degrees;
+    const rootAngle = theta + beta;
+    const stripAngle = 2 * beta / STRIPS;
     const shade = Math.sin(Math.PI * t);
     turnState.amount = t;
-    turnState.leaf.style.setProperty('--turn', `${rootAngle.toFixed(2)}deg`);
-    turnState.leaf.style.setProperty('--step', `${stripAngle.toFixed(3)}deg`);
+    turnState.leaf.style.setProperty('--turn', `${(rootAngle * degrees).toFixed(2)}deg`);
+    turnState.leaf.style.setProperty('--step', `${(stripAngle * degrees).toFixed(3)}deg`);
     turnState.leaf.style.setProperty('--shade', shade.toFixed(3));
-    book.style.setProperty('--turn-shade', shade.toFixed(3));
+    root.style.setProperty('--turn-shade', shade.toFixed(3));
 
     turnState.strips.forEach((strip, index) => {
-      const nearLight = Math.abs(Math.cos(rootAngle / degrees - index * stripAngle / degrees));
-      const farLight = Math.abs(Math.cos(rootAngle / degrees - (index + 1) * stripAngle / degrees));
+      const nearLight = Math.abs(Math.cos(rootAngle - index * stripAngle));
+      const farLight = Math.abs(Math.cos(rootAngle - (index + 1) * stripAngle));
       strip.style.setProperty('--lit', nearLight.toFixed(3));
       strip.style.setProperty('--a1', ((1 - nearLight) * .62).toFixed(3));
       strip.style.setProperty('--a2', ((1 - farLight) * .62).toFixed(3));
@@ -182,7 +191,7 @@
     if (committed) current = state.target;
     state.leaf.remove();
     book.classList.remove('is-turning-next', 'is-turning-prev');
-    book.style.setProperty('--turn-shade', '0');
+    root.style.setProperty('--turn-shade', '0');
     turning = false;
     render(current);
   }
@@ -217,8 +226,12 @@
     requestAnimationFrame(frame);
   }
 
+  function canTurn(direction) {
+    return direction === 'next' ? current < spreads.length - 1 : current > 0;
+  }
+
   function animateTurn(direction) {
-    if (introActive || turning || (direction === 'next' && current >= spreads.length - 1) || (direction === 'prev' && current <= 0)) return;
+    if (introActive || turning || !canTurn(direction)) return;
     turning = true;
     dismissHint();
     const state = buildLeaf(direction);
@@ -231,27 +244,41 @@
     hint.classList.add('is-gone');
   }
 
+  /* A press anywhere on a half picks that page up. A press that never moves
+     is a click: on the outer edge it turns the page, and anywhere else it
+     opens the essay printed on it. */
   function beginDrag(event) {
     if (introActive || turning || event.button !== 0) return;
-    const direction = event.currentTarget.dataset.diaryDrag;
-    if ((direction === 'next' && current >= spreads.length - 1) || (direction === 'prev' && current <= 0)) return;
-    const state = buildLeaf(direction);
-    setTurn(state, 0);
-    resetLean();
+    const zone = event.currentTarget;
+    const direction = zone.dataset.diaryDrag;
+    const bounds = zone.getBoundingClientRect();
+    const acrossZone = (event.clientX - bounds.left) / bounds.width;
+    const onEdge = direction === 'next' ? acrossZone > 1 - EDGE_BAND : acrossZone < EDGE_BAND;
+    const page = spreadNode.querySelector(direction === 'next' ? '.memory-page--right' : '.memory-page--left');
+    const url = page ? page.dataset.url : null;
     const now = performance.now();
-    pointer = { id: event.pointerId, startX: event.clientX, state, amount: 0, velocity: 0, previousAmount: 0, previousTime: now, moved: 0 };
-    turning = true;
-    event.currentTarget.setPointerCapture(event.pointerId);
+    pointer = {
+      id: event.pointerId, startX: event.clientX, state: null, amount: 0,
+      velocity: 0, previousAmount: 0, previousTime: now, moved: 0, onEdge, url, direction
+    };
+    if (canTurn(direction)) {
+      pointer.state = buildLeaf(direction);
+      setTurn(pointer.state, 0);
+      resetLean();
+      turning = true;
+    }
+    try { zone.setPointerCapture(event.pointerId); } catch (error) { /* synthetic pointers */ }
     event.preventDefault();
   }
 
   function moveDrag(event) {
     if (!pointer || event.pointerId !== pointer.id) return;
+    pointer.moved = Math.max(pointer.moved, Math.abs(event.clientX - pointer.startX));
+    if (!pointer.state) return;
     const bounds = book.getBoundingClientRect();
-    const delta = pointer.state.direction === 'next' ? pointer.startX - event.clientX : event.clientX - pointer.startX;
+    const delta = pointer.direction === 'next' ? pointer.startX - event.clientX : event.clientX - pointer.startX;
     const amount = Math.max(0, Math.min(1, delta / (bounds.width * .62)));
     const now = performance.now();
-    pointer.moved = Math.max(pointer.moved, Math.abs(event.clientX - pointer.startX));
     pointer.velocity = (amount - pointer.previousAmount) / Math.max(.001, (now - pointer.previousTime) / 1000);
     pointer.previousAmount = amount;
     pointer.previousTime = now;
@@ -262,8 +289,19 @@
   function endDrag(event) {
     if (!pointer || event.pointerId !== pointer.id) return;
     const drag = pointer;
-    const commit = drag.moved < 6 || drag.amount > .42 || drag.velocity > 1.1;
     pointer = null;
+    dismissHint();
+    const tapped = drag.moved < 6;
+    if (tapped && !drag.onEdge && drag.url) {
+      if (drag.state) {
+        setTurn(drag.state, 0);
+        finishTurn(drag.state, false);
+      }
+      window.location.href = drag.url;
+      return;
+    }
+    if (!drag.state) return;
+    const commit = tapped || drag.amount > .42 || drag.velocity > 1.1;
     settleTurn(drag.state, commit, drag.velocity);
   }
 
@@ -278,13 +316,66 @@
     }
   }
 
+  /* ---------------------------------------------------------- the feather */
+  /* Anchors are the point of the quill that touches the paper, in fractions
+     of the book. The feather is placed so that point lands on them. */
+  const ANCHOR = {
+    start: { x: .60, y: -.34 },
+    left: { x: .26, y: .66 },
+    rest: { x: .82, y: .74 }
+  };
+  let featherPose = { x: ANCHOR.rest.x, y: ANCHOR.rest.y, rotate: 16, tilt: 0, height: 0, opacity: 0 };
+
+  function placeFeather(pose) {
+    if (!feather) return;
+    featherPose = pose;
+    const width = feather.offsetWidth || book.clientWidth * .27;
+    const height = feather.offsetHeight || width * .667;
+    const x = pose.x * book.clientWidth - width * .76;
+    const y = pose.y * book.clientHeight - height * .60;
+    feather.style.transform =
+      `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, ${(14 + pose.height * 90).toFixed(1)}px)` +
+      ` rotate(${pose.rotate.toFixed(1)}deg) rotateY(${pose.tilt.toFixed(1)}deg)`;
+    feather.style.opacity = pose.opacity.toFixed(3);
+    feather.style.setProperty('--h', pose.height.toFixed(3));
+  }
+
+  function restFeather(visible) {
+    placeFeather({ ...ANCHOR.rest, rotate: 16, tilt: 0, height: 0, opacity: visible ? 1 : 0 });
+  }
+
+  function flyFeather(from, to, duration, options, done) {
+    if (reducedMotion) { restFeather(true); done && done(); return; }
+    const sway = options.sway;
+    const cycles = options.cycles;
+    const started = performance.now();
+    function frame(now) {
+      const t = Math.min(1, (now - started) / duration);
+      const glide = .5 - Math.cos(Math.PI * t) / 2;
+      const drop = 1 - Math.pow(1 - t, 1.7);
+      const wave = Math.sin(t * Math.PI * 2 * cycles + options.phase);
+      const fade = 1 - t;
+      placeFeather({
+        x: from.x + (to.x - from.x) * glide + sway * wave * fade,
+        y: from.y + (to.y - from.y) * (options.arc ? glide : drop) - (options.arc || 0) * Math.sin(Math.PI * t),
+        rotate: options.rotateFrom + (options.rotateTo - options.rotateFrom) * glide + options.rock * wave * fade,
+        tilt: options.tilt * Math.cos(t * Math.PI * 2 * cycles) * fade,
+        height: options.liftFrom + (options.liftTo - options.liftFrom) * glide + (options.hop || 0) * Math.sin(Math.PI * t),
+        opacity: Math.min(1, t / .12)
+      });
+      if (t < 1) requestAnimationFrame(frame);
+      else done && done();
+    }
+    requestAnimationFrame(frame);
+  }
+
   function tweenIntroTurn(state, duration, done) {
     const started = performance.now();
     function frame(now) {
-      const progress = Math.min(1, (now - started) / duration);
-      const eased = .5 - Math.cos(Math.PI * progress) / 2;
+      const step = Math.min(1, (now - started) / duration);
+      const eased = .5 - Math.cos(Math.PI * step) / 2;
       setTurn(state, eased);
-      if (progress < 1) requestAnimationFrame(frame);
+      if (step < 1) requestAnimationFrame(frame);
       else {
         finishTurn(state, true);
         done();
@@ -298,36 +389,37 @@
       current = 0;
       introActive = false;
       render(current);
-      feather.className = 'diary-feather is-resting';
+      restFeather(true);
       return;
     }
     introActive = true;
-    root.classList.add('is-intro-story');
     current = 1;
     render(current);
+    restFeather(false);
     makeRiffle();
 
     setTimeout(() => {
-      feather.className = 'diary-feather is-falling';
-    }, 2050);
+      flyFeather(ANCHOR.start, ANCHOR.left, 2400, {
+        sway: .075, cycles: 1.7, phase: .4, rock: 26, tilt: 30,
+        rotateFrom: -44, rotateTo: -19, liftFrom: 1, liftTo: 0
+      }, turnOnContact);
+    }, 900);
 
-    setTimeout(() => {
-      feather.className = 'diary-feather is-landed-left';
-    }, 3650);
-
-    setTimeout(() => {
+    function turnOnContact() {
       if (turning) return;
       turning = true;
-      feather.className = 'diary-feather is-crossing';
       const state = buildLeaf('prev');
       setTurn(state, 0);
-      tweenIntroTurn(state, 1750, () => {
+      tweenIntroTurn(state, 1650, () => {
         introActive = false;
-        root.classList.remove('is-intro-story');
-        feather.className = 'diary-feather is-resting';
+        restFeather(true);
         caption.textContent = 'Love is the Only Prosperity';
       });
-    }, 4200);
+      flyFeather(ANCHOR.left, ANCHOR.rest, 1650, {
+        sway: .02, cycles: .85, phase: 0, rock: 9, tilt: 42, arc: .1,
+        rotateFrom: -19, rotateTo: 16, liftFrom: 0, liftTo: 0, hop: .55
+      });
+    }
   }
 
   function leanBook(event) {
@@ -351,6 +443,9 @@
     zone.addEventListener('pointermove', moveDrag);
     zone.addEventListener('pointerup', endDrag);
     zone.addEventListener('pointercancel', endDrag);
+    zone.addEventListener('click', (event) => {
+      if (event.detail === 0) animateTurn(zone.dataset.diaryDrag);
+    });
   });
   stage.addEventListener('pointermove', leanBook);
   stage.addEventListener('pointerleave', resetLean);

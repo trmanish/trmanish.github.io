@@ -14,6 +14,7 @@
   const stage = root.querySelector('[data-diary-stage]');
   const book = root.querySelector('[data-diary-book]');
   const spreadNode = root.querySelector('[data-diary-spread]');
+  const turnZones = [...root.querySelectorAll('[data-diary-drag]')];
   const prevButton = root.querySelector('[data-diary-prev]');
   const nextButton = root.querySelector('[data-diary-next]');
   const caption = document.querySelector('[data-diary-caption]');
@@ -40,7 +41,7 @@
     if (options.continuation) {
       return `<article class="memory-page memory-page--${side}${continuationClass}" data-url="${escapeHtml(post.url)}" tabindex="0" role="link" aria-label="Read ${escapeHtml(post.title)}">
         <div class="memory-page__inner">
-          <p class="memory-page__eyebrow"><span>A remembered truth</span><span class="memory-page__number">II</span></p>
+          <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
           <blockquote class="memory-page__quote">Your fear of getting hurt should never be greater than your courage to love.</blockquote>
           <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet—yet it forces the best out of us for everyone around us.</p>
           <span class="memory-page__read">Continue reading &rarr;</span>
@@ -52,7 +53,7 @@
       : `<div class="memory-page__mark" aria-hidden="true">${side === 'left' ? '✢' : '❦'}</div>`;
     return `<article class="memory-page memory-page--${side}${featureClass}" data-url="${escapeHtml(post.url)}" tabindex="0" role="link" aria-label="Read ${escapeHtml(post.title)}">
       <div class="memory-page__inner">
-        <p class="memory-page__eyebrow"><span>${options.feature ? 'A memory to begin' : escapeHtml(post.date)}</span><span class="memory-page__number">${String(options.number || 1).padStart(2, '0')}</span></p>
+        <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">${String(options.number || 1).padStart(2, '0')}</span></p>
         ${visual}
         <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
         <span class="memory-page__rule" aria-hidden="true"></span>
@@ -86,6 +87,10 @@
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
     nextButton.disabled = index === spreads.length - 1;
+    turnZones.forEach((zone) => {
+      zone.disabled = (zone.dataset.diaryDrag === 'prev' && index === 0) ||
+        (zone.dataset.diaryDrag === 'next' && index === spreads.length - 1);
+    });
     attachPageNavigation();
   }
 
@@ -137,7 +142,7 @@
 
   function setTurn(turnState, amount) {
     const eased = Math.max(0, Math.min(1, amount));
-    const curl = Math.sin(eased * Math.PI) * 32;
+    const curl = Math.sin(eased * Math.PI) * 42;
     const total = eased * 180;
     turnState.leaf.style.setProperty('--turn', `${Math.max(0, total - curl)}deg`);
     turnState.leaf.style.setProperty('--step', `${curl / (STRIPS - 1)}deg`);
@@ -187,16 +192,13 @@
 
   function beginDrag(event) {
     if (turning || event.button !== 0) return;
-    const bounds = book.getBoundingClientRect();
-    const localX = event.clientX - bounds.left;
-    const direction = localX > bounds.width / 2 ? 'next' : 'prev';
+    const direction = event.currentTarget.dataset.diaryDrag;
     if ((direction === 'next' && current >= spreads.length - 1) || (direction === 'prev' && current <= 0)) return;
     const state = buildLeaf(direction);
-    const activeSpread = spreads[current];
-    const activePost = direction === 'next' ? activeSpread.right : activeSpread.left;
-    pointer = { id: event.pointerId, startX: event.clientX, lastX: event.clientX, startTime: performance.now(), state, amount: 0, clickUrl: activePost && activePost.url };
+    resetLean();
+    pointer = { id: event.pointerId, startX: event.clientX, lastX: event.clientX, startTime: performance.now(), state, amount: 0 };
     turning = true;
-    stage.setPointerCapture(event.pointerId);
+    event.currentTarget.setPointerCapture(event.pointerId);
     event.preventDefault();
   }
 
@@ -219,8 +221,8 @@
     turning = false;
     drag.state.leaf.remove();
     render(current);
-    if (travel < 7 && drag.clickUrl) {
-      window.location.href = drag.clickUrl;
+    if (travel < 7) {
+      animateTurn(drag.state.direction, 0, true);
     } else if (commit) {
       animateTurn(drag.state.direction, drag.amount, true);
     }
@@ -238,12 +240,30 @@
     setTimeout(() => { caption.textContent = 'Love is the Only Prosperity'; }, 1200);
   }
 
+  function leanBook(event) {
+    if (pointer || turning || !window.matchMedia('(pointer: fine)').matches) return;
+    const bounds = stage.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - .5) * 2;
+    const y = ((event.clientY - bounds.top) / bounds.height - .5) * 2;
+    book.style.setProperty('--lean-x', `${(-y * 1.15).toFixed(2)}deg`);
+    book.style.setProperty('--lean-y', `${(x * 1.7).toFixed(2)}deg`);
+  }
+
+  function resetLean() {
+    book.style.setProperty('--lean-x', '0deg');
+    book.style.setProperty('--lean-y', '0deg');
+  }
+
   prevButton.addEventListener('click', () => animateTurn('prev'));
   nextButton.addEventListener('click', () => animateTurn('next'));
-  stage.addEventListener('pointerdown', beginDrag);
-  stage.addEventListener('pointermove', moveDrag);
-  stage.addEventListener('pointerup', endDrag);
-  stage.addEventListener('pointercancel', endDrag);
+  turnZones.forEach((zone) => {
+    zone.addEventListener('pointerdown', beginDrag);
+    zone.addEventListener('pointermove', moveDrag);
+    zone.addEventListener('pointerup', endDrag);
+    zone.addEventListener('pointercancel', endDrag);
+  });
+  stage.addEventListener('pointermove', leanBook);
+  stage.addEventListener('pointerleave', resetLean);
   document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') animateTurn('next');
     if (event.key === 'ArrowLeft') animateTurn('prev');

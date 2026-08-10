@@ -676,3 +676,86 @@ body.site-page--post.is-closing { opacity: 0; }
     .site-page .featured-posts,
     .site-page .post-list { max-width: calc(100% - 24px); }
 }
+
+/* ---- the lamp: tap it and the room goes dark, leaving the sheet in a
+       warm pool of light. Shares its markup with the diary home. ---- */
+.lamp-toggle {
+    position: fixed;
+    top: 6px;
+    right: clamp(10px, 2.2vw, 26px);
+    z-index: 130;
+    width: 44px;
+    height: 70px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.lamp-toggle svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.lamp-cord { stroke: #5a4632; stroke-width: 1.6; }
+.lamp-shade { fill: #6b4a2f; stroke: #3f2c1a; stroke-width: 1; }
+.lamp-bulb {
+    fill: rgba(120, 95, 60, .18);
+    stroke: #6b543a;
+    stroke-width: 1.2;
+    transition: fill .5s ease, stroke .5s ease;
+}
+.lamp-flame { fill: transparent; transition: fill .5s ease; }
+.lamp-glow {
+    position: absolute;
+    left: 50%;
+    top: 56%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 199, 112, .5), rgba(255, 180, 80, .16) 46%, transparent 72%);
+    opacity: 0;
+    transition: opacity .6s ease;
+    pointer-events: none;
+}
+body.is-night .lamp-bulb { fill: rgba(255, 214, 122, .35); stroke: #c9a050; }
+body.is-night .lamp-flame { fill: #ffd67a; animation: lamp-flame-sway 2.6s ease-in-out infinite; transform-origin: 50% 88%; }
+body.is-night .lamp-glow { opacity: 1; animation: lamp-flicker 3.4s ease-in-out infinite; }
+@keyframes lamp-flicker {
+    0%, 100% { opacity: .95; }
+    46% { opacity: .72; }
+    58% { opacity: 1; }
+    74% { opacity: .84; }
+}
+@keyframes lamp-flame-sway {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(.9) rotate(1.6deg); }
+}
+
+/* Night in the room: the desk darkens while the article sheet or the list
+   stays inside a warm pool of light. */
+body.site-page { transition: background .7s ease; }
+body.site-page.is-night { background: #191309; }
+.site-wash { transition: filter .7s ease; }
+.is-night .site-wash { filter: brightness(.25) saturate(.62) sepia(.14); }
+body.site-page::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .8s ease;
+    background:
+        radial-gradient(ellipse 58% 60% at 50% 44%, rgba(255, 191, 105, .06), transparent 62%),
+        radial-gradient(ellipse 80% 78% at 50% 46%, transparent 42%, rgba(12, 8, 3, .48) 75%, rgba(8, 5, 2, .76) 100%);
+}
+body.site-page.is-night::after { opacity: 1; }
+.is-night .nav-bar { background: linear-gradient(180deg, rgba(21, 16, 9, .95), rgba(21, 16, 9, .55) 60%, transparent); }
+.site-page.is-night .nav-bar a { color: rgba(226, 210, 180, .6); }
+.site-page.is-night .nav-bar a:hover,
+.site-page.is-night .nav-bar a.active { color: #e8c988; }
+.site-page.is-night .nav-bar .site-wordmark { color: rgba(240, 227, 200, .92); }
+.site-page--post.is-night .article-paper {
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .6)) drop-shadow(0 0 46px rgba(255, 185, 95, .14));
+}
+.site-page.is-night footer { color: rgba(226, 211, 182, .5); }
+.site-page.is-night .subscribe-container h3,
+.site-page.is-night .subscribe-heading { color: rgba(226, 211, 182, .6); }

@@ -23,10 +23,11 @@
       });
     </script>
 </head>
-<body>
+<body class="site-page{% if page.layout == 'post' %} site-page--post{% endif %}">
+    <div class="site-wash" aria-hidden="true"></div>
     <header class="nav-bar">
         <nav>
-            <a href="{{ "/" | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
+            <a href="{{ "/" | relative_url }}" class="site-wordmark">Two Ticks</a>
             <a href="{{ "/posts.html" | relative_url }}" class="{% if page.url contains 'posts' or page.layout == 'post' %}active{% endif %}">All Ticks</a>
             <a href="{{ "/podcasts.html" | relative_url }}" class="{% if page.url contains 'podcast' %}active{% endif %}">Podcasts</a>
         </nav>
@@ -34,7 +35,7 @@
     
 
     
-    <main>
+    <main class="site-main">
         {% if page.layout == 'post' %}
             <h1 class="post-title">{{ page.title }}</h1>
             <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>

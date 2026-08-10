@@ -543,8 +543,8 @@
     const bounds = stage.getBoundingClientRect();
     const x = ((event.clientX - bounds.left) / bounds.width - .5) * 2;
     const y = ((event.clientY - bounds.top) / bounds.height - .5) * 2;
-    book.style.setProperty('--lean-x', `${(-y * 3.5).toFixed(2)}deg`);
-    book.style.setProperty('--lean-y', `${(x * 5.5).toFixed(2)}deg`);
+    book.style.setProperty('--lean-x', `${(-y * 2).toFixed(2)}deg`);
+    book.style.setProperty('--lean-y', `${(x * 3).toFixed(2)}deg`);
   }
 
   function resetLean() {

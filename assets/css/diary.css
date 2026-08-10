@@ -618,12 +618,21 @@ a { text-decoration: none; }
    turns past edge-on so the flipped side reads as plain paper. */
 .diary-riffle__page {
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   display: block;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.diary-riffle__page .memory-page { height: 100%; }
+.diary-riffle__page .memory-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .diary-riffle__page .memory-page::before,
 .diary-riffle__page .memory-page::after { display: none; }
 .diary-riffle__leaf::after {

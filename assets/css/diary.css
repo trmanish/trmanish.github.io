@@ -307,17 +307,38 @@ a { text-decoration: none; }
   letter-spacing: .04em;
 }
 .memory-page__number { font-variant-numeric: tabular-nums; }
+/* A photograph is a print laid on the page and held by a strip of tape on
+   its top edge, the way a real diary keeps one. */
+.memory-page__photo {
+  position: relative;
+  display: block;
+  margin: 6px 0 clamp(10px, 1.5vw, 19px);
+  transform: rotate(-.45deg);
+}
 .memory-page__image {
+  display: block;
   width: 100%;
   height: clamp(76px, 14vw, 190px);
-  margin-bottom: clamp(10px, 1.5vw, 19px);
   object-fit: cover;
   filter: sepia(.1) saturate(.9) contrast(.97);
   border: 7px solid rgba(249,242,222,.8);
   box-shadow: 0 3px 7px rgba(65,40,20,.22);
-  transform: rotate(-.45deg);
 }
-.memory-page--right .memory-page__image { transform: rotate(.5deg); }
+.memory-page__tape {
+  position: absolute;
+  z-index: 3;
+  top: clamp(-9px, -.7vw, -6px);
+  left: 50%;
+  width: clamp(48px, 24%, 104px);
+  height: clamp(14px, 1.8vw, 24px);
+  transform: translateX(-50%) rotate(-2.2deg);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.24), transparent 18%, transparent 82%, rgba(255,255,255,.2)),
+    linear-gradient(180deg, rgba(243,234,206,.66), rgba(232,220,188,.5));
+  border-left: 1px dashed rgba(120,90,55,.22);
+  border-right: 1px dashed rgba(120,90,55,.22);
+  box-shadow: 0 1px 3px rgba(70,45,20,.2), inset 0 0 8px rgba(255,255,255,.4);
+}
 .memory-page__mark {
   width: 100%;
   height: clamp(64px, 11vw, 142px);
@@ -372,6 +393,19 @@ a { text-decoration: none; }
 .memory-page--feature .memory-page__title { font-size: clamp(24px, 3.1vw, 47px); }
 .memory-page--feature .memory-page__image { height: clamp(105px, 17vw, 225px); }
 .memory-page--feature-continuation .memory-page__inner { justify-content: center; }
+
+/* A post owns its whole spread, so the right page is all writing. */
+.memory-page--body .memory-page__excerpt {
+  margin-top: clamp(8px, 1.4vw, 18px);
+  font-size: clamp(12px, 1.42vw, 21px);
+  -webkit-line-clamp: 11;
+}
+.memory-page:not(.memory-page--feature):not(.memory-page--body):not(.memory-page--feature-continuation) .memory-page__inner {
+  justify-content: center;
+}
+.memory-page:not(.memory-page--feature):not(.memory-page--body):not(.memory-page--feature-continuation) .memory-page__title {
+  font-size: clamp(23px, 2.9vw, 44px);
+}
 .memory-page__quote {
   position: relative;
   margin: 0;
@@ -552,7 +586,7 @@ a { text-decoration: none; }
   position: absolute;
   left: 0; top: 0;
   z-index: 74;
-  width: 27%;
+  width: 24%;
   opacity: 0;
   pointer-events: none;
   user-select: none;
@@ -565,6 +599,16 @@ a { text-decoration: none; }
   height: auto;
   filter: sepia(.2) saturate(.92) contrast(1.32) brightness(.6);
   -webkit-user-drag: none;
+}
+/* The source image has wispy half-transparent barbs. A real feather lying on
+   the page hides the ink under it, so the same image is stacked once more to
+   bring the body up to full opacity. */
+.diary-feather::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/diary/memory-feather.webp") center / 100% 100% no-repeat;
+  filter: sepia(.2) saturate(.92) contrast(1.32) brightness(.6);
 }
 .diary-feather__shadow {
   position: absolute;
@@ -622,7 +666,7 @@ a { text-decoration: none; }
   .memory-page__read { display: none; }
   .diary-gutter { width: 14px; }
   .diary-turn-zone { width: 23%; }
-  .diary-feather { width: 35%; }
+  .diary-feather { width: 30%; }
 }
 
 @media (max-width: 480px) {

@@ -6,7 +6,7 @@
   /* Posts arrive oldest first, and each spread holds a single post, so the
      diary reads date after date the way a real one fills up. The feature
      spread keeps its own place in that order, and the opening animation
-     stops the riffle a few pages past it so the feather can flip back. */
+     stops flipping a few pages past it so the feather can flip back. */
   const posts = JSON.parse(dataNode.textContent);
   const spreads = posts.map((post) => ({
     type: post.title.toLowerCase() === 'love is the only prosperity' ? 'feature' : 'post',
@@ -25,7 +25,6 @@
   const caption = document.querySelector('[data-diary-caption]');
   const progress = document.querySelector('[data-diary-progress]');
   const hint = document.querySelector('[data-diary-hint]');
-  const riffle = root.querySelector('[data-diary-riffle]');
   const feather = root.querySelector('[data-diary-feather]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const STRIPS = 18;
@@ -384,25 +383,6 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
-  /* The riffle leaves carry real pages, sampled from the spreads between the
-     diary's start and where it stops, so the fast flips show writing going
-     past instead of blank paper. */
-  function makeRiffle() {
-    if (reducedMotion) return;
-    for (let i = 0; i < 5; i += 1) {
-      const leaf = document.createElement('i');
-      leaf.className = 'diary-riffle__leaf';
-      leaf.style.setProperty('--delay', `${180 + i * 105}ms`);
-      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
-      const page = document.createElement('span');
-      page.className = 'diary-riffle__page';
-      page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
-      leaf.appendChild(page);
-      leaf.addEventListener('animationend', () => leaf.remove());
-      riffle.appendChild(leaf);
-    }
-  }
-
   /* ---------------------------------------------------------- the feather */
   /* Anchors are the point of the quill that touches the paper, in fractions
      of the book. The feather is placed so that point lands on them. */
@@ -476,8 +456,10 @@
     requestAnimationFrame(frame);
   }
 
-  /* The riffle settles with the last page still slightly lifted, the feather
-     drifts in from the left of the screen, touches that bent page, and the
+  /* The diary opens at its first page and flips forward through real page
+     turns, fast ones, until it stops a few pages past the feature spread.
+     The stop page settles slightly lifted rather than flat, the feather
+     drifts in from the left and slides under that lifted edge, and its
      touch pushes the page over to open the feature spread. */
   function runOpeningStory() {
     if (reducedMotion || spreads.length < 2 || introIndex <= loveIndex) {
@@ -491,33 +473,58 @@
     current = 0;
     render(current);
     restFeather(false);
-    makeRiffle();
-    let bentLeaf = null;
 
-    /* The riffle is still blurring past when the diary lands on the stop
-       page, so the change of spread hides inside the motion. */
-    setTimeout(() => {
-      current = introIndex;
+    /* If anything interrupts the opening, the diary must never stay locked:
+       after a hard limit it lands on the feature spread and hands over. */
+    const watchdog = setTimeout(() => {
+      if (!introActive) return;
+      introActive = false;
+      turning = false;
+      book.querySelectorAll('.diary-leaf').forEach((leaf) => leaf.remove());
+      book.classList.remove('is-turning-next', 'is-turning-prev', 'is-bent');
+      feather.classList.remove('diary-feather--under');
+      current = loveIndex;
       render(current);
+      restFeather(true);
+    }, 13000);
+
+    const stops = [...new Set([1, 2, 3].map((step) => Math.max(1, Math.round(introIndex * step / 4))).concat(introIndex))]
+      .filter((stop) => stop > 0 && stop < spreads.length)
+      .sort((a, b) => a - b);
+
+    function flipTo(list, i, done) {
+      if (i >= list.length) { done(); return; }
       turning = true;
-      bentLeaf = buildLeaf('prev', loveIndex);
-      setTurn(bentLeaf, .11);
-    }, 1500);
+      const state = buildLeaf('next', list[i]);
+      setTurn(state, 0);
+      tweenIntroTurn(state, 460, () => setTimeout(() => flipTo(list, i + 1, done), 120));
+    }
 
     setTimeout(() => {
+      flipTo(stops, 0, () => {
+        book.classList.add('is-bent');
+        setTimeout(startFeather, 460);
+      });
+    }, 550);
+
+    function startFeather() {
       feather.classList.add('diary-feather--under');
       flyFeather(ANCHOR.start, ANCHOR.hit, 2300, {
         sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
         rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
       }, turnOnContact);
-    }, 2050);
+    }
 
     function turnOnContact() {
-      if (!bentLeaf) return;
+      turning = true;
+      const state = buildLeaf('prev', loveIndex);
+      setTurn(state, .035);
+      book.classList.remove('is-bent');
       /* The feather slid in under the lifted page, so it stays beneath the
          book until the turning page has risen clear of it. */
       setTimeout(() => feather.classList.remove('diary-feather--under'), 520);
-      tweenIntroTurn(bentLeaf, 1650, () => {
+      tweenIntroTurn(state, 1650, () => {
+        clearTimeout(watchdog);
         introActive = false;
         restFeather(true);
         caption.textContent = 'Love is the Only Prosperity';

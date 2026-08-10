@@ -54,5 +54,16 @@
         <p>&copy; {{ 'now' | date: "%Y" }} Two Ticks</p>
     </footer>
 
+    <script>
+      // A click on the desk around the sheet closes it and returns to the diary.
+      (function () {
+        var home = '{{ "/" | relative_url }}';
+        document.addEventListener('click', function (event) {
+          if (event.target.closest('.article-paper, .nav-bar, footer, a, button, input, form')) return;
+          document.body.classList.add('is-closing');
+          setTimeout(function () { window.location.href = home; }, 400);
+        });
+      })();
+    </script>
 </body>
 </html>

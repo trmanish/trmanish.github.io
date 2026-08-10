@@ -59,12 +59,12 @@ class: "home-page"
 
 <script id="diary-posts" type="application/json">
 [
-{% for post in site.posts %}
+{% for post in site.posts reversed %}
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date: "%B %d, %Y" | jsonify }},
-    "excerpt": {{ post.content | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 300 | jsonify }},
+    "excerpt": {{ post.content | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 460 | jsonify }},
     "image": {% if post.image %}{{ post.image | relative_url | jsonify }}{% else %}""{% endif %}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}

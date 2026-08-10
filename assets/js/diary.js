@@ -3,13 +3,14 @@
   const dataNode = document.getElementById('diary-posts');
   if (!root || !dataNode) return;
 
+  /* Posts arrive oldest first, and each spread holds a single post, so the
+     diary reads date after date the way a real one fills up. The feature
+     spread sits in front of them as the diary's opening page. */
   const posts = JSON.parse(dataNode.textContent);
   const featureIndex = posts.findIndex((post) => post.title.toLowerCase() === 'love is the only prosperity');
   const feature = featureIndex >= 0 ? posts.splice(featureIndex, 1)[0] : posts.shift();
-  const spreads = [{ type: 'feature', left: feature, right: feature }];
-  for (let i = 0; i < posts.length; i += 2) {
-    spreads.push({ type: 'posts', left: posts[i], right: posts[i + 1] || null });
-  }
+  const spreads = [{ type: 'feature', post: feature }];
+  posts.forEach((post) => spreads.push({ type: 'post', post }));
 
   const stage = root.querySelector('[data-diary-stage]');
   const book = root.querySelector('[data-diary-book]');
@@ -45,48 +46,52 @@
   window.addEventListener('resize', () => { measure(); placeFeather(featherPose); });
   measure();
 
-  function pageMarkup(post, side, options = {}) {
-    if (!post) {
-      return `<article class="memory-page memory-page--${side}" aria-hidden="true"><div class="memory-page__inner"></div></article>`;
+  function photoMarkup(post) {
+    if (!post.image) {
+      return `<div class="memory-page__mark" aria-hidden="true">✢</div>`;
     }
-    const featureClass = options.feature ? ' memory-page--feature' : '';
-    const continuationClass = options.continuation ? ' memory-page--feature-continuation' : '';
-    if (options.continuation) {
-      return `<article class="memory-page memory-page--${side}${continuationClass}" data-url="${escapeHtml(post.url)}" tabindex="0" role="link" aria-label="Read ${escapeHtml(post.title)}">
-        <div class="memory-page__inner">
-          <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
-          <blockquote class="memory-page__quote">Your fear of getting hurt should never be greater than your courage to love.</blockquote>
-          <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet, yet it forces the best out of us for everyone around us.</p>
-          <span class="memory-page__read">Continue reading &rarr;</span>
-        </div>
-      </article>`;
-    }
-    const visual = post.image
-      ? `<img class="memory-page__image" src="${escapeHtml(post.image)}" alt="" loading="eager">`
-      : `<div class="memory-page__mark" aria-hidden="true">${side === 'left' ? '✢' : '❦'}</div>`;
-    return `<article class="memory-page memory-page--${side}${featureClass}" data-url="${escapeHtml(post.url)}" tabindex="0" role="link" aria-label="Read ${escapeHtml(post.title)}">
-      <div class="memory-page__inner">
-        <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">${String(options.number || 1).padStart(2, '0')}</span></p>
-        ${visual}
-        <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
-        <span class="memory-page__rule" aria-hidden="true"></span>
-        <p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>
-        <span class="memory-page__read">Read this tick &rarr;</span>
-      </div>
+    return `<span class="memory-page__photo"><i class="memory-page__tape" aria-hidden="true"></i><img class="memory-page__image" src="${escapeHtml(post.image)}" alt="" loading="eager" draggable="false"></span>`;
+  }
+
+  function pageShell(post, side, extraClass, inner) {
+    return `<article class="memory-page memory-page--${side}${extraClass}" data-url="${escapeHtml(post.url)}" tabindex="0" role="link" aria-label="Read ${escapeHtml(post.title)}">
+      <div class="memory-page__inner">${inner}</div>
     </article>`;
+  }
+
+  function eyebrowMarkup(post, number) {
+    return `<p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">${String(number).padStart(2, '0')}</span></p>`;
   }
 
   function spreadPages(index) {
     const spread = spreads[index];
+    const post = spread.post;
     if (spread.type === 'feature') {
       return {
-        left: pageMarkup(spread.left, 'left', { feature: true, number: 1 }),
-        right: pageMarkup(spread.right, 'right', { continuation: true })
+        left: pageShell(post, 'left', ' memory-page--feature', `
+          ${eyebrowMarkup(post, 1)}
+          ${photoMarkup(post)}
+          <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
+          <span class="memory-page__rule" aria-hidden="true"></span>
+          <p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>
+          <span class="memory-page__read">Read this tick &rarr;</span>`),
+        right: pageShell(post, 'right', ' memory-page--feature-continuation', `
+          <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
+          <blockquote class="memory-page__quote">Your fear of getting hurt should never be greater than your courage to love.</blockquote>
+          <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet, yet it forces the best out of us for everyone around us.</p>
+          <span class="memory-page__read">Continue reading &rarr;</span>`)
       };
     }
     return {
-      left: pageMarkup(spread.left, 'left', { number: index * 2 }),
-      right: pageMarkup(spread.right, 'right', { number: index * 2 + 1 })
+      left: pageShell(post, 'left', '', `
+        ${eyebrowMarkup(post, index * 2)}
+        ${photoMarkup(post)}
+        <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
+        <span class="memory-page__rule" aria-hidden="true"></span>`),
+      right: pageShell(post, 'right', ' memory-page--body', `
+        ${eyebrowMarkup(post, index * 2 + 1)}
+        <p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>
+        <span class="memory-page__read">Read this tick &rarr;</span>`)
     };
   }
 
@@ -96,7 +101,7 @@
     const spread = spreads[index];
     caption.textContent = spread.type === 'feature'
       ? 'Love is the Only Prosperity'
-      : `${index + 1} of ${spreads.length} · ${spread.left.title}${spread.right ? ` / ${spread.right.title}` : ''}`;
+      : `${index + 1} of ${spreads.length} · ${spread.post.title}`;
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
     nextButton.disabled = index === spreads.length - 1;
@@ -320,16 +325,16 @@
   /* Anchors are the point of the quill that touches the paper, in fractions
      of the book. The feather is placed so that point lands on them. */
   const ANCHOR = {
-    start: { x: .60, y: -.34 },
-    left: { x: .26, y: .66 },
-    rest: { x: .82, y: .74 }
+    start: { x: -.46, y: .16 },
+    hit: { x: .055, y: .48 },
+    rest: { x: .84, y: .86 }
   };
   let featherPose = { x: ANCHOR.rest.x, y: ANCHOR.rest.y, rotate: 16, tilt: 0, height: 0, opacity: 0 };
 
   function placeFeather(pose) {
     if (!feather) return;
     featherPose = pose;
-    const width = feather.offsetWidth || book.clientWidth * .27;
+    const width = feather.offsetWidth || book.clientWidth * .24;
     const height = feather.offsetHeight || width * .667;
     const x = pose.x * book.clientWidth - width * .76;
     const y = pose.y * book.clientHeight - height * .60;
@@ -352,12 +357,15 @@
     function frame(now) {
       const t = Math.min(1, (now - started) / duration);
       const glide = .5 - Math.cos(Math.PI * t) / 2;
-      const drop = 1 - Math.pow(1 - t, 1.7);
+      const settle = 1 - Math.pow(1 - t, 1.7);
       const wave = Math.sin(t * Math.PI * 2 * cycles + options.phase);
       const fade = 1 - t;
+      const wobble = sway * wave * fade;
       placeFeather({
-        x: from.x + (to.x - from.x) * glide + sway * wave * fade,
-        y: from.y + (to.y - from.y) * (options.arc ? glide : drop) - (options.arc || 0) * Math.sin(Math.PI * t),
+        x: from.x + (to.x - from.x) * glide + (options.swayAxis === 'y' ? 0 : wobble),
+        y: from.y + (to.y - from.y) * (options.arc ? glide : settle)
+          - (options.arc || 0) * Math.sin(Math.PI * t)
+          + (options.swayAxis === 'y' ? wobble : 0),
         rotate: options.rotateFrom + (options.rotateTo - options.rotateFrom) * glide + options.rock * wave * fade,
         tilt: options.tilt * Math.cos(t * Math.PI * 2 * cycles) * fade,
         height: options.liftFrom + (options.liftTo - options.liftFrom) * glide + (options.hop || 0) * Math.sin(Math.PI * t),
@@ -370,11 +378,12 @@
   }
 
   function tweenIntroTurn(state, duration, done) {
+    const from = state.amount;
     const started = performance.now();
     function frame(now) {
       const step = Math.min(1, (now - started) / duration);
       const eased = .5 - Math.cos(Math.PI * step) / 2;
-      setTurn(state, eased);
+      setTurn(state, from + (1 - from) * eased);
       if (step < 1) requestAnimationFrame(frame);
       else {
         finishTurn(state, true);
@@ -384,6 +393,9 @@
     requestAnimationFrame(frame);
   }
 
+  /* The riffle settles with the last page still slightly lifted, the feather
+     drifts in from the left of the screen, touches that bent page, and the
+     touch pushes the page over to open the feature spread. */
   function runOpeningStory() {
     if (reducedMotion || spreads.length < 2) {
       current = 0;
@@ -397,27 +409,31 @@
     render(current);
     restFeather(false);
     makeRiffle();
+    let bentLeaf = null;
 
     setTimeout(() => {
-      flyFeather(ANCHOR.start, ANCHOR.left, 2400, {
-        sway: .075, cycles: 1.7, phase: .4, rock: 26, tilt: 30,
-        rotateFrom: -44, rotateTo: -19, liftFrom: 1, liftTo: 0
+      turning = true;
+      bentLeaf = buildLeaf('prev');
+      setTurn(bentLeaf, .062);
+    }, 1650);
+
+    setTimeout(() => {
+      flyFeather(ANCHOR.start, ANCHOR.hit, 2300, {
+        sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
+        rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
       }, turnOnContact);
-    }, 900);
+    }, 2000);
 
     function turnOnContact() {
-      if (turning) return;
-      turning = true;
-      const state = buildLeaf('prev');
-      setTurn(state, 0);
-      tweenIntroTurn(state, 1650, () => {
+      if (!bentLeaf) return;
+      tweenIntroTurn(bentLeaf, 1650, () => {
         introActive = false;
         restFeather(true);
         caption.textContent = 'Love is the Only Prosperity';
       });
-      flyFeather(ANCHOR.left, ANCHOR.rest, 1650, {
-        sway: .02, cycles: .85, phase: 0, rock: 9, tilt: 42, arc: .1,
-        rotateFrom: -19, rotateTo: 16, liftFrom: 0, liftTo: 0, hop: .55
+      flyFeather(ANCHOR.hit, ANCHOR.rest, 1650, {
+        sway: .025, swayAxis: 'y', cycles: .8, phase: 0, rock: 8, tilt: 40, arc: .09,
+        rotateFrom: -24, rotateTo: 16, liftFrom: .04, liftTo: 0, hop: .55
       });
     }
   }

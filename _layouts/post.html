@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%s" }}">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWGCRLMXHK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -68,7 +68,7 @@
       <path class="lamp-shade" d="M12.5 61.5 L31.5 61.5 L29.5 67 L14.5 67 Z"/>
     </svg>
     </button>
-    <script src="{{ '/assets/js/lamp.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/lamp.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 
     <script>
       // A click on the desk around the sheet closes it and returns to the diary.

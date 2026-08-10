@@ -373,11 +373,11 @@
   function makeRiffle() {
     if (reducedMotion) return;
     for (let i = 0; i < 5; i += 1) {
-      const leaf = document.createElement('i');
+      const leaf = document.createElement('div');
       leaf.className = 'diary-riffle__leaf';
       leaf.style.setProperty('--delay', `${180 + i * 105}ms`);
       const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
-      const page = document.createElement('span');
+      const page = document.createElement('div');
       page.className = 'diary-riffle__page';
       page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
       leaf.appendChild(page);

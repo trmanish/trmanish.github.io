@@ -8,6 +8,10 @@ class: "home-page"
   <p class="diary-kicker">Life, two ticks at a time</p>
   <h1 id="diary-heading" class="visually-hidden">Two Ticks — Essays and memories</h1>
 
+  <blockquote class="diary-home-quote diary-home-quote--above">
+    In the end, we realize, that Artificial Intelligence is not a threat to Society. Natural Stupidity of Humans is.
+  </blockquote>
+
   <div class="diary-shell" data-diary>
     <button class="diary-arrow diary-arrow--prev" type="button" aria-label="Turn to the previous pages" data-diary-prev>
       <span aria-hidden="true">&#8592;</span>
@@ -19,6 +23,8 @@ class: "home-page"
         <div class="diary-page-stack diary-page-stack--left" aria-hidden="true"></div>
         <div class="diary-page-stack diary-page-stack--right" aria-hidden="true"></div>
         <div class="diary-spread" data-diary-spread></div>
+        <button class="diary-turn-zone diary-turn-zone--left" type="button" aria-label="Drag or tap to turn to the previous pages" data-diary-drag="prev"></button>
+        <button class="diary-turn-zone diary-turn-zone--right" type="button" aria-label="Drag or tap to turn to the next pages" data-diary-drag="next"></button>
         <div class="diary-gutter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="diary-riffle" data-diary-riffle aria-hidden="true"></div>
       </div>
@@ -32,8 +38,12 @@ class: "home-page"
   <div class="diary-meta">
     <p data-diary-caption>Open the diary</p>
     <div class="diary-progress" aria-hidden="true"><span data-diary-progress></span></div>
-    <p class="diary-hint" data-diary-hint>Drag a page to turn it &middot; click a page to read</p>
+    <p class="diary-hint" data-diary-hint>Drag or tap a page edge to turn &middot; click the center to read</p>
   </div>
+
+  <blockquote class="diary-home-quote diary-home-quote--below">
+    Life is static. It doesn't unfold or move. It appears to pass by Two Ticks at a time. Yet, It's a constant. It's just us who feel it change.
+  </blockquote>
 
   <noscript>
     <p class="diary-noscript">The diary needs JavaScript to turn its pages. <a href="{{ '/posts.html' | relative_url }}">Browse all essays</a>.</p>

@@ -427,6 +427,9 @@ a { text-decoration: none; }
   -webkit-line-clamp: var(--clamp-feature, 4);
   -webkit-box-orient: vertical;
   overflow: hidden;
+  /* Never let flex squeeze the clamped box mid-line; the clamp alone
+     decides where the writing ends. */
+  flex-shrink: 0;
 }
 .memory-page__read {
   margin: auto 0 0;

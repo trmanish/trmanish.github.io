@@ -157,9 +157,12 @@
       const pull = inner.querySelector('.memory-page__quote--pull');
       const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight) || 18;
       const innerBottom = inner.getBoundingClientRect().bottom - parseFloat(getComputedStyle(inner).paddingBottom);
-      let reserved = read ? read.getBoundingClientRect().height + 12 : 0;
-      if (pull) reserved += pull.getBoundingClientRect().height + 18;
-      const available = innerBottom - reserved - excerpt.getBoundingClientRect().top;
+      let reserved = read ? read.getBoundingClientRect().height + 16 : 0;
+      if (pull) {
+        reserved += pull.getBoundingClientRect().height
+          + parseFloat(getComputedStyle(pull).marginTop || 0) + 10;
+      }
+      const available = innerBottom - reserved - excerpt.getBoundingClientRect().top - 4;
       const lines = Math.max(2, Math.floor(available / lineHeight));
       const scope = excerpt.closest('.memory-page--feature') ? '--clamp-feature' : '--clamp-body';
       root.style.setProperty(scope, lines);

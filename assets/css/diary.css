@@ -221,7 +221,10 @@ a { text-decoration: none; }
 }
 /* An open book is never flat. Each page plane tips a few degrees so the
    paper rises toward the spine, and the shading below paints the bow of
-   the paper: darker in the crease, a soft light just before it. */
+   the paper: darker in the crease, a soft light just before it.
+   The tilted pages sit above the flat turn zones in 3D, so they must not
+   swallow pointer events: every press belongs to the zones. */
+.diary-spread .memory-page { pointer-events: none; }
 .diary-spread .memory-page--left {
   transform-origin: left center;
   transform: rotateY(-5.5deg);

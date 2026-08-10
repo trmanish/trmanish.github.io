@@ -488,7 +488,7 @@
       restFeather(true);
     }, 13000);
 
-    const stops = [...new Set([1, 2, 3].map((step) => Math.max(1, Math.round(introIndex * step / 4))).concat(introIndex))]
+    const stops = [...new Set([1, 2, 3, 4].map((step) => Math.max(1, Math.round(introIndex * step / 5))).concat(introIndex))]
       .filter((stop) => stop > 0 && stop < spreads.length)
       .sort((a, b) => a - b);
 
@@ -497,7 +497,7 @@
       turning = true;
       const state = buildLeaf('next', list[i]);
       setTurn(state, 0);
-      tweenIntroTurn(state, 460, () => setTimeout(() => flipTo(list, i + 1, done), 120));
+      tweenIntroTurn(state, 250, () => setTimeout(() => flipTo(list, i + 1, done), 40));
     }
 
     setTimeout(() => {

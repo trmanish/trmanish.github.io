@@ -367,23 +367,17 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
-  /* The riffle leaves carry real pages, sampled from the spreads between the
-     diary's start and where it stops, so the fast flips show writing going
-     past instead of blank paper. */
-  function makeRiffle() {
-    if (reducedMotion) return;
-    for (let i = 0; i < 5; i += 1) {
-      const leaf = document.createElement('div');
-      leaf.className = 'diary-riffle__leaf';
-      leaf.style.setProperty('--delay', `${180 + i * 105}ms`);
-      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
-      const page = document.createElement('div');
-      page.className = 'diary-riffle__page';
-      page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
-      leaf.appendChild(page);
-      leaf.addEventListener('animationend', () => leaf.remove());
-      riffle.appendChild(leaf);
-    }
+  /* The opening flips are real page turns run fast, using the same leaf
+     machinery as a drag, so every flying page carries real writing and the
+     motion is identical on every browser. Each hop lands a few spreads
+     further on, the way a thumb lets a chunk of pages go at once. */
+  function quickTurns(targets, done) {
+    if (!targets.length) { done(); return; }
+    const target = targets.shift();
+    turning = true;
+    const state = buildLeaf('next', target);
+    setTurn(state, 0);
+    tweenIntroTurn(state, 310 + targets.length * 25, () => quickTurns(targets, done));
   }
 
   /* ---------------------------------------------------------- the feather */
@@ -474,26 +468,29 @@
     current = 0;
     render(current);
     restFeather(false);
-    makeRiffle();
     let bentLeaf = null;
 
-    /* The riffle is still blurring past when the diary lands on the stop
-       page, so the change of spread hides inside the motion. */
-    setTimeout(() => {
-      current = introIndex;
-      render(current);
-      turning = true;
-      bentLeaf = buildLeaf('prev', loveIndex);
-      setTurn(bentLeaf, .11);
-    }, 1500);
+    /* Flip forward through the diary in a few fast hops, then leave the
+       stop page settled slightly bent, waiting for the feather. */
+    const hops = [];
+    for (let k = 1; k <= 3; k += 1) {
+      const idx = Math.round(introIndex * k / 4);
+      if (idx > (hops[hops.length - 1] || 0) && idx < introIndex) hops.push(idx);
+    }
+    hops.push(introIndex);
 
     setTimeout(() => {
-      feather.classList.add('diary-feather--under');
-      flyFeather(ANCHOR.start, ANCHOR.hit, 2300, {
-        sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
-        rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
-      }, turnOnContact);
-    }, 2050);
+      quickTurns(hops, () => {
+        turning = true;
+        bentLeaf = buildLeaf('prev', loveIndex);
+        setTurn(bentLeaf, .11);
+        feather.classList.add('diary-feather--under');
+        flyFeather(ANCHOR.start, ANCHOR.hit, 2150, {
+          sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
+          rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
+        }, turnOnContact);
+      });
+    }, 420);
 
     function turnOnContact() {
       if (!bentLeaf) return;

@@ -27,6 +27,7 @@ class: "home-page"
         <button class="diary-turn-zone diary-turn-zone--right" type="button" aria-label="Drag or tap to turn to the next pages" data-diary-drag="next"></button>
         <div class="diary-gutter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="diary-riffle" data-diary-riffle aria-hidden="true"></div>
+        <img class="diary-feather is-hidden" src="{{ '/assets/images/diary/memory-feather.webp' | relative_url }}" alt="" data-diary-feather aria-hidden="true">
       </div>
     </div>
 

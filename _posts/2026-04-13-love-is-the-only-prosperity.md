@@ -53,7 +53,7 @@ You realize eventually that the only thing that matters is the desire to see som
 
 *A care for the life around you that asks for nothing back.*
 
-The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. The love to see a child anywhere in the world fall asleep without fearing whether they'll wake up to the sound of bombs. The love to know that a kid somewhere is worrying about what game to play tomorrow—not whether they'll have a single meal to survive the day. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
+The desire to see someone battle for their health and come out winning. The desire to see someone entering a new phase of life. The desire to see a child anywhere in the world fall asleep without fearing whether they’ll wake up to the sound of bombs. The desire to know that a kid somewhere is worrying about what game to play tomorrow—not whether they’ll have a single meal to survive the day. Even the care that remains when you lose someone you hold dear, so that you still want the absolute best for them, wherever they go and whatever they do.
 
 Right now, my heart feels heavy. It's heavy seeing someone fighting just to keep their life—the most basic of human needs. It's heavy knowing that right now, somewhere in the world, a child is going to sleep not knowing if they'll see the morning. It feels heavy to say goodbye to someone you wanted to hold on to just a little longer.
 

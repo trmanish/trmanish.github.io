@@ -1,5 +1,5 @@
 ---
-title: "Love is the Only Prosperity"
+title: "Prosperity is Seeing Others Prosper"
 date: 2026-04-13
 layout: post
 featured: true
@@ -8,7 +8,7 @@ image: "/assets/love_prosperity/sf_pier.png"
 ---
 
 <div align="center">
-  <h1><strong>Love is the Only Prosperity</strong></h1>
+  <h1><strong>Prosperity is Seeing Others Prosper</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->
@@ -51,7 +51,7 @@ But there is a quiet, unconditional geometry to the heart—it wants the person 
 
 You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.**
 
-*An unconditional love for the life around you, with no expectations.*
+*A care for the life around you that asks for nothing back.*
 
 The love to see someone battle for their health and come out winning. The love to see someone entering a new phase of life. The love to see a child anywhere in the world fall asleep without fearing whether they'll wake up to the sound of bombs. The love to know that a kid somewhere is worrying about what game to play tomorrow—not whether they'll have a single meal to survive the day. Even the love to see yourself lose someone you really care for, yet still want the absolute best for them, wherever they go and whatever they do.
 
@@ -63,4 +63,4 @@ But this is the heart's way of saying that love is all that matters in the end. 
     Your fear of getting hurt should never be greater than your courage to love.
 </div>
 
-Because whenever the heart grows heavy, love will always find its way.
+Because a heart never grows heavy over nothing. The weight is love, and love always finds somewhere to go.

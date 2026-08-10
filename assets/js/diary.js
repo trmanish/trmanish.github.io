@@ -9,7 +9,7 @@
      stops the riffle a few pages past it so the feather can flip back. */
   const posts = JSON.parse(dataNode.textContent);
   const spreads = posts.map((post) => ({
-    type: post.title.toLowerCase() === 'love is the only prosperity' ? 'feature' : 'post',
+    type: post.title.toLowerCase() === 'prosperity is seeing others prosper' ? 'feature' : 'post',
     post
   }));
   const loveIndex = Math.max(0, spreads.findIndex((spread) => spread.type === 'feature'));
@@ -136,7 +136,7 @@
     spreadNode.innerHTML = pages.left + pages.right;
     const spread = spreads[index];
     caption.textContent = spread.type === 'feature'
-      ? 'Love is the Only Prosperity'
+      ? 'Prosperity is Seeing Others Prosper'
       : `${index + 1} of ${spreads.length} · ${spread.post.title}`;
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
@@ -552,7 +552,7 @@
       tweenIntroTurn(bentLeaf, 1650, () => {
         introActive = false;
         restFeather(true);
-        caption.textContent = 'Love is the Only Prosperity';
+        caption.textContent = 'Prosperity is Seeing Others Prosper';
       });
       setTimeout(() => {
         flyFeather(ANCHOR.hit, ANCHOR.rest, 1350, {

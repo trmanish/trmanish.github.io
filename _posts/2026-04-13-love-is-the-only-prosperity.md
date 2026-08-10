@@ -49,7 +49,7 @@ I finally said goodbye. But I didn't really want to say it. I feared she'll love
 
 But there is a quiet, unconditional geometry to the heart—it wants the person you care for to find love, even if it isn't yours. So they can be loved the way you always wanted to love them—even if you believed no one could have cared for them more than you. Seeing them loved is its own way of seeing them prosper.
 
-You realize eventually that the only thing that really matters, the only thing you really need, is Love. **Love for the other person.**
+You realize eventually that the only thing that matters is the desire to see someone do well. **A true desire to see them prosper.**
 
 *A care for the life around you that asks for nothing back.*
 
@@ -63,4 +63,4 @@ But this is the heart's way of saying that love is all that matters in the end. 
     Your fear of getting hurt should never be greater than your courage to love.
 </div>
 
-Because a heart never grows heavy over nothing. The weight is love, and love always finds somewhere to go.
+Because a heart never grows heavy over nothing. The weight is the Care for someone who crossed your path. And Care always finds somewhere to go.

@@ -404,8 +404,13 @@ a { text-decoration: none; }
 }
 
 .memory-page--feature .memory-page__title { font-size: clamp(16px, 1.95vw, 29px); }
-/* The feature photo shows whole, never cropped. */
-.memory-page--feature .memory-page__image { height: auto; }
+/* The feature photo shows whole, never cropped: the full image sits inside
+   a taller polaroid frame, matted with the border's own cream. */
+.memory-page--feature .memory-page__image {
+  height: clamp(140px, 20vw, 260px);
+  object-fit: contain;
+  background: rgba(249, 242, 222, .8);
+}
 .memory-page--feature .memory-page__photo { margin-bottom: clamp(16px, 2.4vw, 30px); }
 .memory-page--feature-continuation .memory-page__inner { justify-content: center; }
 
@@ -573,12 +578,8 @@ a { text-decoration: none; }
 .diary-leaf--next .diary-face--back .diary-face__page { left: calc(-1 * var(--strip-w) * (var(--strips) - 1 - var(--strip-index))); }
 .diary-leaf--prev .diary-face--front .diary-face__page { right: calc(-1 * var(--strip-w) * var(--strip-index)); left: auto; }
 .diary-leaf--prev .diary-face--back .diary-face__page { right: calc(-1 * var(--strip-w) * (var(--strips) - 1 - var(--strip-index))); left: auto; }
-/* A face is drawn 36 times per turn, so the costly paper effects come off
-   inside it. They are barely visible on a page that is edge on anyway. */
-.diary-face .memory-page { box-shadow: none; }
-.diary-face .memory-page::before,
-.diary-face .memory-page::after { display: none; }
-.diary-face .memory-page__image { filter: none; box-shadow: none; }
+/* Leaf faces render exactly like settled pages, so a page held mid-turn
+   (the bent stop page in the opening) is indistinguishable from a real one. */
 .diary-face::before,
 .diary-face::after {
   content: "";

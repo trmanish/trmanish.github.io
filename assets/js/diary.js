@@ -427,8 +427,10 @@
      plain transforms. A CSS keyframe animation with a filter in it made
      Safari's compositor rasterize the page content at the wrong scale, so
      no filter, no CSS animation and no backface layers are used here. */
-  function windWave(fromIndex, toIndex, count) {
+  function windWave(fromIndex, toIndex, count, pace) {
     if (reducedMotion) return;
+    const stagger = (pace && pace.stagger) || 105;
+    const duration = (pace && pace.duration) || 1100;
     const span = Math.max(1, toIndex - fromIndex);
     const leaves = [];
     for (let i = 0; i < count; i += 1) {
@@ -440,7 +442,7 @@
       page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
       leaf.appendChild(page);
       riffle.appendChild(leaf);
-      leaves.push({ leaf, page, start: 180 + i * 105, duration: 1100, done: false });
+      leaves.push({ leaf, page, start: 160 + i * stagger, duration, done: false });
     }
     const began = performance.now();
     function frame(now) {
@@ -585,7 +587,7 @@
        (or all the way to the stop page when there is nothing to pause on).
        The underlying spread changes while leaves are still blurring past,
        so the jump hides inside the motion. */
-    windWave(0, pauseAt > 0 ? pauseAt : introIndex, 3);
+    windWave(0, pauseAt > 0 ? pauseAt : introIndex, 7, { stagger: 85, duration: 820 });
 
     setTimeout(() => {
       if (pauseAt > 0) {
@@ -599,7 +601,7 @@
       } else {
         settleBent();
       }
-    }, 1250);
+    }, 1400);
 
     function settleBent() {
       current = introIndex;

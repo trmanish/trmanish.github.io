@@ -404,7 +404,8 @@ a { text-decoration: none; }
 }
 
 .memory-page--feature .memory-page__title { font-size: clamp(16px, 1.95vw, 29px); }
-.memory-page--feature .memory-page__image { height: clamp(105px, 17vw, 225px); }
+/* The feature photo shows whole, never cropped. */
+.memory-page--feature .memory-page__image { height: auto; }
 .memory-page--feature .memory-page__photo { margin-bottom: clamp(16px, 2.4vw, 30px); }
 .memory-page--feature-continuation .memory-page__inner { justify-content: center; }
 

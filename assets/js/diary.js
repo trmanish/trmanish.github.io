@@ -9,12 +9,12 @@
      stops the riffle a few pages past it so the feather can flip back. */
   const posts = JSON.parse(dataNode.textContent);
   const spreads = posts.map((post) => ({
-    type: post.title.toLowerCase() === 'prosperity is seeing others prosper' ? 'feature' : 'post',
+    type: post.title.toLowerCase() === 'the last scarce things' ? 'feature' : 'post',
     post
   }));
   const loveIndex = Math.max(0, spreads.findIndex((spread) => spread.type === 'feature'));
-  const foundIntro = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'the last scarce things');
-  const introIndex = foundIntro > loveIndex ? foundIntro : Math.min(loveIndex + 1, spreads.length - 1);
+  const foundIntro = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'prosperity is seeing others prosper');
+  const introIndex = foundIntro >= 0 && foundIntro !== loveIndex ? foundIntro : Math.max(loveIndex - 1, 0);
 
   const stage = root.querySelector('[data-diary-stage]');
   const book = root.querySelector('[data-diary-book]');
@@ -82,8 +82,8 @@
           <span class="memory-page__read">Read this tick &rarr;</span>`),
         right: pageShell(post, 'right', ' memory-page--feature-continuation', `
           <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
-          <blockquote class="memory-page__quote">Your fear of getting hurt should never be greater than your courage to love.</blockquote>
-          <p class="memory-page__continuation">Love is beautiful, painful, joyful and quiet, yet it forces the best out of us for everyone around us.</p>
+          <blockquote class="memory-page__quote">In a world where machines can do everything, the only thing left worth doing is to love someone completely, simply, on every ordinary day.</blockquote>
+          <p class="memory-page__continuation">When machines make perfection abundant, imperfection becomes the new beauty, and character becomes the new wealth.</p>
           <span class="memory-page__read">Continue reading &rarr;</span>`)
       };
     }
@@ -136,7 +136,7 @@
     spreadNode.innerHTML = pages.left + pages.right;
     const spread = spreads[index];
     caption.textContent = spread.type === 'feature'
-      ? 'Prosperity is Seeing Others Prosper'
+      ? 'The Last Scarce Things'
       : `${index + 1} of ${spreads.length} · ${spread.post.title}`;
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
@@ -512,7 +512,7 @@
      drifts in from the left of the screen, touches that bent page, and the
      touch pushes the page over to open the feature spread. */
   function runOpeningStory() {
-    if (reducedMotion || spreads.length < 2 || introIndex <= loveIndex) {
+    if (reducedMotion || spreads.length < 2 || introIndex === loveIndex) {
       current = loveIndex;
       introActive = false;
       render(current);
@@ -552,7 +552,7 @@
       tweenIntroTurn(bentLeaf, 1650, () => {
         introActive = false;
         restFeather(true);
-        caption.textContent = 'Prosperity is Seeing Others Prosper';
+        caption.textContent = 'The Last Scarce Things';
       });
       setTimeout(() => {
         flyFeather(ANCHOR.hit, ANCHOR.rest, 1350, {

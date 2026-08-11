@@ -436,6 +436,11 @@ a { text-decoration: none; }
   margin-top: clamp(10px, 1.5vw, 20px);
   -webkit-line-clamp: 2;
 }
+/* The written lines never get squeezed into half-height slices; when space
+   runs out, whole bullets are dropped instead (see tuneClamp). */
+.memory-page__excerpt--lead,
+.memory-page__excerpt--leadin,
+.memory-page__list { flex-shrink: 0; }
 /* One or two more bullets written under the landing page's pull quote. */
 .memory-page__list--continuation {
   margin: clamp(14px, 2vw, 26px) auto 0;

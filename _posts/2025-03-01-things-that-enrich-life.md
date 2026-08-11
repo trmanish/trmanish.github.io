@@ -2,6 +2,7 @@
 title: "Things that Enrich Life"
 date: 2026-08-07
 layout: post
+image: "/assets/things_enrich_life/header-sketch.webp"
 ---
 
 <div align="center">
@@ -9,6 +10,10 @@ layout: post
 </div>
 
 <br> <!-- Adds extra spacing -->
+
+<img src="/assets/things_enrich_life/header-sketch.webp" alt="A contemplative person overlooking a city and the everyday lives unfolding below" width="100%">
+
+<br>
 
 <span style="font-size: 12px;"><em>First published in Sep 2022 on LI. Updated Aug 2026.</em></span><br><br>
 

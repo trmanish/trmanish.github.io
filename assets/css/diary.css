@@ -331,7 +331,7 @@ a { text-decoration: none; }
 .memory-page__image {
   display: block;
   width: 100%;
-  height: clamp(76px, 14vw, 190px);
+  height: clamp(105px, 17vw, 225px);
   object-fit: cover;
   filter: sepia(.1) saturate(.9) contrast(.97);
   border: 7px solid rgba(249,242,222,.8);

@@ -11,7 +11,7 @@ image: "/assets/things_enrich_life/header-sketch.webp"
 
 <br> <!-- Adds extra spacing -->
 
-<img src="/assets/things_enrich_life/header-sketch.webp" alt="A contemplative person overlooking a city and the everyday lives unfolding below" width="100%">
+<img class="post-hero-image post-hero-image--short" src="/assets/things_enrich_life/header-sketch.webp" alt="A contemplative person overlooking a city and the everyday lives unfolding below" width="100%">
 
 <br>
 

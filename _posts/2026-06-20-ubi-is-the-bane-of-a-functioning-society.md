@@ -2,7 +2,7 @@
 title: "UBI is the Bane of a Functioning Society"
 date: 2026-06-20
 layout: post
-published: true
+published: false
 hidden: true
 ---
 

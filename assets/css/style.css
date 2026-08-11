@@ -716,7 +716,9 @@ body.site-page--post.is-closing { opacity: 0; }
   overflow: visible;
   filter: drop-shadow(2px 4px 3px rgba(58, 38, 18, .32));
 }
-body.is-night .lamp-toggle svg { filter: drop-shadow(2px 5px 7px rgba(0, 0, 0, .6)); }
+/* A lit lantern is the light source, so at night it casts no shadow of
+   its own and the glow stays exactly as before. */
+body.is-night .lamp-toggle svg { filter: none; }
 .lamp-cord { stroke: #5a4632; stroke-width: 1.6; }
 .lamp-shade { fill: #6b4a2f; stroke: #3f2c1a; stroke-width: 1; }
 .lamp-bulb {

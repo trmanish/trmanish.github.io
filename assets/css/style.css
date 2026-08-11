@@ -612,10 +612,26 @@ body.site-page--post.is-closing { opacity: 0; }
 }
 
 .site-page--post .article-paper img {
+    box-sizing: border-box;
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: clamp(18px, 3vw, 30px) auto;
+    padding: 0;
+    background: transparent;
+    border: 0 !important;
+    border-radius: 0 !important;
     filter: sepia(.04) saturate(.96);
     box-shadow: 0 8px 22px rgba(63, 39, 19, .15);
+}
+
+/* The Enrich Life drawing keeps its wide header crop, but sits a little
+   shorter than its original 3:2 frame so the writing arrives sooner. */
+.site-page--post .article-paper .post-hero-image--short {
+    width: 100%;
+    height: clamp(210px, 54vw, 455px);
+    object-fit: cover;
+    object-position: center 46%;
 }
 
 .site-page--post .article-paper div[style*="background-color: #fcfcfc"] {

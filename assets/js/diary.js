@@ -4,17 +4,19 @@
   if (!root || !dataNode) return;
 
   /* Posts arrive oldest first, and each spread holds a single post, so the
-     diary reads date after date the way a real one fills up. The feature
-     spread keeps its own place in that order, and the opening animation
-     stops the riffle a few pages past it so the feather can flip back. */
+     diary reads date after date the way a real one fills up. Everything the
+     opening needs is computed from dates: the newest post is the landing
+     spread the feather reveals, the second newest is where the wind leaves
+     the diary open, and nothing here ever names a post. The one aesthetic
+     exception: the wind pauses to hover on the Prosperity page if present. */
   const posts = JSON.parse(dataNode.textContent);
-  const spreads = posts.map((post) => ({
-    type: post.title.toLowerCase() === 'the last scarce things' ? 'feature' : 'post',
+  const spreads = posts.map((post, index) => ({
+    type: index === posts.length - 1 ? 'feature' : 'post',
     post
   }));
-  const loveIndex = Math.max(0, spreads.findIndex((spread) => spread.type === 'feature'));
-  const foundIntro = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'prosperity is seeing others prosper');
-  const introIndex = foundIntro >= 0 && foundIntro !== loveIndex ? foundIntro : Math.max(loveIndex - 1, 0);
+  const loveIndex = spreads.length - 1;
+  const introIndex = Math.max(0, spreads.length - 2);
+  const hoverIndex = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'prosperity is seeing others prosper');
 
   const stage = root.querySelector('[data-diary-stage]');
   const book = root.querySelector('[data-diary-book]');
@@ -72,6 +74,8 @@
     const spread = spreads[index];
     const post = spread.post;
     if (spread.type === 'feature') {
+      const quote = featureQuote(post);
+      const continuation = featureContinuation(post, quote);
       return {
         left: pageShell(post, 'left', ' memory-page--feature', `
           ${eyebrowMarkup(post, index * 2)}
@@ -82,8 +86,8 @@
           <span class="memory-page__read">Read this tick &rarr;</span>`),
         right: pageShell(post, 'right', ' memory-page--feature-continuation', `
           <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
-          <blockquote class="memory-page__quote">In a world where machines can do everything, the only thing left worth doing is to love someone completely, simply, on every ordinary day.</blockquote>
-          <p class="memory-page__continuation">When machines make perfection abundant, imperfection becomes the new beauty, and character becomes the new wealth.</p>
+          <blockquote class="memory-page__quote">${escapeHtml(quote)}</blockquote>
+          ${continuation ? `<p class="memory-page__continuation">${escapeHtml(continuation)}</p>` : ''}
           <span class="memory-page__read">Continue reading &rarr;</span>`)
       };
     }
@@ -131,12 +135,31 @@
     return tail.reduce((best, sentence) => (sentence.length > best.length ? sentence : best), tail[0]);
   }
 
+  /* The landing spread writes out its own quote, whichever post is newest.
+     A bulleted post offers its strongest bullet; prose offers a sentence. */
+  function featureQuote(post) {
+    const bullets = (post.bullets || []).filter(Boolean);
+    if (bullets.length >= 3) {
+      const fit = bullets.filter((item) => item.length > 34 && item.length < 170);
+      if (fit.length) return fit.reduce((best, item) => (item.length > best.length ? item : best), fit[0]);
+    }
+    return pickQuote(post.excerpt) || splitExcerpt(post.excerpt).lead || (post.excerpt || '').slice(0, 140);
+  }
+
+  function featureContinuation(post, quote) {
+    if ((post.bullets || []).filter(Boolean).length >= 3 && post.intro) {
+      return post.intro.length > 170 ? '' : post.intro;
+    }
+    const sentences = ((post.excerpt || '').match(/[^.!?…]+[.!?]/g) || []).map((s) => s.trim());
+    return sentences.find((s) => s.length > 40 && s.length < 170 && s !== quote) || '';
+  }
+
   function render(index) {
     const pages = spreadPages(index);
     spreadNode.innerHTML = pages.left + pages.right;
     const spread = spreads[index];
     caption.textContent = spread.type === 'feature'
-      ? 'The Last Scarce Things'
+      ? spread.post.title
       : `${index + 1} of ${spreads.length} · ${spread.post.title}`;
     progress.style.transform = `scaleX(${(index + 1) / spreads.length})`;
     prevButton.disabled = index === 0;
@@ -398,18 +421,20 @@
     settleTurn(drag.state, commit, drag.velocity);
   }
 
-  /* The riffle: a fast overlapping cascade of pages sweeping right to left,
-     each carrying real writing. The leaves are driven frame by frame with
+  /* A wave of wind: a fast overlapping cascade of pages sweeping right to
+     left, each carrying real writing sampled from the stretch of the diary
+     the wave is blowing through. The leaves are driven frame by frame with
      plain transforms. A CSS keyframe animation with a filter in it made
      Safari's compositor rasterize the page content at the wrong scale, so
      no filter, no CSS animation and no backface layers are used here. */
-  function makeRiffle() {
+  function windWave(fromIndex, toIndex, count) {
     if (reducedMotion) return;
+    const span = Math.max(1, toIndex - fromIndex);
     const leaves = [];
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < count; i += 1) {
       const leaf = document.createElement('div');
       leaf.className = 'diary-riffle__leaf';
-      const sample = Math.min(spreads.length - 1, Math.max(1, Math.round((i + 1) * introIndex / 6)));
+      const sample = Math.min(spreads.length - 1, Math.max(1, fromIndex + Math.round((i + 1) * span / (count + 1))));
       const page = document.createElement('div');
       page.className = 'diary-riffle__page';
       page.innerHTML = spreadPages(sample).right.replace(/tabindex="0"/g, 'tabindex="-1"');
@@ -431,6 +456,36 @@
         else alive = true;
       });
       if (alive) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* The wind eases: one real page lifts, hangs mid-air trembling for a few
+     seconds as if the gust holding it faded, then the wind returns and
+     carries it over. */
+  function hoverPage(done) {
+    turning = true;
+    const state = buildLeaf('next', Math.min(current + 1, spreads.length - 1));
+    const LIFT = 650, HANG = 2500, DROP = 480;
+    const began = performance.now();
+    function frame(now) {
+      const elapsed = now - began;
+      if (elapsed < LIFT) {
+        const k = elapsed / LIFT;
+        setTurn(state, .52 * (1 - Math.pow(1 - k, 2)));
+      } else if (elapsed < LIFT + HANG) {
+        const w = elapsed - LIFT;
+        setTurn(state, .52 + .05 * Math.sin(w / 340) + .016 * Math.sin(w / 89));
+      } else if (elapsed < LIFT + HANG + DROP) {
+        const k = (elapsed - LIFT - HANG) / DROP;
+        setTurn(state, .55 + .45 * k * k * (3 - 2 * k));
+      } else {
+        setTurn(state, 1);
+        finishTurn(state, true);
+        done();
+        return;
+      }
+      requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
   }
@@ -523,26 +578,43 @@
     current = 0;
     render(current);
     restFeather(false);
-    makeRiffle();
     let bentLeaf = null;
+    const pauseAt = hoverIndex > 0 && hoverIndex < introIndex ? hoverIndex : -1;
 
-    /* The riffle is still sweeping past when the diary lands on the stop
-       page, so the change of spread hides inside the motion. */
+    /* First gust: pages fly from the diary's start toward the pause page
+       (or all the way to the stop page when there is nothing to pause on).
+       The underlying spread changes while leaves are still blurring past,
+       so the jump hides inside the motion. */
+    windWave(0, pauseAt > 0 ? pauseAt : introIndex, 3);
+
     setTimeout(() => {
+      if (pauseAt > 0) {
+        current = pauseAt;
+        render(current);
+        hoverPage(() => {
+          /* the wind returns: second gust carries on to the stop page */
+          windWave(current, introIndex, 3);
+          setTimeout(settleBent, 1250);
+        });
+      } else {
+        settleBent();
+      }
+    }, 1250);
+
+    function settleBent() {
       current = introIndex;
       render(current);
       turning = true;
       bentLeaf = buildLeaf('prev', loveIndex);
       setTurn(bentLeaf, .11);
-    }, 1500);
-
-    setTimeout(() => {
-      feather.classList.add('diary-feather--under');
-      flyFeather(ANCHOR.start, ANCHOR.hit, 2150, {
-        sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
-        rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
-      }, turnOnContact);
-    }, 2050);
+      setTimeout(() => {
+        feather.classList.add('diary-feather--under');
+        flyFeather(ANCHOR.start, ANCHOR.hit, 2150, {
+          sway: .055, swayAxis: 'y', cycles: 1.6, phase: .3, rock: 22, tilt: 26,
+          rotateFrom: -64, rotateTo: -24, liftFrom: 1, liftTo: .04
+        }, turnOnContact);
+      }, 420);
+    }
 
     function turnOnContact() {
       if (!bentLeaf) return;
@@ -552,7 +624,7 @@
       tweenIntroTurn(bentLeaf, 1650, () => {
         introActive = false;
         restFeather(true);
-        caption.textContent = 'The Last Scarce Things';
+        caption.textContent = spreads[loveIndex].post.title;
       });
       setTimeout(() => {
         flyFeather(ANCHOR.hit, ANCHOR.rest, 1350, {

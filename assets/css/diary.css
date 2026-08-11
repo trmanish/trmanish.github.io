@@ -430,6 +430,18 @@ a { text-decoration: none; }
   -webkit-line-clamp: 3;
 }
 .memory-page__excerpt--lead:empty { display: none; }
+/* The lead-in line of a bulleted feature page, separated from the byline
+   by a blank line the way the post itself is set. */
+.memory-page__excerpt--leadin {
+  margin-top: clamp(10px, 1.5vw, 20px);
+  -webkit-line-clamp: 2;
+}
+/* One or two more bullets written under the landing page's pull quote. */
+.memory-page__list--continuation {
+  margin: clamp(14px, 2vw, 26px) auto 0;
+  max-width: 36ch;
+}
+.memory-page--feature .memory-page__list { margin-top: clamp(8px, 1.2vw, 16px); }
 
 /* A line worth keeping, copied out across the lower part of the page. */
 .memory-page__quote--pull {

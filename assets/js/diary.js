@@ -10,12 +10,14 @@
      the diary open, and nothing here ever names a post. The one aesthetic
      exception: the wind pauses to hover on the Prosperity page if present. */
   const posts = JSON.parse(dataNode.textContent);
-  const spreads = posts.map((post, index) => ({
-    type: index === posts.length - 1 ? 'feature' : 'post',
-    post
-  }));
-  const loveIndex = spreads.length - 1;
-  const introIndex = Math.max(0, spreads.length - 2);
+  const spreads = posts.map((post) => ({ type: 'post', post }));
+  /* The feather always lands on Things that Enrich Life; newer posts sit
+     after it and appear as the reader flips forward. If it ever vanishes,
+     the newest post takes its place. */
+  const pinned = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'things that enrich life');
+  const loveIndex = pinned >= 0 ? pinned : spreads.length - 1;
+  spreads[loveIndex].type = 'feature';
+  const introIndex = Math.max(0, loveIndex - 1);
   const hoverIndex = spreads.findIndex((spread) => spread.post.title.toLowerCase() === 'prosperity is seeing others prosper');
 
   const stage = root.querySelector('[data-diary-stage]');
@@ -75,19 +77,42 @@
     const post = spread.post;
     if (spread.type === 'feature') {
       const quote = featureQuote(post);
-      const continuation = featureContinuation(post, quote);
+      const bullets = (post.bullets || []).filter(Boolean);
+      let leftBody;
+      let rightExtra;
+      if (bullets.length >= 3) {
+        /* A bulleted post keeps its shape: the byline, a blank line, the
+           lead-in sentence, then the bullets themselves. */
+        const introText = (post.intro || '').trim();
+        const match = introText.match(/^(.*[.!?])\s*([^.!?:]*:)\s*$/);
+        const byline = match ? match[1].trim() : introText;
+        const leadIn = match ? match[2].trim() : '';
+        const rest = bullets.filter((item) => item !== quote);
+        leftBody = `
+          ${byline ? `<p class="memory-page__excerpt memory-page__excerpt--lead">${escapeHtml(byline)}</p>` : ''}
+          ${leadIn ? `<p class="memory-page__excerpt memory-page__excerpt--leadin">${escapeHtml(leadIn)}</p>` : ''}
+          <ul class="memory-page__list">${rest.slice(0, 5).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+        const more = rest.slice(5, 7);
+        rightExtra = more.length
+          ? `<ul class="memory-page__list memory-page__list--continuation">${more.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+          : '';
+      } else {
+        const continuation = featureContinuation(post, quote);
+        leftBody = `<p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>`;
+        rightExtra = continuation ? `<p class="memory-page__continuation">${escapeHtml(continuation)}</p>` : '';
+      }
       return {
         left: pageShell(post, 'left', ' memory-page--feature', `
           ${eyebrowMarkup(post, index * 2)}
           ${photoMarkup(post)}
           <h2 class="memory-page__title">${escapeHtml(post.title)}</h2>
           <span class="memory-page__rule" aria-hidden="true"></span>
-          <p class="memory-page__excerpt">${escapeHtml(post.excerpt)}</p>
+          ${leftBody}
           <span class="memory-page__read">Read this tick &rarr;</span>`),
         right: pageShell(post, 'right', ' memory-page--feature-continuation', `
           <p class="memory-page__eyebrow"><span>${escapeHtml(post.date)}</span><span class="memory-page__number">II</span></p>
           <blockquote class="memory-page__quote">${escapeHtml(quote)}</blockquote>
-          ${continuation ? `<p class="memory-page__continuation">${escapeHtml(continuation)}</p>` : ''}
+          ${rightExtra}
           <span class="memory-page__read">Continue reading &rarr;</span>`)
       };
     }
@@ -174,7 +199,7 @@
      look of a written page. The measured counts go on the shell as CSS
      variables, so the faces built for a turn inherit the same limits. */
   function tuneClamp() {
-    spreadNode.querySelectorAll('.memory-page__excerpt:not(.memory-page__excerpt--lead)').forEach((excerpt) => {
+    spreadNode.querySelectorAll('.memory-page__excerpt:not(.memory-page__excerpt--lead):not(.memory-page__excerpt--leadin)').forEach((excerpt) => {
       const inner = excerpt.closest('.memory-page__inner');
       const read = inner.querySelector('.memory-page__read');
       const lineHeight = parseFloat(getComputedStyle(excerpt).lineHeight) || 18;

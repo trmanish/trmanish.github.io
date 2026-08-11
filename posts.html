@@ -3,6 +3,8 @@ layout: default
 title: "All Ticks"
 ---
 
+{% assign visible_posts = site.posts | where_exp: "post", "post.hidden != true" %}
+
 <div class="featured-posts">
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h3>Featured Posts</h3>
@@ -18,7 +20,7 @@ title: "All Ticks"
         <button class="scroll-arrow scroll-left" onclick="scrollFeatured('left')">&lt;</button>
         <button class="scroll-arrow scroll-right" onclick="scrollFeatured('right')">&gt;</button>
         <div class="featured-posts-grid">
-        {% assign featured_posts = site.posts | where: "featured", true | sort: "featured_order" %}
+        {% assign featured_posts = visible_posts | where: "featured", true | sort: "featured_order" %}
         {% for post in featured_posts %}
                 <div class="featured-post-item">
                     <div class="featured-post-image">
@@ -40,7 +42,7 @@ title: "All Ticks"
 <div class="featured-posts-separator"></div>
 
 <div class="post-list">
-    {% for post in site.posts %}
+    {% for post in visible_posts %}
         <div class="post-item">
             <div class="post-info">
                 <p class="post-date">{{ post.date | date: "%b %d, %Y" }}</p>

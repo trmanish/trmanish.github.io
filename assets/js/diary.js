@@ -88,11 +88,16 @@
         const byline = match ? match[1].trim() : introText;
         const leadIn = match ? match[2].trim() : '';
         const rest = bullets.filter((item) => item !== quote);
+        /* The photograph and heading leave room for two complete bullets on
+           the left. Continue from the third on the facing page; assigning
+           five here made the fit pass hide bullets 3–5 while the right page
+           incorrectly resumed at bullet 6. */
+        const leftItems = rest.slice(0, 2);
         leftBody = `
           ${byline ? `<p class="memory-page__excerpt memory-page__excerpt--lead">${escapeHtml(byline)}</p>` : ''}
           ${leadIn ? `<p class="memory-page__excerpt memory-page__excerpt--leadin">${escapeHtml(leadIn)}</p>` : ''}
-          <ul class="memory-page__list">${rest.slice(0, 5).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
-        const more = rest.slice(5, 7);
+          <ul class="memory-page__list">${leftItems.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+        const more = rest.slice(leftItems.length, leftItems.length + 5);
         rightExtra = more.length
           ? `<ul class="memory-page__list memory-page__list--continuation">${more.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
           : '';

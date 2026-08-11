@@ -60,8 +60,9 @@ class: "home-page"
 </section>
 
 <script id="diary-posts" type="application/json">
+{% assign diary_posts = site.posts | where_exp: "post", "post.hidden != true" | reverse %}
 [
-{% for post in site.posts reversed %}
+{% for post in diary_posts %}
   {% assign li_parts = post.content | split: '<li>' %}
   {
     "title": {{ post.title | jsonify }},

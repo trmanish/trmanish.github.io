@@ -644,17 +644,34 @@ body.site-page--post.is-closing { opacity: 0; }
     text-transform: uppercase;
 }
 
+/* The archive containers are sheets cut from the same paper as the article
+   page: same texture, same scissor-cut edges, same shadow. */
 .site-page .featured-posts,
 .site-page .post-list {
-    padding-left: clamp(18px, 3vw, 36px);
-    padding-right: clamp(18px, 3vw, 36px);
-    background: rgba(251, 249, 243, .86);
-    border: 1px solid rgba(91, 59, 33, .13);
-    box-shadow: 0 18px 45px rgba(67, 44, 24, .1);
+    padding: clamp(22px, 3.5vw, 40px) clamp(18px, 3vw, 36px);
+    background-color: rgba(251, 249, 243, .97);
+    background-image:
+        radial-gradient(circle at 13% 18%, rgba(110,64,36,.032) 0 1px, transparent 2px),
+        radial-gradient(circle at 87% 72%, rgba(130,76,39,.036) 0 1px, transparent 2.3px),
+        repeating-linear-gradient(0deg, rgba(89,62,38,.015) 0 1px, transparent 1px 4px);
+    background-size: 47px 43px, 59px 61px, 100% 4px;
+    border: 1px solid rgba(91, 59, 33, .18);
+    border-radius: 0;
+    clip-path: polygon(
+        0 16px, 13px 2px, 31% 5px, 52% 0, 78% 4px, calc(100% - 15px) 1px, 100% 14px,
+        calc(100% - 2px) 34%, 100% 61%, calc(100% - 4px) calc(100% - 17px), calc(100% - 12px) 100%,
+        70% calc(100% - 3px), 44% 100%, 18% calc(100% - 4px), 12px calc(100% - 1px), 0 calc(100% - 13px),
+        3px 63%, 0 32%);
+    box-shadow: inset 0 0 38px rgba(96, 59, 28, .08);
+    filter: drop-shadow(0 18px 30px rgba(67, 44, 24, .2));
 }
 
-.site-page .featured-posts { margin-top: 42px; border-radius: 9px 9px 0 0; }
-.site-page .post-list { margin-top: 30px; border-radius: 5px; }
+.site-page .featured-posts { margin-top: 42px; }
+.site-page .post-list { margin-top: 34px; }
+.site-page.is-night .featured-posts,
+.site-page.is-night .post-list {
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .6)) drop-shadow(0 0 46px rgba(255, 185, 95, .14));
+}
 .site-page .featured-post-item,
 .site-page .post-item { border-color: rgba(73, 51, 32, .17); }
 .site-page .featured-post-item { background: rgba(255, 253, 248, .7); border-radius: 4px 9px 5px 7px; }

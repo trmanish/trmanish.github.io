@@ -210,6 +210,21 @@
       const scope = excerpt.closest('.memory-page--feature') ? '--clamp-feature' : '--clamp-body';
       root.style.setProperty(scope, lines);
     });
+
+    /* Bulleted pages drop whole bullets that would not fit, never half of one. */
+    spreadNode.querySelectorAll('.memory-page__list').forEach((list) => {
+      const inner = list.closest('.memory-page__inner');
+      const read = inner.querySelector('.memory-page__read');
+      const limit = inner.getBoundingClientRect().bottom
+        - parseFloat(getComputedStyle(inner).paddingBottom)
+        - (read ? read.getBoundingClientRect().height + 12 : 0);
+      let overflowed = false;
+      [...list.children].forEach((item) => { item.style.display = ''; });
+      [...list.children].forEach((item) => {
+        if (!overflowed && item.getBoundingClientRect().bottom > limit) overflowed = true;
+        if (overflowed) item.style.display = 'none';
+      });
+    });
   }
 
   function attachPageNavigation() {

@@ -409,6 +409,8 @@ a { text-decoration: none; }
 .memory-page--feature .memory-page__image {
   height: clamp(100px, 13vw, 175px);
   object-fit: cover;
+  /* the couple sits at the right edge of the panorama; crop from the left */
+  object-position: right center;
 }
 .memory-page--feature .memory-page__photo { margin-bottom: clamp(16px, 2.4vw, 30px); }
 .memory-page--feature-continuation .memory-page__inner { justify-content: center; }

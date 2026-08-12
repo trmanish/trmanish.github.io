@@ -790,6 +790,9 @@ a { text-decoration: none; }
 /* The wind brushes the lantern: it swings gently on its cord and settles. */
 .lamp-toggle { transform-origin: 50% 0; }
 .lamp-toggle.is-swaying { animation: lantern-sway 3s ease-in-out; }
+/* While the opening wind is turning pages, the lantern swings with it and
+   only comes to rest when the diary does, just before the feather. */
+body.is-wind-blowing .lamp-toggle { animation: lantern-sway 2.6s ease-in-out infinite; }
 @keyframes lantern-sway {
   0% { transform: rotate(0deg); }
   18% { transform: rotate(2.7deg); }

@@ -625,6 +625,7 @@
     current = 0;
     render(current);
     restFeather(false);
+    document.body.classList.add('is-wind-blowing');
     let bentLeaf = null;
     const pauseAt = hoverIndex > 0 && hoverIndex < introIndex ? hoverIndex : -1;
 
@@ -649,6 +650,7 @@
     }, 1400);
 
     function settleBent() {
+      document.body.classList.remove('is-wind-blowing');
       current = introIndex;
       render(current);
       turning = true;

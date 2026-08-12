@@ -725,6 +725,18 @@ body.site-page--post.is-closing { opacity: 0; }
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+
+/* The wind brushes the lantern: it swings gently on its cord and settles. */
+.lamp-toggle { transform-origin: 50% 0; }
+.lamp-toggle.is-swaying { animation: lantern-sway 3s ease-in-out; }
+@keyframes lantern-sway {
+  0% { transform: rotate(0deg); }
+  18% { transform: rotate(2.7deg); }
+  38% { transform: rotate(-2.2deg); }
+  58% { transform: rotate(1.3deg); }
+  78% { transform: rotate(-.6deg); }
+  100% { transform: rotate(0deg); }
+}
 .lamp-toggle svg {
   display: block;
   width: 100%;

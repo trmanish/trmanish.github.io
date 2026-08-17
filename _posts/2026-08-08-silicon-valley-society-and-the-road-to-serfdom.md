@@ -1,6 +1,6 @@
 ---
 title: "Silicon Valley, Society and the road to Serfdom!"
-date: 2026-08-08
+date: 2026-08-15
 layout: post
 featured: true
 featured_order: 3
@@ -20,7 +20,7 @@ image: "/assets/sv_serfdom/cover.webp"
 
 <br>
 
-*First published in Oct 2022 on LI*<br><br>
+<span style="font-size: 12px;"><em>First published in Oct 2022 on LI</em></span><br><br>
 
 Over the years, observing people over Linkedin, everything going around the world, how we have been reacting as a Society, I have come to finally writing my eventual thought, which is the culmination of everything I have written over here. This is the underlying theme, the pattern, the connecting dots, which has been defining most of what is happening around us last decade or so.
 

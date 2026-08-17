@@ -9,8 +9,7 @@ layout: post
 </div>
 
 
-*First published in Jul 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Jul 2024 on LI</em></span><br><br>
 
 The GenAI field right now gives a very similar vibes to last decades’ hype on Self Driving and “Uber for X” startups. 
 

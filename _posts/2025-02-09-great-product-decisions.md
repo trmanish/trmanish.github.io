@@ -13,7 +13,7 @@ image: "/assets/great_product_decisions/headline_image.jpeg"
 
 <img src="/assets/great_product_decisions/headline_image.jpeg" width="100%">
 
-*First published in Oct 2018 on LI*<br><br>
+<span style="font-size: 12px;"><em>First published in Oct 2018 on LI</em></span><br><br>
 
 I once interviewed at LinkedIn. I wasn’t very interested in the role; the recruiter approached me, and I had been out of the interview market for some time, so I decided to go for a refresh of my interviewing skills.
 

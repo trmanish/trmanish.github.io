@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Sep 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Sep 2024 on LI</em></span><br><br>
 
 As you observe more, you realize: 
 

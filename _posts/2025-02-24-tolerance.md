@@ -13,8 +13,7 @@ image: "/assets/tolerance/popper.jpg"
 
 <img src="/assets/tolerance/popper.jpg" width="100%">
 
-*First published in Oct 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Oct 2024 on LI</em></span><br><br>
 
 There is a lot being said and discussed recently on Freedom of Speech, fascism and Tolerance that I think it’s time I should share few thoughts on that since societies around the world are being influenced and moved on these ideas. 
 

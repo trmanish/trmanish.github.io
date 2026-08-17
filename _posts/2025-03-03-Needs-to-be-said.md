@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in May 2022 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in May 2022 on LI</em></span><br><br>
 
 1. The ‘Artificial’ in Artificial Intelligence is for a reason. Because it’s fake. AI is dumber than a rodent and AI won’t be smarter than humans. 
 

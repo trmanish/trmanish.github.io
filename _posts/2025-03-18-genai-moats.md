@@ -11,7 +11,7 @@ image: "/assets/genai_moats/pdf1.jpg"
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Oct 2024 on LI*<br><br>
+<span style="font-size: 12px;"><em>First published in Oct 2024 on LI</em></span><br><br>
 
 7 months ago, when our tech and VC brothers and sisters in SV overnight became AGI bros and sis, I wrote quietly [here](https://trmanish.github.io/2024/03/25/the-agi-myth.html) that LLMs do not have Intelligence as they cannot Reason and Plan- two key tenets of Intelligence. 
 

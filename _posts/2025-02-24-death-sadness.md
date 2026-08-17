@@ -13,7 +13,7 @@ image: "/assets/death_sadness/header.jpg"
 
 <img src="/assets/death_sadness/header.jpg" width="100%">
 
-*First published in Aug 2022 on LI*<br><br>
+<span style="font-size: 12px;"><em>First published in Aug 2022 on LI</em></span><br><br>
 
 ***Credit: Each Scene Re-Construction and art shown is created using AI***<br>
 

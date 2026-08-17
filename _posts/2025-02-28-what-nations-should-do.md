@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in May 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in May 2024 on LI</em></span><br><br>
 
 What Nations Should Do: 
 

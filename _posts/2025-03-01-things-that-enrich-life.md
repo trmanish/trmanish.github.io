@@ -215,6 +215,9 @@ Things that will truly enrich your life:
 - Don't reason your way through human emotions. Feelings aren't puzzles to be solved. 
 
 
+- Understand that sometimes the Heart needs more time to accept what the Mind already knows. The mind moves on the day it understands. The heart moves on the day it stops hoping. 
+
+
 - Get hurt without being hurtful. 
 
 

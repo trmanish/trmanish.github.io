@@ -69,7 +69,11 @@ for (let i = 0; i < subscribers.length; i += batchSize) {
   try {
     await resend.emails.send({
       from: 'Two Ticks <newsletter@twoticks.blog>',
-      to: emails,
+      // Subscribers go in bcc so no one ever sees anyone else's address.
+      // `to` still needs a value, so the visible copy is addressed to the
+      // sending mailbox itself.
+      to: 'Two Ticks <newsletter@twoticks.blog>',
+      bcc: emails,
       subject: `New Tick: ${title}`,
       html: emailHtml,
     });

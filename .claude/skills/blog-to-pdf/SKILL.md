@@ -2,8 +2,9 @@
 name: blog-to-pdf
 description: >-
   Convert a post from THIS blog (trmanish.github.io / "Two Ticks") into a PDF
-  that visually matches the live blog page exactly — same Geist font, colors,
-  sizing, date placement, and loose-list spacing. Use ONLY for posts in this
+  that visually matches the live blog page exactly — same worn-paper colour and
+  grain, Merriweather body, Playfair headings, date placement, pull-quote
+  panels, and loose-list spacing. Use ONLY for posts in this
   repo's _posts/ directory. Do NOT use for arbitrary markdown-to-PDF conversion
   (use the general md-to-pdf skill for that). Triggers: "make a pdf of this
   post", "blog to pdf", "pdf of <post title>", "convert this article to pdf".
@@ -20,24 +21,72 @@ settings so the PDF matches without re-deriving them each time.
 `_posts/` folder. For any other markdown → PDF need, use the general
 `md-to-pdf` skill instead. Do not generalize this skill.
 
+## Method 1 (PREFERRED): print the live page with the lantern lit
+
+Manish confirmed on 2026-08-17 that this is the style he wants: "keep a note of
+this pdf style.. this is good". Do this first. Only fall back to Method 2 if the
+post is not yet live.
+
+Do NOT rebuild the page's look in hand-written CSS. Load the real published page
+in Chrome and print it, so the PDF carries the actual masthead, nav, lit lantern,
+fonts, glow and footer rather than an approximation. He rejected a hand-built
+reconstruction outright, so re-deriving the styling is the wrong instinct here.
+
+Use `render-live.mjs`, in this skill's directory:
+
+```bash
+cd <scratchpad>
+ln -sfn "$(find /Users/manish/.npm/_npx -maxdepth 3 -type d -name node_modules \
+  -path '*puppeteer*' -prune -o -maxdepth 3 -type d -name node_modules -print \
+  | head -1)" node_modules          # ESM ignores NODE_PATH, so symlink instead
+node <skill>/render-live.mjs <live-post-url> <output.pdf>
+```
+
+Key points, each learned the hard way:
+- The lantern is lit by seeding `localStorage['twoticks-lamp'] = 'night'` on the
+  origin BEFORE navigating to the post, so `lamp.js` applies `.is-night` itself.
+- `page.emulateMediaType('screen')` is essential. Print media reverts the page to
+  white and throws away the whole dark theme.
+- `printBackground: true`, margins 0, and `scale` ~0.72 for a 1200px viewport.
+- Verify before printing that `document.body.classList.contains('is-night')` is
+  true and the background computes to `rgb(25, 19, 9)`. Do not assume it worked.
+- The post must actually be live (HTTP 200); check first.
+- Known artifacts: `position: fixed` puts a clipped lantern at the top of later
+  pages, and a narrower viewport gives larger text but more pages.
+
+## Method 2 (FALLBACK): rebuild in CSS, for posts not yet published
+
+Everything below reconstructs the page by hand. It produces the day theme only
+and omits the masthead, lantern and desk. Use it only when Method 1 cannot run.
+
 ## The source of truth (do not guess — mirror these)
 
-From `assets/css/style.css`:
-- Font: `Geist` (weights 300;400;700), loaded from Google Fonts. Body falls
-  back to `sans-serif`.
-- `body`: `color: #444`, `font-size: 15px`, `line-height: 1.7`, white background.
-- `h1`: `font-size: 36px`, `font-weight: 600`, `margin-top: 40px`.
+The article page is a sheet of worn paper on a desk. In the PDF the page IS the
+sheet, so the sheet's colour and grain fill the whole page (the desk wash, the
+fixed masthead, the torn `clip-path` edges and the lantern do not belong in a
+print and are deliberately left out; `clip-path` in particular would slice every
+page, not just the first).
 
-From `_layouts/post.html` the post is rendered inside:
-- `<main style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: left;">`
-- with the date printed first as `<p><strong>{{ date | date: "%B %d, %Y" }}</strong></p>`
+From `assets/css/style.css`, `body.site-page--post .article-paper`:
+- Body font `Merriweather` (300;400;700), ink `#342b23`, `font-size: 15.5px`,
+  `line-height: 1.76`, max width 800px.
+- Paper: `rgba(251,249,243,.97)` plus the three background layers (two dot
+  gradients and a 4px ruling), `background-size: 47px 43px, 59px 61px, 100% 4px`.
+- Headings `Playfair Display`, colour `#30271f`, `line-height: 1.2`; `h1` renders
+  at its clamp ceiling, `44px`.
+- Images: `filter: sepia(.04) saturate(.96)`, `box-shadow: 0 8px 22px rgba(63,39,19,.15)`,
+  no border, no radius. `.post-hero-image--short` keeps its wide crop
+  (`object-fit: cover; object-position: center 46%`).
+- Pull quotes are the inline `background-color: #fcfcfc` divs, restyled to
+  `rgba(246,242,232,.72)` parchment, Merriweather italic, `1.24em`, uneven
+  corner radius. Add `page-break-inside: avoid` so a panel never splits.
+- The date is `<p class="article-date">`: Geist, 11px, uppercase,
+  `letter-spacing: .14em`, colour `rgba(52,43,35,.56)`, `margin: 0 0 32px`.
 
-The post markdown body itself supplies the centered title
-(`<div align="center"><h1><strong>Title</strong></h1></div>`) and the italic
-byline line. Bullet lists in these posts use blank lines between items, which
-renders as a **loose list** (each item wrapped in a `<p>`) — this is what gives
-the generous vertical spacing between bullets. Preserve that; do NOT collapse
-the blank lines and do NOT add custom `p`/`li` margin overrides.
+From `_layouts/post.html` the date prints first, then the post body, which
+supplies its own centred title, hero image and italic byline. Bullet lists use
+blank lines between items (a **loose list**), which gives the generous spacing —
+preserve it, and do not add `p`/`li` margin overrides.
 
 ## Workflow
 
@@ -75,48 +124,24 @@ the blank lines and do NOT add custom `p`/`li` margin overrides.
 
 ## Frontmatter + template (copy exactly)
 
+Take the CSS block verbatim from `things-that-enrich-life-pdf.md` in the repo
+root — that file is the reference implementation and already mirrors the current
+stylesheet. The body then follows:
+
 ```markdown
 ---
 pdf_options:
   format: Letter
-  margin: 20mm 20mm
+  margin: 14mm 16mm
   printBackground: true
 css: |-
-  /* Mirror the blog stylesheet (assets/css/style.css) exactly */
-  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
-
-  body {
-    font-family: 'Geist', sans-serif;
-    background-color: white;
-    color: #444;
-    /* Mirror post.html <main style="max-width:800px;margin:40px auto;padding:20px"> */
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: left;
-  }
-
-  h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-top: 40px;
-  }
+  ... (copy the whole css block from things-that-enrich-life-pdf.md) ...
 ---
 
-**Month DD, YYYY**
+<p class="article-date">Month DD, YYYY</p>
 
-<div align="center">
-  <h1><strong>Post Title</strong></h1>
-</div>
-
-<br>
-
-*Italic byline line, if the post has one*<br><br>
-
-
-... post body copied VERBATIM from _posts/, blank lines between bullets preserved ...
+... post body copied VERBATIM from _posts/, with image src paths made relative,
+    blank lines between bullets preserved ...
 ```
 
 ## Notes & gotchas
@@ -133,10 +158,14 @@ css: |-
   bottom (e.g. `20mm 20mm` → `12mm 20mm`) and set the body `margin` to
   `0 auto` instead of `40px auto`. Regenerate and confirm with
   `pdfinfo <file>.pdf | grep Pages` until the blank page is gone.
-- Keep the Google Fonts `@import` weights identical to the blog (`300;400;700`).
-  The blog's `h1` requests weight 600, which with only 400/700 available renders
-  at 700 — matching that fallback keeps the title weight identical. Don't add a
-  `600` weight to the import.
+- Keep the Google Fonts `@import` covering Merriweather (300;400;700), Playfair
+  Display (700) and Geist (300;400;700) — the body, the headings and the date
+  line each need one of them.
+- `printBackground: true` is what renders the paper colour and grain. Without it
+  the PDF comes out plain white and the whole point is lost. Set the colour on
+  `html` as well as `body` so it fills the full page, not just the content box.
+- Generation takes a while (Chrome fetches the fonts); run it in the background
+  rather than letting a two-minute foreground timeout kill it.
 - If you edit the post content, update BOTH `_posts/<post>.md` and the
   `<slug>-pdf.md` so the blog and PDF stay in sync.
 - Output PDF naming convention: Title in `Title_Case_With_Underscores.pdf`

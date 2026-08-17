@@ -60,27 +60,41 @@ if (subscribers.length === 0) {
 
 console.log(`Sending "${title}" to ${subscribers.length} subscriber(s)...`);
 
-// Send in batches of 50
-const batchSize = 50;
+// One message per subscriber, so nobody can see anyone else's address and
+// each copy is a genuine one-to-one email. Resend's batch endpoint takes up
+// to 100 messages per call.
+const batchSize = 100;
+let sent = 0;
+let failed = 0;
+
 for (let i = 0; i < subscribers.length; i += batchSize) {
   const batch = subscribers.slice(i, i + batchSize);
-  const emails = batch.map(s => s.email);
+  const batchNumber = Math.floor(i / batchSize) + 1;
+
+  const messages = batch.map((s) => ({
+    from: 'Two Ticks <newsletter@twoticks.blog>',
+    to: s.email,
+    subject: `New Tick: ${title}`,
+    html: emailHtml,
+  }));
 
   try {
-    await resend.emails.send({
-      from: 'Two Ticks <newsletter@twoticks.blog>',
-      // Subscribers go in bcc so no one ever sees anyone else's address.
-      // `to` still needs a value, so the visible copy is addressed to the
-      // sending mailbox itself.
-      to: 'Two Ticks <newsletter@twoticks.blog>',
-      bcc: emails,
-      subject: `New Tick: ${title}`,
-      html: emailHtml,
-    });
-    console.log(`Sent batch ${Math.floor(i / batchSize) + 1} (${emails.length} emails)`);
+    // The SDK reports API failures in `error` rather than throwing, so a
+    // failed batch would otherwise look like a success.
+    const { error } = await resend.batch.send(messages);
+    if (error) throw error;
+
+    sent += messages.length;
+    console.log(`Sent batch ${batchNumber} (${messages.length} emails)`);
   } catch (error) {
-    console.error(`Failed batch ${Math.floor(i / batchSize) + 1}:`, error);
+    failed += messages.length;
+    console.error(`Failed batch ${batchNumber}:`, error);
   }
 }
 
-console.log('Newsletter sent.');
+console.log(`Newsletter sent to ${sent} subscriber(s)${failed ? `, ${failed} failed` : ''}.`);
+
+if (sent === 0) {
+  console.error('No newsletter emails were delivered.');
+  process.exit(1);
+}

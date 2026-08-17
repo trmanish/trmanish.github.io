@@ -1,6 +1,6 @@
 ---
 title: "The Greater Fool is the Only Thing Crypto Ever Built"
-date: 2026-08-17
+date: 2026-08-16
 layout: post
 published: true
 ---

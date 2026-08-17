@@ -634,6 +634,23 @@ body.site-page--post.is-closing { opacity: 0; }
     object-position: center 46%;
 }
 
+/* Screenshots and charts carried over from LinkedIn arrive at full article
+   width, which lets a tall one push the writing off the screen. Cap both
+   dimensions and let the aspect ratio settle inside them: no object-fit
+   crop here, since these images are mostly text and charts that must stay
+   whole to stay readable. */
+.site-page--post .article-paper .post-inline-image {
+    width: auto;
+    max-width: min(74%, 620px);
+    max-height: clamp(230px, 46vw, 430px);
+}
+
+@media (max-width: 640px) {
+    .site-page--post .article-paper .post-inline-image {
+        max-width: 100%;
+    }
+}
+
 .site-page--post .article-paper div[style*="background-color: #fcfcfc"] {
     background: rgba(246, 242, 232, .72) !important;
     border-color: rgba(102, 67, 39, .14) !important;

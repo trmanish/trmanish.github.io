@@ -46,7 +46,7 @@ As I have suggested many times in past:
 
 As I have been doing last few articles of mine, I would start by highlighting the Principles which act as my Sentinel in Life. Those are the yardsticks, which nudge me to see things, the way they are.
 
-<img src="/assets/sv_serfdom/img_01.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_01.webp">
 
 With that out of the way, **Let's Begin!**
 
@@ -60,13 +60,13 @@ Let's start!
 
 Last couple of years, especially starting 2021, you might have been inundated with news of the latest "technology" that is going to revolutionize the world, that is far better, "cares about you" and is overall a "better internet" we all wanted.
 
-<img src="/assets/sv_serfdom/img_02.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_02.webp">
 
 Some ppl call it Web3, some refer to this "internet revolution" as Metaverse. The narrative is so popular that even a company like Facebook, which was looking to dilute and keep some distance between the company and the brand "Facebook", which last few years has had more share of negative news to it's name than positive, [ended up choosing Meta as their new name for the company.](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/)
 
 If you google on the term "Web3" or "Metaverse", I am sure, you will find myriads of articles defining in their own way, what it means. For example, [here's one such:](https://www.momint.so/post/how-web3-can-change-the-world#:~:text=Web3%20(which%20is%20short%20for,to%20both%20builders%20and%20searchers.)
 
-<img src="/assets/sv_serfdom/img_03.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_03.webp">
 
 Sounds very promising and ethical I must say. But is that really so?
 
@@ -98,13 +98,13 @@ The activity here isn't something that you are supposed to do as part of your wo
 
 You like exercising and working out?. What if you can earn if you "move" your body. **That's Move-to-Earn(M2E)** now. M2E projects like STEPN (GMT), [FitMint ($FITT)](https://fitmint.io/), see users earn rewards for activities like walking, jogging and running.
 
-<img src="/assets/sv_serfdom/img_04.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_04.webp">
 
 Don't like moving your body from the couch and want some opportunity to make money, while keep lying on your couch? Fret not. Web3 has you covered there too.
 
 Contrasting with the Move-to-Earn concept, the **Watch-to-Earn (W2E)** sector claims to reward the couch potatoes for something that most internet users do every day: Watch videos mindlessly.
 
-<img src="/assets/sv_serfdom/img_05.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_05.webp">
 
 But hold on? We aren't done yet. Isn't Web3 supposed to be all inclusive for everyone in the economy? What about those who like doing nothing. No activity, no hobby, no entertainment. Excluding them would be bad isn't it?
 
@@ -114,7 +114,7 @@ Yes, Relax. Web3, [also has a project, where you get to make money](https://medi
 
 **Relax-to-Earn (R2E).**
 
-<img src="/assets/sv_serfdom/img_06.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_06.webp">
 
 If you don't want to relax, as you might find that even a tiring thing to do, you can just sleep. Web3 has you covered there too and [let's you make money when you sleep.](https://sleepfuture.com/)
 
@@ -122,7 +122,7 @@ Literally. No joke. Just sleep!
 
 That's **Sleep-to-Earn (S2E).**
 
-<img src="/assets/sv_serfdom/img_07.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_07.webp">
 
 In essence, you now get to make money, while you play, move, eat, sleep, relax. I am sure someone in Web3 is even innovating to help you make money while you **shit- Shit-to-Earn.**
 
@@ -134,9 +134,9 @@ Btw, I just made that category on the fly while writing this. But Web3 innovator
 
 There is a [SHIT TO EARN Web3 Project already](https://technext.ng/2022/08/22/shit-to-earn/).
 
-<img src="/assets/sv_serfdom/img_08.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_08.webp">
 
-<img src="/assets/sv_serfdom/img_09.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_09.webp">
 
 *So what's wrong in all this? After all, if you get to participate in an activity that is creating an "economy" of its own, while also reaping the monetary rewards for doing that activity, isn't that a sensible thing?*
 
@@ -152,7 +152,7 @@ Lets peel the onions of how this Web3, the X-to-Earn model actually works:
 
 The whole X-to-Earn phenomenon began with Axie Infinity, a Blockchain Game launched in 2018, which was considered the pioneer of X-to-Earn: Play-to-Earn (P2E), that became peak mania in 2021 crypto craze.
 
-<img src="/assets/sv_serfdom/img_10.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_10.webp">
 
 To participate in the game, one is required to purchase the in-game assets to participate, either in the ***form of inflationary SLP and AXS tokens or Axie NFTs. ***
 
@@ -163,7 +163,7 @@ The reason I am sharing some details on how the Axie P2E game worked is because 
 - You as a participant, is first **REQUIRED** to purchase an NFT or token of the project to be allowed to participate and see earning potential.
 - This is done by you spending your $ or your country's fiat currency, via MetaMask, other Crypto exchanges, and convert those into an NFT or certain tokens of the project. In the case of FITMINT, a web3 project in Move-to-Earn category, [proudly funded by General Catalyst and considered an innovation in Indian market](https://www.generalcatalyst.com/gcamplified/our-investment-in-fitmint-crypto-meets-fitness-india-web3-meets-world) by it's partners Anand Chandreshekaran and Niko Bonatsos, you need to buy an NFT of a sneaker, for 170 MATIC. At current price of $0.75/MATIC, you need to buy an NFT of a sneaker, for **$127 USD ~= 10K INR.**
 
-<img src="/assets/sv_serfdom/img_11.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_11.webp">
 
 The cost of a real Nike Sneaker, which you can actually wear on your feet and help you in your actual running, is even lesser than that, with online shops like Amazon and Flipkart in India, selling even lower.
 
@@ -207,13 +207,13 @@ This is where, new ppl are encouraged to play this Web3 "game". Ppl who got suck
 
 **Does this remind of something?**
 
-<img src="/assets/sv_serfdom/img_12.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_12.webp">
 
 Without the flow of new money, the token has no price. No value. It crashes. It only has a price because it is put on an unregulated crypto exchange, where somehow you can suck in new money.
 
 Without new money flowing in, Ppl who got these tokens for actual money they spent, now lose everything. And the whole scheme unravels.
 
-<img src="/assets/sv_serfdom/img_13.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_13.webp">
 
 This is in nutshell, every X-to-Earn Project is.
 
@@ -265,7 +265,7 @@ We also leveraged oxen and bulls, to now help us irrigate land, to grow food, in
 
 Until 1800, our primary source of **Energy for heating was largely wood, a biomass**. For other kinetic energy, we relied on muscle energy from animals or our own.
 
-<img src="/assets/sv_serfdom/img_14.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_14.webp">
 
 - **From Biomass, to Coal**
 
@@ -275,15 +275,15 @@ Sometime in mid to late 1800s, our transition from Wood to Coal started happenin
 
 Post mid 1900's we started increasing our reliance on Oil and natural gas (a bye product of drilling oil). Advantage of Oil was that it was in liquid form, so quite easy to use in various applications especially for Jet fuel where Coal could not efficiently help power the engine for jets due to its solid nature of the fuel.
 
-<img src="/assets/sv_serfdom/img_15.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_15.webp">
 
 Oil also brought itself with other refined products like Gasoline, Kerosene for heating, Naptha and Petroleum based products that are used almost in every product we use in life. Petroleum led to creation of polymers and plastics that drives medical equipments/devices.
 
-<img src="/assets/sv_serfdom/img_16.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_16.webp">
 
 As you see, since thousands of years, our species has slowly moved from an energy source that used to be [**low on Energy Density to a higher Energy Density fuel**](https://www.engineeringtoolbox.com/fossil-fuels-energy-content-d_1298.html). That has propelled us to have more energy at our disposal in the last 50 years than anytime ever in our history.
 
-<img src="/assets/sv_serfdom/img_17.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_17.webp">
 
 To put this into context how the changes have happened over a period of 200 years:
 
@@ -331,7 +331,7 @@ On an average, inhabitants of Earth now have **700 times more useful energy**at 
 
 Our entire civilization, our species has been able to survive, grow, flourish only because of being able to produce increasing amount of useful energy at our disposal due to transitioning [to Higher Energy Density Fuel compared](https://drexel.edu/~/media/Files/greatworks/pdf_sum10/WK8_Layton_EnergyDensities.ashx) to what we were using earlier.
 
-<img src="/assets/sv_serfdom/img_18.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_18.webp">
 
 With more increased energy, we have been able to grow far more food at a far lesser time than we could have ever imagined two centuries ago.
 
@@ -363,13 +363,13 @@ This was only possible due to access to Natural Gas, a fossil fuel we have been 
 
 However, post 2000s, with the introduction of "renewables" in the form of source of Energy, this is the first time our species is moving **from Higher Energy Density Fuel to Lower Energy Density fuel that is also intermittent source of Energy**.
 
-<img src="/assets/sv_serfdom/img_19.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_19.webp">
 
 A population that even if assumed won't grow, would still need more energy as many countries in Developing World move up the Human Development Index. As developing countries start shrinking their population % currently in poverty, the demand of energy naturally goes up. Ppl now want to fly, buy that refrigerator, better Air Conditioning Systems at home and so on.
 
 **There is a population of 5.5B ppl** in India and other developing countries that is on the verge of requiring exponential increase in Energy Demand as their Human Development Index reaches where China currently is.
 
-<img src="/assets/sv_serfdom/img_20.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_20.webp">
 
 Yet, somehow, the world has been convinced by govts, climate activists and even many "research" scientists that "renewables" in solar and wind will still lead to abundant energy needs for our population.
 
@@ -377,49 +377,49 @@ The reality is totally opposite. Not only Solar and Wind are highly low energy d
 
 Nuclear has the [highest capacity factor of above 95% while Solar and Wind crawl around 25% even in the best of conditions](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_07_b) (highest sun, and wind availability).
 
-<img src="/assets/sv_serfdom/img_21.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_21.webp">
 
 In Germany, Solar is only around 12% capacity factor, meaning **Germany's solar panels produce electricity only about 12% of the time.**
 
 No doubt, **Germany is currently reeling under Energy Crisis** [that their industries are collapsing as they don't have energy to run factories](https://www.bloomberg.com/news/articles/2022-07-03/germany-s-union-head-warns-of-collapse-of-entire-industries).
 
-<img src="/assets/sv_serfdom/img_22.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_22.webp">
 
 In fact, the entire Europe is facing an unprecedented energy crisis with threat to mobile networks [shutting down and a run for firewood](https://t.co/cWmOYohVPd), something I wrote months ago will happen.
 
-<img src="/assets/sv_serfdom/img_23.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_23.webp">
 
-<img src="/assets/sv_serfdom/img_24.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_24.webp">
 
-<img src="/assets/sv_serfdom/img_25.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_25.webp">
 
-<img src="/assets/sv_serfdom/img_26.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_26.webp">
 
 Switzerland is even making bizarre request to its citizens to "shower together" this winter to conserve energy and if not followed, ppl can end up in prison.
 
-<img src="/assets/sv_serfdom/img_27.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_27.webp">
 
 And low and behold, ironically Germany's source of energy in the country is now coming mainly from Coal and other fossil fuels. A country that spent $0.5T last 20 years in Solar and Wind.
 
 **Wind and Solar are just not working when it's needed.**
 
-<img src="/assets/sv_serfdom/img_28.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_28.webp">
 
 But it's not just Germany. You can look at Netherlands, Poland, Belgium and France. All have barely any power being produced from Wind and Solar.
 
-<img src="/assets/sv_serfdom/img_29.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_29.webp">
 
-<img src="/assets/sv_serfdom/img_30.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_30.webp">
 
 It's Nuclear, Coal, Natural Gas that is helping these countries get any energy.
 
 In fact, if you take last 30 days across Europe for various countries, then here's all of Wind (on shore and off shore):
 
-<img src="/assets/sv_serfdom/img_31.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_31.webp">
 
 And here's Solar Power for 30 days
 
-<img src="/assets/sv_serfdom/img_32.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_32.webp">
 
 Notice, how on an average (Mean) is such a tiny percent of Max Installed Capacity. It's reaching barely 20%.
 
@@ -431,19 +431,17 @@ Everything in life needs Energy. To get Energy, you also need some form of Energ
 
 You want Energy source, which are able to provide more net Energy, than it requires to generate them. This is what is measured by EROI. And you can see where we stand when it comes to all Energy Sources.
 
-<img src="/assets/sv_serfdom/img_33.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_33.webp">
 
 None of this is surprising to me. I have been writing about this for months, to no avail.
-
-<img src="/assets/sv_serfdom/img_34.webp" width="100%">
 
 And I haven't even come to the cost of electricity that has surged so high for ppl in Europe that not only small businesses are getting crippled, residents can no longer afford to have such high electricity cost. And we haven't even entered Winters yet.
 
 The warnings have already started in Europe and UK, as written months ago.
 
-<img src="/assets/sv_serfdom/img_35.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_35.webp">
 
-<img src="/assets/sv_serfdom/img_36.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_36.webp">
 
 **This is just simple physics , but it is remarkable how often these realities are ignored**.
 
@@ -469,21 +467,21 @@ To run factories, transportation, produce food, we need Energy that is outside o
 
 **A mere 5% reduction. $Trillions of money spent**. **50 years**.
 
-<img src="/assets/sv_serfdom/img_37.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_37.webp">
 
 If you think this is mainly due to Developing World's dependence on fossil fuel as primary source of Total Energy in Economy, let me also share the actual reality:
 
-<img src="/assets/sv_serfdom/img_38.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_38.webp">
 
 The "Green Energy" movement tells you that Battery Electric Vehicle(BEV) is the future. It will help us not be dependent on gasoline and crude oil, which is under the control of some "despots" in the World.
 
 What they however don't tell you, that all the materials needed to fuel this "green movement" not only require more fossil fuels to mine these metals from Earth, which destroys the earth's surface, de-contaminates water bodies near by, but these are also mainly concentrated in majority one country. Talk about taking control of our energy needs in our hands.
 
-<img src="/assets/sv_serfdom/img_39.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_39.webp">
 
 I haven't even talked about the raw materials that go behind building those wind turbines, solar panel (made out of dirty coal from China). But just a small example, a 3MW Wind Turbine, contains up to 4.7 tons of copper. Half is from the cable and wiring, 24% from the turbine/power generation components, 4% from transformers, and 19% from turbine transformers. **Onshore wind farms use approximately 7,766 lbs. of copper per MW**.
 
-<img src="/assets/sv_serfdom/img_40.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_40.webp">
 
 All of this copper is mined from Earth using fossil fuels. It also makes shortage of copper for other areas of economy.
 
@@ -493,11 +491,11 @@ Another pervasive belief is that a BEV is devoid of fossil fuel since it's run o
 
 However even when all of these are made out of fossil fuels, somehow, magically the Hollow Abstraction starts spreading narrative that BEVs will be cheaper for us as gasoline cost goes high.
 
-<img src="/assets/sv_serfdom/img_41.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_41.webp">
 
 Here's a reality check:
 
-<img src="/assets/sv_serfdom/img_42.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_42.webp">
 
 BEVs go expensive as fossil fuels go expensive.
 
@@ -513,13 +511,13 @@ Because it not only needs to keep its existing fossil fuel power plant running t
 
 This is exactly what Europe is currently doing by rushing for coal and wood as Solar and Wind reliance crippled the energy supply.
 
-<img src="/assets/sv_serfdom/img_43.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_43.webp">
 
 But then, 40% of what Europe used to call Renewable Energy all these years was basically a hood to cover up the reality behind it.
 
 **40% of the "renewable" energy** for [EU is nothing but cutting down trees in America and breaking it into wooden pellets](https://www.dailymail.co.uk/news/article-11209335/Historic-U-S-southeast-hardwood-forests-threatened-rapacious-11B-wood-pellet-industry.html), transported across the ocean to EU. Cutting down millions of trees, is somehow known as good for climate as "wood" happens to be renewable. Because trees grow back in seconds.
 
-<img src="/assets/sv_serfdom/img_44.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_44.webp">
 
 This has been going on for years in the name of "renewable energy".
 
@@ -535,7 +533,7 @@ But then Greta never questions these as its called "renewables and good for plan
 
 In fact she continues spreading mis-information on how Natural Gas and Nuclear are bad for us.
 
-<img src="/assets/sv_serfdom/img_45.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_45.webp">
 
 If there is one reason you need to make sure kids stay in school , study and learn things, this is the one.
 
@@ -563,7 +561,7 @@ There are many things I write, where I wish I turn out to be wrong. Heart wishes
 
 When [the NYTimes story](https://www.nytimes.com/2022/06/11/world/africa/somalia-drought-hunger.html) broke out on tens of thousands of kids in Africa dead due to food shortage as fertilizer price went up, my heart sank. Big.
 
-<img src="/assets/sv_serfdom/img_46.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_46.webp">
 
 It was not the fault of those kids. It was not the fault of their parents living in Africa.
 
@@ -587,7 +585,7 @@ At a basic level, a currency is a function of a country's growth(GDP) and debt. 
 
 The recent move higher of USD, if seen in detail, will help analyze that USD appreciation right now is largely with respect to other G7 currency's depreciation namely GBP, Euro and Japanese Yen.
 
-<img src="/assets/sv_serfdom/img_47.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_47.webp">
 
 With respect to Emerging Economies currencies, USD appreciation is not that pronounced vs G7 currencies.
 
@@ -670,7 +668,7 @@ Actual VCs in Sarah Tavel did write [how you can really nail down "cost structur
 
 The current VC gurus in Bill Gurley even told you how every other person is wrong on [valuation and misses it by a Mile, including those whose bread and butter is to](https://abovethecrowd.com/2014/07/11/how-to-miss-by-a-mile-an-alternative-look-at-ubers-potential-market-size/) teach valuation and how his investment thesis is the right one
 
-<img src="/assets/sv_serfdom/img_48.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_48.webp">
 
 Talk about really missing it by a Mile.
 
@@ -712,7 +710,7 @@ And that's exactly what was done.
 
 Suddenly it was now evil to support "fossil fuels" as they somehow going to destroy the planet while the only solution floated was Solar and Wind.
 
-<img src="/assets/sv_serfdom/img_49.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_49.webp">
 
 Silicon Valley took over the mantle and now you were told that existing system of automakers is bad as they are enablers of "fossil fuel merchants" while the only system that is going to save the planet is an automaker which runs on 1 ton Battery, made out of fossil fuel, needing you to spend $100k to begin with, while all existing $20K EV cars are no comparison even if a car which is 4-5x costlier than them, is far superior quality and drive. You were made to focus on the feature comparison, you were made to forget the cost factor.
 
@@ -733,8 +731,6 @@ And it worked.
 All these new systems on the surface did "**appear"** to work for ppl. It was not difficult to get convinced that you are making money in driving your own car, renting your own house, by being your own bank. After all they all were seeing a sudden surge of growth. The economy binged on these whole decade.
 
 But all of that was the Hollow Abstraction.
-
-<img src="/assets/sv_serfdom/img_50.webp" width="100%">
 
 Some of these ideas were actually cool. It's pretty sensible to not wait for a cab arrival and not knowing where they are until they arrive, in an era where we have GPS on our phones. The new innovation in mobile phones, made that obvious to use it going forward to make existing system more efficient.
 
@@ -762,46 +758,46 @@ But then if you observe closely, you will notice the trick.
 - You were told **fiat money is evil** and crypto and Bitcoin is the only sound money. An Inflation Hedge. Digital Gold. Yet, when real Inflation actually came, Bitcoin was the first to collapse.
 - You were told by Central Bankers and even famous Nobel Laureate in Economics, Paul Krugman, whole of last year, that **Inflation is transitory** and it's not going to be big inflation. Yet, the world is facing highest inflation in 40 years and Central Bankers and the said "Nobel Laureate" nonchalantly telling you "Sorry, we were wrong". But somehow, [someone like me with no Economics academic background knew The Great Inflation is coming](https://www.linkedin.com/posts/trmanish_the-move-in-us-treasury-yield-says-that-the-activity-6810272167557783552-z2vu?utm_source=share&utm_medium=member_desktop) early last year?
 
-<img src="/assets/sv_serfdom/img_51.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_51.webp">
 
 - You were told, that the **traditional automakers are dead** and only new age EVs like Tesla will survive by perpetual scammers of Silicon Valley , who took millions for a ride on their scam SPACs, yet, the traditional automakers are thriving and overtaking in EVs while Tesla is barely able to come up with more fraud narratives as its pyramid starts to unravel.
 
-<img src="/assets/sv_serfdom/img_52.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_52.webp">
 
-<img src="/assets/sv_serfdom/img_53.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_53.webp">
 
-<img src="/assets/sv_serfdom/img_54.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_54.webp">
 
 - You were told, Climate Crisis is going to kill everyone on the planet and will destroy ecological systems including Great Barrier Reef, yet, [years later you see the highest Coral cover in decades.](https://www.reuters.com/business/environment/parts-australias-great-barrier-reef-show-highest-coral-cover-36-years-2022-08-04/)
 
-<img src="/assets/sv_serfdom/img_55.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_55.webp">
 
 - You were told a new **magical transportation system of HyperLoop** will change how we commute around the world, yet, reality is it was a scam, the core purpose of which [was to undermine rail projects in California](https://amp.fresnobee.com/opinion/editorials/article264451076.html), so that ppl cannot benefit from having a high speed public rail system and end up buying more cars.
 
-<img src="/assets/sv_serfdom/img_56.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_56.webp">
 
 - You were told, how **Neuralink will cure ppl of brain ailments**, while reality it is just a Theranos 2.0 with even worse consequences of killing innocent animals.
 - You were told **Full Self Driving cars are here since 2015**, yet many are killed in the name of Autonomous driving while billions were made in that fraud.
 - You were told by famous AI experts that how AI is the "new electricity" even when limited AI educated ppl like me claimed otherwise years ago. Yet, years later, one of those scientists [quietly tells you AI is not what they had been propagating for years.](https://www.zdnet.com/article/metas-ai-guru-lecun-most-of-todays-ai-approaches-will-never-lead-to-true-intelligence/)
 
-<img src="/assets/sv_serfdom/img_57.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_57.webp">
 
 - You were told, this Inflation , the gas prices, **everything is because of "Putin's War"**, yet, inflation has been rising even before that.
 - You were told **fossil fuels are evil**and "we will make sure we bring an end to the fossil fuels". Yet, when the energy cost goes high, due to preventing investment in fossil fuels exploration, you see same ppl imploring Saudis to pump more fossil fuels in-spite of having access to one of the largest shale oil resources domestically. Because pumping oil in America leads to climate crisis, but asking Saudis to do that doesn't cause climate crisis.
 
-<img src="/assets/sv_serfdom/img_58.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_58.webp">
 
 - You were told all "my SPACs" are better than Warren Buffet's investing, only to dump all of them on public and lie.
 
-<img src="/assets/sv_serfdom/img_59.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_59.webp">
 
 - You were even **told by Wall Street,** [that they will prevent companies investing](https://www.newyorker.com/news/daily-comment/citing-climate-change-blackrock-will-start-moving-away-from-fossil-fuels) in fossil fuel, a major cause of supply shortage of fossil fuels now, yet, when the same disinvestment led to Energy Crisis, the same Wall St, is [now asking to stay](https://mitsloan.mit.edu/ideas-made-to-matter/blackrocks-larry-fink-dont-divest-fossil-fuels-stay-game).
 
-<img src="/assets/sv_serfdom/img_60.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_60.webp">
 
 Every one of these narratives running for years, didn't come true as told to you. And everyone of them, told you years later:
 
-<img src="/assets/sv_serfdom/img_61.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_61.webp">
 
 They were not Wrong.
 
@@ -815,25 +811,25 @@ For those who are a bit aware, [you might have heard of Sri Lanka, as a country'
 
 Those who are slightly more aware, would know that Sri Lanka collapsed because of "green dogma" of asking farmers in the country to stop using fertilizers to grow crops and use organic manure.
 
-<img src="/assets/sv_serfdom/img_62.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_62.webp">
 
 But if you dig deep, you would realize, the "green dogma" run by Sri Lanka's President was not some random event.
 
 He was made to follow [an "ESG activist", Vandana Shiva, in Sri Lanka](https://www.humanprogress.org/sri-lanka-is-a-wake-up-call-for-eco-utopians/), something World Economic Forum, has been propagating to world since years.
 
-<img src="/assets/sv_serfdom/img_63.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_63.webp">
 
 Of course, covid restrictions, economy going down, also exacerbated the crisis. But the impact of forcing the farmers in the country to not use fertilizers in the name of "saving climate" led to a huge collapse in country's GDP. And by now, from our de-tour on Energy above, you would have learnt how 50% of our food is possible only because of Nitrogen provided to crops via fertilizers. You take ammonia from natural gas away, 50% of the world's population will die immediately.
 
 When the country collapsed, **WEF, quietly removed the post they were propagating on "green narrative" from their website for years.**
 
-<img src="/assets/sv_serfdom/img_64.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_64.webp">
 
-<img src="/assets/sv_serfdom/img_65.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_65.webp">
 
 But this is the same World Economic Forum, which talks of "saving climate" and taxing commercial airliners for "emissions", yet, very unabashedly thinks [private jets of rich ppl flying in Europe will be tax exempted for any emission](https://www.argusmedia.com/en/news/2231434-eu-draft-exempts-private-jets-cargo-from-jet-fuel-tax).
 
-<img src="/assets/sv_serfdom/img_66.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_66.webp">
 
 The same rich "elites" who fly into Davos in their private jets from their multiple oceanside homes, yet they tell you if you cook food using fossil fuels, the world is going to drown and you are not doing your part of "saving planet".
 
@@ -909,7 +905,7 @@ What are we actually creating? Mis-Information?
 
 Silicon Valley has now very quietly, brushed aside and hacked the whole definition of **what exactly Building means** even when it came from a person in Steve Jobs, whose name, current age Silicon Valley ironically like to use so often. But never learnt what exactly "building" means.
 
-<img src="/assets/sv_serfdom/img_67.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_67.webp">
 
 Now, this "building" is mainly so you can be again used as the ultimate exit liquidity for them to grift off your collective misery.
 
@@ -951,13 +947,11 @@ Its us, our greed, our fallibility as a species that creates and spreads mis-inf
 
 Yet, we ignore that. We have consistently attempted to spread more misinformation and use our position to enrich ourselves by spreading consistently wrong narratives to **hype a field where we work.**
 
-<img src="/assets/sv_serfdom/img_68.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_68.webp">
 
 Even if the hype, the hyperbole is outrageously wrong.
 
 Even if our own enablement of lies and fraud would lead to getting many ppl killed.
-
-<img src="/assets/sv_serfdom/img_69.webp" width="100%">
 
 Yet, no one cares.
 
@@ -971,11 +965,11 @@ Because it helps run our grift. Helps enrich ourselves, even if the narrative is
 
 Everyone is stabbing everyone else on the back.
 
-<img src="/assets/sv_serfdom/img_70.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_70.webp">
 
 VC and tech bros enable a false narrative and praise [bigger frauds of Silicon Valley](https://www.linkedin.com/posts/trmanish_things-to-happen-this-decade-bitcoin-activity-6934355875025362944-fOsy/?utm_source=share&utm_medium=member_desktop) who
 
-<img src="/assets/sv_serfdom/img_71.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_71.webp">
 
 have been running an entire [pyramid on lies and Hollow Abstractions](https://twitter.com/Tweetermeyer/status/1527658189784854528?s=20&t=7akYMdKayo_CalMbP2AuDw), as it helps them get to be on the "better" side of public. Only to later cheat them with their worthless SPACs or pump and dump their fraud EV Trucking company.
 
@@ -1135,7 +1129,7 @@ You want your company to appear valuable and doing something really "great work"
 
 Just pump up the price of its stock. Doesn't matter how. By hook or by crook. By outright lies and fraud. Doesn't matter. Just keep the Stock price up.
 
-<img src="/assets/sv_serfdom/img_72.webp" width="100%">
+<img class="post-inline-image" src="/assets/sv_serfdom/img_72.webp">
 
 And suddenly everyone will start questioning their own all very valid scepticism, because the Price is up. As it now makes them think that the Crowd must be knowing something which they don't. You let the crowd take over. You then get a Tesla.
 

@@ -102,7 +102,7 @@ css: |-
   h1, h2, h3 { page-break-after: avoid; }
 ---
 
-<p class="article-date">August 17, 2026</p>
+<p class="article-date">August 16, 2026</p>
 
 <div align="center">
   <h1><strong>The Greater Fool is the Only Thing Crypto Ever Built</strong></h1>

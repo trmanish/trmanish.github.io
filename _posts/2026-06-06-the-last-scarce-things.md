@@ -2,6 +2,8 @@
 title: "The Last Scarce Things"
 date: 2026-06-06
 layout: post
+featured: true
+featured_order: 4
 published: true
 image: "/assets/last_scarce_things/ai-pilled.jpeg"
 ---

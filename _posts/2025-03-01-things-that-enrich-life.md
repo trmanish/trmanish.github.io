@@ -2,6 +2,8 @@
 title: "Things that Enrich Life"
 date: 2026-08-07
 layout: post
+featured: true
+featured_order: 2
 image: "/assets/things_enrich_life/header-sketch.webp"
 ---
 

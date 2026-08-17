@@ -2,8 +2,6 @@
 title: "Thoughts on WeWork"
 date: 2019-11-06
 layout: post
-featured: true
-featured_order: 5
 image: "/assets/thoughts_on_wework/headline_image.jpeg"
 ---
 

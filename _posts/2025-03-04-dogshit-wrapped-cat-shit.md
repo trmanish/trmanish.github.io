@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Jan 2022 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Jan 2022 on LI</em></span><br><br>
 
 Web3(whatever that means) is dog shit wrapped in cat shit sold under the narratives of an open “decentralized internet” 
 

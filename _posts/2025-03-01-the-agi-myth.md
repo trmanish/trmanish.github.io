@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Mar 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Mar 2024 on LI</em></span><br><br>
 
 There is so much talks of Intelligence, AGI, the “AI danger” and even the plethora of Startup ideas driven by some LLM, that I am going to share few lines and my take on this topic from my draft article on my blog. 
 

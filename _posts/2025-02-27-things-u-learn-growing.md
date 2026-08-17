@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Jun 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Jun 2024 on LI</em></span><br><br>
 
 As you mature, you realize there were few things you wish you were taught in high school that could make the world more peaceful and joyous around you:
 

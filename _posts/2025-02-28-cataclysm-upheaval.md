@@ -10,8 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Apr 2024 on LI*<br><br>
-
+<span style="font-size: 12px;"><em>First published in Apr 2024 on LI</em></span><br><br>
 
 I think somewhere in the cacophony coming out of Valley on the “impending” AGI that will allegedly unleash a remarkable productivity growth (trillions as per hype factory of BCGs of the world), the actual real issue which gets completely missed and ignored due to this “artificial optimism” is the cataclysmic upheaval that the Societies are about to witness. 
 

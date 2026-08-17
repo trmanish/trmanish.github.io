@@ -10,7 +10,7 @@ layout: post
 
 <br> <!-- Adds extra spacing -->
 
-*First published in Apr 2022 on LI*<br><br>
+<span style="font-size: 12px;"><em>First published in Apr 2022 on LI</em></span><br><br>
 
 This is not a popular opinion, however this is how I see it.
 

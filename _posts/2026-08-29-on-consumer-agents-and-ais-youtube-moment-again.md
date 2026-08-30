@@ -131,7 +131,7 @@ AI leading to YouTube's yet another YouTube Moment.
 
 ### In Conclusion
 
-Both Wabi and Instinct, in my personal conviction, will be declared dead. Wabi already is, and their founders, like any optimistic founders, have not yet admitted it. Instinct will take a year or so to get there.
+Both Wabi and Instinct, in my personal opinion and regrettably so, as my heart wants both of them to succeed while my brain says otherwise, will fail to get consumer adoption. The same fate that unfortunately befell agentic browsers. Wabi is already there, and their founders, like any optimistic founders, have not yet admitted it. Instinct will take a year or so to get there.
 
 We will witness AI leading to YouTube's yet another YouTube Moment. Software's YouTube Moment, in my opinion, will never arrive.
 

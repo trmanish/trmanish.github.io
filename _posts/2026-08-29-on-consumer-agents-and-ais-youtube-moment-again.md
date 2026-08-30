@@ -15,7 +15,7 @@ For the last year or so, there has quietly been a revival of consumer AI interes
 
 The interest was latent and tacit until a couple of weeks ago, when the frenzy came out in the open with Instinct's $250M raise at around a $2.5B valuation.
 
-Last year it was the high interest in another consumer AI startup, Wabi, a personalized software as mini-apps creation app.
+Last year it was the high interest in another consumer AI startup, Wabi, a personalized software as mini-apps creation product.
 
 So, as I was expecting a few months ago, consumer AI, which has been a pariah for the last four years due to the over excitement in automating every enterprise workflow with B2B AI startups, is now rising from the ashes.
 
@@ -27,7 +27,7 @@ I should begin by congratulating Instinct for lighting that fire.
 
 The current thesis, as I understand it in Silicon Valley, is twofold.
 
-**The Wabi Thesis.** We are entering Software's YouTube Moment, as very articulately laid out by a16z's Anish Acharya last year when they invested $20M in Wabi's seed. The simple idea is that just like with YouTube, everyone got empowered to create their own videos and a whole creator economy opened up. With AI, people will create their own personalized software, mini apps as Wabi lays it out, and they won't need to go and download other people's apps.
+**The Wabi Thesis.** We are entering [Software's YouTube Moment](https://a16z.com/softwares-youtube-moment-is-happening-now/), as very articulately laid out by a16z's Anish Acharya last year when they invested $20M in Wabi's seed. The simple idea is that just like with YouTube, everyone got empowered to create their own videos and a whole creator economy opened up. With AI, people will create their own personalized software, mini apps as Wabi lays it out, and they won't need to go and download other people's apps.
 
 **The Instinct Thesis.** Personal background agents that automate all your personal tasks, running through a universal iMessage or text interface, are the future of the consumer AI experience. It lays out a compelling argument that after more than fifteen years there is an app fatigue, and since AI agents can work in the background the way your own personal human assistant would, "UI is pre AI" and no UI is the future.
 

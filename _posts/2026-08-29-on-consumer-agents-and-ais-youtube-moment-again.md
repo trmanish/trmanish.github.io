@@ -85,7 +85,7 @@ That is the reason it is easier for people to yap on social media and become an 
 
 ### Why Instinct Fails
 
-Similarly, in spite of the near consensus and the hype around Instinct in SF these last few weeks, I will take the same position, that it will be a dead man walking a year from now.
+Similarly, in spite of the near consensus and the hype around Instinct in SF these last few weeks, I will take the same position, that a year from now it will not have found the consumer adoption it is hoping for.
 
 Not because it is not a good and capable agent. In fact, I like the backend agent engineering that has gone into it.
 

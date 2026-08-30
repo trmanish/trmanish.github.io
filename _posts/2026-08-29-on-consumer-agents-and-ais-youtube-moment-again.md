@@ -1,12 +1,12 @@
 ---
-title: "On Consumer Agents and AI's Youtube Moment (Again)!"
+title: "On Consumer Agents and AI's Youtube Moment (Again)"
 date: 2026-08-29
 layout: post
 published: true
 ---
 
 <div align="center">
-  <h1><strong>On Consumer Agents and AI's Youtube Moment (Again)!</strong></h1>
+  <h1><strong>On Consumer Agents and AI's Youtube Moment (Again)</strong></h1>
 </div>
 
 <br> <!-- Adds extra spacing -->

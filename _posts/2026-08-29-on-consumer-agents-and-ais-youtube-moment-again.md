@@ -77,6 +77,10 @@ I wrote last year that Wabi will unfortunately be dead on arrival in spite of a 
     Most people are not looking to solve their problems. They want someone else to solve it for them.
 </div>
 
+This is what I wrote at the time, in November 2025.
+
+<img src="/assets/consumer_agents/wabi_thread_nov2025.webp" width="100%">
+
 Human behavior is to do the things that give you notoriety and fame, rather than spend a few brain cells figuring out a workflow automation for a problem you might be facing.
 
 That is the reason it is easier for people to yap on social media and become an influencer than to build mini apps, even when AI does the building for them.

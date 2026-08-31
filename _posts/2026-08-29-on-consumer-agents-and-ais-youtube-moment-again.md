@@ -67,6 +67,12 @@ Similarly, I disagree with the current consensus on consumer agents, for both th
 
 In the consumer space, my personal conviction is that products do not become successful because of great features and time saving capabilities. They become successful when they meet a human behavior capability.
 
+There is also the matter of the device.
+
+In the consumer world the device of usage is the phone. In the enterprise it is usually a desktop or a laptop. That difference matters far more than it is given credit for.
+
+People use their phones for communication and for experiences. They do not use them for automation. And yet the method of both Wabi and Instinct has been to sell automation to consumers, on the one device where nobody has ever asked for it. That is antithetical to what consumers actually want.
+
 <br>
 
 ### Why Wabi Fails

@@ -43,7 +43,9 @@ These are my personal convictions based on my own understanding of consumer and 
 
 ### My Core Thesis
 
-Consumer products run on human behavior. And no amount of force and money can fight that.
+**Consumer products are driven by human behavior. And human behavior seeks Experiences over Automation.**
+
+No amount of force and money can fight that.
 
 In July of 2025, when most of the clamor in the Valley was around agentic browsers, with OpenAI launching Atlas and Perplexity launching Comet, I wrote at that time that the agentic browser is a dead on arrival product, because it will not get adopted by consumers.
 
@@ -71,7 +73,9 @@ There is also the matter of the device.
 
 In the consumer world the device of usage is the phone. In the enterprise it is usually a desktop or a laptop. That difference matters far more than it is given credit for.
 
-People use their phones for communication and for experiences. They do not use them for automation. And yet the method of both Wabi and Instinct has been to sell automation to consumers, on the one device where nobody has ever asked for it. That is antithetical to what consumers actually want.
+Both Wabi and Instinct are trying to sell automation to consumers. While a normal consumer uses phones largely for communication or for experiences. Not for automation.
+
+That is antithetical to what consumers actually want.
 
 <br>
 

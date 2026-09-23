@@ -115,6 +115,16 @@ So it will not matter how much automation you give consumers. Text as a medium i
 
 This was the same reason I wrote last year that Poke would fail as a product, because it would not get adopted by consumers. Instinct is just a better and smarter Poke. The medium is the same.
 
+There is a deeper problem with selling time saving to consumers.
+
+People don't use phones to save time. They use phones to kill time.
+
+Most people wake up every day, go to work, come home, watch Netflix, scroll through other people's lives online, and do it all again the next day, consistently, until they die. Their life is ordinary and mundane, and doom scrolling on the phone is how they try to make it feel exciting.
+
+They go to their phones looking for experiences. Not automation.
+
+Their emails don't have any hidden treasure they need an agent to find.
+
 <br>
 
 ### Another YouTube Moment, Not Software's YouTube Moment

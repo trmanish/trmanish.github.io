@@ -46,7 +46,8 @@ jobs:
 
       - name: Commit new audio
         run: |
-          git add assets/audio _data/narration.json
+          [ -e assets/audio ] && git add assets/audio
+          [ -e _data/narration.json ] && git add _data/narration.json
           if git diff --cached --quiet; then
             echo "No narration changes."
             exit 0
@@ -58,7 +59,9 @@ jobs:
           git push origin HEAD:main
 
   build:
+    # The site deploys even if narration fails; the audio catches up next run.
     needs: narrate
+    if: ${{ always() }}
     runs-on: ubuntu-latest
 
     steps:

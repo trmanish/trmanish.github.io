@@ -337,6 +337,40 @@ a { text-decoration: none; }
   border: 7px solid rgba(249,242,222,.8);
   box-shadow: 0 3px 7px rgba(65,40,20,.22);
 }
+/* A portrait print: round, centred, and alive on hover. */
+.memory-page__photo--avatar {
+  width: clamp(105px, 17vw, 225px);
+  height: clamp(105px, 17vw, 225px);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: none;
+  box-shadow: 0 3px 7px rgba(65,40,20,.22);
+}
+.memory-page__photo--avatar .memory-page__image,
+.memory-page__photo--avatar .memory-page__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  box-shadow: none;
+}
+.memory-page__photo--avatar .memory-page__video {
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.memory-page__photo--avatar.is-playing .memory-page__video { opacity: 1; }
+.memory-page__credit {
+  display: block;
+  margin: calc(-1 * clamp(6px, 1vw, 13px)) 0 clamp(8px, 1.2vw, 15px);
+  text-align: center;
+  font-size: clamp(8px, .8vw, 11px);
+  font-style: italic;
+  opacity: .6;
+}
 .memory-page__tape {
   position: absolute;
   z-index: 3;
@@ -762,6 +796,7 @@ a { text-decoration: none; }
   .diary-home-quote--below { margin-top: 14px; }
   .memory-page__eyebrow { margin-bottom: 5px; letter-spacing: .06em; }
   .memory-page__image, .memory-page__mark { height: 58px; margin-bottom: 7px; }
+  .memory-page__photo--avatar { width: 58px; height: 58px; }
   .memory-page__title { font-size: 12px; line-height: 1.02; }
   .memory-page--feature .memory-page__title { font-size: 16px; }
   .memory-page__rule { margin: 6px 0; width: 28px; }

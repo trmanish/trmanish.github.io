@@ -2,6 +2,7 @@
 title: "Consumer Agents: Kill Time, Not Tasks"
 date: 2026-09-26
 layout: post
+image: "/assets/consumer_agents/cover.png"
 published: true
 ---
 

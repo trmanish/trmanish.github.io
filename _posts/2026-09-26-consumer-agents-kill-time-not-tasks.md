@@ -50,11 +50,11 @@ First with Wabi, then with Instinct, and now with consumer agents as a whole. I 
 
 - **In summary**, the only place where consumer agents will be used by consumers on a DAU basis is where they largely help consumers WASTE THEIR TIME AND HELP THEM WITH EMOTIONS.
 
-  <div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
-      Consumer agents will win where they help people waste their time and feel something. Not where they save time or make money.
-  </div>
+<div style="text-align: center; font-size: 1.5em; padding: 15px; border-radius: 8px; background-color: #fcfcfc; border: 1px solid #eee; width: 80%; margin: 20px auto;">
+    Consumer agents will win where they help people waste their time and feel something. Not where they save time or make money.
+</div>
 
-  Meaning, giving consumers experiences rather than productivity, automation or make-money schemes (Polsia et al., and what Farza Majeed is recently thinking with Clicky. I do like Farza and root for him, a high agency human).
+Meaning, giving consumers experiences rather than productivity, automation or make-money schemes (Polsia et al., and what Farza Majeed is recently thinking with Clicky. I do like Farza and root for him, a high agency human).
 
 <img class="post-inline-image" src="/assets/consumer_agents/farza_personal_agents.webp" alt="Farza on personal agents: the technology is amazing, but the killer use case will be helping individuals create new economic value by starting businesses, turning hobbies into income and launching side hustles">
 

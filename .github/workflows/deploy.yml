@@ -29,8 +29,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      # The latest main, not the triggering commit, so audio committed by an
+      # earlier run is seen and never generated (and billed) twice.
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Install ffmpeg
         run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg

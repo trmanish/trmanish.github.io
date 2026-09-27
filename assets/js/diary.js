@@ -59,7 +59,50 @@
     if (!post.image) {
       return `<div class="memory-page__mark" aria-hidden="true">✢</div>`;
     }
-    return `<span class="memory-page__photo"><i class="memory-page__tape" aria-hidden="true"></i><img class="memory-page__image" src="${escapeHtml(post.image)}" alt="" loading="eager" draggable="false"></span>`;
+    const credit = post.credit ? `<span class="memory-page__credit">${escapeHtml(post.credit)}</span>` : '';
+    if (post.video) {
+      /* A round portrait that comes alive: the still sits on the page and
+         a muted loop plays over it on hover, or on its own where there is
+         no hover to wait for. */
+      return `<span class="memory-page__photo memory-page__photo--avatar"><img class="memory-page__image" src="${escapeHtml(post.image)}" alt="" loading="eager" draggable="false"><video class="memory-page__video" src="${escapeHtml(post.video)}" muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video></span>${credit}`;
+    }
+    return `<span class="memory-page__photo"><i class="memory-page__tape" aria-hidden="true"></i><img class="memory-page__image" src="${escapeHtml(post.image)}" alt="" loading="eager" draggable="false"></span>${credit}`;
+  }
+
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  function playAvatar(photo, on) {
+    const video = photo && photo.querySelector('.memory-page__video');
+    if (!video) return;
+    if (on) {
+      video.play().then(() => photo.classList.add('is-playing')).catch(() => {});
+    } else {
+      photo.classList.remove('is-playing');
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+  /* The page turn zones lie over the photo and take its hover, so the
+     pointer's position decides instead. */
+  let hoverFrame = 0;
+  document.addEventListener('pointermove', (event) => {
+    if (!canHover || hoverFrame) return;
+    hoverFrame = requestAnimationFrame(() => {
+      hoverFrame = 0;
+      root.querySelectorAll('.memory-page__photo--avatar').forEach((photo) => {
+        const box = photo.getBoundingClientRect();
+        const over = event.clientX >= box.left && event.clientX <= box.right
+          && event.clientY >= box.top && event.clientY <= box.bottom;
+        if (over !== photo.classList.contains('is-hovered')) {
+          photo.classList.toggle('is-hovered', over);
+          playAvatar(photo, over);
+        }
+      });
+    });
+  });
+  if (!canHover) {
+    new MutationObserver(() => {
+      root.querySelectorAll('.memory-page__photo--avatar:not(.is-playing)').forEach((photo) => playAvatar(photo, true));
+    }).observe(root, { childList: true, subtree: true });
   }
 
   function pageShell(post, side, extraClass, inner) {

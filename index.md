@@ -71,7 +71,9 @@ class: "home-page"
     "excerpt": {{ post.content | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 900 | jsonify }},
     "intro": {{ li_parts | first | strip_html | strip_newlines | normalize_whitespace | replace: post.title, "" | truncate: 300 | jsonify }},
     "bullets": [{% for part in li_parts offset: 1 limit: 12 %}{{ part | split: '</li>' | first | strip_html | strip_newlines | normalize_whitespace | truncate: 140 | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
-    "image": {% if post.image %}{{ post.image | relative_url | jsonify }}{% else %}""{% endif %}
+    "image": {% if post.image %}{{ post.image | relative_url | jsonify }}{% else %}""{% endif %},
+    "video": {% if post.cover_video %}{{ post.cover_video | relative_url | jsonify }}{% else %}""{% endif %},
+    "credit": {{ post.image_credit | default: "" | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]

@@ -2,7 +2,9 @@
 title: "Consumer Agents: Kill Time, Not Tasks"
 date: 2026-09-26
 layout: post
-image: "/assets/consumer_agents/cover.png"
+image: "/assets/consumer_agents/muse_hatch.jpg"
+cover_video: "/assets/consumer_agents/muse_hatch-working.mp4"
+image_credit: "from Muse.ai"
 published: true
 ---
 

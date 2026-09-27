@@ -45,7 +45,9 @@
     <video class="post-avatar__video" src="{{ page.cover_video | relative_url }}" muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
   </span>
   {% if page.image_credit %}<figcaption class="post-avatar__credit">{{ page.image_credit }}</figcaption>{% endif %}
-</figure>{% endcapture %}
+</figure>
+
+<p><br /></p>{% endcapture %}
             {{ content | replace_first: "<!-- Adds extra spacing --></p>", cover_avatar }}
             {% else %}
             {{ content }}

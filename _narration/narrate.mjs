@@ -29,8 +29,8 @@ const AUDIO_DIR = path.join(ROOT, 'assets/audio');
 const MANIFEST = path.join(ROOT, '_data/narration.json');
 const MUSIC = path.join(ROOT, '_narration/music/now-we-are-free.m4a');
 
-// A calm, deep American narrator ("Brian"). Override with NARRATION_VOICE_ID.
-const VOICE_ID = process.env.NARRATION_VOICE_ID || 'nPczCjzI2devNBz1zQrb';
+// The blog's narrator voice. Override with NARRATION_VOICE_ID.
+const VOICE_ID = process.env.NARRATION_VOICE_ID || 'XFQFwy8OEb9lvFQIMZ5a';
 const MODEL_ID = process.env.NARRATION_MODEL_ID || 'eleven_multilingual_v2';
 const VOICE_SETTINGS = { stability: 0.6, similarity_boost: 0.75, style: 0.1, use_speaker_boost: true, speed: 0.92 };
 

@@ -38,8 +38,7 @@
         <p class="article-date">{{ page.date | date: "%B %d, %Y" }}</p>
         <div>
             {% if page.cover_video %}
-            {% capture cover_avatar %}</h1>
-</div>
+            {% capture cover_avatar %}<!-- Adds extra spacing --></p>
 <figure class="post-avatar" data-post-avatar>
   <span class="post-avatar__frame">
     <img class="post-avatar__image" src="{{ page.image | relative_url }}" alt="">
@@ -47,8 +46,7 @@
   </span>
   {% if page.image_credit %}<figcaption class="post-avatar__credit">{{ page.image_credit }}</figcaption>{% endif %}
 </figure>{% endcapture %}
-            {{ content | replace_first: "</h1>
-</div>", cover_avatar }}
+            {{ content | replace_first: "<!-- Adds extra spacing --></p>", cover_avatar }}
             {% else %}
             {{ content }}
             {% endif %}

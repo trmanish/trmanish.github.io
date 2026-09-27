@@ -86,30 +86,35 @@
 
     {% if page.cover_video %}
     <script>
-      // The cover portrait comes alive: on hover where there is a pointer,
-      // and whenever it is on screen where there is not.
+      // The cover portrait comes alive once the reader starts scrolling,
+      // or on hover, and rests again back at the top or out of view.
       (function () {
         var avatar = document.querySelector('[data-post-avatar]');
         if (!avatar) return;
         var video = avatar.querySelector('video');
-        function play(on) {
+        var hovered = false, inView = true, playing = false;
+        function update() {
+          var on = hovered || (inView && window.scrollY > 40);
+          if (on === playing) return;
+          playing = on;
           if (on) {
-            video.play().then(function () { avatar.classList.add('is-playing'); }).catch(function () {});
+            video.play().then(function () { if (playing) avatar.classList.add('is-playing'); }).catch(function () {});
           } else {
             avatar.classList.remove('is-playing');
             video.pause();
             video.currentTime = 0;
           }
         }
-        if (window.matchMedia('(hover: hover)').matches) {
-          var frame = avatar.querySelector('.post-avatar__frame');
-          frame.addEventListener('mouseenter', function () { play(true); });
-          frame.addEventListener('mouseleave', function () { play(false); });
-        } else if ('IntersectionObserver' in window) {
+        var frame = avatar.querySelector('.post-avatar__frame');
+        frame.addEventListener('mouseenter', function () { hovered = true; update(); });
+        frame.addEventListener('mouseleave', function () { hovered = false; update(); });
+        window.addEventListener('scroll', update, { passive: true });
+        if ('IntersectionObserver' in window) {
           new IntersectionObserver(function (entries) {
-            play(entries[0].isIntersecting);
-          }, { threshold: 0.6 }).observe(avatar);
+            inView = entries[0].isIntersecting; update();
+          }).observe(avatar);
         }
+        update();
       })();
     </script>
     {% endif %}

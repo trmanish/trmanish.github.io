@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    {% assign share_description = page.description | default: page.excerpt | strip_html | strip_newlines | normalize_whitespace | replace: page.title, "" | strip | truncate: 200 %}
+    {% assign share_description = page.description | default: page.content | strip_html | strip_newlines | normalize_whitespace | replace: page.title, "" | strip | truncate: 200 %}
     <meta name="description" content="{{ share_description | escape }}">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="{{ site.title | escape }}">

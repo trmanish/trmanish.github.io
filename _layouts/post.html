@@ -37,7 +37,21 @@
     <main class="site-main article-paper" style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: left;">
         <p class="article-date">{{ page.date | date: "%B %d, %Y" }}</p>
         <div>
+            {% if page.cover_video %}
+            {% capture cover_avatar %}</h1>
+</div>
+<figure class="post-avatar" data-post-avatar>
+  <span class="post-avatar__frame">
+    <img class="post-avatar__image" src="{{ page.image | relative_url }}" alt="">
+    <video class="post-avatar__video" src="{{ page.cover_video | relative_url }}" muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" tabindex="-1"></video>
+  </span>
+  {% if page.image_credit %}<figcaption class="post-avatar__credit">{{ page.image_credit }}</figcaption>{% endif %}
+</figure>{% endcapture %}
+            {{ content | replace_first: "</h1>
+</div>", cover_avatar }}
+            {% else %}
             {{ content }}
+            {% endif %}
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
@@ -69,6 +83,36 @@
     </svg>
     </button>
     <script src="{{ '/assets/js/lamp.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+
+    {% if page.cover_video %}
+    <script>
+      // The cover portrait comes alive: on hover where there is a pointer,
+      // and whenever it is on screen where there is not.
+      (function () {
+        var avatar = document.querySelector('[data-post-avatar]');
+        if (!avatar) return;
+        var video = avatar.querySelector('video');
+        function play(on) {
+          if (on) {
+            video.play().then(function () { avatar.classList.add('is-playing'); }).catch(function () {});
+          } else {
+            avatar.classList.remove('is-playing');
+            video.pause();
+            video.currentTime = 0;
+          }
+        }
+        if (window.matchMedia('(hover: hover)').matches) {
+          var frame = avatar.querySelector('.post-avatar__frame');
+          frame.addEventListener('mouseenter', function () { play(true); });
+          frame.addEventListener('mouseleave', function () { play(false); });
+        } else if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            play(entries[0].isIntersecting);
+          }, { threshold: 0.6 }).observe(avatar);
+        }
+      })();
+    </script>
+    {% endif %}
 
     <script>
       // A click on the desk around the sheet closes it and returns to the diary.

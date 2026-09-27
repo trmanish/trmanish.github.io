@@ -7,7 +7,7 @@ featured_order: 4
 published: true
 image: "/assets/last_scarce_things/ai-pilled.jpeg"
 narration: true
-narration_music: true
+narration_music: interstellar-stay
 ---
 
 <div align="center">

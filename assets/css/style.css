@@ -654,7 +654,7 @@ body.site-page--post.is-closing { opacity: 0; }
 /* A post's cover portrait: round, centred under the title, and alive on
    hover, with a small credit beneath it. */
 .site-page--post .post-avatar {
-    margin: 18px auto 4px;
+    margin: clamp(18px, 3vw, 30px) auto;
     text-align: center;
 }
 .site-page--post .post-avatar__frame {

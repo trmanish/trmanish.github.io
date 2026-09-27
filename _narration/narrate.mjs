@@ -4,6 +4,13 @@
 // Each post's prose is read by an ElevenLabs voice, one paragraph-sized chunk
 // at a time, the chunks are joined, and for posts marked `narration_music: true`
 // the music bed loops quietly underneath for as long as the voice speaks.
+// `narration_music: interstellar-stay` picks _narration/music/interstellar-stay.m4a
+// instead of the default bed. Beds are pre-trimmed, loop-ready and matched to
+// about -19 LUFS, so one volume setting suits them all.
+//
+// Every clip ElevenLabs makes stays in the account's history, and a clip whose
+// text was read before is downloaded from there for free rather than generated
+// and billed again. So changing the music, or the mix, costs nothing.
 //
 // The result lands in assets/audio/<post>-<hash>.m4a, and _data/narration.json
 // records it for the post layout. The hash covers the text, the voice and the
@@ -27,7 +34,8 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const POSTS = path.join(ROOT, '_posts');
 const AUDIO_DIR = path.join(ROOT, 'assets/audio');
 const MANIFEST = path.join(ROOT, '_data/narration.json');
-const MUSIC = path.join(ROOT, '_narration/music/now-we-are-free.m4a');
+const MUSIC_DIR = path.join(ROOT, '_narration/music');
+const DEFAULT_MUSIC = 'now-we-are-free';
 
 // The blog's narrator voice. Override with NARRATION_VOICE_ID.
 const VOICE_ID = process.env.NARRATION_VOICE_ID || 'XFQFwy8OEb9lvFQIMZ5a';
@@ -120,16 +128,56 @@ function chunks(paragraphs) {
   return out;
 }
 
+const API = 'https://api.elevenlabs.io/v1';
+const headers = () => ({ 'xi-api-key': process.env.ELEVENLABS_API_KEY });
+
+// Text already read in this voice, mapped to its history clip.
+let spoken = null;
+async function history() {
+  if (spoken) return spoken;
+  spoken = new Map();
+  let after = null;
+  try {
+    for (let page = 0; page < 50; page++) {
+      const query = new URLSearchParams({ page_size: '1000', voice_id: VOICE_ID });
+      if (after) query.set('start_after_history_item_id', after);
+      const response = await fetch(`${API}/history?${query}`, { headers: headers() });
+      if (!response.ok) throw new Error(`history ${response.status}`);
+      const data = await response.json();
+      for (const item of data.history || []) {
+        const key = `${item.model_id}\n${item.text}`;
+        if (!spoken.has(key)) spoken.set(key, item.history_item_id);
+      }
+      if (!data.has_more) break;
+      after = data.last_history_item_id;
+    }
+  } catch (error) {
+    console.log(`  (could not read ElevenLabs history, generating fresh: ${error.message})`);
+  }
+  return spoken;
+}
+
 async function speak(text, previous, next, file) {
+  if (!useSay) {
+    const reuse = (await history()).get(`${MODEL_ID}\n${text}`);
+    if (reuse) {
+      const response = await fetch(`${API}/history/${reuse}/audio`, { headers: headers() });
+      if (response.ok) {
+        fs.writeFileSync(file, Buffer.from(await response.arrayBuffer()));
+        console.log('    reused from history, not billed');
+        return;
+      }
+    }
+  }
   if (useSay) {
     execFileSync('say', ['-v', 'Daniel', '-r', '165', '-o', `${file}.aiff`, text]);
     execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', `${file}.aiff`, '-ar', '44100', '-ac', '1', file]);
     return;
   }
   for (let attempt = 1; ; attempt++) {
-    const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}?output_format=mp3_44100_128`, {
+    const response = await fetch(`${API}/text-to-speech/${VOICE_ID}?output_format=mp3_44100_128`, {
       method: 'POST',
-      headers: { 'xi-api-key': process.env.ELEVENLABS_API_KEY, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
+      headers: { ...headers(), 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
       body: JSON.stringify({ text, model_id: MODEL_ID, voice_settings: VOICE_SETTINGS, previous_text: previous, next_text: next }),
     });
     if (response.ok) {
@@ -169,7 +217,7 @@ async function render(post, paragraphs, outFile) {
     const total = duration(voice) + MUSIC_LEAD_IN + MUSIC_TAIL;
     // The bed loops under the whole reading, fades in, and fades out after it.
     ffmpeg(
-      '-stream_loop', '-1', '-i', MUSIC, '-i', voice,
+      '-stream_loop', '-1', '-i', post.music, '-i', voice,
       '-filter_complex',
       `[0:a]aformat=channel_layouts=mono,volume=${MUSIC_VOLUME},atrim=0:${total.toFixed(2)},afade=t=in:d=2,afade=t=out:st=${(total - MUSIC_TAIL).toFixed(2)}:d=${MUSIC_TAIL}[bed];` +
       `[1:a]adelay=${MUSIC_LEAD_IN * 1000},apad[voice];` +
@@ -184,7 +232,7 @@ async function render(post, paragraphs, outFile) {
 
 async function main() {
   const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, 'utf8')) : {};
-  const musicHash = fs.existsSync(MUSIC) ? createHash('sha256').update(fs.readFileSync(MUSIC)).digest('hex') : '';
+  const musicHash = (file) => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
   const posts = fs.readdirSync(POSTS).filter((name) => name.endsWith('.md')).map((name) => {
     const { fields, body } = frontMatter(fs.readFileSync(path.join(POSTS, name), 'utf8'));
     return { key: name.replace(/\.md$/, ''), fields, body };
@@ -193,17 +241,19 @@ async function main() {
   let changed = false;
   for (const post of posts) {
     if (only && !post.key.includes(only)) continue;
-    post.music = post.fields.narration_music === 'true';
+    const bed = post.fields.narration_music;
+    post.music = bed && bed !== 'false' ? path.join(MUSIC_DIR, `${bed === 'true' ? DEFAULT_MUSIC : bed}.m4a`) : null;
+    if (post.music && !fs.existsSync(post.music)) throw new Error(`${post.key}: no music file ${post.music}`);
     const paragraphs = narrationText(post.fields.title, post.body);
     const characters = paragraphs.join('\n\n').length;
     const hash = createHash('sha256').update(JSON.stringify({
       paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE,
-      music: post.music ? { musicHash, MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL } : null,
+      music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL } : null,
       say: useSay,
     })).digest('hex').slice(0, 10);
 
     if (dryRun) {
-      console.log(`\n=== ${post.key}  (${characters} chars, music: ${post.music})\n`);
+      console.log(`\n=== ${post.key}  (${characters} chars, music: ${post.music ? path.basename(post.music) : 'none'})\n`);
       console.log(paragraphs.join('\n\n'));
       continue;
     }

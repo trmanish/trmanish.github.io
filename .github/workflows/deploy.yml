@@ -7,19 +7,65 @@ on:
     paths:
       - "_posts/**"
       - "_layouts/**"
+      - "_data/**"
+      - "_narration/**"
       - "assets/**"
       - "*.html"
       - "*.md"
       - "_config.yml"
       - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+# One run at a time, so a narration commit never races an older deploy.
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
 
 jobs:
+  narrate:
+    # Voices posts marked `narration: true` whose text changed, and commits
+    # the audio back. Unchanged posts are skipped, so nothing is re-billed.
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate narration
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node _narration/narrate.mjs
+
+      - name: Commit new audio
+        run: |
+          git add assets/audio _data/narration.json
+          if git diff --cached --quiet; then
+            echo "No narration changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update post narration"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
   build:
+    needs: narrate
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Create assets/js directory if not exists
         run: mkdir -p assets/js

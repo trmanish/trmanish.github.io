@@ -3,6 +3,8 @@ title: "The Point of It All"
 date: 2026-05-14
 layout: post
 published: true
+narration: true
+narration_music: true
 ---
 
 <div align="center">

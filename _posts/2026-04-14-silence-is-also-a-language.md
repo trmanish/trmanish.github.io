@@ -2,6 +2,8 @@
 title: "Silence is Also a Language"
 date: 2026-04-14
 layout: post
+narration: true
+narration_music: true
 ---
 
 <div align="center">

@@ -720,6 +720,76 @@ body.site-page--post.is-closing { opacity: 0; }
     text-transform: uppercase;
 }
 
+/* Listen to this tick: a quiet line under the date, in the same small
+   caps, that grows a thin progress thread once the reading starts. */
+.site-page--post .listen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    margin: -18px 0 30px;
+    color: rgba(52, 43, 35, .62);
+    font-family: 'Geist', sans-serif;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.site-page--post .listen__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 11px 5px 8px;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    background: rgba(246, 242, 232, .7);
+    border: 1px solid rgba(102, 67, 39, .18);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+.site-page--post .listen__button:hover,
+.site-page--post .listen__button:focus-visible {
+    color: rgba(52, 43, 35, .92);
+    border-color: rgba(102, 67, 39, .38);
+    background: rgba(246, 242, 232, 1);
+}
+.site-page--post .listen__icon {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.site-page--post .listen__icon--play path:first-child { fill: currentColor; }
+.site-page--post .listen__icon--pause,
+.site-page--post .listen.is-playing .listen__icon--play { display: none; }
+.site-page--post .listen.is-playing .listen__icon--pause { display: block; }
+.site-page--post .listen__time { font-variant-numeric: tabular-nums; opacity: .8; }
+.site-page--post .listen__track {
+    position: relative;
+    display: none;
+    flex: 1 1 120px;
+    max-width: 220px;
+    height: 14px;
+    cursor: pointer;
+}
+.site-page--post .listen__track::before,
+.site-page--post .listen__progress {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: 2px;
+    border-radius: 2px;
+}
+.site-page--post .listen__track::before { right: 0; background: rgba(102, 67, 39, .16); }
+.site-page--post .listen__progress { width: 0; background: rgba(102, 67, 39, .6); }
+.site-page--post .listen.is-started .listen__track { display: block; }
+
 /* The archive containers are sheets cut from the same paper as the article
    page: same texture, same scissor-cut edges, same shadow. */
 .site-page .featured-posts,

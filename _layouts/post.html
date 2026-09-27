@@ -53,6 +53,20 @@
 
     <main class="site-main article-paper" style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: left;">
         <p class="article-date">{{ page.date | date: "%B %d, %Y" }}</p>
+        {% assign narration_key = page.path | split: "/" | last | remove: ".md" %}
+        {% assign narration = site.data.narration[narration_key] %}
+        {% if narration %}
+        <div class="listen" data-listen>
+            <button class="listen__button" type="button" aria-label="Listen to this tick">
+                <svg class="listen__icon listen__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="listen__wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+                <svg class="listen__icon listen__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13"/></svg>
+                <span class="listen__label">Listen to this tick</span>
+            </button>
+            <span class="listen__time" data-total="{{ narration.seconds }}">{{ narration.seconds | plus: 30 | divided_by: 60 | at_least: 1 }} min</span>
+            <span class="listen__track" aria-hidden="true"><span class="listen__progress"></span></span>
+            <audio preload="none" src="{{ narration.src | prepend: '/' | relative_url }}"></audio>
+        </div>
+        {% endif %}
         <div>
             {% if page.cover_video %}
             {% capture cover_avatar %}<!-- Adds extra spacing --></p>
@@ -100,6 +114,61 @@
     </svg>
     </button>
     <script src="{{ '/assets/js/lamp.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+
+    {% if narration %}
+    <script>
+      // The narration downloads only when the reader presses play; after
+      // that the browser keeps it.
+      (function () {
+        var box = document.querySelector('[data-listen]');
+        if (!box) return;
+        var audio = box.querySelector('audio');
+        var button = box.querySelector('.listen__button');
+        var label = box.querySelector('.listen__label');
+        var time = box.querySelector('.listen__time');
+        var track = box.querySelector('.listen__track');
+        var bar = box.querySelector('.listen__progress');
+        var total = Number(time.dataset.total) || 0;
+        function clock(seconds) {
+          seconds = Math.max(0, Math.round(seconds));
+          return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
+        }
+        button.addEventListener('click', function () {
+          if (audio.paused) audio.play(); else audio.pause();
+        });
+        audio.addEventListener('play', function () {
+          box.classList.add('is-started', 'is-playing');
+          label.textContent = 'Pause';
+          button.setAttribute('aria-label', 'Pause the narration');
+        });
+        audio.addEventListener('pause', function () {
+          box.classList.remove('is-playing');
+          label.textContent = 'Resume listening';
+          button.setAttribute('aria-label', 'Resume the narration');
+        });
+        audio.addEventListener('ended', function () {
+          label.textContent = 'Listen again';
+          audio.currentTime = 0;
+        });
+        audio.addEventListener('timeupdate', function () {
+          var length = audio.duration || total;
+          if (!length) return;
+          bar.style.width = (audio.currentTime / length * 100) + '%';
+          time.textContent = clock(length - audio.currentTime) + ' left';
+        });
+        track.addEventListener('click', function (event) {
+          var length = audio.duration || total;
+          if (!length) return;
+          var rect = track.getBoundingClientRect();
+          audio.currentTime = (event.clientX - rect.left) / rect.width * length;
+          if (audio.paused) audio.play();
+        });
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.metadata = new MediaMetadata({ title: {{ page.title | jsonify }}, artist: 'Two Ticks' });
+        }
+      })();
+    </script>
+    {% endif %}
 
     {% if page.cover_video %}
     <script>

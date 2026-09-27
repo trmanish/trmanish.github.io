@@ -5,6 +5,8 @@ layout: post
 featured: true
 featured_order: 1
 image: "/assets/love_prosperity/sf_pier.png"
+narration: true
+narration_music: true
 ---
 
 <div align="center">

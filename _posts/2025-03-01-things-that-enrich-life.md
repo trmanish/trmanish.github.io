@@ -5,6 +5,8 @@ layout: post
 featured: true
 featured_order: 2
 image: "/assets/things_enrich_life/header-sketch.webp"
+narration: true
+narration_music: true
 ---
 
 <div align="center">

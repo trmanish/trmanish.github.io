@@ -3,6 +3,8 @@ title: "Goodness Will Kill You"
 date: 2026-04-27
 layout: post
 published: true
+narration: true
+narration_music: true
 ---
 
 <div align="center">

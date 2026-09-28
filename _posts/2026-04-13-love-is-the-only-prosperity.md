@@ -7,6 +7,7 @@ featured_order: 1
 image: "/assets/love_prosperity/sf_pier.png"
 narration: true
 narration_music: icarus
+narration_voice: false
 ---
 
 <div align="center">

@@ -792,6 +792,7 @@ body.site-page--post.is-closing { opacity: 0; }
 .site-page--post .listen__track::before { right: 0; background: rgba(102, 67, 39, .16); }
 .site-page--post .listen__progress { width: 0; background: rgba(102, 67, 39, .6); }
 .site-page--post .listen.is-started .listen__track { display: block; }
+.site-page--post .listen--music.is-started .listen__track { display: none; }
 
 /* The archive containers are sheets cut from the same paper as the article
    page: same texture, same scissor-cut edges, same shadow. */

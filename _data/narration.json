@@ -6,10 +6,11 @@
     "bytes": 2880979
   },
   "2026-04-13-love-is-the-only-prosperity": {
-    "src": "assets/audio/love-is-the-only-prosperity-55929b43d7.m4a",
-    "hash": "55929b43d7",
-    "seconds": 427,
-    "bytes": 2665253
+    "src": "assets/audio/love-is-the-only-prosperity-48b4aa424a.m4a",
+    "hash": "48b4aa424a",
+    "music_only": true,
+    "seconds": 208,
+    "bytes": 1714206
   },
   "2026-04-14-silence-is-also-a-language": {
     "src": "assets/audio/silence-is-also-a-language-92d457eb41.m4a",

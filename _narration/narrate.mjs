@@ -25,7 +25,7 @@
 // Needs ffmpeg, and ELEVENLABS_API_KEY in the environment unless --dry-run/--say.
 
 import { createHash } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -42,11 +42,21 @@ const VOICE_ID = process.env.NARRATION_VOICE_ID || 'XFQFwy8OEb9lvFQIMZ5a';
 const MODEL_ID = process.env.NARRATION_MODEL_ID || 'eleven_multilingual_v2';
 const VOICE_SETTINGS = { stability: 0.6, similarity_boost: 0.75, style: 0.1, use_speaker_boost: true, speed: 0.92 };
 
-const MUSIC_VOLUME = 0.11;   // how loud the bed sits under the voice
+const MUSIC_VOLUME = 0.3;    // how loud the bed sits under the voice (~10 dB below it)
 const MUSIC_LEAD_IN = 3;     // seconds of music before the voice starts
 const MUSIC_TAIL = 5;        // seconds of music after the voice ends
 const CHUNK_CHARS = 2200;    // ElevenLabs reads best in paragraph-sized pieces
 const BITRATE = '48k';       // AAC mono: ~0.36 MB a minute
+
+// ElevenLabs reads briskly and barely rests between sentences. These give the
+// reading room to breathe without paying to voice it again: the natural gaps
+// in the voice are found and lengthened, and the whole reading is eased down.
+const PACING = {
+  tempo: 0.94,          // 6% slower overall
+  gapThreshold: -38,    // dB below which the voice counts as silent
+  sentencePause: 0.45,  // extra seconds added at each sentence break
+  paragraphPause: 0.8,  // extra seconds added at each paragraph break
+};
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
@@ -192,7 +202,45 @@ async function speak(text, previous, next, file) {
   }
 }
 
-const ffmpeg = (...argv) => execFileSync('ffmpeg', ['-v', 'error', '-y', ...argv]);
+const ffmpeg = (...argv) => execFileSync('ffmpeg', ['-v', 'error', '-y', ...argv], { maxBuffer: 1 << 26 });
+
+// Lengthens the pauses between sentences. The text says how many sentence and
+// paragraph breaks there are, so exactly that many of the longest natural gaps
+// in the voice are widened, the very longest (paragraphs) the most, while the
+// short breaths at commas are left alone. Then the reading is eased down.
+function pace(input, output, work, sentenceCount, paragraphCount) {
+  const log = spawnSync('ffmpeg', ['-hide_banner', '-i', input, '-af',
+    `silencedetect=noise=${PACING.gapThreshold}dB:d=0.08`, '-f', 'null', '-'],
+  { maxBuffer: 1 << 26 }).stderr.toString();
+  const starts = [...log.matchAll(/silence_start: ([\d.]+)/g)].map((m) => Number(m[1]));
+  const ends = [...log.matchAll(/silence_end: ([\d.]+)/g)].map((m) => Number(m[1]));
+  const make = (seconds, name) => {
+    const file = path.join(work, name);
+    ffmpeg('-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono', '-t', String(seconds), file);
+    return file;
+  };
+  const shortPause = make(PACING.sentencePause, 'pause-s.wav');
+  const longPause = make(PACING.paragraphPause, 'pause-p.wav');
+  const gaps = starts.map((start, i) => ({ start, end: ends[i] }))
+    .filter((gap) => gap.end !== undefined && gap.start > 0.05)
+    .sort((a, b) => (b.end - b.start) - (a.end - a.start));
+  const chosen = gaps.slice(0, sentenceCount)
+    .map((gap, rank) => ({ ...gap, pause: rank < paragraphCount ? longPause : shortPause }))
+    .sort((a, b) => a.start - b.start);
+  console.log(`  widened ${chosen.length} of ${gaps.length} pauses (${sentenceCount} sentences, ${paragraphCount} paragraphs)`);
+  const list = [];
+  let from = 0;
+  for (const gap of chosen) {
+    const cut = (gap.start + gap.end) / 2;
+    list.push(`file '${input}'`, `inpoint ${from.toFixed(4)}`, `outpoint ${cut.toFixed(4)}`, `file '${gap.pause}'`);
+    from = cut;
+  }
+  list.push(`file '${input}'`, `inpoint ${from.toFixed(4)}`);
+  fs.writeFileSync(path.join(work, 'paced.txt'), list.join('\n'));
+  const spaced = path.join(work, 'spaced.wav');
+  ffmpeg('-f', 'concat', '-safe', '0', '-i', path.join(work, 'paced.txt'), spaced);
+  ffmpeg('-i', spaced, '-af', `atempo=${PACING.tempo}`, '-ar', '44100', '-ac', '1', output);
+}
 const duration = (file) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file]).toString());
 
 async function render(post, paragraphs, outFile) {
@@ -209,8 +257,12 @@ async function render(post, paragraphs, outFile) {
     list.push(`file '${wav}'`, `file '${path.join(work, 'gap.wav')}'`);
   }
   fs.writeFileSync(path.join(work, 'list.txt'), list.join('\n'));
+  const raw = path.join(work, 'raw.wav');
+  ffmpeg('-f', 'concat', '-safe', '0', '-i', path.join(work, 'list.txt'), '-c', 'copy', raw);
   const voice = path.join(work, 'voice.wav');
-  ffmpeg('-f', 'concat', '-safe', '0', '-i', path.join(work, 'list.txt'), '-c', 'copy', voice);
+  const spoken = paragraphs.join('\n\n');
+  const sentences = (spoken.match(/[.!?]+["')\]]?(?=\s|$)/g) || []).length;
+  pace(raw, voice, work, sentences, paragraphs.length);
 
   const encode = ['-c:a', 'aac', '-b:a', BITRATE, '-ac', '1', '-movflags', '+faststart', outFile];
   if (post.music) {
@@ -247,7 +299,7 @@ async function main() {
     const paragraphs = narrationText(post.fields.title, post.body);
     const characters = paragraphs.join('\n\n').length;
     const hash = createHash('sha256').update(JSON.stringify({
-      paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE,
+      paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING,
       music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL } : null,
       say: useSay,
     })).digest('hex').slice(0, 10);

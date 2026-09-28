@@ -45,6 +45,6 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          SITE_URL: "https://trmanish.github.io"
+          SITE_URL: "https://twoticks.blog"
           POST_FILE: ${{ steps.detect.outputs.file }}
         run: node .github/scripts/send-newsletter.mjs

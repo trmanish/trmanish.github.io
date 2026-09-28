@@ -2,10 +2,8 @@ import { neon } from '@neondatabase/serverless';
 import { Resend } from 'resend';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 
-const sql = neon(process.env.DATABASE_URL);
-const resend = new Resend(process.env.RESEND_API_KEY);
 const siteUrl = process.env.SITE_URL || 'https://twoticks.blog';
 const postFile = process.env.POST_FILE;
 
@@ -21,8 +19,24 @@ const filename = postFile.split('/').pop().replace('.md', '');
 const match = filename.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
 const postUrl = `${siteUrl}/${match[1]}/${match[2]}/${match[3]}/${match[4]}.html`;
 
-// Convert markdown to HTML
-const postHtml = marked(content);
+// An email has no site to resolve /assets/... against, so every image and
+// link is made absolute. The post's own title block is dropped, since the
+// email prints the title itself, and images are kept to the column width.
+const absolute = (url) => (url.startsWith('/') && !url.startsWith('//') ? `${siteUrl}${url}` : url);
+const imageStyle = 'display:block;max-width:100%;height:auto;margin:24px auto;border-radius:4px;';
+const postHtml = marked(content.replace(/<div align="center">\s*<h1>[\s\S]*?<\/h1>\s*<\/div>/i, ''))
+  .replace(/(<(?:img|a|source)\b[^>]*?\b(?:src|href)=")([^"]+)"/gi, (_, head, url) => `${head}${absolute(url)}"`)
+  .replace(/<img\b(?![^>]*\bstyle=)/gi, `<img style="${imageStyle}"`)
+  .replace(/(<img\b[^>]*?\bstyle=")(?![^"]*max-width)/gi, `$1${imageStyle}`);
+
+// The cover sits under the title. A post whose cover animates on the site
+// (cover_video) shows its still here as a small round portrait instead.
+const cover = frontmatter.image
+  ? frontmatter.cover_video
+    ? `<img src="${absolute(frontmatter.image)}" alt="" width="180" height="180" style="display:block;width:180px;height:180px;margin:24px auto 6px;border-radius:50%;object-fit:cover;">`
+      + (frontmatter.image_credit ? `<p style="margin:0 0 20px;text-align:center;font-size:12px;font-style:italic;color:#999;">${frontmatter.image_credit}</p>` : '')
+    : `<img src="${absolute(frontmatter.image)}" alt="" style="${imageStyle}">`
+  : '';
 
 // Build email HTML
 const emailHtml = `
@@ -39,6 +53,7 @@ const emailHtml = `
 </head>
 <body>
   <h1>${title}</h1>
+  ${cover}
   <div class="post-content">
     ${postHtml}
   </div>
@@ -49,6 +64,16 @@ const emailHtml = `
 </body>
 </html>
 `;
+
+// DRY_RUN=1 writes the email to newsletter-preview.html and sends nothing.
+if (process.env.DRY_RUN) {
+  writeFileSync('newsletter-preview.html', emailHtml);
+  console.log(`Preview written for "${title}" (${postUrl}).`);
+  process.exit(0);
+}
+
+const sql = neon(process.env.DATABASE_URL);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Fetch all subscribers
 const subscribers = await sql`SELECT email FROM subscribers WHERE confirmed = true`;

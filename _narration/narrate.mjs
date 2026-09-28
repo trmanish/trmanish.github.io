@@ -40,7 +40,13 @@ const DEFAULT_MUSIC = 'now-we-are-free';
 // The blog's narrator voice. Override with NARRATION_VOICE_ID.
 const VOICE_ID = process.env.NARRATION_VOICE_ID || 'XFQFwy8OEb9lvFQIMZ5a';
 const MODEL_ID = process.env.NARRATION_MODEL_ID || 'eleven_multilingual_v2';
-const VOICE_SETTINGS = { stability: 0.6, similarity_boost: 0.75, style: 0.1, use_speaker_boost: true, speed: 0.92 };
+// ElevenLabs' guidance for narration: style at 0 (anything more makes the pace
+// uneven), stability near 0.5 (higher turns flat), a slightly slow speed.
+const VOICE_SETTINGS = { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true, speed: 0.88 };
+// Only history clips made on or after this moment are reused. Move it forward
+// whenever VOICE_SETTINGS or the chunking changes, so a clip read the old way
+// is never mistaken for one read the new way.
+const SETTINGS_SINCE = Date.parse('2026-09-28T00:22:02Z') / 1000;
 
 const MUSIC_VOLUME = 0.3;    // how loud the bed sits under the voice (~10 dB below it)
 const VOICE_LOUDNESS = -16;  // LUFS; the usual level for spoken audio
@@ -49,17 +55,20 @@ const VOICE_LOUDNESS = -16;  // LUFS; the usual level for spoken audio
 const DUCKING = { threshold: 0.02, ratio: 5, attack: 30, release: 600 };
 const MUSIC_LEAD_IN = 3;     // seconds of music before the voice starts
 const MUSIC_TAIL = 5;        // seconds of music after the voice ends
-const CHUNK_CHARS = 2200;    // ElevenLabs reads best in paragraph-sized pieces
+const CHUNK_CHARS = 800;     // ElevenLabs advises under 800-900 characters a request
+const PARAGRAPH_BREAK = '<break time="1.0s" />';  // said between paragraphs in a chunk
+const GAP_PARAGRAPH = 1.0;   // silence between chunks that end a paragraph
+const GAP_SENTENCE = 0.3;    // silence between chunks that split a long paragraph
 const BITRATE = '48k';       // AAC mono: ~0.36 MB a minute
 
 // ElevenLabs reads briskly and barely rests between sentences. These give the
 // reading room to breathe without paying to voice it again: the natural gaps
 // in the voice are found and lengthened, and the whole reading is eased down.
 const PACING = {
-  tempo: 0.94,          // 6% slower overall
+  tempo: 1,             // the voice's own speed setting now sets the pace
   gapThreshold: -38,    // dB below which the voice counts as silent
-  sentencePause: 0.45,  // extra seconds added at each sentence break
-  paragraphPause: 0.8,  // extra seconds added at each paragraph break
+  sentencePause: 0.25,  // extra seconds added at each sentence break
+  paragraphPause: 0.3,  // extra seconds added at each paragraph break
 };
 
 const args = process.argv.slice(2);
@@ -128,15 +137,36 @@ export function narrationText(title, body) {
   return [`${title}.`, ...read];
 }
 
+// Pieces of at most CHUNK_CHARS: whole paragraphs where they fit, a long
+// paragraph split at its sentences. Paragraphs inside one piece are joined by
+// a break tag; each piece notes whether it ends a paragraph, which sets the
+// silence laid after it.
 function chunks(paragraphs) {
-  const out = [];
-  let current = '';
-  for (const paragraph of paragraphs) {
-    if (current && current.length + paragraph.length > CHUNK_CHARS) {
-      out.push(current);
-      current = '';
+  const units = paragraphs.flatMap((paragraph) => {
+    if (paragraph.length <= CHUNK_CHARS) return [{ text: paragraph, endsParagraph: true }];
+    const sentences = paragraph.match(/[^.!?]+(?:[.!?]+["')\]]?|$)\s*/g) || [paragraph];
+    const parts = [];
+    let part = '';
+    for (const sentence of sentences) {
+      if (part && part.length + sentence.length > CHUNK_CHARS) {
+        parts.push(part.trim());
+        part = '';
+      }
+      part += sentence;
     }
-    current = current ? `${current}\n\n${paragraph}` : paragraph;
+    if (part.trim()) parts.push(part.trim());
+    return parts.map((text, i) => ({ text, endsParagraph: i === parts.length - 1 }));
+  });
+  const out = [];
+  let current = null;
+  for (const unit of units) {
+    if (current && (!current.endsParagraph || current.text.length + unit.text.length > CHUNK_CHARS)) {
+      out.push(current);
+      current = null;
+    }
+    current = current
+      ? { text: `${current.text} ${PARAGRAPH_BREAK}\n\n${unit.text}`, endsParagraph: unit.endsParagraph }
+      : { ...unit };
   }
   if (current) out.push(current);
   return out;
@@ -159,6 +189,7 @@ async function history() {
       if (!response.ok) throw new Error(`history ${response.status}`);
       const data = await response.json();
       for (const item of data.history || []) {
+        if (item.date_unix < SETTINGS_SINCE) continue;
         const key = `${item.model_id}\n${item.text}`;
         if (!spoken.has(key)) spoken.set(key, item.history_item_id);
       }
@@ -171,7 +202,7 @@ async function history() {
   return spoken;
 }
 
-async function speak(text, previous, next, file) {
+async function speak(text, previous, next, file, stitch = []) {
   if (!useSay) {
     const reuse = (await history()).get(`${MODEL_ID}\n${text}`);
     if (reuse) {
@@ -179,26 +210,35 @@ async function speak(text, previous, next, file) {
       if (response.ok) {
         fs.writeFileSync(file, Buffer.from(await response.arrayBuffer()));
         console.log('    reused from history, not billed');
-        return;
+        return null;
       }
     }
   }
   if (useSay) {
-    execFileSync('say', ['-v', 'Daniel', '-r', '165', '-o', `${file}.aiff`, text]);
+    execFileSync('say', ['-v', 'Daniel', '-r', '165', '-o', `${file}.aiff`, text.replace(/<break[^>]*>/g, '[[slnc 1000]]')]);
     execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', `${file}.aiff`, '-ar', '44100', '-ac', '1', file]);
-    return;
+    return null;
   }
   for (let attempt = 1; ; attempt++) {
     const response = await fetch(`${API}/text-to-speech/${VOICE_ID}?output_format=mp3_44100_128`, {
       method: 'POST',
       headers: { ...headers(), 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
-      body: JSON.stringify({ text, model_id: MODEL_ID, voice_settings: VOICE_SETTINGS, previous_text: previous, next_text: next }),
+      body: JSON.stringify({
+        text, model_id: MODEL_ID, voice_settings: VOICE_SETTINGS, previous_text: previous, next_text: next,
+        // Request stitching: the voice carries on from the audio just made.
+        ...(stitch.length ? { previous_request_ids: stitch.slice(-3) } : {}),
+      }),
     });
     if (response.ok) {
       fs.writeFileSync(file, Buffer.from(await response.arrayBuffer()));
-      return;
+      return response.headers.get('request-id');
     }
     const detail = await response.text();
+    if (response.status === 400 && stitch.length) {
+      console.log('    stitching refused, retrying without it');
+      stitch = [];
+      continue;
+    }
     if (attempt >= 4 || ![429, 500, 502, 503].includes(response.status)) {
       throw new Error(`ElevenLabs ${response.status}: ${detail.slice(0, 300)}`);
     }
@@ -251,14 +291,21 @@ async function render(post, paragraphs, outFile) {
   const work = fs.mkdtempSync(path.join(os.tmpdir(), 'narrate-'));
   const pieces = chunks(paragraphs);
   const list = [];
-  ffmpeg('-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono', '-t', '0.7', path.join(work, 'gap.wav'));
+  const gapParagraph = path.join(work, 'gap-p.wav');
+  const gapSentence = path.join(work, 'gap-s.wav');
+  ffmpeg('-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono', '-t', String(GAP_PARAGRAPH), gapParagraph);
+  ffmpeg('-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono', '-t', String(GAP_SENTENCE), gapSentence);
+  const plain = (text) => text?.replace(/<break[^>]*>/g, '');
+  const stitch = [];
   for (let i = 0; i < pieces.length; i++) {
     const file = path.join(work, `part${i}.${useSay ? 'wav' : 'mp3'}`);
-    console.log(`  chunk ${i + 1}/${pieces.length} (${pieces[i].length} chars)`);
-    await speak(pieces[i], pieces[i - 1]?.slice(-500) || undefined, pieces[i + 1]?.slice(0, 500) || undefined, file);
+    console.log(`  chunk ${i + 1}/${pieces.length} (${pieces[i].text.length} chars)`);
+    const id = await speak(pieces[i].text, plain(pieces[i - 1]?.text)?.slice(-500) || undefined,
+      plain(pieces[i + 1]?.text)?.slice(0, 500) || undefined, file, stitch);
+    if (id) stitch.push(id);
     const wav = path.join(work, `part${i}.wav`);
     if (!useSay) ffmpeg('-i', file, '-ar', '44100', '-ac', '1', wav);
-    list.push(`file '${wav}'`, `file '${path.join(work, 'gap.wav')}'`);
+    list.push(`file '${wav}'`, `file '${pieces[i].endsParagraph ? gapParagraph : gapSentence}'`);
   }
   fs.writeFileSync(path.join(work, 'list.txt'), list.join('\n'));
   const raw = path.join(work, 'raw.wav');
@@ -304,7 +351,7 @@ async function main() {
     const paragraphs = narrationText(post.fields.title, post.body);
     const characters = paragraphs.join('\n\n').length;
     const hash = createHash('sha256').update(JSON.stringify({
-      paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING,
+      paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING, CHUNK_CHARS, PARAGRAPH_BREAK,
       music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL, DUCKING } : null,
       VOICE_LOUDNESS,
       say: useSay,

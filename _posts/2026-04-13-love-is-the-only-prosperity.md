@@ -4,7 +4,7 @@ date: 2026-04-13
 layout: post
 featured: true
 featured_order: 1
-image: "/assets/love_prosperity/sf_pier.png"
+image: "/assets/love_prosperity/sf_pier.jpg"
 narration: true
 narration_music: icarus
 narration_voice: false
@@ -17,7 +17,7 @@ narration_voice: false
 <br> <!-- Adds extra spacing -->
 
 <div style="text-align: center;">
-<img src="/assets/love_prosperity/sf_pier.png" style="width: 55%; display: inline-block;">
+<img src="/assets/love_prosperity/sf_pier.jpg" style="width: 55%; display: inline-block;">
 </div>
 
 <br>

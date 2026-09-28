@@ -289,6 +289,8 @@ function pace(input, output, work, sentenceCount, paragraphCount) {
   ffmpeg('-f', 'concat', '-safe', '0', '-i', path.join(work, 'paced.txt'), spaced);
   ffmpeg('-i', spaced, '-af', `atempo=${PACING.tempo}`, '-ar', '44100', '-ac', '1', output);
 }
+const loudness = (file) => Number(spawnSync('ffmpeg', ['-hide_banner', '-i', file, '-af', 'ebur128=framelog=quiet', '-f', 'null', '-'],
+  { maxBuffer: 1 << 26 }).stderr.toString().match(/^\s+I:\s+(-?[\d.]+) LUFS/m)[1]);
 const duration = (file) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file]).toString());
 
 async function render(post, paragraphs, outFile) {
@@ -357,7 +359,7 @@ async function main() {
     const characters = paragraphs.join('\n\n').length;
     const hash = musicOnly
       ? createHash('sha256').update(JSON.stringify({
-        musicOnly, musicHash: musicHash(post.music), MUSIC_ONLY_SECONDS, MUSIC_ONLY_LOUDNESS, MUSIC_ONLY_BITRATE,
+        musicOnly, musicHash: musicHash(post.music), MUSIC_ONLY_SECONDS, MUSIC_ONLY_LOUDNESS, MUSIC_ONLY_BITRATE, gain: 'fixed',
       })).digest('hex').slice(0, 10)
       : createHash('sha256').update(JSON.stringify({
       paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING, CHUNK_CHARS, PARAGRAPH_BREAK,
@@ -381,8 +383,11 @@ async function main() {
       const src = `assets/audio/${post.key.replace(/^\d{4}-\d{2}-\d{2}-/, '')}-${hash}.m4a`;
       // Whole loops only, so the file's own end meets its start seamlessly.
       const loops = Math.max(1, Math.ceil(MUSIC_ONLY_SECONDS / duration(post.music)));
+      // One fixed gain for the whole piece, so its quiet passages stay quiet.
+      // (A dynamic normaliser lifted near-silent openings into loud drones.)
+      const gain = (MUSIC_ONLY_LOUDNESS - loudness(post.music)).toFixed(2);
       ffmpeg('-stream_loop', String(loops - 1), '-i', post.music,
-        '-af', `loudnorm=I=${MUSIC_ONLY_LOUDNESS}:TP=-1.5:LRA=11,aresample=44100`,
+        '-af', `volume=${gain}dB,alimiter=limit=0.95,aresample=44100`,
         '-c:a', 'aac', '-b:a', MUSIC_ONLY_BITRATE, '-ac', '1', '-movflags', '+faststart', path.join(ROOT, src));
       const old = manifest[post.key]?.src;
       if (old && old !== src) fs.rmSync(path.join(ROOT, old), { force: true });

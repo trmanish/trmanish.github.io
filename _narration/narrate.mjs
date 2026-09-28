@@ -48,11 +48,8 @@ const VOICE_SETTINGS = { stability: 0.5, similarity_boost: 0.75, style: 0, use_s
 // is never mistaken for one read the new way.
 const SETTINGS_SINCE = Date.parse('2026-09-28T00:22:02Z') / 1000;
 
-const MUSIC_VOLUME = 0.3;    // how loud the bed sits under the voice (~10 dB below it)
+const MUSIC_VOLUME = 0.22;   // a steady bed about 16 dB under the voice
 const VOICE_LOUDNESS = -16;  // LUFS; the usual level for spoken audio
-// While the voice speaks, the bed dips by up to this ratio and swells back in
-// the pauses, so the words stay clear without the music feeling faint.
-const DUCKING = { threshold: 0.02, ratio: 5, attack: 30, release: 600 };
 const MUSIC_LEAD_IN = 3;     // seconds of music before the voice starts
 const MUSIC_TAIL = 5;        // seconds of music after the voice ends
 const CHUNK_CHARS = 800;     // ElevenLabs advises under 800-900 characters a request
@@ -323,9 +320,8 @@ async function render(post, paragraphs, outFile) {
       '-stream_loop', '-1', '-i', post.music, '-i', voice,
       '-filter_complex',
       `[0:a]aformat=channel_layouts=mono,volume=${MUSIC_VOLUME},atrim=0:${total.toFixed(2)},afade=t=in:d=2,afade=t=out:st=${(total - MUSIC_TAIL).toFixed(2)}:d=${MUSIC_TAIL}[bed];` +
-      `[1:a]loudnorm=I=${VOICE_LOUDNESS}:TP=-1.5:LRA=11,aresample=44100,adelay=${MUSIC_LEAD_IN * 1000},apad,asplit=2[voice][key];` +
-      `[bed][key]sidechaincompress=threshold=${DUCKING.threshold}:ratio=${DUCKING.ratio}:attack=${DUCKING.attack}:release=${DUCKING.release}[ducked];` +
-      `[ducked][voice]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[out]`,
+      `[1:a]loudnorm=I=${VOICE_LOUDNESS}:TP=-1.5:LRA=11,aresample=44100,adelay=${MUSIC_LEAD_IN * 1000},apad[voice];` +
+      `[bed][voice]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[out]`,
       '-map', '[out]', ...encode,
     );
   } else {
@@ -352,7 +348,7 @@ async function main() {
     const characters = paragraphs.join('\n\n').length;
     const hash = createHash('sha256').update(JSON.stringify({
       paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING, CHUNK_CHARS, PARAGRAPH_BREAK,
-      music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL, DUCKING } : null,
+      music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL } : null,
       VOICE_LOUDNESS,
       say: useSay,
     })).digest('hex').slice(0, 10);

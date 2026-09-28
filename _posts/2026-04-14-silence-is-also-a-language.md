@@ -4,6 +4,7 @@ date: 2026-04-14
 layout: post
 narration: true
 narration_music: true
+narration_voice: false
 ---
 
 <div align="center">

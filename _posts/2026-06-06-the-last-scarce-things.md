@@ -8,6 +8,7 @@ published: true
 image: "/assets/last_scarce_things/ai-pilled.jpeg"
 narration: true
 narration_music: interstellar-stay
+narration_voice: false
 ---
 
 <div align="center">

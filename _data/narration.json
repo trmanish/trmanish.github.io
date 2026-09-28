@@ -1,9 +1,10 @@
 {
   "2025-03-01-things-that-enrich-life": {
-    "src": "assets/audio/things-that-enrich-life-adfdcd2e10.m4a",
-    "hash": "adfdcd2e10",
-    "seconds": 461,
-    "bytes": 2880979
+    "src": "assets/audio/things-that-enrich-life-8878fef6b7.m4a",
+    "hash": "8878fef6b7",
+    "music_only": true,
+    "seconds": 219,
+    "bytes": 1800453
   },
   "2026-04-13-love-is-the-only-prosperity": {
     "src": "assets/audio/love-is-the-only-prosperity-48b4aa424a.m4a",
@@ -13,27 +14,31 @@
     "bytes": 1714206
   },
   "2026-04-14-silence-is-also-a-language": {
-    "src": "assets/audio/silence-is-also-a-language-92d457eb41.m4a",
-    "hash": "92d457eb41",
+    "src": "assets/audio/silence-is-also-a-language-cf0af256e5.m4a",
+    "hash": "cf0af256e5",
+    "music_only": true,
     "seconds": 225,
-    "bytes": 1401389
+    "bytes": 1849219
   },
   "2026-04-27-goodness-will-kill-you": {
-    "src": "assets/audio/goodness-will-kill-you-27e0f5e2e3.m4a",
-    "hash": "27e0f5e2e3",
-    "seconds": 854,
-    "bytes": 5322195
+    "src": "assets/audio/goodness-will-kill-you-cf0af256e5.m4a",
+    "hash": "cf0af256e5",
+    "music_only": true,
+    "seconds": 225,
+    "bytes": 1849219
   },
   "2026-05-14-the-purpose-of-life-is-people-letting-them-go-is-the-goal": {
-    "src": "assets/audio/the-purpose-of-life-is-people-letting-them-go-is-the-goal-4004c7966b.m4a",
-    "hash": "4004c7966b",
-    "seconds": 1298,
-    "bytes": 8102032
+    "src": "assets/audio/the-purpose-of-life-is-people-letting-them-go-is-the-goal-8db64b160d.m4a",
+    "hash": "8db64b160d",
+    "music_only": true,
+    "seconds": 187,
+    "bytes": 1536786
   },
   "2026-06-06-the-last-scarce-things": {
-    "src": "assets/audio/the-last-scarce-things-a0d0cff8fb.m4a",
-    "hash": "a0d0cff8fb",
-    "seconds": 663,
-    "bytes": 4135278
+    "src": "assets/audio/the-last-scarce-things-8db64b160d.m4a",
+    "hash": "8db64b160d",
+    "music_only": true,
+    "seconds": 187,
+    "bytes": 1536786
   }
 }

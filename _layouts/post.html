@@ -137,19 +137,23 @@
           return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
         }
         button.addEventListener('click', function () {
-          if (audio.paused) audio.play(); else audio.pause();
+          if (!audio.paused) { audio.pause(); return; }
+          var playing = audio.play();
+          if (playing && playing.catch) {
+            playing.catch(function (error) {
+              console.warn('Two Ticks audio could not start:', error);
+              box.classList.remove('is-playing');
+              label.textContent = 'Tap to retry';
+            });
+          }
+        });
+        audio.addEventListener('error', function () {
+          console.warn('Two Ticks audio failed to load:', audio.currentSrc, audio.error && audio.error.code);
+          label.textContent = 'Audio unavailable';
         });
         audio.addEventListener('play', function () {
           box.classList.add('is-started', 'is-playing');
           label.textContent = 'Pause';
-          if (musicOnly && audio.currentTime < 0.5) {
-            // Ease the score in rather than starting at full level.
-            audio.volume = 0;
-            var step = setInterval(function () {
-              audio.volume = Math.min(1, audio.volume + 0.05);
-              if (audio.volume >= 1) clearInterval(step);
-            }, 75);
-          }
           button.setAttribute('aria-label', 'Pause the narration');
         });
         audio.addEventListener('pause', function () {

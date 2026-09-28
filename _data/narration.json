@@ -1,44 +1,44 @@
 {
   "2025-03-01-things-that-enrich-life": {
-    "src": "assets/audio/things-that-enrich-life-8878fef6b7.m4a",
-    "hash": "8878fef6b7",
+    "src": "assets/audio/things-that-enrich-life-4a1ce9efff.m4a",
+    "hash": "4a1ce9efff",
     "music_only": true,
-    "seconds": 219,
-    "bytes": 1800453
+    "seconds": 224,
+    "bytes": 1840512
   },
   "2026-04-13-love-is-the-only-prosperity": {
-    "src": "assets/audio/love-is-the-only-prosperity-48b4aa424a.m4a",
-    "hash": "48b4aa424a",
+    "src": "assets/audio/love-is-the-only-prosperity-243315f9a7.m4a",
+    "hash": "243315f9a7",
     "music_only": true,
-    "seconds": 208,
-    "bytes": 1714206
+    "seconds": 198,
+    "bytes": 1625883
   },
   "2026-04-14-silence-is-also-a-language": {
-    "src": "assets/audio/silence-is-also-a-language-cf0af256e5.m4a",
-    "hash": "cf0af256e5",
+    "src": "assets/audio/silence-is-also-a-language-b15eb97371.m4a",
+    "hash": "b15eb97371",
     "music_only": true,
-    "seconds": 225,
-    "bytes": 1849219
+    "seconds": 224,
+    "bytes": 1846888
   },
   "2026-04-27-goodness-will-kill-you": {
-    "src": "assets/audio/goodness-will-kill-you-cf0af256e5.m4a",
-    "hash": "cf0af256e5",
+    "src": "assets/audio/goodness-will-kill-you-b15eb97371.m4a",
+    "hash": "b15eb97371",
     "music_only": true,
-    "seconds": 225,
-    "bytes": 1849219
+    "seconds": 224,
+    "bytes": 1846888
   },
   "2026-05-14-the-purpose-of-life-is-people-letting-them-go-is-the-goal": {
-    "src": "assets/audio/the-purpose-of-life-is-people-letting-them-go-is-the-goal-8db64b160d.m4a",
-    "hash": "8db64b160d",
+    "src": "assets/audio/the-purpose-of-life-is-people-letting-them-go-is-the-goal-6131b962a4.m4a",
+    "hash": "6131b962a4",
     "music_only": true,
     "seconds": 187,
-    "bytes": 1536786
+    "bytes": 1534772
   },
   "2026-06-06-the-last-scarce-things": {
-    "src": "assets/audio/the-last-scarce-things-8db64b160d.m4a",
-    "hash": "8db64b160d",
+    "src": "assets/audio/the-last-scarce-things-6131b962a4.m4a",
+    "hash": "6131b962a4",
     "music_only": true,
     "seconds": 187,
-    "bytes": 1536786
+    "bytes": 1534772
   }
 }

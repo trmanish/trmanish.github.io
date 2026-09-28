@@ -57,15 +57,15 @@
         <div class="article-meta">
         <p class="article-date">{{ page.date | date: "%B %d, %Y" }}</p>
         {% if narration %}
-        <div class="listen" data-listen>
+        <div class="listen{% if narration.music_only %} listen--music{% endif %}" data-listen>
             <span class="listen__track" aria-hidden="true"><span class="listen__progress"></span></span>
-            <button class="listen__button" type="button" aria-label="Listen to this tick">
+            <button class="listen__button" type="button" aria-label="{% if narration.music_only %}Play the music for this tick{% else %}Listen to this tick{% endif %}">
                 <svg class="listen__icon listen__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="listen__wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
                 <svg class="listen__icon listen__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13"/></svg>
-                <span class="listen__label">Listen</span>
+                <span class="listen__label">{% if narration.music_only %}Music{% else %}Listen{% endif %}</span>
             </button>
-            <span class="listen__time" data-total="{{ narration.seconds }}">{{ narration.seconds | plus: 30 | divided_by: 60 | at_least: 1 }} min</span>
-            <audio preload="none" src="{{ narration.src | prepend: '/' | relative_url }}"></audio>
+            {% unless narration.music_only %}<span class="listen__time" data-total="{{ narration.seconds }}">{{ narration.seconds | plus: 30 | divided_by: 60 | at_least: 1 }} min</span>{% endunless %}
+            <audio preload="none"{% if narration.music_only %} loop{% endif %} src="{{ narration.src | prepend: '/' | relative_url }}"></audio>
         </div>
         {% endif %}
         </div>
@@ -130,7 +130,8 @@
         var time = box.querySelector('.listen__time');
         var track = box.querySelector('.listen__track');
         var bar = box.querySelector('.listen__progress');
-        var total = Number(time.dataset.total) || 0;
+        var musicOnly = box.classList.contains('listen--music');
+        var total = time ? Number(time.dataset.total) || 0 : 0;
         function clock(seconds) {
           seconds = Math.max(0, Math.round(seconds));
           return Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
@@ -141,11 +142,19 @@
         audio.addEventListener('play', function () {
           box.classList.add('is-started', 'is-playing');
           label.textContent = 'Pause';
+          if (musicOnly && audio.currentTime < 0.5) {
+            // Ease the score in rather than starting at full level.
+            audio.volume = 0;
+            var step = setInterval(function () {
+              audio.volume = Math.min(1, audio.volume + 0.05);
+              if (audio.volume >= 1) clearInterval(step);
+            }, 75);
+          }
           button.setAttribute('aria-label', 'Pause the narration');
         });
         audio.addEventListener('pause', function () {
           box.classList.remove('is-playing');
-          label.textContent = 'Resume';
+          label.textContent = musicOnly ? 'Music' : 'Resume';
           button.setAttribute('aria-label', 'Resume the narration');
         });
         audio.addEventListener('ended', function () {
@@ -153,6 +162,7 @@
           audio.currentTime = 0;
         });
         audio.addEventListener('timeupdate', function () {
+          if (musicOnly) return;
           var length = audio.duration || total;
           if (!length) return;
           bar.style.width = (audio.currentTime / length * 100) + '%';

@@ -12,6 +12,10 @@
 // text was read before is downloaded from there for free rather than generated
 // and billed again. So changing the music, or the mix, costs nothing.
 //
+// `narration_voice: false` keeps a post's score but drops the voice: the
+// music alone is laid out to a few minutes at full listening level, and the
+// page loops it for as long as the reader lets it play. No ElevenLabs call.
+//
 // The result lands in assets/audio/<post>-<hash>.m4a, and _data/narration.json
 // records it for the post layout. The hash covers the text, the voice and the
 // music, so an unchanged post is never sent to ElevenLabs twice and a changed
@@ -57,6 +61,9 @@ const PARAGRAPH_BREAK = '<break time="1.0s" />';  // said between paragraphs in 
 const GAP_PARAGRAPH = 1.0;   // silence between chunks that end a paragraph
 const GAP_SENTENCE = 0.3;    // silence between chunks that split a long paragraph
 const BITRATE = '48k';       // AAC mono: ~0.36 MB a minute
+const MUSIC_ONLY_SECONDS = 180;  // a music-only file runs at least this long, in whole loops
+const MUSIC_ONLY_LOUDNESS = -18; // LUFS, the score heard on its own
+const MUSIC_ONLY_BITRATE = '64k';
 
 // ElevenLabs reads briskly and barely rests between sentences. These give the
 // reading room to breathe without paying to voice it again: the natural gaps
@@ -344,9 +351,15 @@ async function main() {
     const bed = post.fields.narration_music;
     post.music = bed && bed !== 'false' ? path.join(MUSIC_DIR, `${bed === 'true' ? DEFAULT_MUSIC : bed}.m4a`) : null;
     if (post.music && !fs.existsSync(post.music)) throw new Error(`${post.key}: no music file ${post.music}`);
+    const musicOnly = post.fields.narration_voice === 'false';
+    if (musicOnly && !post.music) throw new Error(`${post.key}: narration_voice: false needs a narration_music track`);
     const paragraphs = narrationText(post.fields.title, post.body);
     const characters = paragraphs.join('\n\n').length;
-    const hash = createHash('sha256').update(JSON.stringify({
+    const hash = musicOnly
+      ? createHash('sha256').update(JSON.stringify({
+        musicOnly, musicHash: musicHash(post.music), MUSIC_ONLY_SECONDS, MUSIC_ONLY_LOUDNESS, MUSIC_ONLY_BITRATE,
+      })).digest('hex').slice(0, 10)
+      : createHash('sha256').update(JSON.stringify({
       paragraphs, VOICE_ID, MODEL_ID, VOICE_SETTINGS, BITRATE, PACING, CHUNK_CHARS, PARAGRAPH_BREAK,
       music: post.music ? { musicHash: musicHash(post.music), MUSIC_VOLUME, MUSIC_LEAD_IN, MUSIC_TAIL } : null,
       VOICE_LOUDNESS,
@@ -360,6 +373,26 @@ async function main() {
     }
     if (manifest[post.key]?.hash === hash && fs.existsSync(path.join(ROOT, manifest[post.key].src))) {
       console.log(`= ${post.key} is up to date`);
+      continue;
+    }
+    if (musicOnly) {
+      console.log(`> ${post.key} (music only: ${path.basename(post.music)})`);
+      fs.mkdirSync(AUDIO_DIR, { recursive: true });
+      const src = `assets/audio/${post.key.replace(/^\d{4}-\d{2}-\d{2}-/, '')}-${hash}.m4a`;
+      // Whole loops only, so the file's own end meets its start seamlessly.
+      const loops = Math.max(1, Math.ceil(MUSIC_ONLY_SECONDS / duration(post.music)));
+      ffmpeg('-stream_loop', String(loops - 1), '-i', post.music,
+        '-af', `loudnorm=I=${MUSIC_ONLY_LOUDNESS}:TP=-1.5:LRA=11,aresample=44100`,
+        '-c:a', 'aac', '-b:a', MUSIC_ONLY_BITRATE, '-ac', '1', '-movflags', '+faststart', path.join(ROOT, src));
+      const old = manifest[post.key]?.src;
+      if (old && old !== src) fs.rmSync(path.join(ROOT, old), { force: true });
+      manifest[post.key] = {
+        src, hash, music_only: true,
+        seconds: Math.round(duration(path.join(ROOT, src))),
+        bytes: fs.statSync(path.join(ROOT, src)).size,
+      };
+      changed = true;
+      console.log(`  wrote ${src} (${(manifest[post.key].bytes / 1e6).toFixed(1)} MB, ${loops} loops)`);
       continue;
     }
     if (!useSay && !process.env.ELEVENLABS_API_KEY) {

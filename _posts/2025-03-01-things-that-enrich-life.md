@@ -7,6 +7,7 @@ featured_order: 2
 image: "/assets/things_enrich_life/header-sketch.webp"
 narration: true
 narration_music: hand-covers-bruise
+narration_voice: false
 ---
 
 <div align="center">

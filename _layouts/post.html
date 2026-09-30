@@ -22,6 +22,10 @@
     <meta name="twitter:title" content="{{ page.title | escape }}">
     <meta name="twitter:description" content="{{ share_description | escape }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%s" }}">
+    {% assign head_narration_key = page.path | split: "/" | last | remove: ".md" %}
+    {% if site.data.narration[head_narration_key].music_only %}
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+    {% endif %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWGCRLMXHK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -179,6 +183,31 @@
           audio.currentTime = (event.clientX - rect.left) / rect.width * length;
           if (audio.paused) audio.play();
         });
+        // Music posts get a handwritten note under the button, drawn like the
+        // lantern note on the diary. It shows on every new arrival (a link,
+        // a typed URL, back or forward) but not on a reload, and fades early
+        // once the music starts.
+        if (musicOnly) {
+          var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+          var reloaded = nav ? nav.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+          if (!reloaded) {
+            var note = document.createElement('div');
+            note.className = 'music-note';
+            note.setAttribute('aria-hidden', 'true');
+            note.innerHTML = '<svg viewBox="0 0 30 34"><path d="M6 32 C 16 28, 22 18, 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 4 L15.5 8.5 M21 4 L24.5 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>read with the music on';
+            box.appendChild(note);
+            var hideNote = function () {
+              if (!note) return;
+              note.classList.remove('is-visible');
+              var gone = note;
+              note = null;
+              setTimeout(function () { gone.remove(); }, 1300);
+            };
+            setTimeout(function () { if (note) note.classList.add('is-visible'); }, 1500);
+            setTimeout(hideNote, 9500);
+            audio.addEventListener('play', hideNote);
+          }
+        }
         if ('mediaSession' in navigator) {
           navigator.mediaSession.metadata = new MediaMetadata({ title: {{ page.title | jsonify }}, artist: 'Two Ticks' });
         }
